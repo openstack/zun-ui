@@ -1,0 +1,12 @@
+<div ng-controller="createContainerInfoController as ctrl">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="container-name" translate>Container Name</label>
+        <input name="container-name" type="text" class="form-control" id="container-name"
+               ng-model="model.newContainerSpec.name"
+               placeholder="{$ 'Name of the container to create.'|translate $}">
+      </div>
+    </div>
+  </div>
+</div>

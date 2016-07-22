@@ -1,0 +1,4 @@
+[gerrit]
+host=review.openstack.org
+port= # need to set for zun-ui
+project=openstack/zun-ui.git

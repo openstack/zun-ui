@@ -1,0 +1,26 @@
+<div ng-controller="horizon.dashboard.container.containers.OverviewController as ctrl">
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Info</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>Name</dt>
+        <dd>{$ ctrl.container.name|noName $}</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Record Properties</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>Created</dt>
+        <dd>{$ ctrl.container.created_at | date:'short' $}</dd>
+        <dt translate>Updated</dt>
+        <dd>{$ ctrl.container.updated_at | date:'short' $}</dd>
+        <dt translate>ID</dt>
+        <dd>{$ ctrl.container.id $}</dd>
+      </dl>
+    </div>
+  </div>
+</div>
