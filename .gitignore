@@ -5,7 +5,7 @@ doc/source/sourcecode
 zun_ui/test/.secret_key_store
 .venv
 .tox
-*.pyc
+*.py[cod]
 *.lock
 *.egg*
 *.swp

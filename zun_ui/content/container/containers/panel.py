@@ -15,7 +15,7 @@ import horizon
 
 # This panel will be loaded from horizon, because specified in enabled file.
 # To register REST api, import below here.
-from zun_ui.api import zun_rest_api  # noqa
+from zun_ui.api import rest_api  # noqa
 
 class Containers(horizon.Panel):
     name = _("Containers")

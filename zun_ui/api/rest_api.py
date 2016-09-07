@@ -12,7 +12,7 @@
 
 from django.views import generic
 
-from zun_ui.api import zunclient
+from zun_ui.api import client
 
 from openstack_dashboard.api.rest import urls
 from openstack_dashboard.api.rest import utils as rest_utils
@@ -36,7 +36,7 @@ class Container(generic.View):
     @rest_utils.ajax()
     def get(self, request, id):
         """Get a specific container"""
-        return change_to_id(zunclient.container_show(request, id).to_dict())
+        return change_to_id(client.container_show(request, id).to_dict())
 
 
 @urls.register
@@ -51,7 +51,7 @@ class Containers(generic.View):
         The returned result is an object with property 'items' and each
         item under this is a Container.
         """
-        result = zunclient.container_list(request)
+        result = client.container_list(request)
         return {'items': [change_to_id(n.to_dict()) for n in result]}
 
     @rest_utils.ajax(data_required=True)
@@ -61,7 +61,7 @@ class Containers(generic.View):
         Returns HTTP 204 (no content) on successful deletion.
         """
         for id in request.DATA:
-            zunclient.container_delete(request, id)
+            client.container_delete(request, id)
 
     @rest_utils.ajax(data_required=True)
     def post(self, request):
@@ -69,7 +69,7 @@ class Containers(generic.View):
 
         Returns the new Container object on success.
         """
-        new_container = zunclient.container_create(request, **request.DATA)
+        new_container = client.container_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
             '/api/zun/container/%s' % new_container.uuid,
             new_container.to_dict())
