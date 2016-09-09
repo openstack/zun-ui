@@ -13,11 +13,11 @@
 
 from __future__ import absolute_import
 import logging
-#from zunclient.v1 import client as zun_client
+# from zunclient.v1 import client as zun_client
 
 from horizon import exceptions
 from horizon.utils.memoized import memoized
-from openstack_dashboard.api import base
+# from openstack_dashboard.api import base
 
 # for stab, should remove when use CLI API
 import copy
@@ -29,6 +29,7 @@ LOG = logging.getLogger(__name__)
 CONTAINER_CREATE_ATTRS = ['name']
 
 STUB_DATA = {}
+
 
 # for stab, should be removed when use CLI API
 class StubResponse(object):
@@ -47,8 +48,9 @@ class StubResponse(object):
 
 @memoized
 def zunclient(request):
-    zun_url = ""
+    pass
     """"
+    zun_url = ""
     try:
         zun_url = base.url_for(request, 'container')
     except exceptions.ServiceCatalogException:
@@ -80,7 +82,7 @@ def container_create(request, **kwargs):
                 kv = v.split("=", 1)
                 labels[kv[0]] = kv[1]
             args["labels"] = labels
-    #created = zunclient(request).containers.create(**args)
+    # created = zunclient(request).containers.create(**args)
 
     # create dummy response
     args["uuid"] = uuid.uuid1().hex
@@ -93,21 +95,21 @@ def container_create(request, **kwargs):
 
 
 def container_delete(request, id):
-    #deleted = zunclient(request).containers.delete(id)
+    # deleted = zunclient(request).containers.delete(id)
     deleted = STUB_DATA.pop(id)
 
     return deleted
 
 
 def container_list(request, limit=None, marker=None, sort_key=None,
-                  sort_dir=None, detail=True):
-    #list = zunclient(request).containers.list(limit, marker, sort_key,
+                   sort_dir=None, detail=True):
+    # list = zunclient(request).containers.list(limit, marker, sort_key,
     #                                            sort_dir, detail)
     list = [STUB_DATA[data] for data in STUB_DATA]
     return list
 
 
 def container_show(request, id):
-    #show = zunclient(request).containers.get(id)
+    # show = zunclient(request).containers.get(id)
     show = STUB_DATA.get(id)
     return show

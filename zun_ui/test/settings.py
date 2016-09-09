@@ -20,9 +20,9 @@ HORIZON_CONFIG.pop('dashboards', None)
 HORIZON_CONFIG.pop('default_dashboard', None)
 
 # Update the dashboards with zun_ui
-import zun_ui.enabled
 import openstack_dashboard.enabled
 from openstack_dashboard.utils import settings
+import zun_ui.enabled
 
 settings.update_dashboards(
     [

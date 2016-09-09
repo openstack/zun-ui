@@ -17,6 +17,7 @@ import horizon
 # To register REST api, import below here.
 from zun_ui.api import rest_api  # noqa
 
+
 class Containers(horizon.Panel):
     name = _("Containers")
     slug = "container.containers"
