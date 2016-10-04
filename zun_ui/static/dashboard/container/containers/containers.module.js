@@ -65,6 +65,12 @@
     .setProperty('id', {
       label: gettext('ID')
     })
+    .setProperty('image', {
+      label: gettext('Image')
+    })
+    .setProperty('status', {
+      label: gettext('Status')
+    })
     .setListFunction(listFunction)
     .tableColumns
     .append({
@@ -77,6 +83,14 @@
     .append({
       id: 'id',
       priority: 2
+    })
+    .append({
+      id: 'image',
+      priority: 2
+    })
+    .append({
+      id: 'status',
+      priority: 2
     });
     // for magic-search
     registry.getResourceType(resourceType).filterFacets
@@ -88,6 +102,16 @@
     .append({
       'label': gettext('ID'),
       'name': 'id',
+      'singleton': true
+    })
+    .append({
+      'label': gettext('Image'),
+      'name': 'image',
+      'singleton': true
+    })
+    .append({
+      'label': gettext('Status'),
+      'name': 'status',
       'singleton': true
     });
 

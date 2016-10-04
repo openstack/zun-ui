@@ -6,6 +6,24 @@
       <dl class="dl-horizontal">
         <dt translate>Name</dt>
         <dd>{$ ctrl.container.name|noName $}</dd>
+        <dt translate>Status</dt>
+        <dd>{$ ctrl.container.status $}</dd>
+        <dt translate>Image</dt>
+        <dd>{$ ctrl.container.image $}</dd>
+        <dt translate>Command</dt>
+        <dd>{$ ctrl.container.command $}</dd>
+        <dt translate>Memory</dt>
+        <dd>{$ ctrl.container.memory $}</dd>
+      </dl>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Environment</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <div ng-repeat="(key, value) in ctrl.container.environment">
+          <dt>{$ key $}</dt>
+          <dd>{$ value $}</dd>
+        </div>
       </dl>
     </div>
   </div>

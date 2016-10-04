@@ -28,12 +28,9 @@
     .controller('horizon.dashboard.container.containers.DrawerController', controller);
 
   controller.$inject = [
-    'horizon.app.core.openstack-service-api.zun',
-    'horizon.dashboard.container.containers.resourceType'
   ];
 
-  function controller(zun, resourceType) {
-    var ctrl = this;
+  function controller() {
   }
 
 })();

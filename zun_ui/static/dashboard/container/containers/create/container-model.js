@@ -34,7 +34,14 @@
 
     function initNewContainerSpec() {
       model.newContainerSpec = {
+        uuid: null,
         name: null,
+        image: null,
+        command: null,
+        memory: null,
+        memory_size: null,
+        memory_unit: "m",
+        environment: null
       };
     }
 
@@ -56,7 +63,8 @@
       // Not only "null", blank too.
       for (var key in finalSpec) {
         if (finalSpec.hasOwnProperty(key) && finalSpec[key] === null
-             || finalSpec[key] === "") {
+            || finalSpec[key] === ""
+            || key === "memory_size" || key === "memory_unit") {
           delete finalSpec[key];
         }
       }
