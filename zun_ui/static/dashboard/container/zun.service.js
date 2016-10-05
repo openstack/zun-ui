@@ -31,6 +31,9 @@
       getContainers: getContainers,
       deleteContainer: deleteContainer,
       deleteContainers: deleteContainers,
+      startContainer: startContainer,
+      stopContainer: stopContainer,
+      logsContainer: logsContainer,
     };
 
     return service;
@@ -73,7 +76,29 @@
       return apiService.delete('/api/zun/containers/', ids)
         .error(function() {
           toastService.add('error', gettext('Unable to delete the Containers.'));
-        })
+        });
     }
+
+    function startContainer(id) {
+      return apiService.post('/api/zun/containers/' + id + '/start')
+        .error(function() {
+          toastService.add('error', gettext('Unable to start Container'));
+        });
+    }
+
+    function stopContainer(id) {
+        return apiService.post('/api/zun/containers/' + id + '/stop')
+          .error(function() {
+            toastService.add('error', gettext('Unable to stop Container'));
+          });
+      }
+
+    function logsContainer(id) {
+        return apiService.get('/api/zun/containers/' + id + '/logs')
+          .error(function() {
+            toastService.add('error', gettext('Unable to get logs of Container'));
+          });
+      }
+
   }
 }());

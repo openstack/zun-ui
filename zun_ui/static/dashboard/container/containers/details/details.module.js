@@ -41,10 +41,16 @@
   ) {
     registry.getResourceType(resourceType)
       .setLoadFunction(loadFunction)
-      .detailsViews.append({
+      .detailsViews
+      .append({
         id: 'containerDetailsOverview',
         name: gettext('Overview'),
         template: basePath + 'details/overview.html'
+      })
+      .append({
+        id: 'containerDetailsLogs',
+        name: gettext('Logs'),
+        template: basePath + 'details/logs.html'
       });
 
     function loadFunction(identifier) {

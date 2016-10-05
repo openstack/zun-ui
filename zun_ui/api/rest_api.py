@@ -40,6 +40,26 @@ class Container(generic.View):
 
 
 @urls.register
+class ContainerActions(generic.View):
+    """API for retrieving a single container"""
+    url_regex = r'zun/containers/(?P<id>[^/]+)/(?P<action>[^/]+)$'
+
+    @rest_utils.ajax()
+    def get(self, request, id, action):
+        """Get a specific container info"""
+        if action == 'logs':
+            return client.container_logs(request, id)
+
+    @rest_utils.ajax()
+    def post(self, request, id, action):
+        """Execute a action of the Containers."""
+        if action == 'start':
+            return client.container_start(request, id)
+        elif action == 'stop':
+            return client.container_stop(request, id)
+
+
+@urls.register
 class Containers(generic.View):
     """API for Zun Containers"""
     url_regex = r'zun/containers/$'

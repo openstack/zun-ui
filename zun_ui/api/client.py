@@ -74,3 +74,15 @@ def container_list(request, limit=None, marker=None, sort_key=None,
 
 def container_show(request, id):
     return zunclient(request).containers.get(id)
+
+
+def container_logs(request, id):
+    return zunclient(request).containers.logs(id)
+
+
+def container_start(request, id):
+    return zunclient(request).containers.start(id)
+
+
+def container_stop(request, id):
+    return zunclient(request).containers.stop(id)

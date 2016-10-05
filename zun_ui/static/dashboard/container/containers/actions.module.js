@@ -30,6 +30,8 @@
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container.containers.create.service',
     'horizon.dashboard.container.containers.delete.service',
+    'horizon.dashboard.container.containers.start.service',
+    'horizon.dashboard.container.containers.stop.service',
     'horizon.dashboard.container.containers.resourceType',
   ];
 
@@ -38,10 +40,26 @@
     gettext,
     createContainerService,
     deleteContainerService,
+    startContainerService,
+    stopContainerService,
     resourceType)
   {
     var containersResourceType = registry.getResourceType(resourceType);
     containersResourceType.itemActions
+      .append({
+        id: 'startContainerAction',
+        service: startContainerService,
+        template: {
+          text: gettext('Start Container')
+        }
+      })
+      .append({
+        id: 'stopContainerAction',
+        service: stopContainerService,
+        template: {
+          text: gettext('Stop Container')
+        }
+      })
       .append({
         id: 'deleteContainerAction',
         service: deleteContainerService,
