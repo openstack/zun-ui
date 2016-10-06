@@ -17,18 +17,18 @@
 
   /**
    * @ngdoc controller
-   * @name createContainerInfoController
+   * @name createContainerLabelsController
    * @ngController
    * @description
-   * Controller for the container info step in create workflow
+   * Controller for the container labels step in create workflow
    */
   angular
     .module('horizon.dashboard.container.containers')
-    .controller('createContainerInfoController', createContainerInfoController);
+    .controller('createContainerLabelsController', createContainerLabelsController);
 
-  createContainerInfoController.$inject = [
+  createContainerLabelsController.$inject = [
   ];
 
-  function createContainerInfoController() {
+  function createContainerLabelsController() {
   }
 })();

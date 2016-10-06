@@ -1,28 +1,36 @@
 <div ng-controller="horizon.dashboard.container.containers.DrawerController as drawerCtrl">
   <div class="row">
-    <span class="rsp-alt-p2">
-      <dl class="col-md-5">
+    <span class="rsp-alt-p3">
+      <dl class="col-md-4">
         <dt translate>ID</dt>
         <dd>{$ item.id $}</dd>
       </dl>
+    </span>
+    <span class="rsp-alt-p2">
       <dl class="col-md-4">
         <dt translate>Image</dt>
         <dd>{$ item.image $}</dd>
       </dl>
-      <dl class="col-md-3">
+      <dl class="col-md-2">
         <dt translate>Status</dt>
         <dd>{$ item.status $}</dd>
+      </dl>
+      <dl class="col-md-2">
+        <dt translate>Task State</dt>
+        <dd>{$ item.task_state $}</dd>
       </dl>
     </span>
   </div>
   <div class="row">
-    <dl class="col-md-9">
+    <dl class="col-md-8">
       <dt translate>Command</dt>
       <dd>{$ item.command $}</dd>
     </dl>
-    <dl class="col-md-3">
-      <dt translate>Memory</dt>
-      <dd>{$ item.memory $}</dd>
+    <dl class="col-md-4">
+      <dt translate>Ports</dt>
+      <div ng-repeat="value in item.ports">
+        <dd>{$ value $}</dd>
+      </div>
     </dl>
   </div>
 </div>

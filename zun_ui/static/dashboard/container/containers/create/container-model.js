@@ -38,10 +38,15 @@
         name: null,
         image: null,
         command: null,
+        cpu: null,
         memory: null,
         memory_size: null,
         memory_unit: "m",
-        environment: null
+        environment: null,
+        hostname: null,
+        workdir: null,
+        ports: null,
+        labels: null
       };
     }
 

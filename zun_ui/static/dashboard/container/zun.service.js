@@ -51,6 +51,10 @@
 
     function getContainer(id) {
       return apiService.get('/api/zun/containers/' + id)
+        .success(function(data, status, headers, config) {
+          convertMemorySize(data);
+          return data;
+        })
         .error(function() {
           toastService.add('error', gettext('Unable to retrieve the Container.'));
         });
@@ -58,6 +62,12 @@
 
     function getContainers() {
       return apiService.get('/api/zun/containers/')
+        .success(function(data, status, headers, config) {
+          angular.forEach(data.items, function(container, idx){
+            convertMemorySize(container);
+          });
+          return data;
+        })
         .error(function() {
           toastService.add('error', gettext('Unable to retrieve the Containers.'));
         });
@@ -100,5 +110,23 @@
           });
       }
 
+    function convertMemorySize(container){
+      var memoryUnits = { "b": gettext("bytes"),
+                          "k": gettext("KB"),
+                          "m": gettext("MB"),
+                          "g": gettext("GB") };
+
+      container.memorysize = "";
+      container.memoryunit = "";
+      if(container.memory !== null && container.memory !== ""){
+        // separate number and unit.
+        var regex = /(\d+)([bkmg]?)/;
+        var match = regex.exec(container.memory);
+        container.memorysize = match[1];
+        if(match[2]){
+          container.memoryunit = memoryUnits[match[2]];
+        }
+      }
+    }
   }
 }());

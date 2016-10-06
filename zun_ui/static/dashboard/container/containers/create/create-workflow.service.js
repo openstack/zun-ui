@@ -35,7 +35,31 @@
           templateUrl: basePath + 'containers/create/info/info.html',
           helpUrl: basePath + 'containers/create/info/info.help.html',
           formName: 'containerInfoForm'
-        }
+        },
+        {
+          title: gettext('Spec'),
+          templateUrl: basePath + 'containers/create/spec/spec.html',
+          helpUrl: basePath + 'containers/create/spec/spec.help.html',
+          formName: 'containerSpecForm'
+        },
+        {
+          title: gettext('Miscellaneous'),
+          templateUrl: basePath + 'containers/create/misc/misc.html',
+          helpUrl: basePath + 'containers/create/misc/misc.help.html',
+          formName: 'containerMiscForm'
+        },
+        {
+          title: gettext('Environments'),
+          templateUrl: basePath + 'containers/create/envs/envs.html',
+          helpUrl: basePath + 'containers/create/envs/envs.help.html',
+          formName: 'containerEnvsForm'
+        },
+        {
+          title: gettext('Labels'),
+          templateUrl: basePath + 'containers/create/labels/labels.html',
+          helpUrl: basePath + 'containers/create/labels/labels.help.html',
+          formName: 'containerLabelsForm'
+        },
       ],
 
       btnText: {

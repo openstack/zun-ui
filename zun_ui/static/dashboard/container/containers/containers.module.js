@@ -56,7 +56,7 @@
   function run(registry, zun, basePath, resourceType) {
     registry.getResourceType(resourceType)
     .setNames(gettext('Container'), gettext('Containers'))
-    // for detail summary view on table row 
+    // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'details/drawer.html')
     // for table row items and detail summary view.
     .setProperty('name', {
@@ -71,6 +71,9 @@
     .setProperty('status', {
       label: gettext('Status')
     })
+    .setProperty('task_state', {
+      label: gettext('Task State')
+    })
     .setListFunction(listFunction)
     .tableColumns
     .append({
@@ -82,7 +85,7 @@
     })
     .append({
       id: 'id',
-      priority: 2
+      priority: 3
     })
     .append({
       id: 'image',
@@ -90,6 +93,10 @@
     })
     .append({
       id: 'status',
+      priority: 2
+    })
+    .append({
+      id: 'task_state',
       priority: 2
     });
     // for magic-search
@@ -112,6 +119,11 @@
     .append({
       'label': gettext('Status'),
       'name': 'status',
+      'singleton': true
+    })
+    .append({
+      'label': gettext('Task State'),
+      'name': 'task_state',
       'singleton': true
     });
 

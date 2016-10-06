@@ -12,12 +12,38 @@
         <dd>{$ ctrl.container.image $}</dd>
         <dt translate>Command</dt>
         <dd>{$ ctrl.container.command $}</dd>
-        <dt translate>Memory</dt>
-        <dd>{$ ctrl.container.memory $}</dd>
+        <dt translate>Task State</dt>
+        <dd>{$ ctrl.container.task_state $}</dd>
       </dl>
     </div>
     <div class="col-md-6 detail">
-      <h3 translate>Environment</h3>
+      <h3 translate>Spec</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>CPU</dt>
+        <dd>{$ ctrl.container.cpu $}</dd>
+        <dt translate>Memory</dt>
+        <dd>{$ ctrl.container.memorysize $} {$ ctrl.container.memoryunit $}</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Miscellaneous</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>Hostname</dt>
+        <dd>{$ ctrl.container.hostname $}</dd>
+        <dt translate>Working Directory</dt>
+        <dd>{$ ctrl.container.workdir $}</dd>
+        <dt translate>Ports</dt>
+        <div ng-repeat="value in ctrl.container.ports">
+          <dd>{$ value $}</dd>
+        </div>
+      </dl>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Environment Variables</h3>
       <hr>
       <dl class="dl-horizontal">
         <div ng-repeat="(key, value) in ctrl.container.environment">
@@ -28,6 +54,16 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Labels</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <div ng-repeat="(key, value) in ctrl.container.labels">
+          <dt>{$ key $}</dt>
+          <dd>{$ value $}</dd>
+        </div>
+      </dl>
+    </div>
     <div class="col-md-6 detail">
       <h3 translate>Record Properties</h3>
       <hr>
