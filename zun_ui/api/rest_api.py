@@ -57,6 +57,12 @@ class ContainerActions(generic.View):
             return client.container_start(request, id)
         elif action == 'stop':
             return client.container_stop(request, id)
+        elif action == 'reboot':
+            return client.container_reboot(request, id)
+        elif action == 'pause':
+            return client.container_pause(request, id)
+        elif action == 'unpause':
+            return client.container_unpause(request, id)
 
 
 @urls.register
