@@ -34,6 +34,9 @@
       startContainer: startContainer,
       stopContainer: stopContainer,
       logsContainer: logsContainer,
+      rebootContainer: rebootContainer,
+      pauseContainer: pauseContainer,
+      unpauseContainer: unpauseContainer
     };
 
     return service;
@@ -128,5 +131,26 @@
         }
       }
     }
+
+    function rebootContainer(id) {
+      return apiService.post('/api/zun/containers/' + id + '/reboot')
+        .error(function() {
+          toastService.add('error', gettext('Unable to reboot Container'));
+        });
+    }
+
+    function pauseContainer(id) {
+        return apiService.post('/api/zun/containers/' + id + '/pause')
+          .error(function() {
+            toastService.add('error', gettext('Unable to pause Container'));
+          });
+      }
+
+    function unpauseContainer(id) {
+        return apiService.post('/api/zun/containers/' + id + '/unpause')
+          .error(function() {
+            toastService.add('error', gettext('Unable to unpause of Container'));
+          });
+      }
   }
 }());

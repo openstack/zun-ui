@@ -32,6 +32,9 @@
     'horizon.dashboard.container.containers.delete.service',
     'horizon.dashboard.container.containers.start.service',
     'horizon.dashboard.container.containers.stop.service',
+    'horizon.dashboard.container.containers.reboot.service',
+    'horizon.dashboard.container.containers.pause.service',
+    'horizon.dashboard.container.containers.unpause.service',
     'horizon.dashboard.container.containers.resourceType',
   ];
 
@@ -42,6 +45,9 @@
     deleteContainerService,
     startContainerService,
     stopContainerService,
+    rebootContainerService,
+    pauseContainerService,
+    unpauseContainerService,
     resourceType)
   {
     var containersResourceType = registry.getResourceType(resourceType);
@@ -58,6 +64,27 @@
         service: stopContainerService,
         template: {
           text: gettext('Stop Container')
+        }
+      })
+      .append({
+        id: 'rebootContainerAction',
+        service: rebootContainerService,
+        template: {
+          text: gettext('Reboot Container')
+        }
+      })
+      .append({
+        id: 'pauseContainerAction',
+        service: pauseContainerService,
+        template: {
+          text: gettext('Pause Container')
+        }
+      })
+      .append({
+        id: 'unpauseContainerAction',
+        service: unpauseContainerService,
+        template: {
+          text: gettext('Unpause Container')
         }
       })
       .append({
