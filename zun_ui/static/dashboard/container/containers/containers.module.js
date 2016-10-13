@@ -162,7 +162,7 @@
   function config($provide, $windowProvider, $routeProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/container/containers/';
     $provide.constant('horizon.dashboard.container.containers.basePath', path);
-    $routeProvider.when('/project/container/containers/', {
+    $routeProvider.when('/project/container/containers', {
       templateUrl: path + 'panel.html'
     });
   }
