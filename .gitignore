@@ -2,6 +2,7 @@ AUTHORS
 ChangeLog
 build
 doc/source/sourcecode
+releasenotes/build
 zun_ui/test/.secret_key_store
 .venv
 .tox
