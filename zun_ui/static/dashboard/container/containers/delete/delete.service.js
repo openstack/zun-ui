@@ -51,7 +51,7 @@
       successEvent: events.DELETE_SUCCESS
     };
     var service = {
-      initScope: initScope,
+      initAction: initAction,
       allowed: allowed,
       perform: perform
     };
@@ -61,10 +61,7 @@
 
     //////////////
 
-    // include this function in your service
-    // if you plan to emit events to the parent controller
-    function initScope($scope) {
-      scope = $scope;
+    function initAction() {
     }
 
     function allowed() {
@@ -72,7 +69,8 @@
     }
 
     // delete selected resource objects
-    function perform(selected) {
+    function perform(selected, newScope) {
+      scope = newScope;
       var selected = angular.isArray(selected) ? selected : [selected];
       context.labels = labelize(selected.length);
       return $qExtensions.allSettled(selected.map(checkPermission)).then(afterCheck);

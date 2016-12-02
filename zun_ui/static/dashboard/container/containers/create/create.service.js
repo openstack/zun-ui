@@ -41,14 +41,13 @@
   function createService(
     $location, policy, actionResult, gettext, $qExtensions, wizardModalService, toast, model, events, resourceType, createWorkflow
   ) {
-
     var scope;
     var message = {
       success: gettext('Container %s was successfully created.')
     };
 
     var service = {
-      initScope: initScope,
+      initAction: initAction,
       perform: perform,
       allowed: allowed
     };
@@ -57,15 +56,13 @@
 
     //////////////
 
-    function initScope($scope) {
-      scope = $scope;
-      scope.workflow = createWorkflow;
-      scope.model = model;
-      scope.$on('$destroy', function() {
-      });
+    function initAction() {
     }
 
-    function perform(selected) {
+    function perform(selected, newScope) {
+      scope = newScope;
+      scope.workflow = createWorkflow;
+      scope.model = model;
       scope.model.init();
       // for creation according to selected item
       scope.selected = selected;
