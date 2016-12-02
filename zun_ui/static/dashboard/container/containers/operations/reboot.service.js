@@ -40,7 +40,7 @@
     };
 
     var service = {
-      initScope: initScope,
+      initAction: initAction,
       allowed: allowed,
       perform: perform
     };
@@ -51,7 +51,7 @@
 
     // include this function in your service
     // if you plan to emit events to the parent controller
-    function initScope() {
+    function initAction() {
     }
 
     function allowed() {
