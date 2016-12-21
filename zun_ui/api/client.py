@@ -22,7 +22,7 @@ LOG = logging.getLogger(__name__)
 
 CONTAINER_CREATE_ATTRS = ['name', 'image', 'command', 'cpu', 'memory',
                           'environment', 'workdir', 'ports', 'hostname',
-                          'labels']
+                          'labels', 'image_pull_policy']
 
 
 @memoized
@@ -109,3 +109,11 @@ def container_pause(request, id):
 
 def container_unpause(request, id):
     return zunclient(request).containers.unpause(id)
+
+
+def container_execute(request, id, command):
+    return zunclient(request).containers.execute(id, command)
+
+
+def container_kill(request, id, signal=None):
+    return zunclient(request).containers.kill(id, signal)

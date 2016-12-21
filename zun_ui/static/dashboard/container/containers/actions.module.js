@@ -35,6 +35,8 @@
     'horizon.dashboard.container.containers.reboot.service',
     'horizon.dashboard.container.containers.pause.service',
     'horizon.dashboard.container.containers.unpause.service',
+    'horizon.dashboard.container.containers.execute.service',
+    'horizon.dashboard.container.containers.kill.service',
     'horizon.dashboard.container.containers.resourceType',
   ];
 
@@ -48,9 +50,32 @@
     rebootContainerService,
     pauseContainerService,
     unpauseContainerService,
+    executeContainerService,
+    killContainerService,
     resourceType)
   {
     var containersResourceType = registry.getResourceType(resourceType);
+
+    containersResourceType.globalActions
+      .append({
+        id: 'createContainerAction',
+        service: createContainerService,
+        template: {
+          type: 'create',
+          text: gettext('Create Container')
+        }
+      });
+
+    containersResourceType.batchActions
+      .append({
+        id: 'batchDeleteContainerAction',
+        service: deleteContainerService,
+        template: {
+          type: 'delete-selected',
+          text: gettext('Delete Containers')
+        }
+      });
+
     containersResourceType.itemActions
       .append({
         id: 'startContainerAction',
@@ -88,29 +113,25 @@
         }
       })
       .append({
+        id: 'executeContainerAction',
+        service: executeContainerService,
+        template: {
+          text: gettext('Execute Command')
+        }
+      })
+      .append({
+        id: 'killContainerAction',
+        service: killContainerService,
+        template: {
+          text: gettext('Send Kill Signal')
+        }
+      })
+      .append({
         id: 'deleteContainerAction',
         service: deleteContainerService,
         template: {
           type: 'delete',
           text: gettext('Delete Container')
-        }
-      });
-
-    containersResourceType.batchActions
-      .append({
-        id: 'createContainerAction',
-        service: createContainerService,
-        template: {
-          type: 'create',
-          text: gettext('Create Container')
-        }
-      })
-      .append({
-        id: 'batchDeleteContainerAction',
-        service: deleteContainerService,
-        template: {
-          type: 'delete-selected',
-          text: gettext('Delete Containers')
         }
       });
   }

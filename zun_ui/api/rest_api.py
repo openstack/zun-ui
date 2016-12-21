@@ -63,6 +63,12 @@ class ContainerActions(generic.View):
             return client.container_pause(request, id)
         elif action == 'unpause':
             return client.container_unpause(request, id)
+        elif action == 'execute':
+            command = request.DATA.get("command")
+            return client.container_execute(request, id, command)
+        elif action == 'kill':
+            signal = request.DATA.get("signal")
+            return client.container_kill(request, id, signal)
 
 
 @urls.register
