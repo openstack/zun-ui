@@ -11,9 +11,8 @@
 #    under the License.
 
 from django.conf.urls import url
-from zun_ui.content.container.containers.views import IndexView
-
+from horizon.browsers import views
 
 urlpatterns = [
-    url('', IndexView.as_view(), name='index'),
+    url('', views.AngularIndexView.as_view(), name='index'),
 ]
