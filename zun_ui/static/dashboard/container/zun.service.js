@@ -36,7 +36,9 @@
       logsContainer: logsContainer,
       rebootContainer: rebootContainer,
       pauseContainer: pauseContainer,
-      unpauseContainer: unpauseContainer
+      unpauseContainer: unpauseContainer,
+      executeContainer: executeContainer,
+      killContainer: killContainer
     };
 
     return service;
@@ -140,17 +142,31 @@
     }
 
     function pauseContainer(id) {
-        return apiService.post('/api/zun/containers/' + id + '/pause')
-          .error(function() {
-            toastService.add('error', gettext('Unable to pause Container'));
-          });
-      }
+      return apiService.post('/api/zun/containers/' + id + '/pause')
+        .error(function() {
+          toastService.add('error', gettext('Unable to pause Container'));
+        });
+    }
 
     function unpauseContainer(id) {
-        return apiService.post('/api/zun/containers/' + id + '/unpause')
-          .error(function() {
-            toastService.add('error', gettext('Unable to unpause of Container'));
-          });
-      }
+      return apiService.post('/api/zun/containers/' + id + '/unpause')
+        .error(function() {
+          toastService.add('error', gettext('Unable to unpause of Container'));
+        });
+    }
+
+    function executeContainer(id, params) {
+      return apiService.post('/api/zun/containers/' + id + '/execute', params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to execute the command'));
+        });
+    }
+
+    function killContainer(id, params) {
+      return apiService.post('/api/zun/containers/' + id + '/kill', params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to send kill signal'));
+        });
+    }
   }
 }());
