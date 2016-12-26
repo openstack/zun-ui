@@ -11,8 +11,10 @@
 #    under the License.
 
 from django.conf.urls import url
+from django.utils.translation import ugettext_lazy as _
 from horizon.browsers import views
 
+title = _("Containers")
 urlpatterns = [
-    url('', views.AngularIndexView.as_view(), name='index'),
+    url('', views.AngularIndexView.as_view(title=title), name='index'),
 ]
