@@ -88,7 +88,10 @@ def container_show(request, id):
 
 
 def container_logs(request, id):
-    return zunclient(request).containers.logs(id)
+    args = {}
+    args["stdout"] = True
+    args["stderr"] = True
+    return zunclient(request).containers.logs(id, **args)
 
 
 def container_start(request, id):
