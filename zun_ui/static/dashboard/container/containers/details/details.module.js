@@ -29,18 +29,18 @@
   registerDetails.$inject = [
     'horizon.dashboard.container.containers.basePath',
     'horizon.dashboard.container.containers.resourceType',
-    'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.service',
     'horizon.framework.conf.resource-type-registry.service'
   ];
 
   function registerDetails(
     basePath,
     resourceType,
-    zun,
+    containerService,
     registry
   ) {
     registry.getResourceType(resourceType)
-      .setLoadFunction(loadFunction)
+      .setLoadFunction(containerService.getContainerPromise)
       .detailsViews
       .append({
         id: 'containerDetailsOverview',
@@ -52,10 +52,6 @@
         name: gettext('Logs'),
         template: basePath + 'details/logs.html'
       });
-
-    function loadFunction(identifier) {
-      return zun.getContainer(identifier);
-    }
   }
 
 })();

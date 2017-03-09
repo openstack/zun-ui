@@ -50,38 +50,25 @@
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.app.core.openstack-service-api.zun',
     'horizon.dashboard.container.containers.basePath',
-    'horizon.dashboard.container.containers.resourceType'
+    'horizon.dashboard.container.containers.resourceType',
+    'horizon.dashboard.container.containers.service'
   ];
 
-  function run(registry, zun, basePath, resourceType) {
+  function run(registry, zun, basePath, resourceType, containerService) {
     registry.getResourceType(resourceType)
     .setNames(gettext('Container'), gettext('Containers'))
     // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'details/drawer.html')
     // for table row items and detail summary view.
-    .setProperty('name', {
-      label: gettext('Name')
-    })
-    .setProperty('id', {
-      label: gettext('ID')
-    })
-    .setProperty('image', {
-      label: gettext('Image')
-    })
-    .setProperty('status', {
-      label: gettext('Status')
-    })
-    .setProperty('task_state', {
-      label: gettext('Task State')
-    })
-    .setListFunction(listFunction)
+    .setProperties(containerProperties())
+    .setListFunction(containerService.getContainersPromise)
     .tableColumns
     .append({
       id: 'name',
       priority: 1,
       sortDefault: true,
       filters: ['noName'],
-      urlFunction: urlFunction
+      urlFunction: containerService.getDetailsPath
     })
     .append({
       id: 'id',
@@ -126,23 +113,34 @@
       'name': 'task_state',
       'singleton': true
     });
+  }
 
-    function listFunction(params) {
-      return zun.getContainers(params).then(modifyResponse);
-
-      function modifyResponse(response) {
-        return {data: {items: response.data.items.map(addTrackBy)}};
-
-        function addTrackBy(item) {
-          item.trackBy = item.id;
-          return item;
-        }
-      }
-    }
-
-    function urlFunction(item) {
-      return 'project/ngdetails/OS::Zun::Container/' + item.id;
-    }
+  function containerProperties() {
+    return {
+      'addresses': { label: gettext('Addresses'), filters: ['noValue', 'json'] },
+      'command': { label: gettext('Command'), filters: ['noValue'] },
+      'cpu': { label: gettext('CPU'), filters: ['noValue'] },
+      'environment': { label: gettext('Environment'), filters: ['noValue', 'json'] },
+      'host': { label: gettext('Host'), filters: ['noValue'] },
+      'hostname': { label: gettext('Hostname'), filters: ['noValue'] },
+      'id': {label: gettext('ID'), filters: ['noValue'] },
+      'image': {label: gettext('Image'), filters: ['noValue'] },
+      'image_driver': {label: gettext('Image Driver'), filters: ['noValue'] },
+      'image_pull_policy': {label: gettext('Image Pull Policy'), filters: ['noValue'] },
+      'labels': {label: gettext('Labels'), filters: ['noValue', 'json'] },
+      'links': {label: gettext('Links'), filters: ['noValue', 'json'] },
+      'memory': {label: gettext('Memory'), filters: ['noValue'] },
+      'name': {label: gettext('Name'), filters: ['noName'] },
+      'ports': {label: gettext('Ports'), filters: ['noValue', 'json'] },
+      'restart_policy': {label: gettext('Restart Policy'), filters: ['noValue', 'json'] },
+      'status': {label: gettext('Status'), filters: ['noValue'] },
+      'status_detail': {label: gettext('Status Detail'), filters: ['noValue'] },
+      'status_reason': {label: gettext('Status Reason'), filters: ['noValue'] },
+      'stdin_open': {label: gettext('Stdin Open'), filters: ['yesno'] },
+      'task_state': {label: gettext('Task State'), filters: ['noValue'] },
+      'tty': {label: gettext('TTY'), filters: ['yesno'] },
+      'workdir': {label: gettext('Workdir'), filters: ['noValue'] }
+    };
   }
 
   config.$inject = [
