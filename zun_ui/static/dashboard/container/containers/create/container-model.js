@@ -43,9 +43,7 @@
         memory_size: null,
         memory_unit: "m",
         environment: null,
-        hostname: null,
         workdir: null,
-        ports: null,
         labels: null
       };
     }

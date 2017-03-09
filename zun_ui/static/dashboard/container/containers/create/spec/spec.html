@@ -8,24 +8,13 @@
                placeholder="{$ 'The number of virtual cpu for this container.'|translate $}">
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-8">
+    <div class="col-xs-12">
       <div class="form-group">
         <label class="control-label" for="container-memory-size" translate>Memory Size</label>
         <input name="container-memory-size" type="number" min="1"
                class="form-control" ng-model="model.newContainerSpec.memory_size"
-               placeholder="{$ 'The container memory size.'|translate $}"
-               ng-change="changeMemorySize()" id="container-memory-size">
-      </div>
-    </div>
-    <div class="col-xs-4">
-      <div class="form-group">
-        <label class="control-label" for="container-memory-unit" translate>Memory Unit</label>
-        <select name="container-memory-unit" id="container-memory-unit"
-                class="form-control" ng-options="mu.unit as mu.label for mu in ctrl.memory_units"
-                ng-model="model.newContainerSpec.memory_unit" ng-change="changeMemoryUnit()">
-        </select>
+               placeholder="{$ 'The container memory size in MiB.'|translate $}"
+               id="container-memory-size">
       </div>
     </div>
   </div>

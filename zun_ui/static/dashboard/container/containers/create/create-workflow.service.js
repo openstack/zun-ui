@@ -49,12 +49,6 @@
           formName: 'containerMiscForm'
         },
         {
-          title: gettext('Environments'),
-          templateUrl: basePath + 'containers/create/envs/envs.html',
-          helpUrl: basePath + 'containers/create/envs/envs.help.html',
-          formName: 'containerEnvsForm'
-        },
-        {
           title: gettext('Labels'),
           templateUrl: basePath + 'containers/create/labels/labels.html',
           helpUrl: basePath + 'containers/create/labels/labels.help.html',
