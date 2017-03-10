@@ -20,9 +20,7 @@ from zunclient.v1 import client as zun_client
 
 LOG = logging.getLogger(__name__)
 
-CONTAINER_CREATE_ATTRS = ['name', 'image', 'command', 'cpu', 'memory',
-                          'environment', 'workdir', 'ports', 'hostname',
-                          'labels', 'image_pull_policy']
+CONTAINER_CREATE_ATTRS = zun_client.containers.CREATION_ATTRIBUTES
 
 
 @memoized
@@ -65,8 +63,6 @@ def container_create(request, **kwargs):
                 kv = v.split("=", 1)
                 labels[kv[0]] = kv[1]
             args["labels"] = labels
-        elif key == "ports":
-            args["ports"] = [v for v in value.split(",")]
     return zunclient(request).containers.create(**args)
 
 

@@ -2,14 +2,6 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="form-group">
-        <label class="control-label" for="container-hostname" translate>Hostname</label>
-        <input name="container-hostname" type="text" class="form-control" id="container-hostname"
-               ng-model="model.newContainerSpec.hostname"
-               placeholder="{$ 'The hostname to use for the container'|translate $}">
-      </div>
-    </div>
-    <div class="col-xs-12">
-      <div class="form-group">
         <label class="control-label" for="container-workdir" translate>Working Directory</label>
         <input name="container-workdir" type="text" class="form-control" id="container-workdir"
                ng-model="model.newContainerSpec.workdir"
@@ -18,10 +10,10 @@
     </div>
     <div class="col-xs-12">
       <div class="form-group">
-        <label class="control-label" for="container-ports" translate>Ports</label>
-        <input name="container-ports" type="text" class="form-control" id="container-ports"
-               ng-model="model.newContainerSpec.ports"
-               placeholder="{$ 'PORT1,PORT2,PORT3...'|translate $}">
+        <label class="control-label" for="container-environment" translate>Environment Variables</label>
+        <input name="container-environment" type="text" class="form-control" id="container-environment"
+               ng-model="model.newContainerSpec.environment"
+               placeholder="{$ 'KEY1=VALUE1,KEY2=VALUE2...'|translate $}">
       </div>
     </div>
   </div>
