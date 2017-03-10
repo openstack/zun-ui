@@ -24,7 +24,9 @@
     'horizon.framework.util.i18n.gettext'
   ];
 
-  function ZunAPI(apiService, toastService, gettext) {
+  function ZunAPI(apiService, toast, gettext) {
+    var containersPath = '/api/zun/containers/';
+    var imagesPath = '/api/zun/images/';
     var service = {
       createContainer: createContainer,
       getContainer: getContainer,
@@ -38,7 +40,9 @@
       pauseContainer: pauseContainer,
       unpauseContainer: unpauseContainer,
       executeContainer: executeContainer,
-      killContainer: killContainer
+      killContainer: killContainer,
+      getImages: getImages,
+      pullImage: pullImage
     };
 
     return service;
@@ -48,38 +52,22 @@
     ///////////////
 
     function createContainer(params) {
-      return apiService.post('/api/zun/containers/', params)
-        .error(function() {
-          toastService.add('error', gettext('Unable to create Container'));
-        });
+      var msg = gettext('Unable to create Container.');
+      return apiService.post(containersPath, params).error(error(msg));
     }
 
     function getContainer(id) {
-      return apiService.get('/api/zun/containers/' + id)
-        .success(function(data, status, headers, config) {
-          convertMemorySize(data);
-          return data;
-        })
-        .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the Container.'));
-        });
+      var msg = gettext('Unable to retrieve the Container.');
+      return apiService.get(containersPath + id).error(error(msg));
     }
 
     function getContainers() {
-      return apiService.get('/api/zun/containers/')
-        .success(function(data, status, headers, config) {
-          angular.forEach(data.items, function(container, idx){
-            convertMemorySize(container);
-          });
-          return data;
-        })
-        .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the Containers.'));
-        });
+      var msg = gettext('Unable to retrieve the Containers.');
+      return apiService.get(containersPath).error(error(msg));
     }
 
     function deleteContainer(id, suppressError) {
-      var promise = apiService.delete('/api/zun/containers/', [id]);
+      var promise = apiService.delete(containersPath, [id]);
       return suppressError ? promise : promise.error(function() {
         var msg = gettext('Unable to delete the Container with id: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
@@ -88,85 +76,54 @@
 
     // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
     function deleteContainers(ids) {
-      return apiService.delete('/api/zun/containers/', ids)
-        .error(function() {
-          toastService.add('error', gettext('Unable to delete the Containers.'));
-        });
+      var msg = gettext('Unable to delete the Containers.');
+      return apiService.delete(containersPath, ids).error(error(msg));
     }
 
     function startContainer(id) {
-      return apiService.post('/api/zun/containers/' + id + '/start')
-        .error(function() {
-          toastService.add('error', gettext('Unable to start Container'));
-        });
+      var msg = gettext('Unable to start Container.');
+      return apiService.post(containersPath + id + '/start').error(error(msg));
     }
 
     function stopContainer(id) {
-        return apiService.post('/api/zun/containers/' + id + '/stop')
-          .error(function() {
-            toastService.add('error', gettext('Unable to stop Container'));
-          });
-      }
+      var msg = gettext('Unable to stop Container.');
+      return apiService.post(containersPath + id + '/stop').error(error(msg));
+    }
 
     function logsContainer(id) {
-        return apiService.get('/api/zun/containers/' + id + '/logs')
-          .error(function() {
-            toastService.add('error', gettext('Unable to get logs of Container'));
-          });
-      }
-
-    function convertMemorySize(container){
-      var memoryUnits = { "b": gettext("bytes"),
-                          "k": gettext("KB"),
-                          "m": gettext("MB"),
-                          "g": gettext("GB") };
-
-      container.memorysize = "";
-      container.memoryunit = "";
-      if(container.memory !== null && container.memory !== ""){
-        // separate number and unit.
-        var regex = /(\d+)([bkmg]?)/;
-        var match = regex.exec(container.memory);
-        container.memorysize = match[1];
-        if(match[2]){
-          container.memoryunit = memoryUnits[match[2]];
-        }
-      }
+      var msg = gettext('Unable to get logs of Container.');
+      return apiService.get(containersPath + id + '/logs').error(error(msg));
     }
 
     function rebootContainer(id) {
-      return apiService.post('/api/zun/containers/' + id + '/reboot')
-        .error(function() {
-          toastService.add('error', gettext('Unable to reboot Container'));
-        });
+      var msg = gettext('Unable to reboot Container.');
+      return apiService.post(containersPath + id + '/reboot').error(error(msg));
     }
 
     function pauseContainer(id) {
-      return apiService.post('/api/zun/containers/' + id + '/pause')
-        .error(function() {
-          toastService.add('error', gettext('Unable to pause Container'));
-        });
+      var msg = gettext('Unable to pause Container');
+      return apiService.post(containersPath + id + '/pause').error(error(msg));
     }
 
     function unpauseContainer(id) {
-      return apiService.post('/api/zun/containers/' + id + '/unpause')
-        .error(function() {
-          toastService.add('error', gettext('Unable to unpause of Container'));
-        });
+      var msg = gettext('Unable to unpause of Container');
+      return apiService.post(containersPath + id + '/unpause').error(error(msg));
     }
 
     function executeContainer(id, params) {
-      return apiService.post('/api/zun/containers/' + id + '/execute', params)
-        .error(function() {
-          toastService.add('error', gettext('Unable to execute the command'));
-        });
+      var msg = gettext('Unable to execute the command');
+      return apiService.post(containersPath + id + '/execute', params).error(error(msg));
     }
 
     function killContainer(id, params) {
-      return apiService.post('/api/zun/containers/' + id + '/kill', params)
-        .error(function() {
-          toastService.add('error', gettext('Unable to send kill signal'));
-        });
+      var msg = gettext('Unable to send kill signal');
+      return apiService.post(containersPath + id + '/kill', params).error(error(msg));
+    }
+
+    function error(message) {
+      return function() {
+        toast.add('error', message);
+      };
     }
   }
 }());
