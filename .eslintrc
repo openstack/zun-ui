@@ -32,14 +32,19 @@ rules:
     requireParamDescription: false
   }]
   brace-style: 1
-  no-extra-parens: 1
-  consistent-return: 1
-  callback-return: 1
-  guard-for-in: 1
   block-scoped-var: 1
-  semi-spacing: 1
-  no-redeclare: 1
+  callback-return: 1
+  consistent-return: 1
+  guard-for-in: 1
+  no-extra-parens: 1
   no-new: 1
+  no-redeclare: 1
+  no-undefined: 1
+  no-unneeded-ternary: 1
+  no-use-before-define: 1
+  quote-props: 0
+  semi-spacing: 1
+  space-in-parens: 1
 
   #############################################################################
   # Angular Plugin Customization

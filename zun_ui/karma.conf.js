@@ -55,7 +55,6 @@ module.exports = function (config) {
       toxPath + 'xstatic/pkg/angular/data/angular-cookies.js',
       toxPath + 'xstatic/pkg/angular_bootstrap/data/angular-bootstrap.js',
       toxPath + 'xstatic/pkg/angular_gettext/data/angular-gettext.js',
-      toxPath + 'xstatic/pkg/angular_fileupload/data/ng-file-upload-all.js',
       toxPath + 'xstatic/pkg/angular/data/angular-sanitize.js',
       toxPath + 'xstatic/pkg/d3/data/d3.js',
       toxPath + 'xstatic/pkg/rickshaw/data/rickshaw.js',
@@ -102,7 +101,6 @@ module.exports = function (config) {
        * among them should not be significant.
        */
       toxPath + 'openstack_dashboard/static/**/*.mock.js',
-      //'./static/**/*.mock.js',
 
       /**
        * Finally, list files for spec with `spec.js` extension. The order
@@ -120,7 +118,9 @@ module.exports = function (config) {
 
     frameworks: ['jasmine'],
 
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
+
+    browserNoActivityTimeout: 60000,
 
     phantomjsLauncher: {
       // Have phantomjs exit if a ResourceError is encountered
@@ -131,24 +131,25 @@ module.exports = function (config) {
     reporters: ['progress', 'coverage', 'threshold'],
 
     plugins: [
-      'karma-chrome-launcher',
+      'karma-phantomjs-launcher',
       'karma-jasmine',
       'karma-ng-html2js-preprocessor',
       'karma-coverage',
       'karma-threshold-reporter'
     ],
 
+    // Places coverage report in HTML format in the subdirectory below.
     coverageReporter: {
       type: 'html',
-      dir: '../cover/zun_ui'
+      dir: '../cover/karma/'
     },
 
     // Coverage threshold values.
     thresholdReporter: {
-      statements: 45,
-      branches: 0,
-      functions: 15,
-      lines: 45
+      statements: 10, // target 100
+      branches: 0, // target 100
+      functions: 10, // target 100
+      lines: 10 // target 100
     }
   });
 };
