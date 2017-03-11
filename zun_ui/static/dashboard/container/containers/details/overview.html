@@ -3,78 +3,38 @@
     <div class="col-md-6 detail">
       <h3 translate>Info</h3>
       <hr>
-      <dl class="dl-horizontal">
-        <dt translate>Name</dt>
-        <dd>{$ ctrl.container.name|noName $}</dd>
-        <dt translate>Status</dt>
-        <dd>{$ ctrl.container.status $}</dd>
-        <dt translate>Image</dt>
-        <dd>{$ ctrl.container.image $}</dd>
-        <dt translate>Command</dt>
-        <dd>{$ ctrl.container.command $}</dd>
-        <dt translate>Task State</dt>
-        <dd>{$ ctrl.container.task_state $}</dd>
-      </dl>
+      <hz-resource-property-list
+        resource-type-name="OS::Zun::Container"
+        cls="dl-horizontal"
+        item="ctrl.container"
+        property-groups="[['id', 'name', 'status', 'status_detail', 'status_reason',
+                           'task_state', 'command']]">
+      </hz-resource-property-list>
     </div>
     <div class="col-md-6 detail">
       <h3 translate>Spec</h3>
       <hr>
-      <dl class="dl-horizontal">
-        <dt translate>CPU</dt>
-        <dd>{$ ctrl.container.cpu $}</dd>
-        <dt translate>Memory</dt>
-        <dd>{$ ctrl.container.memorysize $} {$ ctrl.container.memoryunit $}</dd>
-      </dl>
+      <hz-resource-property-list
+        resource-type-name="OS::Zun::Container"
+        cls="dl-horizontal"
+        item="ctrl.container"
+        property-groups="[['image', 'image_driver', 'image_pull_policy',
+                           'cpu', 'memory', 'restart_policy',
+                           'hostname', 'addresses', 'ports']]">
+      </hz-resource-property-list>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 detail">
       <h3 translate>Miscellaneous</h3>
       <hr>
-      <dl class="dl-horizontal">
-        <dt translate>Hostname</dt>
-        <dd>{$ ctrl.container.hostname $}</dd>
-        <dt translate>Working Directory</dt>
-        <dd>{$ ctrl.container.workdir $}</dd>
-        <dt translate>Ports</dt>
-        <div ng-repeat="value in ctrl.container.ports">
-          <dd>{$ value $}</dd>
-        </div>
-      </dl>
-    </div>
-    <div class="col-md-6 detail">
-      <h3 translate>Environment Variables</h3>
-      <hr>
-      <dl class="dl-horizontal">
-        <div ng-repeat="(key, value) in ctrl.container.environment">
-          <dt>{$ key $}</dt>
-          <dd>{$ value $}</dd>
-        </div>
-      </dl>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6 detail">
-      <h3 translate>Labels</h3>
-      <hr>
-      <dl class="dl-horizontal">
-        <div ng-repeat="(key, value) in ctrl.container.labels">
-          <dt>{$ key $}</dt>
-          <dd>{$ value $}</dd>
-        </div>
-      </dl>
-    </div>
-    <div class="col-md-6 detail">
-      <h3 translate>Record Properties</h3>
-      <hr>
-      <dl class="dl-horizontal">
-        <dt translate>Created</dt>
-        <dd>{$ ctrl.container.created_at | date:'short' $}</dd>
-        <dt translate>Updated</dt>
-        <dd>{$ ctrl.container.updated_at | date:'short' $}</dd>
-        <dt translate>ID</dt>
-        <dd>{$ ctrl.container.id $}</dd>
-      </dl>
+      <hz-resource-property-list
+        resource-type-name="OS::Zun::Container"
+        cls="dl-horizontal"
+        item="ctrl.container"
+        property-groups="[['host', 'workdir', 'environment', 'stdin_open', 'tty',
+                           'labels','links']]">
+      </hz-resource-property-list>
     </div>
   </div>
 </div>

@@ -19,21 +19,13 @@
     .controller('horizon.dashboard.container.containers.OverviewController', controller);
 
   controller.$inject = [
-    '$scope',
-    'horizon.dashboard.container.containers.resourceType',
-    'horizon.dashboard.container.containers.events',
-    'horizon.framework.conf.resource-type-registry.service'
+    '$scope'
   ];
 
   function controller(
-    $scope,
-    resourceType,
-    events,
-    registry
+    $scope
   ) {
     var ctrl = this;
-    ctrl.container = {};
-
     $scope.context.loadPromise.then(onGetContainer);
 
     function onGetContainer(container) {
