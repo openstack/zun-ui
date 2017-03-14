@@ -40,9 +40,7 @@
       pauseContainer: pauseContainer,
       unpauseContainer: unpauseContainer,
       executeContainer: executeContainer,
-      killContainer: killContainer,
-      getImages: getImages,
-      pullImage: pullImage
+      killContainer: killContainer
     };
 
     return service;
