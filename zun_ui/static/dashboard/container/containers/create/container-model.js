@@ -40,8 +40,6 @@
         command: null,
         cpu: null,
         memory: null,
-        memory_size: null,
-        memory_unit: "m",
         environment: null,
         workdir: null,
         labels: null
@@ -65,9 +63,8 @@
       // Initially clean fields that don't have any value.
       // Not only "null", blank too.
       for (var key in finalSpec) {
-        if (finalSpec.hasOwnProperty(key) && finalSpec[key] === null
-            || finalSpec[key] === ""
-            || key === "memory_size" || key === "memory_unit") {
+        if (finalSpec.hasOwnProperty(key) && finalSpec[key] === null ||
+            finalSpec[key] === "") {
           delete finalSpec[key];
         }
       }

@@ -15,6 +15,12 @@
 (function() {
   'use strict';
 
+  /**
+   * @ngdoc factory
+   * @name horizon.dashboard.container.containers.kill.service
+   * @description
+   * Service to send kill signals to the container
+   */
   angular
     .module('horizon.dashboard.container.containers')
     .factory(
@@ -30,12 +36,6 @@
     'horizon.framework.widgets.toast.service'
   ];
 
-  /**
-   * @ngdoc factory
-   * @name horizon.dashboard.container.containers.kill.service
-   * @description
-   * Service to send kill signals to the container
-   */
   function killContainerService(
     zun, basePath, gettext, $qExtensions, modal, toast
   ) {
@@ -95,8 +95,8 @@
     }
 
     function allowed() {
-        return $qExtensions.booleanAsPromise(true);
-      }
+      return $qExtensions.booleanAsPromise(true);
+    }
 
     function perform(selected) {
       model = {
@@ -120,7 +120,7 @@
       var name = context.model.name;
       delete context.model.id;
       delete context.model.name;
-      return zun.killContainer(id, context.model).then(function(response) {
+      return zun.killContainer(id, context.model).then(function() {
         toast.add('success', interpolate(message.success, [name]));
       });
     }

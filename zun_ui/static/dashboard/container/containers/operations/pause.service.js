@@ -15,6 +15,12 @@
 (function() {
   'use strict';
 
+  /**
+   * @ngDoc factory
+   * @name horizon.dashboard.container.containers.pause.service
+   * @Description
+   * pause container.
+   */
   angular
     .module('horizon.dashboard.container.containers')
     .factory('horizon.dashboard.container.containers.pause.service', pauseService);
@@ -22,17 +28,10 @@
   pauseService.$inject = [
     'horizon.framework.util.q.extensions',
     'horizon.framework.widgets.toast.service',
-    'horizon.app.core.openstack-service-api.zun',
-    'horizon.framework.widgets.modal-wait-spinner.service'
+    'horizon.app.core.openstack-service-api.zun'
   ];
 
-  /**
-   * @ngDoc factory
-   * @name horizon.dashboard.container.containers.pause.service
-   * @Description
-   * pause container.
-   */
-  function pauseService($qExtensions, toast, zun, modalWaitSpinnerService) {
+  function pauseService($qExtensions, toast, zun) {
 
     var message = {
       success: gettext('Container %s was successfully paused.')
@@ -61,9 +60,9 @@
       // pause selected container
       return zun.pauseContainer(selected.id).then(success);
 
-      function success(response) {
+      function success() {
         toast.add('success', interpolate(message.success, [selected.name]));
-      };
+      }
     }
   }
 })();

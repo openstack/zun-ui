@@ -15,6 +15,12 @@
 (function() {
   'use strict';
 
+  /**
+   * @ngDoc factory
+   * @name horizon.dashboard.container.containers.start.service
+   * @Description
+   * Start container.
+   */
   angular
     .module('horizon.dashboard.container.containers')
     .factory('horizon.dashboard.container.containers.start.service', startService);
@@ -25,12 +31,6 @@
     'horizon.app.core.openstack-service-api.zun'
   ];
 
-  /**
-   * @ngDoc factory
-   * @name horizon.dashboard.container.containers.start.service
-   * @Description
-   * Start container.
-   */
   function startService(
     $qExtensions, toast, zun
   ) {
@@ -60,7 +60,7 @@
 
     function perform(selected) {
       // start selected container
-      return zun.startContainer(selected.id).success(function(response) {
+      return zun.startContainer(selected.id).success(function() {
         toast.add('success', interpolate(message.success, [selected.name]));
       });
     }

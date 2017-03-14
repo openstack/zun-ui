@@ -15,6 +15,12 @@
 (function() {
   'use strict';
 
+  /**
+   * @ngdoc factory
+   * @name horizon.dashboard.container.containers.execute.service
+   * @description
+   * Service for the command execution in the container
+   */
   angular
     .module('horizon.dashboard.container.containers')
     .factory(
@@ -29,12 +35,6 @@
     'horizon.framework.widgets.toast.service'
   ];
 
-  /**
-   * @ngdoc factory
-   * @name horizon.dashboard.container.containers.execute.service
-   * @description
-   * Service for the command execution in the container
-   */
   function executeContainerService(
     zun, gettext, $qExtensions, modal, toast
   ) {
@@ -110,7 +110,7 @@
       var name = context.model.name;
       delete context.model.id;
       delete context.model.name;
-      return zun.executeContainer(id, context.model).then(function(response) {
+      return zun.executeContainer(id, context.model).then(function() {
         toast.add('success', interpolate(message.success, [name]));
       });
     }

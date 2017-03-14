@@ -26,7 +26,6 @@
 
   function ZunAPI(apiService, toast, gettext) {
     var containersPath = '/api/zun/containers/';
-    var imagesPath = '/api/zun/images/';
     var service = {
       createContainer: createContainer,
       getContainer: getContainer,

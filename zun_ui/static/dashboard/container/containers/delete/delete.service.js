@@ -15,6 +15,14 @@
 (function() {
   'use strict';
 
+  /**
+   * @ngDoc factory
+   * @name horizon.dashboard.container.containers.delete.service
+   * @Description
+   * Brings up the delete containers confirmation modal dialog.
+   * On submit, delete selected resources.
+   * On cancel, do nothing.
+   */
   angular
     .module('horizon.dashboard.container.containers')
     .factory('horizon.dashboard.container.containers.delete.service', deleteService);
@@ -33,16 +41,9 @@
     'horizon.dashboard.container.containers.events'
   ];
 
-  /**
-   * @ngDoc factory
-   * @name horizon.dashboard.container.containers.delete.service
-   * @Description
-   * Brings up the delete containers confirmation modal dialog.
-   * On submit, delete selected resources.
-   * On cancel, do nothing.
-   */
   function deleteService(
-    $location, $q, zun, policy, actionResult, gettext, $qExtensions, deleteModal, toast, resourceType, events
+    $location, $q, zun, policy, actionResult, gettext, $qExtensions, deleteModal,
+    toast, resourceType, events
   ) {
     var scope;
     var context = {
@@ -71,12 +72,12 @@
     // delete selected resource objects
     function perform(selected, newScope) {
       scope = newScope;
-      var selected = angular.isArray(selected) ? selected : [selected];
+      selected = angular.isArray(selected) ? selected : [selected];
       context.labels = labelize(selected.length);
       return $qExtensions.allSettled(selected.map(checkPermission)).then(afterCheck);
     }
 
-    function labelize(count){
+    function labelize(count) {
       return {
         title: ngettext('Confirm Delete Container',
                         'Confirm Delete Containers', count),
@@ -99,7 +100,7 @@
     }
 
     // for batch delete
-    function afterCheck(result){
+    function afterCheck(result) {
       var outcome = $q.reject();  // Reject the promise by default
       if (result.fail.length > 0) {
         toast.add('error', getMessage(notAllowedMessage, result.fail));
@@ -121,9 +122,9 @@
       deleteModalResult.fail.forEach(function markFailed(item) {
         result.failed(resourceType, getEntity(item).id);
       });
-      if(result.result.failed.length == 0 && result.result.deleted.length > 0){
+      if (result.result.failed.length === 0 && result.result.deleted.length > 0) {
         $location.path('/project/container/containers');
-      }else{
+      } else {
         return result.result;
       }
     }
@@ -142,7 +143,7 @@
     }
 
     // call delete REST API
-    function deleteEntity(id){
+    function deleteEntity(id) {
       return zun.deleteContainer(id, true);
     }
   }

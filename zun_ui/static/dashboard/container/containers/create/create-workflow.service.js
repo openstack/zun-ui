@@ -28,7 +28,6 @@
   function containerWorkflow(basePath, dashboardWorkflow, gettext) {
     return dashboardWorkflow({
       title: gettext('Create Container'),
-
       steps: [
         {
           title: gettext('Info'),
@@ -53,13 +52,11 @@
           templateUrl: basePath + 'containers/create/labels/labels.html',
           helpUrl: basePath + 'containers/create/labels/labels.help.html',
           formName: 'containerLabelsForm'
-        },
+        }
       ],
-
       btnText: {
         finish: gettext('Create')
       },
-
       btnIcon: {
         finish: 'fa fa-check'
       }

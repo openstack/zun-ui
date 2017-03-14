@@ -15,6 +15,12 @@
 (function() {
   'use strict';
 
+  /**
+   * @ngDoc factory
+   * @name horizon.dashboard.container.containers.reboot.service
+   * @Description
+   * reboot container.
+   */
   angular
     .module('horizon.dashboard.container.containers')
     .factory('horizon.dashboard.container.containers.reboot.service', rebootService);
@@ -25,12 +31,6 @@
     'horizon.app.core.openstack-service-api.zun'
   ];
 
-  /**
-   * @ngDoc factory
-   * @name horizon.dashboard.container.containers.reboot.service
-   * @Description
-   * reboot container.
-   */
   function rebootService(
     $qExtensions, toast, zun
   ) {
@@ -60,7 +60,7 @@
 
     function perform(selected) {
       // reboot selected container
-      return zun.rebootContainer(selected.id).success(function(response) {
+      return zun.rebootContainer(selected.id).success(function() {
         toast.add('success', interpolate(message.success, [selected.name]));
       });
     }

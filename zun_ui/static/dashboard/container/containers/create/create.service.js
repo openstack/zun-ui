@@ -39,7 +39,8 @@
   ];
 
   function createService(
-    $location, policy, actionResult, gettext, $qExtensions, wizardModalService, toast, model, events, resourceType, createWorkflow
+    $location, policy, actionResult, gettext, $qExtensions, wizardModalService,
+    toast, model, events, resourceType, createWorkflow
   ) {
     var scope;
     var message = {
@@ -78,7 +79,7 @@
       //return policy.ifAllowed({ rules: [['container', 'add_container']] });
     }
 
-    function submit(){
+    function submit() {
       return model.createContainer().then(success);
     }
 
@@ -87,9 +88,9 @@
       toast.add('success', interpolate(message.success, [response.data.id]));
       var result = actionResult.getActionResult()
                    .created(resourceType, response.data.id);
-      if(result.result.failed.length == 0 && result.result.created.length > 0){
+      if (result.result.failed.length === 0 && result.result.created.length > 0) {
         $location.path('/project/container/containers');
-      }else{
+      } else {
         return result.result;
       }
     }

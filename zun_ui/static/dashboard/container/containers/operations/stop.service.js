@@ -15,6 +15,12 @@
 (function() {
   'use strict';
 
+  /**
+   * @ngDoc factory
+   * @name horizon.dashboard.container.containers.stop.service
+   * @Description
+   * Stop container.
+   */
   angular
     .module('horizon.dashboard.container.containers')
     .factory('horizon.dashboard.container.containers.stop.service', stopService);
@@ -25,12 +31,6 @@
     'horizon.app.core.openstack-service-api.zun'
   ];
 
-  /**
-   * @ngDoc factory
-   * @name horizon.dashboard.container.containers.stop.service
-   * @Description
-   * Stop container.
-   */
   function stopService(
     $qExtensions, toast, zun
   ) {
@@ -60,7 +60,7 @@
 
     function perform(selected) {
       // start selected container
-      return zun.stopContainer(selected.id).success(function(response) {
+      return zun.stopContainer(selected.id).success(function() {
         toast.add('success', interpolate(message.success, [selected.name]));
       });
     }

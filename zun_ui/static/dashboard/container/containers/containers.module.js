@@ -38,6 +38,7 @@
    * @ngdoc constant
    * @name horizon.dashboard.container.containers.events
    * @description A list of events used by Container
+   * @returns {Object} Event constants
    */
   function events() {
     return {

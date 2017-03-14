@@ -20,18 +20,11 @@
 
   controller.$inject = [
     '$scope',
-    'horizon.app.core.openstack-service-api.zun',
-    'horizon.dashboard.container.containers.resourceType',
-    'horizon.dashboard.container.containers.events',
-    'horizon.framework.conf.resource-type-registry.service'
+    'horizon.app.core.openstack-service-api.zun'
   ];
 
   function controller(
-    $scope,
-    zun,
-    resourceType,
-    events,
-    registry
+    $scope, zun
   ) {
     var ctrl = this;
     ctrl.container = {};

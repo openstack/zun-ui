@@ -27,11 +27,8 @@
     .controller('createContainerSpecController', createContainerSpecController);
 
   createContainerSpecController.$inject = [
-    '$scope',
-    'horizon.framework.util.i18n.gettext'
   ];
 
-  function createContainerSpecController($scope, gettext) {
-    var ctrl = this;
+  function createContainerSpecController() {
   }
 })();

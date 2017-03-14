@@ -22,8 +22,12 @@
    * @description
    * Provides all of the actions for containers.
    */
-  angular.module('horizon.dashboard.container.containers.actions', ['horizon.framework', 'horizon.dashboard.container'])
-   .run(registerContainerActions);
+  angular.module('horizon.dashboard.container.containers.actions',
+    [
+      'horizon.framework',
+      'horizon.dashboard.container'
+    ])
+    .run(registerContainerActions);
 
   registerContainerActions.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
@@ -38,7 +42,7 @@
     'horizon.dashboard.container.containers.unpause.service',
     'horizon.dashboard.container.containers.execute.service',
     'horizon.dashboard.container.containers.kill.service',
-    'horizon.dashboard.container.containers.resourceType',
+    'horizon.dashboard.container.containers.resourceType'
   ];
 
   function registerContainerActions(
@@ -54,8 +58,8 @@
     unpauseContainerService,
     executeContainerService,
     killContainerService,
-    resourceType)
-  {
+    resourceType
+  ) {
     var containersResourceType = registry.getResourceType(resourceType);
 
     containersResourceType.globalActions
