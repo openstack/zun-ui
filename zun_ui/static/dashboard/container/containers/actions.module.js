@@ -30,6 +30,7 @@
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container.containers.create.service',
     'horizon.dashboard.container.containers.delete.service',
+    'horizon.dashboard.container.containers.delete-force.service',
     'horizon.dashboard.container.containers.start.service',
     'horizon.dashboard.container.containers.stop.service',
     'horizon.dashboard.container.containers.reboot.service',
@@ -45,6 +46,7 @@
     gettext,
     createContainerService,
     deleteContainerService,
+    deleteContainerForceService,
     startContainerService,
     stopContainerService,
     rebootContainerService,
@@ -132,6 +134,14 @@
         template: {
           type: 'delete',
           text: gettext('Delete Container')
+        }
+      })
+      .append({
+        id: 'deleteContainerForceAction',
+        service: deleteContainerForceService,
+        template: {
+          type: 'delete',
+          text: gettext('Delete Container Forcely')
         }
       });
   }

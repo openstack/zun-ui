@@ -33,6 +33,7 @@
       getContainers: getContainers,
       deleteContainer: deleteContainer,
       deleteContainers: deleteContainers,
+      deleteContainerForce: deleteContainerForce,
       startContainer: startContainer,
       stopContainer: stopContainer,
       logsContainer: logsContainer,
@@ -76,6 +77,14 @@
     function deleteContainers(ids) {
       var msg = gettext('Unable to delete the Containers.');
       return apiService.delete(containersPath, ids).error(error(msg));
+    }
+
+    function deleteContainerForce(id, suppressError) {
+      var promise = apiService.delete(containersPath + id, [id]);
+      return suppressError ? promise : promise.error(function() {
+        var msg = gettext('Unable to delete forcely the Container with id: %(id)s');
+        toastService.add('error', interpolate(msg, { id: id }, true));
+      });
     }
 
     function startContainer(id) {

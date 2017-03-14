@@ -38,6 +38,14 @@ class Container(generic.View):
         """Get a specific container"""
         return change_to_id(client.container_show(request, id).to_dict())
 
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request, id):
+        """Delete single Container forcely by id.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        return client.container_delete(request, id, force=True)
+
 
 @urls.register
 class ContainerActions(generic.View):
