@@ -77,6 +77,8 @@ class ContainerActions(generic.View):
         elif action == 'kill':
             signal = request.DATA.get("signal")
             return client.container_kill(request, id, signal)
+        elif action == 'attach':
+            return client.container_attach(request, id)
 
 
 @urls.register

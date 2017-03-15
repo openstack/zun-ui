@@ -130,3 +130,7 @@ def container_execute(request, id, command):
 
 def container_kill(request, id, signal=None):
     return zunclient(request).containers.kill(id, signal)
+
+
+def container_attach(request, id):
+    return zunclient(request).containers.attach(id)

@@ -13,8 +13,11 @@
 from django.conf.urls import url
 from django.utils.translation import ugettext_lazy as _
 from horizon.browsers import views
+from zun_ui.content.container.containers import views as zun_views
 
 title = _("Containers")
 urlpatterns = [
+    url(r'^(?P<container_id>[^/]+)/console',
+        zun_views.SerialConsoleView.as_view(), name='console'),
     url('', views.AngularIndexView.as_view(title=title), name='index'),
 ]

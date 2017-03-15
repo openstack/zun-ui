@@ -112,17 +112,17 @@
     }
 
     function unpauseContainer(id) {
-      var msg = gettext('Unable to unpause of Container');
+      var msg = gettext('Unable to unpause of Container.');
       return apiService.post(containersPath + id + '/unpause').error(error(msg));
     }
 
     function executeContainer(id, params) {
-      var msg = gettext('Unable to execute the command');
+      var msg = gettext('Unable to execute the command.');
       return apiService.post(containersPath + id + '/execute', params).error(error(msg));
     }
 
     function killContainer(id, params) {
-      var msg = gettext('Unable to send kill signal');
+      var msg = gettext('Unable to send kill signal.');
       return apiService.post(containersPath + id + '/kill', params).error(error(msg));
     }
 

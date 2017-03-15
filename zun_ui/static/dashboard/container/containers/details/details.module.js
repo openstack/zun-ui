@@ -51,6 +51,11 @@
         id: 'containerDetailsLogs',
         name: gettext('Logs'),
         template: basePath + 'details/logs.html'
+      })
+      .append({
+        id: 'containerDetailsConsole',
+        name: gettext('Console'),
+        template: basePath + 'details/console.html'
       });
   }
 

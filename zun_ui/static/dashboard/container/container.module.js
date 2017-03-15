@@ -32,6 +32,8 @@
 
   function config($provide, $windowProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/container/';
+    var root = $windowProvider.$get().WEBROOT + 'project/container/';
     $provide.constant('horizon.dashboard.container.basePath', path);
+    $provide.constant('horizon.dashboard.container.webRoot', root);
   }
 })();
