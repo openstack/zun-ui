@@ -19,6 +19,7 @@
     .factory('horizon.dashboard.container.containers.service', containersService);
 
   containersService.$inject = [
+    'horizon.app.core.detailRoute',
     'horizon.app.core.openstack-service-api.zun'
   ];
 
@@ -30,7 +31,7 @@
    * This service provides functions that are used through
    * the containers features.
    */
-  function containersService(zun) {
+  function containersService(detailRoute, zun) {
     return {
       getDetailsPath: getDetailsPath,
       getContainerPromise: getContainerPromise,
@@ -45,7 +46,7 @@
      * Returns the relative path to the details view.
      */
     function getDetailsPath(item) {
-      return 'project/ngdetails/OS::Zun::Container/' + item.id;
+      return detailRoute + 'OS::Zun::Container/' + item.id;
     }
 
     /*
