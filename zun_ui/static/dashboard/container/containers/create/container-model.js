@@ -43,7 +43,8 @@
         environment: null,
         workdir: null,
         labels: null,
-        run: true
+        run: true,
+        interactive: true
       };
     }
 

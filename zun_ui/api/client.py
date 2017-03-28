@@ -48,6 +48,11 @@ def container_create(request, **kwargs):
         if key == "run":
             run = value
             continue
+        elif key == "interactive":
+            args["tty"] = value
+            args["stdin_open"] = value
+            continue
+
         if key in CONTAINER_CREATE_ATTRS:
             args[str(key)] = str(value)
         else:
