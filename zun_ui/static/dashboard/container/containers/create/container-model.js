@@ -42,7 +42,8 @@
         memory: null,
         environment: null,
         workdir: null,
-        labels: null
+        labels: null,
+        run: true
       };
     }
 

@@ -43,7 +43,11 @@ def zunclient(request):
 
 def container_create(request, **kwargs):
     args = {}
+    run = False
     for (key, value) in kwargs.items():
+        if key == "run":
+            run = value
+            continue
         if key in CONTAINER_CREATE_ATTRS:
             args[str(key)] = str(value)
         else:
@@ -63,7 +67,12 @@ def container_create(request, **kwargs):
                 kv = v.split("=", 1)
                 labels[kv[0]] = kv[1]
             args["labels"] = labels
-    return zunclient(request).containers.create(**args)
+    response = None
+    if run:
+        response = zunclient(request).containers.run(**args)
+    else:
+        response = zunclient(request).containers.create(**args)
+    return response
 
 
 def container_delete(request, id, force=False):

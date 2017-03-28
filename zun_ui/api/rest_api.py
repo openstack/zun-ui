@@ -108,6 +108,7 @@ class Containers(generic.View):
         """Create a new Container.
 
         Returns the new Container object on success.
+        If 'run' attribute is set true, do 'run' instead 'create'
         """
         new_container = client.container_create(request, **request.DATA)
         return rest_utils.CreatedResponse(

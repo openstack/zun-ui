@@ -28,5 +28,14 @@
                placeholder="{$ 'A command that will be sent to the container.'|translate $}">
       </div>
     </div>
+    <div class="col-xs-12">
+      <div class="form-group">
+        <div class="themable-checkbox">
+          <input name="container-run" type="checkbox" class="form-control" id="container-run"
+                 ng-model="model.newContainerSpec.run">
+          <label class="control-label" for="container-run" translate>Start container after creation</label>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
