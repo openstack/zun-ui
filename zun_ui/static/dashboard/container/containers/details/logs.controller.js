@@ -34,7 +34,9 @@
 
     function onGetContainer(container) {
       ctrl.container = container.data;
-      zun.logsContainer(ctrl.container.id).then(onGetLogs);
+      if (ctrl.container.status !== "Creating") {
+        zun.logsContainer(ctrl.container.id).then(onGetLogs);
+      }
     }
 
     function onGetLogs(logs) {
