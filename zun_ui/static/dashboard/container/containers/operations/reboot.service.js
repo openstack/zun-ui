@@ -26,13 +26,15 @@
     .factory('horizon.dashboard.container.containers.reboot.service', rebootService);
 
   rebootService.$inject = [
+    'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.resourceType',
+    'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.q.extensions',
-    'horizon.framework.widgets.toast.service',
-    'horizon.app.core.openstack-service-api.zun'
+    'horizon.framework.widgets.toast.service'
   ];
 
   function rebootService(
-    $qExtensions, toast, zun
+    zun, resourceType, actionResult, $qExtensions, toast
   ) {
 
     var message = {
@@ -60,8 +62,10 @@
 
     function perform(selected) {
       // reboot selected container
-      return zun.rebootContainer(selected.id).success(function() {
+      return zun.rebootContainer(selected.id).then(function() {
         toast.add('success', interpolate(message.success, [selected.name]));
+        var result = actionResult.getActionResult().updated(resourceType, selected.id);
+        return result.result;
       });
     }
   }

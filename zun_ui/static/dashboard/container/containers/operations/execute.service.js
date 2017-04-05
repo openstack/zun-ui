@@ -29,6 +29,8 @@
 
   executeContainerService.$inject = [
     'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.resourceType',
+    'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
     'horizon.framework.widgets.form.ModalFormService',
@@ -36,7 +38,7 @@
   ];
 
   function executeContainerService(
-    zun, gettext, $qExtensions, modal, toast
+    zun, resourceType, actionResult, gettext, $qExtensions, modal, toast
   ) {
     // schema
     var schema = {
@@ -112,6 +114,8 @@
       delete context.model.name;
       return zun.executeContainer(id, context.model).then(function() {
         toast.add('success', interpolate(message.success, [name]));
+        var result = actionResult.getActionResult().updated(resourceType, id);
+        return result.result;
       });
     }
   }

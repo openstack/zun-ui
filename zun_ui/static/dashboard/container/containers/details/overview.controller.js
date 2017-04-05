@@ -26,6 +26,7 @@
     $scope
   ) {
     var ctrl = this;
+
     $scope.context.loadPromise.then(onGetContainer);
 
     function onGetContainer(container) {

@@ -42,6 +42,7 @@
     'horizon.dashboard.container.containers.unpause.service',
     'horizon.dashboard.container.containers.execute.service',
     'horizon.dashboard.container.containers.kill.service',
+    'horizon.dashboard.container.containers.refresh.service',
     'horizon.dashboard.container.containers.resourceType'
   ];
 
@@ -58,6 +59,7 @@
     unpauseContainerService,
     executeContainerService,
     killContainerService,
+    refreshContainerService,
     resourceType
   ) {
     var containersResourceType = registry.getResourceType(resourceType);
@@ -83,6 +85,13 @@
       });
 
     containersResourceType.itemActions
+      .append({
+        id: 'refreshContainerAction',
+        service: refreshContainerService,
+        template: {
+          text: gettext('Refresh')
+        }
+      })
       .append({
         id: 'startContainerAction',
         service: startContainerService,

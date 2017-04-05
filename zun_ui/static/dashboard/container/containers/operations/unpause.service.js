@@ -26,13 +26,15 @@
     .factory('horizon.dashboard.container.containers.unpause.service', unpauseService);
 
   unpauseService.$inject = [
+    'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.resourceType',
+    'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.q.extensions',
-    'horizon.framework.widgets.toast.service',
-    'horizon.app.core.openstack-service-api.zun'
+    'horizon.framework.widgets.toast.service'
   ];
 
   function unpauseService(
-    $qExtensions, toast, zun
+    zun, resourceType, actionResult, $qExtensions, toast
   ) {
 
     var message = {
@@ -60,9 +62,13 @@
 
     function perform(selected) {
       // unpause selected container
-      return zun.unpauseContainer(selected.id).success(function() {
+      return zun.unpauseContainer(selected.id).then(success);
+
+      function success() {
         toast.add('success', interpolate(message.success, [selected.name]));
-      });
+        var result = actionResult.getActionResult().updated(resourceType, selected.id);
+        return result.result;
+      }
     }
   }
 })();

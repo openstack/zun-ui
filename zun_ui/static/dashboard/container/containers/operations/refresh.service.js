@@ -17,29 +17,24 @@
 
   /**
    * @ngDoc factory
-   * @name horizon.dashboard.container.containers.start.service
+   * @name horizon.dashboard.container.containers.refresh.service
    * @Description
-   * Start container.
+   * refresh container.
    */
   angular
     .module('horizon.dashboard.container.containers')
-    .factory('horizon.dashboard.container.containers.start.service', startService);
+    .factory('horizon.dashboard.container.containers.refresh.service', refreshService);
 
-  startService.$inject = [
+  refreshService.$inject = [
     'horizon.app.core.openstack-service-api.zun',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.framework.util.actions.action-result.service',
-    'horizon.framework.util.q.extensions',
-    'horizon.framework.widgets.toast.service'
+    'horizon.framework.util.q.extensions'
   ];
 
-  function startService(
-    zun, resourceType, actionResult, $qExtensions, toast
+  function refreshService(
+    zun, resourceType, actionResult, $qExtensions
   ) {
-
-    var message = {
-      success: gettext('Container %s was successfully started.')
-    };
 
     var service = {
       initAction: initAction,
@@ -61,12 +56,13 @@
     }
 
     function perform(selected) {
-      // start selected container
-      return zun.startContainer(selected.id).then(function() {
-        toast.add('success', interpolate(message.success, [selected.name]));
+      // refresh selected container
+      return $qExtensions.booleanAsPromise(true).then(success);
+
+      function success() {
         var result = actionResult.getActionResult().updated(resourceType, selected.id);
         return result.result;
-      });
+      }
     }
   }
 })();

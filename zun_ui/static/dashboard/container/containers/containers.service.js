@@ -74,8 +74,6 @@
       return {data: {items: response.data.items.map(modifyItem)}};
 
       function modifyItem(item) {
-        // we should set 'trackBy' as follows ideally.
-        // var timestamp = item.updated_at ? item.updated_at : item.created_at;
         var timestamp = new Date();
         item.trackBy = item.id.concat(timestamp.getTime());
         return item;
