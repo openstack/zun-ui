@@ -108,12 +108,12 @@ def container_start(request, id):
     return zunclient(request).containers.start(id)
 
 
-def container_stop(request, id):
-    return zunclient(request).containers.stop(id)
+def container_stop(request, id, timeout):
+    return zunclient(request).containers.stop(id, timeout)
 
 
-def container_reboot(request, id):
-    return zunclient(request).containers.reboot(id)
+def container_reboot(request, id, timeout):
+    return zunclient(request).containers.reboot(id, timeout)
 
 
 def container_pause(request, id):

@@ -64,9 +64,11 @@ class ContainerActions(generic.View):
         if action == 'start':
             return client.container_start(request, id)
         elif action == 'stop':
-            return client.container_stop(request, id)
+            timeout = 10
+            return client.container_stop(request, id, timeout)
         elif action == 'reboot':
-            return client.container_reboot(request, id)
+            timeout = 10
+            return client.container_reboot(request, id, timeout)
         elif action == 'pause':
             return client.container_pause(request, id)
         elif action == 'unpause':
@@ -75,7 +77,7 @@ class ContainerActions(generic.View):
             command = request.DATA.get("command")
             return client.container_execute(request, id, command)
         elif action == 'kill':
-            signal = request.DATA.get("signal")
+            signal = request.DATA.get("signal") or None
             return client.container_kill(request, id, signal)
         elif action == 'attach':
             return client.container_attach(request, id)
