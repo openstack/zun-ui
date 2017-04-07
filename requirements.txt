@@ -10,7 +10,7 @@
 pbr>=2.0.0 # Apache-2.0
 # If python-zunclient will be released, we will use it.
 #python-zunclient>=0.0.1 # Apache-2.0
-Babel>=2.3.4 # BSD
+Babel!=2.4.0,>=2.3.4 # BSD
 Django<1.9,>=1.8 # BSD
 django-babel>=0.5.1 # BSD
 django-compressor>=2.0 # MIT
