@@ -64,10 +64,10 @@ class ContainerActions(generic.View):
         if action == 'start':
             return client.container_start(request, id)
         elif action == 'stop':
-            timeout = 10
+            timeout = request.DATA.get("timeout") or 10
             return client.container_stop(request, id, timeout)
         elif action == 'reboot':
-            timeout = 10
+            timeout = request.DATA.get("timeout") or 10
             return client.container_reboot(request, id, timeout)
         elif action == 'pause':
             return client.container_pause(request, id)

@@ -91,9 +91,9 @@
       return apiService.post(containersPath + id + '/start').error(error(msg));
     }
 
-    function stopContainer(id) {
+    function stopContainer(id, params) {
       var msg = gettext('Unable to stop Container.');
-      return apiService.post(containersPath + id + '/stop').error(error(msg));
+      return apiService.post(containersPath + id + '/stop', params).error(error(msg));
     }
 
     function logsContainer(id) {
@@ -101,9 +101,9 @@
       return apiService.get(containersPath + id + '/logs').error(error(msg));
     }
 
-    function rebootContainer(id) {
+    function rebootContainer(id, params) {
       var msg = gettext('Unable to reboot Container.');
-      return apiService.post(containersPath + id + '/reboot').error(error(msg));
+      return apiService.post(containersPath + id + '/reboot', params).error(error(msg));
     }
 
     function pauseContainer(id) {

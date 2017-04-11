@@ -27,15 +27,52 @@
 
   stopService.$inject = [
     'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.basePath',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.framework.util.actions.action-result.service',
+    'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
+    'horizon.framework.widgets.form.ModalFormService',
     'horizon.framework.widgets.toast.service'
   ];
 
   function stopService(
-    zun, resourceType, actionResult, $qExtensions, toast
+    zun, basePath, resourceType, actionResult, gettext, $qExtensions, modal, toast
   ) {
+    // schema
+    var schema = {
+      type: "object",
+      properties: {
+        timeout: {
+          title: gettext("Stop Container"),
+          type: "number",
+          minimum: 1
+        }
+      }
+    };
+
+    // form
+    var form = [
+      {
+        type: 'section',
+        htmlClass: 'row',
+        items: [
+          {
+            type: 'section',
+            htmlClass: 'col-sm-12',
+            items: [
+              {
+                "key": "timeout",
+                "placeholder": gettext("Specify a shutdown timeout in seconds. (default: 10)")
+              }
+            ]
+          }
+        ]
+      }
+    ];
+
+    // model
+    var model;
 
     var message = {
       success: gettext('Container %s was successfully stoped.')
@@ -61,12 +98,32 @@
     }
 
     function perform(selected) {
-      // start selected container
-      return zun.stopContainer(selected.id).then(function() {
-        toast.add('success', interpolate(message.success, [selected.name]));
-        var result = actionResult.getActionResult().updated(resourceType, selected.id);
-        return result.result;
-      });
+      model = {
+        id: selected.id,
+        name: selected.name,
+        timeout: null
+      };
+      // modal config
+      var config = {
+        "title": gettext('Stop Container'),
+        "submitText": gettext('Stop'),
+        "schema": schema,
+        "form": form,
+        "model": model
+      };
+      return modal.open(config).then(submit);
+
+      function submit(context) {
+        var id = context.model.id;
+        var name = context.model.name;
+        delete context.model.id;
+        delete context.model.name;
+        return zun.stopContainer(id, context.model).then(function() {
+          toast.add('success', interpolate(message.success, [name]));
+          var result = actionResult.getActionResult().updated(resourceType, id);
+          return result.result;
+        });
+      }
     }
   }
 })();
