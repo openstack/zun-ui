@@ -34,11 +34,12 @@
     'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
     'horizon.framework.widgets.form.ModalFormService',
-    'horizon.framework.widgets.modal-wait-spinner.service'
+    'horizon.framework.widgets.modal-wait-spinner.service',
+    'horizon.framework.widgets.toast.service'
   ];
 
   function executeContainerService(
-    zun, resourceType, actionResult, gettext, $qExtensions, modal, waitSpinner
+    zun, resourceType, actionResult, gettext, $qExtensions, modal, waitSpinner, toast
   ) {
     // schema
     var schema = {
@@ -46,10 +47,6 @@
       properties: {
         command: {
           title: gettext("Command"),
-          type: "string"
-        },
-        exit_code: {
-          title: gettext("Exit Code"),
           type: "string"
         },
         output: {
@@ -75,9 +72,9 @@
             placeholder: gettext("The command to execute."),
             required: true
           },
-          {
-            key: "exit_code",
-            readonly: true,
+          { // for exit code
+            type: "help",
+            helpvalue: "",
             condition: true
           },
           {
@@ -94,9 +91,7 @@
     var model = {
       id: '',
       name: '',
-      command: '',
-      exit_code: '',
-      output: ''
+      command: ''
     };
 
     // modal config
@@ -109,7 +104,8 @@
     };
 
     var message = {
-      success: gettext("Command was successfully executed at container %s.")
+      success: gettext("Command was successfully executed at container %s."),
+      exit_code: gettext("Exit Code")
     };
 
     var service = {
@@ -133,7 +129,6 @@
       config.model.id = selected.id;
       config.model.name = selected.name;
       config.model.command = '';
-      config.model.exit_code = '';
       config.model.output = '';
       config.form = angular.copy(form);
       modal.open(config).then(submit);
@@ -144,7 +139,6 @@
       var name = context.model.name;
       delete context.model.id;
       delete context.model.name;
-      delete context.model.exit_code;
       delete context.model.output;
       waitSpinner.showModalSpinner(gettext('Executing'));
       return zun.executeContainer(id, context.model).then(function(response) {
@@ -152,7 +146,6 @@
           id: id,
           name: name,
           command: context.model.command,
-          exit_code: String(response.data.exit_code),
           output: response.data.output
         };
         config.form = angular.copy(form);
@@ -168,7 +161,8 @@
           resClass = 'danger';
         }
         config.form[0].items[2].condition = false;
-        config.form[0].items[2].fieldHtmlClass = 'alert alert-' + resClass;
+        config.form[0].items[2].helpvalue = "<div class='alert alert-" + resClass + "'>" +
+          message.exit_code + " : " + String(response.data.exit_code) + "</div>";
 
         // for output
         config.form[0].items[3].condition = false;
@@ -178,6 +172,12 @@
         modal.open(config).then(submit);
 
         var result = actionResult.getActionResult().updated(resourceType, id);
+        return result.results;
+      }, function(response) {
+        // close spinner and dispaly toast
+        waitSpinner.hideModalSpinner();
+        toast.add('error', response.data.split("(")[0].trim() + ".");
+        var result = actionResult.getActionResult().failed(resourceType, id);
         return result.results;
       });
     }
