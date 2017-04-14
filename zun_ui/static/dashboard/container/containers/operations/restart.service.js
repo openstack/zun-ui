@@ -17,15 +17,15 @@
 
   /**
    * @ngDoc factory
-   * @name horizon.dashboard.container.containers.reboot.service
+   * @name horizon.dashboard.container.containers.restart.service
    * @Description
-   * reboot container.
+   * restart container.
    */
   angular
     .module('horizon.dashboard.container.containers')
-    .factory('horizon.dashboard.container.containers.reboot.service', rebootService);
+    .factory('horizon.dashboard.container.containers.restart.service', restartService);
 
-  rebootService.$inject = [
+  restartService.$inject = [
     'horizon.app.core.openstack-service-api.zun',
     'horizon.dashboard.container.containers.basePath',
     'horizon.dashboard.container.containers.resourceType',
@@ -36,7 +36,7 @@
     'horizon.framework.widgets.toast.service'
   ];
 
-  function rebootService(
+  function restartService(
     zun, basePath, resourceType, actionResult, gettext, $qExtensions, modal, toast
   ) {
     // schema
@@ -44,7 +44,7 @@
       type: "object",
       properties: {
         timeout: {
-          title: gettext("Reboot Container"),
+          title: gettext("Restart Container"),
           type: "number",
           minimum: 1
         }
@@ -75,7 +75,7 @@
     var model;
 
     var message = {
-      success: gettext('Container %s was successfully rebooted.')
+      success: gettext('Container %s was successfully restarted.')
     };
 
     var service = {
@@ -105,8 +105,8 @@
       };
       // modal config
       var config = {
-        "title": gettext('Reboot Container'),
-        "submitText": gettext('Reboot'),
+        "title": gettext('Restart Container'),
+        "submitText": gettext('Restart'),
         "schema": schema,
         "form": form,
         "model": model
@@ -118,7 +118,7 @@
         var name = context.model.name;
         delete context.model.id;
         delete context.model.name;
-        return zun.rebootContainer(id, context.model).then(function() {
+        return zun.restartContainer(id, context.model).then(function() {
           toast.add('success', interpolate(message.success, [name]));
           var result = actionResult.getActionResult().updated(resourceType, id);
           return result.result;

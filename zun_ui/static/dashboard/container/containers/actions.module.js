@@ -37,7 +37,7 @@
     'horizon.dashboard.container.containers.delete-force.service',
     'horizon.dashboard.container.containers.start.service',
     'horizon.dashboard.container.containers.stop.service',
-    'horizon.dashboard.container.containers.reboot.service',
+    'horizon.dashboard.container.containers.restart.service',
     'horizon.dashboard.container.containers.pause.service',
     'horizon.dashboard.container.containers.unpause.service',
     'horizon.dashboard.container.containers.execute.service',
@@ -54,7 +54,7 @@
     deleteContainerForceService,
     startContainerService,
     stopContainerService,
-    rebootContainerService,
+    restartContainerService,
     pauseContainerService,
     unpauseContainerService,
     executeContainerService,
@@ -107,10 +107,10 @@
         }
       })
       .append({
-        id: 'rebootContainerAction',
-        service: rebootContainerService,
+        id: 'restartContainerAction',
+        service: restartContainerService,
         template: {
-          text: gettext('Reboot Container')
+          text: gettext('Restart Container')
         }
       })
       .append({

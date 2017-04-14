@@ -36,7 +36,7 @@
       startContainer: startContainer,
       stopContainer: stopContainer,
       logsContainer: logsContainer,
-      rebootContainer: rebootContainer,
+      restartContainer: restartContainer,
       pauseContainer: pauseContainer,
       unpauseContainer: unpauseContainer,
       executeContainer: executeContainer,
@@ -101,9 +101,9 @@
       return apiService.get(containersPath + id + '/logs').error(error(msg));
     }
 
-    function rebootContainer(id, params) {
-      var msg = gettext('Unable to reboot Container.');
-      return apiService.post(containersPath + id + '/reboot', params).error(error(msg));
+    function restartContainer(id, params) {
+      var msg = gettext('Unable to restart Container.');
+      return apiService.post(containersPath + id + '/restart', params).error(error(msg));
     }
 
     function pauseContainer(id) {
