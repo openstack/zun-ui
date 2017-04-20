@@ -39,7 +39,7 @@
         "when this container was created.</p>");
       if (ctrl.container.status !== "Running") {
         console = $("<p>Container is not running.</p>");
-      } else if (ctrl.container.tty && ctrl.container.stdin_open) {
+      } else if (ctrl.container.interactive) {
         console = $("<iframe id=\"console_embed\" src=\"" + consoleUrl +
         "\" style=\"width:100%;height:100%\"></iframe>");
       }
