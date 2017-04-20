@@ -5,8 +5,8 @@ zun-ui
 Zun UI
 
 * Free software: Apache license
-* Source: http://git.openstack.org/cgit/openstack/zun-ui
-* Bugs: http://bugs.launchpad.net/zun-ui
+* Source: https://git.openstack.org/cgit/openstack/zun-ui
+* Bugs: https://bugs.launchpad.net/zun-ui
 
 Enabling in DevStack
 --------------------
