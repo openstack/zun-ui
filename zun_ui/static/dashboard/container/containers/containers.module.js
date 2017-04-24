@@ -137,9 +137,8 @@
       'status': {label: gettext('Status'), filters: ['noValue'] },
       'status_detail': {label: gettext('Status Detail'), filters: ['noValue'] },
       'status_reason': {label: gettext('Status Reason'), filters: ['noValue'] },
-      'stdin_open': {label: gettext('Stdin Open'), filters: ['yesno'] },
+      'interactive': {label: gettext('Interactive'), filters: ['yesno'] },
       'task_state': {label: gettext('Task State'), filters: ['noValue'] },
-      'tty': {label: gettext('TTY'), filters: ['yesno'] },
       'workdir': {label: gettext('Workdir'), filters: ['noValue'] }
     };
   }
