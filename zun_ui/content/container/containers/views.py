@@ -15,7 +15,7 @@ from zun_ui.api import client
 
 
 class SerialConsoleView(generic.TemplateView):
-    template_name = 'console.html'
+    template_name = 'project/instances/serial_console.html'
 
     def get_context_data(self, **kwargs):
         context = super(SerialConsoleView, self).get_context_data(**kwargs)
