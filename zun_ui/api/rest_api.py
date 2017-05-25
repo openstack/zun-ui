@@ -118,3 +118,30 @@ class Containers(generic.View):
         return rest_utils.CreatedResponse(
             '/api/zun/container/%s' % new_container.uuid,
             new_container.to_dict())
+
+
+@urls.register
+class Images(generic.View):
+    """API for Zun Images"""
+    url_regex = r'zun/images/$'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get a list of the Images for admin users.
+
+        The returned result is an object with property 'items' and each
+        item under this is a Image.
+        """
+        result = client.image_list(request)
+        return {'items': [change_to_id(i.to_dict()) for i in result]}
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request):
+        """Create a new Image.
+
+        Returns the new Image object on success.
+        """
+        new_image = client.image_create(request, **request.DATA)
+        return rest_utils.CreatedResponse(
+            '/api/zun/image/%s' % new_image.uuid,
+            new_image.to_dict())

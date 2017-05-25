@@ -21,6 +21,7 @@ from zunclient.v1 import client as zun_client
 LOG = logging.getLogger(__name__)
 
 CONTAINER_CREATE_ATTRS = zun_client.containers.CREATION_ATTRIBUTES
+IMAGE_PULL_ATTRS = zun_client.images.PULL_ATTRIBUTES
 
 
 @memoized
@@ -133,3 +134,22 @@ def container_kill(request, id, signal=None):
 
 def container_attach(request, id):
     return zunclient(request).containers.attach(id)
+
+
+def image_list(request, limit=None, marker=None, sort_key=None,
+               sort_dir=None, detail=True):
+    return zunclient(request).images.list(limit, marker, sort_key,
+                                          sort_dir, False)
+
+
+def image_create(request, **kwargs):
+    args = {}
+    for (key, value) in kwargs.items():
+
+        if key in IMAGE_PULL_ATTRS:
+            args[str(key)] = str(value)
+        else:
+            raise exceptions.BadRequest(
+                "Key must be in %s" % ",".join(IMAGE_PULL_ATTRS))
+
+    return zunclient(request).images.create(**args)

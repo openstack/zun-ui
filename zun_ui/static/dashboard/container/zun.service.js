@@ -26,6 +26,7 @@
 
   function ZunAPI(apiService, toast, gettext) {
     var containersPath = '/api/zun/containers/';
+    var imagesPath = '/api/zun/images/';
     var service = {
       createContainer: createContainer,
       getContainer: getContainer,
@@ -40,7 +41,9 @@
       pauseContainer: pauseContainer,
       unpauseContainer: unpauseContainer,
       executeContainer: executeContainer,
-      killContainer: killContainer
+      killContainer: killContainer,
+      pullImage: pullImage,
+      getImages: getImages
     };
 
     return service;
@@ -124,6 +127,20 @@
     function killContainer(id, params) {
       var msg = gettext('Unable to send kill signal.');
       return apiService.post(containersPath + id + '/kill', params).error(error(msg));
+    }
+
+    ////////////
+    // Images //
+    ////////////
+
+    function pullImage(params) {
+      var msg = gettext('Unable to pull Image.');
+      return apiService.post(imagesPath, params).error(error(msg));
+    }
+
+    function getImages() {
+      var msg = gettext('Unable to retrieve the Images.');
+      return apiService.get(imagesPath).error(error(msg));
     }
 
     function error(message) {
