@@ -80,6 +80,12 @@
     }
 
     function submit() {
+      if (model.newContainerSpec.restart_policy === "on-failure") {
+        model.newContainerSpec.restart_policy =
+          model.newContainerSpec.restart_policy + ":" +
+          model.newContainerSpec.restart_policy_max_retry;
+      }
+      delete model.newContainerSpec.restart_policy_max_retry;
       return model.createContainer().then(success);
     }
 

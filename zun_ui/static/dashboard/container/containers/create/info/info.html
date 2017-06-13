@@ -20,6 +20,28 @@
                placeholder="{$ 'Name or ID of the container image.'|translate $}">
       </div>
     </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="container-image-driver" translate>Image Driver</label>
+        <select name="container-image-driver" class="form-control" id="container-image-driver"
+               ng-model="model.newContainerSpec.image_driver">
+          <option value="docker" selected=selected>Docker</option>
+          <option value="glance">Glance</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="container-image-pull-policy" translate>Image Pull Policy</label>
+        <select name="container-image-pull-policy" class="form-control" id="container-image-pull-policy"
+               ng-model="model.newContainerSpec.image_pull_policy">
+          <option value="" selected=selected translate>Select policy.</option>
+          <option value="ifnotpresent" translate>If not present</option>
+          <option value="always" translate>Always</option>
+          <option value="never" translate>Never</option>
+        </select>
+      </div>
+    </div>
     <div class="col-xs-12">
       <div class="form-group">
         <label class="control-label" for="container-command" translate>Command</label>

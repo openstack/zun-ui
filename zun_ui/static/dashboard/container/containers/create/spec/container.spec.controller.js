@@ -27,8 +27,15 @@
     .controller('createContainerSpecController', createContainerSpecController);
 
   createContainerSpecController.$inject = [
+    '$scope'
   ];
 
-  function createContainerSpecController() {
+  function createContainerSpecController($scope) {
+    var ctrl = this;
+    ctrl.onChangeRestartPolicy = function () {
+      if ($scope.model.newContainerSpec.restart_policy !== 'on-failure') {
+        $scope.model.newContainerSpec.restart_policy_max_retry = null;
+      }
+    };
   }
 })();

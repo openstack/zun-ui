@@ -17,5 +17,29 @@
                id="container-memory">
       </div>
     </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="container-restart" translate>Restart Policy</label>
+        <select name="container-restart" class="form-control" id="container-memory"
+                ng-model="model.newContainerSpec.restart_policy"
+                ng-change="ctrl.onChangeRestartPolicy()">
+          <option value="" selected=selected translate>Select policy.</option>
+          <option value="no" translate>No</option>
+          <option value="on-failure" translate>On failure</option>
+          <option value="always" translate>Always</option>
+          <option value="unless-stopped" translate>Unless Stopped</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="container-restart-max-retry" translate>Max Retry</label>
+        <input name="container-restart-max-retry" type="number" min="1"
+               class="form-control" ng-model="model.newContainerSpec.restart_policy_max_retry"
+               id="container-restart-max-retry"
+               placeholder="{$ 'Retry times for \'On failure\' policy.'|translate $}"
+               ng-disabled="model.newContainerSpec.restart_policy!=='on-failure'">
+      </div>
+    </div>
   </div>
 </div>

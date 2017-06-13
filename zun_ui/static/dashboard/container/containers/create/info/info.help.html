@@ -3,6 +3,23 @@
   <dd translate>An arbitrary human-readable name.</dd>
   <dt translate>Image</dt>
   <dd translate>Name or ID of container image.</dd>
+  <dt translate>Image Driver</dt>
+  <dd>
+    <translate>The image driver to use to pull container image.</translate>
+    <ul>
+      <li translate>Docker: Pull the image from Docker Hub.</li>
+      <li translate>Glance: Pull the image from Glance.</li>
+    </ul>
+  </dd>
+  <dt translate>Image Pull Policy</dt>
+  <dd translate>
+    The policy which determines if the image should be pulled prior to starting the container.
+    <ul>
+      <li translate>If not present: only pull the image if it does not already exist on the node.</li>
+      <li translate>Always: Always pull the image from repository.</li>
+      <li translate>Never: never pull the image.</li>
+    </ul>
+  </dd>
   <dt translate>Command</dt>
   <dd translate>Command sent to the container.</dd>
 </dl>

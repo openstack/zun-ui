@@ -15,6 +15,7 @@ from horizon import exceptions
 from horizon.utils.memoized import memoized
 import logging
 from openstack_dashboard.api import base
+from zunclient.common import utils
 from zunclient.v1 import client as zun_client
 
 
@@ -51,6 +52,9 @@ def container_create(request, **kwargs):
             continue
         elif key == "interactive":
             args["interactive"] = value
+            continue
+        elif key == "restart_policy":
+            args[key] = utils.check_restart_policy(value)
             continue
 
         if key in CONTAINER_CREATE_ATTRS:
