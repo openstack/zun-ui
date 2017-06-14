@@ -135,8 +135,7 @@
                   items: [
                     {
                       key: "name",
-                      placeholder: gettext("Name of the container to create."),
-                      readonly: action === "update"
+                      placeholder: gettext("Name of the container to create.")
                     },
                     {
                       key: "image",

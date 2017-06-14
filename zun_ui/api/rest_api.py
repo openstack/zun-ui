@@ -52,10 +52,8 @@ class Container(generic.View):
 
         Returns the Container object on success.
         """
-        container = client.container_update(request, id, **request.DATA)
-        return rest_utils.CreatedResponse(
-            '/api/zun/containers/%s' % id,
-            container.to_dict())
+        args = client.container_update(request, id, **request.DATA)
+        return args
 
 
 @urls.register

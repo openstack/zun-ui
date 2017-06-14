@@ -121,7 +121,7 @@
       // only "cpu" and "memory" fields are editable.
       for (var key in model) {
         if (model.hasOwnProperty(key) && model[key] === null || model[key] === "" ||
-            (key !== "cpu" && key !== "memory")) {
+            (key !== "name" && key !== "cpu" && key !== "memory")) {
           delete model[key];
         }
       }

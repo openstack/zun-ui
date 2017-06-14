@@ -50,6 +50,10 @@ def _cleanup_params(attrs, check, **params):
     for (key, value) in params.items():
         if key == "run":
             run = value
+        elif key == "cpu":
+            args["cpu"] = float(value)
+        elif key == "memory":
+            args["memory"] = int(value)
         elif key == "interactive":
             args["interactive"] = value
         elif key == "restart_policy":
@@ -72,6 +76,19 @@ def _cleanup_params(attrs, check, **params):
     return args, run
 
 
+def _delete_attributes_with_same_value(old, new):
+    '''Delete attributes with same value from new dict
+
+    If new dict has same value in old dict, remove the attributes
+    from new dict.
+    '''
+    for k in old.keys():
+        if k in new:
+            if old[k] == new[k]:
+                del new[k]
+    return new
+
+
 def container_create(request, **kwargs):
     args, run = _cleanup_params(CONTAINER_CREATE_ATTRS, True, **kwargs)
     response = None
@@ -83,8 +100,32 @@ def container_create(request, **kwargs):
 
 
 def container_update(request, id, **kwargs):
+    '''Update Container
+
+    Get current Container attributes and check updates.
+    And update with "rename" for "name", then use "update" for
+    "cpu" and "memory".
+    '''
+
+    # get current data
+    container = zunclient(request).containers.get(id).to_dict()
+    if container["memory"] is not None:
+        container["memory"] = int(container["memory"].replace("M", ""))
     args, run = _cleanup_params(CONTAINER_CREATE_ATTRS, True, **kwargs)
-    return zunclient(request).containers.update(id, **args)
+
+    # remove same values from new params
+    _delete_attributes_with_same_value(container, args)
+
+    # do rename
+    name = args.pop("name", None)
+    if len(args):
+        zunclient(request).containers.update(id, **args)
+
+    # do update
+    if name:
+        zunclient(request).containers.rename(id, name)
+        args["name"] = name
+    return args
 
 
 def container_delete(request, id, force=False):
