@@ -173,7 +173,8 @@ def container_unpause(request, id):
 
 
 def container_execute(request, id, command):
-    return zunclient(request).containers.execute(id, command)
+    args = {"command": command}
+    return zunclient(request).containers.execute(id, **args)
 
 
 def container_kill(request, id, signal=None):
