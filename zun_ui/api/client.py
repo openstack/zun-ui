@@ -43,45 +43,48 @@ def zunclient(request):
     return c
 
 
-def container_create(request, **kwargs):
+def _cleanup_params(attrs, check, **params):
     args = {}
     run = False
-    for (key, value) in kwargs.items():
+
+    for (key, value) in params.items():
         if key == "run":
             run = value
-            continue
         elif key == "interactive":
             args["interactive"] = value
-            continue
         elif key == "restart_policy":
             args[key] = utils.check_restart_policy(value)
-            continue
-
-        if key in CONTAINER_CREATE_ATTRS:
+        elif key == "environment" or key == "labels":
+            values = {}
+            vals = value.split(",")
+            for v in vals:
+                kv = v.split("=", 1)
+                values[kv[0]] = kv[1]
+            args[str(key)] = values
+        elif key in attrs:
+            if value is None:
+                value = ''
             args[str(key)] = str(value)
-        else:
+        elif check:
             raise exceptions.BadRequest(
-                "Key must be in %s" % ",".join(CONTAINER_CREATE_ATTRS))
-        if key == "environment":
-            envs = {}
-            vals = value.split(",")
-            for v in vals:
-                kv = v.split("=", 1)
-                envs[kv[0]] = kv[1]
-            args["environment"] = envs
-        elif key == "labels":
-            labels = {}
-            vals = value.split(",")
-            for v in vals:
-                kv = v.split("=", 1)
-                labels[kv[0]] = kv[1]
-            args["labels"] = labels
+                "Key must be in %s" % ",".join(attrs))
+
+    return args, run
+
+
+def container_create(request, **kwargs):
+    args, run = _cleanup_params(CONTAINER_CREATE_ATTRS, True, **kwargs)
     response = None
     if run:
         response = zunclient(request).containers.run(**args)
     else:
         response = zunclient(request).containers.create(**args)
     return response
+
+
+def container_update(request, id, **kwargs):
+    args, run = _cleanup_params(CONTAINER_CREATE_ATTRS, True, **kwargs)
+    return zunclient(request).containers.update(id, **args)
 
 
 def container_delete(request, id, force=False):
@@ -147,13 +150,5 @@ def image_list(request, limit=None, marker=None, sort_key=None,
 
 
 def image_create(request, **kwargs):
-    args = {}
-    for (key, value) in kwargs.items():
-
-        if key in IMAGE_PULL_ATTRS:
-            args[str(key)] = str(value)
-        else:
-            raise exceptions.BadRequest(
-                "Key must be in %s" % ",".join(IMAGE_PULL_ATTRS))
-
+    args = _cleanup_params(IMAGE_PULL_ATTRS, True, **kwargs)
     return zunclient(request).images.create(**args)

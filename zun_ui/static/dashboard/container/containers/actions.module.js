@@ -33,6 +33,7 @@
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container.containers.create.service',
+    'horizon.dashboard.container.containers.update.service',
     'horizon.dashboard.container.containers.delete.service',
     'horizon.dashboard.container.containers.delete-force.service',
     'horizon.dashboard.container.containers.start.service',
@@ -50,6 +51,7 @@
     registry,
     gettext,
     createContainerService,
+    updateContainerService,
     deleteContainerService,
     deleteContainerForceService,
     startContainerService,
@@ -90,6 +92,13 @@
         service: refreshContainerService,
         template: {
           text: gettext('Refresh')
+        }
+      })
+      .append({
+        id: 'updateContainerAction',
+        service: updateContainerService,
+        template: {
+          text: gettext('Update Container')
         }
       })
       .append({

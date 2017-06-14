@@ -29,6 +29,7 @@
     var imagesPath = '/api/zun/images/';
     var service = {
       createContainer: createContainer,
+      updateContainer: updateContainer,
       getContainer: getContainer,
       getContainers: getContainers,
       deleteContainer: deleteContainer,
@@ -55,6 +56,11 @@
     function createContainer(params) {
       var msg = gettext('Unable to create Container.');
       return apiService.post(containersPath, params).error(error(msg));
+    }
+
+    function updateContainer(id, params) {
+      var msg = gettext('Unable to update Container.');
+      return apiService.patch(containersPath + id, params).error(error(msg));
     }
 
     function getContainer(id) {

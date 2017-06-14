@@ -46,6 +46,17 @@ class Container(generic.View):
         """
         return client.container_delete(request, id, force=True)
 
+    @rest_utils.ajax(data_required=True)
+    def patch(self, request, id):
+        """Update a Container.
+
+        Returns the Container object on success.
+        """
+        container = client.container_update(request, id, **request.DATA)
+        return rest_utils.CreatedResponse(
+            '/api/zun/containers/%s' % id,
+            container.to_dict())
+
 
 @urls.register
 class ContainerActions(generic.View):

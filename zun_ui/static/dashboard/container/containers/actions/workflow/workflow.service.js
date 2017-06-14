@@ -82,8 +82,7 @@
           cpu: {
             title: gettext("CPU"),
             type: "number",
-            minimum: 0,
-            step: 0.1
+            minimum: 0
           },
           memory: {
             title: gettext("Memory"),
@@ -182,7 +181,8 @@
                     },
                     {
                       key: "run",
-                      readonly: action === "update"
+                      readonly: action === "update",
+                      condition: action === "update"
                     }
                   ]
                 }
@@ -200,6 +200,7 @@
                   items: [
                     {
                       key: "cpu",
+                      step: 0.1,
                       placeholder: gettext("The number of virtual cpu for this container.")
                     },
                     {
@@ -292,8 +293,6 @@
       ];
       // model
       model = {
-        //id: "",
-        //uuid: "",
         // info
         name: "",
         image: "",
