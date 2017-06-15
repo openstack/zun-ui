@@ -15,15 +15,16 @@ from zun_ui.api import client
 
 
 class SerialConsoleView(generic.TemplateView):
-    template_name = 'project/instances/serial_console.html'
+    template_name = 'serial_console.html'
 
     def get_context_data(self, **kwargs):
         context = super(SerialConsoleView, self).get_context_data(**kwargs)
-        context['container_id'] = self.kwargs['container_id']
+        context['page_title'] = self.kwargs['container_id']
         try:
             console_url = client.container_attach(self.request,
                                                   self.kwargs['container_id'])
             context["console_url"] = console_url
+            context["protocols"] = "['binary', 'base64']"
         except Exception:
             context["error_message"] = "Cannot get console for container %s." \
                 % self.kwargs['container_id']
