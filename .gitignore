@@ -19,3 +19,4 @@ zun_ui/test/.secret_key_store
 *.mo
 *.py[cod]
 *.swp
+*nose_results.html
