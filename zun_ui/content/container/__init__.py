@@ -11,4 +11,4 @@
 # limitations under the License.
 
 # Register the REST API URLs so they can be called from the JavaScript files
-import zun_ui.api.rest_api  # noqa
+import zun_ui.api.rest_api  # noqa: F401
