@@ -63,11 +63,7 @@ available in your browser at http://localhost:8080/
 Release Notes
 =============
 
-.. toctree::
-  :glob:
-  :maxdepth: 1
-
-  releases/*
+https://docs.openstack.org/releasenotes/zun-ui
 
 Source Code Reference
 =====================
@@ -77,5 +73,3 @@ Source Code Reference
   :maxdepth: 1
 
   sourcecode/autoindex
-
-
