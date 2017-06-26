@@ -1,0 +1,476 @@
+# Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zun-ui 0.1.1.dev19\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-06-26 00:44+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-06-26 02:35+0000\n"
+"Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "A command that will be sent to the container."
+msgstr "コンテナーに送信されるコマンド。"
+
+msgid "Addresses"
+msgstr "アドレス"
+
+msgid "Adds a map of labels to a container in comma separated KEY=VALUE pairs."
+msgstr ""
+"コンテナーに関連付けるラベルをコンマ区切りの KEY=VALUE ペアで指定してくださ"
+"い。。"
+
+msgid ""
+"Allocate pseudo-TTY and keep STDIN open even if not attatched. This also "
+"enables Web console in console tab on details view."
+msgstr ""
+"接続していなくても、擬似 TTY を許可し、標準入力を開いたままにします。これは、"
+"詳細ビューのコンソールタブにあるウェブコンソールも有効にします。"
+
+msgid "Always"
+msgstr "いつも"
+
+msgid "An arbitrary human-readable name."
+msgstr "人間が読むことができる任意の名前。"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "Command"
+msgstr "コマンド"
+
+msgid "Command sent to the container."
+msgstr "コンテナーに送信されるコマンド。"
+
+#, python-format
+msgid "Command was successfully executed at container %s."
+msgstr "コンテナー %s で正常にコマンドが実行されました。"
+
+msgid "Confirm Delete Container"
+msgid_plural "Confirm Delete Containers"
+msgstr[0] "コンテナーの削除の確認"
+
+msgid "Confirm Delete Container Forcely"
+msgid_plural "Confirm Delete Containers Forcely"
+msgstr[0] "コンテナーの強制削除の確認"
+
+msgid "Console"
+msgstr "コンソール"
+
+msgid "Container"
+msgstr "コンテナー"
+
+#, python-format
+msgid "Container %s was successfully created."
+msgstr "コンテナー %s が正常に作成されました。"
+
+#, python-format
+msgid "Container %s was successfully paused."
+msgstr "コンテナー %s が正常に一時停止されました。"
+
+#, python-format
+msgid "Container %s was successfully restarted."
+msgstr "コンテナー %s が正常に再起動されました。"
+
+#, python-format
+msgid "Container %s was successfully started."
+msgstr "コンテナー %s が正常に開始されました。"
+
+#, python-format
+msgid "Container %s was successfully stoped."
+msgstr "コンテナー %s が正常に停止されました。"
+
+#, python-format
+msgid "Container %s was successfully unpaused."
+msgstr "コンテナー %s が正常に一時停止解除されました。"
+
+#, python-format
+msgid "Container %s was successfully updated."
+msgstr "コンテナー %s が正常に更新されました。"
+
+msgid "Container Name"
+msgstr "コンテナー名"
+
+msgid "Containers"
+msgstr "コンテナー"
+
+msgid "Create"
+msgstr "作成"
+
+msgid "Create Container"
+msgstr "コンテナーの作成"
+
+msgid "Delete Container"
+msgid_plural "Delete Containers"
+msgstr[0] "コンテナーの削除"
+
+msgid "Delete Container Forcely"
+msgid_plural "Delete Containers Forcely"
+msgstr[0] "コンテナーの強制削除"
+
+msgid "Delete Containers"
+msgstr "コンテナーの削除"
+
+#, python-format
+msgid "Deleted Container Forcely: %s."
+msgid_plural "Deleted Containers Forcely: %s."
+msgstr[0] "コンテナー %s を強制削除しました。"
+
+#, python-format
+msgid "Deleted Container: %s."
+msgid_plural "Deleted Containers: %s."
+msgstr[0] "コンテナー %s を削除しました。"
+
+msgid "Docker Hub"
+msgstr "Docker Hub"
+
+msgid "Docker Hub: Pull the image from Docker Hub."
+msgstr "Docker Hub: Docker Hub からイメージを取得します。"
+
+msgid "Enable Interactive Mode"
+msgstr "インタラクティブモードの有効化"
+
+msgid "Enable interactive mode"
+msgstr "インタラクティブモードの有効化"
+
+msgid "Environment"
+msgstr "環境変数"
+
+msgid "Environment Variables"
+msgstr "環境変数"
+
+msgid "Execute"
+msgstr "実行"
+
+msgid "Execute Command"
+msgstr "コマンドの実行"
+
+msgid "Executing"
+msgstr "実行中"
+
+msgid "Exit Code"
+msgstr "終了コード"
+
+msgid "Glance"
+msgstr "Glance"
+
+msgid "Glance: Pull the image from Glance."
+msgstr "Glance: Glance からイメージを取得します。"
+
+msgid "Host"
+msgstr "ホスト"
+
+msgid "Hostname"
+msgstr "ホスト名"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "If not present"
+msgstr "存在しなければ"
+
+msgid "Image"
+msgstr "イメージ"
+
+#, python-format
+msgid "Image %s was successfully pulled."
+msgstr "イメージ %s が正常に取得されました。"
+
+msgid "Image Driver"
+msgstr "イメージドライバー"
+
+msgid "Image ID"
+msgstr "イメージ ID"
+
+msgid "Image Pull Policy"
+msgstr "イメージ取得ポリシー"
+
+msgid "Images"
+msgstr "イメージ"
+
+msgid "Info"
+msgstr "情報"
+
+msgid "Interactive"
+msgstr "インタラクティブモード"
+
+msgid "KEY1=VALUE1,KEY2=VALUE2..."
+msgstr "KEY1=VALUE1,KEY2=VALUE2..."
+
+msgid "Kill Signal"
+msgstr "停止シグナル"
+
+#, python-format
+msgid "Kill signal was successfully sent to container %s."
+msgstr "停止シグナルはコンテナー %s に正常に送信されました。"
+
+msgid "Labels"
+msgstr "ラベル"
+
+msgid "Links"
+msgstr "リンク"
+
+msgid "Logs"
+msgstr "ログ"
+
+msgid "Max Retry"
+msgstr "最大試行回数"
+
+msgid "Memory"
+msgstr "メモリー"
+
+msgid "Miscellaneous"
+msgstr "その他"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Name of the container to create."
+msgstr "作成するコンテナーの名前。"
+
+msgid "Name of the image."
+msgstr "イメージの名前。"
+
+msgid "Name or ID of container image."
+msgstr "コンテナーのイメージの名前または ID。"
+
+msgid "Name or ID of the container image."
+msgstr "コンテナーのイメージの名前または ID。"
+
+msgid "Never"
+msgstr "なし"
+
+msgid "Never: never pull the image."
+msgstr "Never: イメージを取得しない。"
+
+msgid "No"
+msgstr "なし"
+
+msgid "On failure"
+msgstr "失敗したら"
+
+msgid "Output"
+msgstr "出力"
+
+msgid "Overview"
+msgstr "概要"
+
+msgid "Pause Container"
+msgstr "コンテナーの一時停止"
+
+msgid "Ports"
+msgstr "ポート"
+
+msgid "Pull"
+msgstr "取得"
+
+msgid "Pull Image"
+msgstr "イメージの取得"
+
+msgid "Refresh"
+msgstr "最新表示"
+
+msgid "Restart"
+msgstr "再起動"
+
+msgid "Restart Container"
+msgstr "コンテナーの再起動"
+
+msgid "Restart Policy"
+msgstr "再起動ポリシー"
+
+msgid "Restart policy to apply when a container exits."
+msgstr "コンテナーが終了するときに適用する再起動ポリシー。"
+
+msgid "Retry times for 'On failure' policy."
+msgstr "'失敗したら' ポリシーの試行回数"
+
+msgid "Select policy."
+msgstr "ポリシーを選択してください"
+
+msgid "Send"
+msgstr "送信"
+
+msgid "Send Kill Signal"
+msgstr "停止シグナルの送信"
+
+msgid ""
+"Signal to send to the container: integer or string like SIGINT.\n"
+"  When not set, SIGKILL is set as default value and the container will "
+"exit.\n"
+"  The supported signals varies between platform.\n"
+"  Besides, you can omit 'SIG' prefix."
+msgstr ""
+"コンテナーに送信するシグナル: 整数か SIGINT のような文字列。\n"
+"  設定されていなければ、 SIGKILL がデフォルト値として設定されコンテナーは終了"
+"します。\n"
+"  サポートされるシグナルはプラットフォームによって異なります。\n"
+"  また、 'SIG' プレフィックスは省略可能です。"
+
+msgid "Size"
+msgstr "サイズ"
+
+msgid "Spec"
+msgstr "スペック"
+
+msgid "Specify a shutdown timeout in seconds. (default: 10)"
+msgstr "停止するまでの秒数を指定してください。（デフォルト値: 10）"
+
+msgid "Start Container"
+msgstr "コンテナーの更新"
+
+msgid "Start container after creation"
+msgstr "作成後のコンテナー開始"
+
+msgid "Status"
+msgstr "ステータス"
+
+msgid "Status Detail"
+msgstr "ステータスの詳細"
+
+msgid "Status Reason"
+msgstr "ステータスの理由"
+
+msgid "Stop"
+msgstr "停止"
+
+msgid "Stop Container"
+msgstr "コンテナーの停止"
+
+msgid "Tag"
+msgstr "タグ"
+
+msgid "Task State"
+msgstr "タスク状態"
+
+msgid "The command to execute."
+msgstr "実行するコマンド"
+
+msgid "The container memory size in MiB."
+msgstr "MiB 単位のコンテナーのメモリーサイズ。"
+
+msgid "The environment variables in comma separated KEY=VALUE pairs"
+msgstr "環境変数をコンマ区切りの KEY=VALUE ペアで指定してください。"
+
+msgid "The image driver to use to pull container image."
+msgstr "コンテナーのイメージの取得に使用するイメージドライバー。"
+
+msgid "The kill signal to send."
+msgstr "送信する停止シグナル"
+
+msgid "The number of virtual cpu for this container."
+msgstr "このコンテナーの仮想 CPU の数。"
+
+msgid "The number of virtual cpus."
+msgstr "仮想 CPU の数。"
+
+msgid "The working directory for commands to run in."
+msgstr "コマンドを実行するときの作業ディレクトリ。"
+
+msgid "The working directory needs to be an absolute path."
+msgstr "作業ディレクトリは絶対パスである必要があります。"
+
+msgid "Unable to create Container."
+msgstr "コンテナーを作成できません。"
+
+#, python-format
+msgid "Unable to delete Container forcely: %s."
+msgid_plural "Unable to delete Containers forcely: %s."
+msgstr[0] "コンテナーを強制削除できません: %s"
+
+#, python-format
+msgid "Unable to delete Container: %s."
+msgid_plural "Unable to delete Containers: %s."
+msgstr[0] "コンテナーを削除できません: %s"
+
+#, python-format
+msgid "Unable to delete forcely the Container with id: %(id)s"
+msgstr "ID %(id)s のコンテナーを強制削除できません。"
+
+#, python-format
+msgid "Unable to delete the Container with id: %(id)s"
+msgstr "ID %(id)s のコンテナーを削除できません。"
+
+msgid "Unable to delete the Containers."
+msgstr "コンテナーの一覧を取得できません。"
+
+msgid "Unable to execute the command."
+msgstr "コマンドを実行できません。"
+
+msgid "Unable to get logs of Container."
+msgstr "コンテナーのログを取得できません。"
+
+msgid "Unable to pause Container"
+msgstr "コンテナーを一時停止できません。"
+
+msgid "Unable to pull Image."
+msgstr "イメージを取得できません。"
+
+msgid "Unable to restart Container."
+msgstr "コンテナーを再起動できません。"
+
+msgid "Unable to retrieve the Container."
+msgstr "コンテナーの情報を取得できません。"
+
+msgid "Unable to retrieve the Containers."
+msgstr "コンテナーの一覧を取得できません。"
+
+msgid "Unable to retrieve the Images."
+msgstr "イメージ一覧を取得できません。"
+
+msgid "Unable to send kill signal."
+msgstr "停止シグナルを送信できません。"
+
+msgid "Unable to start Container."
+msgstr "コンテナーを開始できません。"
+
+msgid "Unable to stop Container."
+msgstr "コンテナーを停止できません。"
+
+msgid "Unable to unpause of Container."
+msgstr "コンテナーを一時停止解除できません。"
+
+msgid "Unable to update Container."
+msgstr "コンテナーを更新できません。"
+
+msgid "Unless Stopped"
+msgstr "停止するまで"
+
+msgid "Unpause Container"
+msgstr "コンテナーの一時停止解除"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Update Container"
+msgstr "コンテナーの更新"
+
+msgid "Workdir"
+msgstr "作業ディレクトリ"
+
+msgid "Working Directory"
+msgstr "作業ディレクトリ"
+
+#, python-format
+msgid "You are not allowed to delete container forcely: %s"
+msgstr "コンテナーの強制削除は許可されていません: %s"
+
+#, python-format
+msgid "You are not allowed to delete containers: %s"
+msgstr "コンテナーの削除は許可されていません: %s"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted container "
+"is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted containers "
+"are not recoverable."
+msgstr[0] ""
+"\"%s\" を選択しました。選択内容を確認してください。削除されたコンテナーは元に"
+"戻せません。"
