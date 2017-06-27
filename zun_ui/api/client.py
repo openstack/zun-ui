@@ -192,5 +192,5 @@ def image_list(request, limit=None, marker=None, sort_key=None,
 
 
 def image_create(request, **kwargs):
-    args = _cleanup_params(IMAGE_PULL_ATTRS, True, **kwargs)
+    args, run = _cleanup_params(IMAGE_PULL_ATTRS, True, **kwargs)
     return zunclient(request).images.create(**args)
