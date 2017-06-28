@@ -29,6 +29,7 @@ import subprocess
 import sys
 
 import django
+import openstackdocstheme
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(BASE_DIR, "..", ".."))
@@ -173,7 +174,6 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.todo',
               'sphinx.ext.coverage',
               'sphinx.ext.viewcode',
-              'oslosphinx',
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -244,8 +244,8 @@ nitpicky = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-# html_theme_path = ['.']
-# html_theme = '_theme'
+html_theme = 'openstackdocs'
+html_theme_path = [openstackdocstheme.get_html_theme_path()]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
