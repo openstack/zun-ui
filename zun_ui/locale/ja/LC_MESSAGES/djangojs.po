@@ -1,13 +1,13 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zun-ui 0.1.1.dev19\n"
+"Project-Id-Version: zun-ui 0.1.1.dev31\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-06-26 00:44+0000\n"
+"POT-Creation-Date: 2017-07-03 00:03+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-06-26 02:35+0000\n"
+"PO-Revision-Date: 2017-07-06 07:36+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -34,6 +34,9 @@ msgstr ""
 
 msgid "Always"
 msgstr "いつも"
+
+msgid "Always: Always pull the image from repository."
+msgstr "いつも: イメージをリポジトリから毎回取得します。"
 
 msgid "An arbitrary human-readable name."
 msgstr "人間が読むことができる任意の名前。"
@@ -173,6 +176,10 @@ msgstr "ID"
 
 msgid "If not present"
 msgstr "存在しなければ"
+
+msgid ""
+"If not present: only pull the image if it does not already exist on the node."
+msgstr "存在しなければ: ノードにイメージが存在しない場合のみ取得します。"
 
 msgid "Image"
 msgstr "イメージ"
@@ -368,6 +375,11 @@ msgstr "このコンテナーの仮想 CPU の数。"
 
 msgid "The number of virtual cpus."
 msgstr "仮想 CPU の数。"
+
+msgid ""
+"The policy which determines if the image should be pulled prior to starting "
+"the container."
+msgstr "コンテナーを開始する前にイメージを取得すべきかを決定するポリシーです。"
 
 msgid "The working directory for commands to run in."
 msgstr "コマンドを実行するときの作業ディレクトリ。"
