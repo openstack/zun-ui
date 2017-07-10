@@ -8,24 +8,20 @@ Horizon plugin for Zun
 * Source: https://git.openstack.org/cgit/openstack/zun-ui
 * Bugs: https://bugs.launchpad.net/zun-ui
 
-Usage
------
+User Documentation
+------------------
 
 .. toctree::
-  :maxdepth: 1
+   :maxdepth: 2
 
-  install
+   install/index
+   Release Notes <https://docs.openstack.org/releasenotes/zun-ui>
 
-Release Notes
--------------
-
-* https://docs.openstack.org/releasenotes/zun-ui
-
-Source Code Reference
----------------------
+Contributor Guide
+-----------------
 
 .. toctree::
-  :glob:
-  :maxdepth: 1
+   :glob:
+   :maxdepth: 2
 
-  sourcecode/autoindex
+   contributor/index
