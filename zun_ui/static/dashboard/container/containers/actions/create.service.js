@@ -79,6 +79,7 @@
           context.model.restart_policy_max_retry;
       }
       delete context.model.restart_policy_max_retry;
+      context.model.security_groups = setSecurityGroups(context.model);
       context.model = cleanNullProperties(context.model);
       return zun.createContainer(context.model).then(success);
     }
@@ -100,6 +101,15 @@
         }
       }
       return model;
+    }
+
+    function setSecurityGroups(model) {
+      // pull out the ids from the security groups objects
+      var securityGroups = [];
+      model.security_groups.forEach(function(securityGroup) {
+        securityGroups.push(securityGroup.name);
+      });
+      return securityGroups;
     }
   }
 })();

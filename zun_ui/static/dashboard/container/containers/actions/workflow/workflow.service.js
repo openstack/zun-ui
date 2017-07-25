@@ -241,6 +241,29 @@
               ]
             },
             {
+              "title": gettext("Security Groups"),
+              /* eslint-disable max-len */
+              help: basePath + "containers/actions/workflow/security-groups/security-groups.help.html",
+              /* eslint-disable max-len */
+              type: "section",
+              htmlClass: "row",
+              items: [
+                {
+                  type: "section",
+                  htmlClass: "col-xs-12",
+                  items: [
+                    {
+                      type: "template",
+                      /* eslint-disable max-len */
+                      templateUrl: basePath + "containers/actions/workflow/security-groups/security-groups.html"
+                      /* eslint-disable max-len */
+                    }
+                  ]
+                }
+              ],
+              condition: action === "update"
+            },
+            {
               "title": gettext("Miscellaneous"),
               help: basePath + "containers/actions/workflow/misc.help.html",
               type: "section",
@@ -304,6 +327,8 @@
         memory: "",
         restart_policy: "",
         restart_policy_max_retry: "",
+        // security groups
+        security_groups: [],
         // misc
         workdir: "",
         environment: "",

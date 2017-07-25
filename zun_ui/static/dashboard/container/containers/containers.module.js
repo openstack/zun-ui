@@ -133,6 +133,7 @@
       'memory': {label: gettext('Memory'), filters: ['noValue'] },
       'name': {label: gettext('Name'), filters: ['noName'] },
       'ports': {label: gettext('Ports'), filters: ['noValue', 'json'] },
+      'security_groups': {label: gettext('Security Groups'), filters: ['noValue', 'json'] },
       'restart_policy': {label: gettext('Restart Policy'), filters: ['noValue', 'json'] },
       'status': {label: gettext('Status'), filters: ['noValue'] },
       'status_detail': {label: gettext('Status Detail'), filters: ['noValue'] },

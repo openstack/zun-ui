@@ -51,11 +51,11 @@ def _cleanup_params(attrs, check, **params):
         if key == "run":
             run = value
         elif key == "cpu":
-            args["cpu"] = float(value)
+            args[key] = float(value)
         elif key == "memory":
-            args["memory"] = int(value)
-        elif key == "interactive":
-            args["interactive"] = value
+            args[key] = int(value)
+        elif key == "interactive" or key == "security_groups":
+            args[key] = value
         elif key == "restart_policy":
             args[key] = utils.check_restart_policy(value)
         elif key == "environment" or key == "labels":
