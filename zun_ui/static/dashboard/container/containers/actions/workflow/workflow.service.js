@@ -21,10 +21,11 @@
 
   workflow.$inject = [
     "horizon.dashboard.container.basePath",
-    "horizon.framework.util.i18n.gettext"
+    "horizon.framework.util.i18n.gettext",
+    "horizon.framework.widgets.metadata.tree.service"
   ];
 
-  function workflow(basePath, gettext) {
+  function workflow(basePath, gettext, treeService) {
     var workflow = {
       init: init
     };
@@ -309,6 +310,29 @@
                   ]
                 }
               ]
+            },
+            {
+              "title": gettext("Scheduler Hints"),
+              /* eslint-disable max-len */
+              help: basePath + "containers/actions/workflow/scheduler-hints/scheduler-hints.help.html",
+              /* eslint-disable max-len */
+              type: "section",
+              htmlClass: "row",
+              items: [
+                {
+                  type: "section",
+                  htmlClass: "col-xs-12",
+                  items: [
+                    {
+                      type: "template",
+                      /* eslint-disable max-len */
+                      templateUrl: basePath + "containers/actions/workflow/scheduler-hints/scheduler-hints.html"
+                      /* eslint-disable max-len */
+                    }
+                  ]
+                }
+              ],
+              condition: action === "update"
             }
           ]
         }
@@ -334,8 +358,15 @@
         environment: "",
         interactive: true,
         // labels
-        labels: ""
+        labels: "",
+        // hints
+        availableHints: [],
+        hintsTree: null,
+        hints: {}
       };
+
+      // initialize tree object for scheduler hints.
+      model.hintsTree = new treeService.Tree(model.availableHints, {});
 
       var config = {
         title: title,

@@ -80,6 +80,9 @@
       }
       delete context.model.restart_policy_max_retry;
       context.model.security_groups = setSecurityGroups(context.model);
+      context.model.hints = setSchedulerHints(context.model);
+      delete context.model.availableHints;
+      delete context.model.hintsTree;
       context.model = cleanNullProperties(context.model);
       return zun.createContainer(context.model).then(success);
     }
@@ -110,6 +113,19 @@
         securityGroups.push(securityGroup.name);
       });
       return securityGroups;
+    }
+
+    function setSchedulerHints(model) {
+      var schedulerHints = {};
+      if (model.hintsTree) {
+        var hints = model.hintsTree.getExisting();
+        if (!angular.equals({}, hints)) {
+          angular.forEach(hints, function(value, key) {
+            schedulerHints[key] = value + '';
+          });
+        }
+      }
+      return schedulerHints;
     }
   }
 })();

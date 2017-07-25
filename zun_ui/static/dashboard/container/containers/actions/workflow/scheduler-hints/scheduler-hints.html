@@ -1,0 +1,12 @@
+<div ng-controller="horizon.dashboard.container.containers.workflow.scheduler-hints as ctrl">
+  <p translate>
+    This step allows you to add scheduler hints to your container.
+  </p>
+  <metadata-tree
+    ng-if="ctrl.availableHints"
+    available="::ctrl.availableHints"
+    existing="{}"
+    text="::ctrl.text"
+    model="::ctrl.hintsTree">
+  </metadata-tree>
+</div>

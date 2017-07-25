@@ -54,7 +54,8 @@ def _cleanup_params(attrs, check, **params):
             args[key] = float(value)
         elif key == "memory":
             args[key] = int(value)
-        elif key == "interactive" or key == "security_groups":
+        elif key == "interactive" or key == "security_groups" \
+                or key == "hints":
             args[key] = value
         elif key == "restart_policy":
             args[key] = utils.check_restart_policy(value)
