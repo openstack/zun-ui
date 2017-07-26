@@ -20,17 +20,19 @@
     .factory("horizon.dashboard.container.containers.workflow", workflow);
 
   workflow.$inject = [
+    "horizon.app.core.openstack-service-api.neutron",
     "horizon.dashboard.container.basePath",
     "horizon.framework.util.i18n.gettext",
     "horizon.framework.widgets.metadata.tree.service"
   ];
 
-  function workflow(basePath, gettext, treeService) {
+  function workflow(neutron, basePath, gettext, treeService) {
     var workflow = {
       init: init
     };
 
     function init(action, title, submitText) {
+      var push = Array.prototype.push;
       var schema, form, model;
       var imageDrivers = [
         {value: "docker", name: gettext("Docker Hub")},
@@ -242,6 +244,44 @@
               ]
             },
             {
+              "title": gettext("Networks"),
+              help: basePath + "containers/actions/workflow/networks/networks.help.html",
+              type: "section",
+              htmlClass: "row",
+              items: [
+                {
+                  type: "section",
+                  htmlClass: "col-xs-12",
+                  items: [
+                    {
+                      type: "template",
+                      templateUrl: basePath + "containers/actions/workflow/networks/networks.html"
+                    }
+                  ]
+                }
+              ],
+              condition: action === "update"
+            },
+            {
+              "title": gettext("Ports"),
+              help: basePath + "containers/actions/workflow/ports/ports.help.html",
+              type: "section",
+              htmlClass: "row",
+              items: [
+                {
+                  type: "section",
+                  htmlClass: "col-xs-12",
+                  items: [
+                    {
+                      type: "template",
+                      templateUrl: basePath + "containers/actions/workflow/ports/ports.html"
+                    }
+                  ]
+                }
+              ],
+              condition: action === "update"
+            },
+            {
               "title": gettext("Security Groups"),
               /* eslint-disable max-len */
               help: basePath + "containers/actions/workflow/security-groups/security-groups.help.html",
@@ -351,6 +391,10 @@
         memory: "",
         restart_policy: "",
         restart_policy_max_retry: "",
+        // networks
+        networks: [],
+        // ports
+        ports: [],
         // security groups
         security_groups: [],
         // misc
@@ -367,6 +411,60 @@
 
       // initialize tree object for scheduler hints.
       model.hintsTree = new treeService.Tree(model.availableHints, {});
+
+      // available networks
+      model.availableNetworks = [];
+
+      // available ports
+      model.availablePorts = [];
+
+      // get available neutron networks and ports
+      getNetworks();
+      function getNetworks() {
+        return neutron.getNetworks().then(onGetNetworks).then(getPorts);
+      }
+
+      function onGetNetworks(response) {
+        push.apply(model.availableNetworks,
+          response.data.items.filter(function(network) {
+            return network.subnets.length > 0;
+          }));
+        return response;
+      }
+
+      function getPorts(networks) {
+        networks.data.items.forEach(function(network) {
+          return neutron.getPorts({network_id: network.id}).then(
+            function(ports) {
+              onGetPorts(ports, network);
+            }
+          );
+        });
+      }
+
+      function onGetPorts(ports, network) {
+        ports.data.items.forEach(function(port) {
+          // no device_owner means that the port can be attached
+          if (port.device_owner === "" && port.admin_state === "UP") {
+            port.subnet_names = getPortSubnets(port, network.subnets);
+            port.network_name = network.name;
+            model.availablePorts.push(port);
+          }
+        });
+      }
+
+      // helper function to return an object of IP:NAME pairs for subnet mapping
+      function getPortSubnets(port, subnets) {
+        var subnetNames = {};
+        port.fixed_ips.forEach(function (ip) {
+          subnets.forEach(function (subnet) {
+            if (ip.subnet_id === subnet.id) {
+              subnetNames[ip.ip_address] = subnet.name;
+            }
+          });
+        });
+        return subnetNames;
+      }
 
       var config = {
         title: title,
