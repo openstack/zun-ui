@@ -79,7 +79,12 @@
           context.model.restart_policy_max_retry;
       }
       delete context.model.restart_policy_max_retry;
+      context.model.nets = setNetworksAndPorts(context.model);
       context.model.security_groups = setSecurityGroups(context.model);
+      delete context.model.networks;
+      delete context.model.ports;
+      delete context.model.availableNetworks;
+      delete context.model.availablePorts;
       context.model.hints = setSchedulerHints(context.model);
       delete context.model.availableHints;
       delete context.model.hintsTree;
@@ -104,6 +109,18 @@
         }
       }
       return model;
+    }
+
+    function setNetworksAndPorts(model) {
+      // pull out the ids from the security groups objects
+      var nets = [];
+      model.networks.forEach(function(network) {
+        nets.push({network: network.id});
+      });
+      model.ports.forEach(function(port) {
+        nets.push({port: port.id});
+      });
+      return nets;
     }
 
     function setSecurityGroups(model) {
