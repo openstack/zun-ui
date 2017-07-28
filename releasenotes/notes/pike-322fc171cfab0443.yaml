@@ -1,0 +1,44 @@
+---
+prelude: >
+    Horizon Plugin for Container Management service is
+    released as Zun UI. Zun UI work with Horizon, and
+    service user interfaces for container management to
+    users. For example, Zun UI provides table views and
+    details view for container, these views have twelve
+    operations for container. Also, this has
+    WebSocket-based console view. Zun UI is implemented
+    Angular-based, and supports latest features in Horizon.
+features:
+  - >
+    [`blueprint add-container-operations <https://blueprints.launchpad.net/zun-ui/+spec/add-container-operations>`_]
+    Operations for container, such as 'Start', 'Stop',
+    'Restart', 'Pause', 'Unpause', 'Execute Command' and
+    'Send Kill Signal', are added. Also, while loading
+    details view, then logs of container are shown in
+    'Logs' tab.
+  - >
+    [`blueprint interactive-mode <https://blueprints.launchpad.net/zun-ui/+spec/interactive-mode>`_]
+    Support pseudo-tty and stdin of container using serial
+    console module in Horizon via WebSocket. "console" tab
+    is added into details view. When user displays details
+    view, if "tty" option for the container is enabled, Zun
+    UI gets the URL for container "tty" from docker and
+    accesses the "tty" via WebSocket to realize console on
+    the browser.
+  - >
+    [`blueprint add-images-panel <https://blueprints.launchpad.net/zun-ui/+spec/add-images-panel>`_]
+    The panel for container images management is added for
+    admin users. This panel shows table view for images and
+    has "pull" action to store image as global action. The
+    actions we can use are only "pull" for now.
+other:
+  - >
+    Support python 3.5.
+  - >
+    Use only tox for test and remove run_tests.sh that is
+    no longer used.
+  - >
+    Switch theme for documentation from oslosphinx to
+    openstackdocstheme.
+  - >
+    Use pbr autodoc feature rather than custom logic.
