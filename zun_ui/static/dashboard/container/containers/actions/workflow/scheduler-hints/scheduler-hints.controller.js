@@ -40,7 +40,7 @@
 
     ctrl.text = {
       /* eslint-disable max-len */
-      help: gettext('You can specify scheduler hints by moving items from the left column to the right column. Use the "Custom" option to add scheduler hints with the key of your choice.'),
+      help: gettext('You can specify scheduler hints by moving items from the left column to the right column. Use the "Custom" option to add scheduler hints with the key of your choice.'),
       /* eslint-enable max-len */
       available: gettext('Available Scheduler Hints'),
       existing: gettext('Existing Scheduler Hints'),
