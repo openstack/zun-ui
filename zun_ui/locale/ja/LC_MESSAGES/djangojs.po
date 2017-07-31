@@ -1,13 +1,13 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zun-ui 0.1.1.dev31\n"
+"Project-Id-Version: zun-ui 0.1.1.dev53\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-07-03 00:03+0000\n"
+"POT-Creation-Date: 2017-07-31 03:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-07-06 07:36+0000\n"
+"PO-Revision-Date: 2017-07-31 04:28+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -17,6 +17,14 @@ msgstr ""
 msgid "A command that will be sent to the container."
 msgstr "コンテナーに送信されるコマンド。"
 
+msgid "A port represents a virtual switch port on a logical network switch."
+msgstr ""
+"ポートとは、論理ネットワークスイッチ上にある仮想スイッチポートのことを表しま"
+"す。"
+
+msgid "Active"
+msgstr "稼働中"
+
 msgid "Addresses"
 msgstr "アドレス"
 
@@ -24,6 +32,9 @@ msgid "Adds a map of labels to a container in comma separated KEY=VALUE pairs."
 msgstr ""
 "コンテナーに関連付けるラベルをコンマ区切りの KEY=VALUE ペアで指定してくださ"
 "い。。"
+
+msgid "Admin State"
+msgstr "管理状態"
 
 msgid ""
 "Allocate pseudo-TTY and keep STDIN open even if not attatched. This also "
@@ -38,11 +49,35 @@ msgstr "いつも"
 msgid "Always: Always pull the image from repository."
 msgstr "いつも: イメージをリポジトリから毎回取得します。"
 
+msgid ""
+"An <b>External</b> network is set up by an administrator.\n"
+"    If you want a container to communicate outside of the data center,\n"
+"    then attach a router between your <b>Project</b> network and the "
+"<b>External</b> network.\n"
+"    You can use the <b>Network Topology</b> view to connect the router to "
+"the two networks."
+msgstr ""
+"<b>外部</b>ネットワークは管理者により設定されます。\n"
+"コンテナーをデータセンター外部と通信させたい場合は、\n"
+"ルーターを<b>プロジェクト</b>ネットワークと<b>外部</b>ネットワークの両方に接"
+"続します。\n"
+"<b>ネットワークトポロジー</b>画面で、ルーターを両方のネットワークに接続するこ"
+"ともできます。"
+
 msgid "An arbitrary human-readable name."
 msgstr "人間が読むことができる任意の名前。"
 
+msgid "Available Scheduler Hints"
+msgstr "有効なスケジューラーヒント"
+
+msgid "Bare Metal"
+msgstr "Bare Metal"
+
 msgid "CPU"
 msgstr "CPU"
+
+msgid "Click to see more details"
+msgstr "クリックすると詳しい情報が表示されます。"
 
 msgid "Command"
 msgstr "コマンド"
@@ -102,6 +137,9 @@ msgstr "コンテナー名"
 msgid "Containers"
 msgstr "コンテナー"
 
+msgid "Containers attach their interfaces to ports."
+msgstr "コンテナーによりインターフェースがポートに接続されます。"
+
 msgid "Create"
 msgstr "作成"
 
@@ -129,11 +167,26 @@ msgid "Deleted Container: %s."
 msgid_plural "Deleted Containers: %s."
 msgstr[0] "コンテナー %s を削除しました。"
 
+msgid "Description"
+msgstr "説明"
+
+msgid "Direct"
+msgstr "Direct"
+
+msgid "Direct Physical"
+msgstr "Direct Physical"
+
+msgid "Direction"
+msgstr "方向"
+
 msgid "Docker Hub"
 msgstr "Docker Hub"
 
 msgid "Docker Hub: Pull the image from Docker Hub."
 msgstr "Docker Hub: Docker Hub からイメージを取得します。"
+
+msgid "Down"
+msgstr "停止中"
 
 msgid "Enable Interactive Mode"
 msgstr "インタラクティブモードの有効化"
@@ -147,6 +200,9 @@ msgstr "環境変数"
 msgid "Environment Variables"
 msgstr "環境変数"
 
+msgid "Ether Type"
+msgstr "Ethernet 種別"
+
 msgid "Execute"
 msgstr "実行"
 
@@ -156,8 +212,22 @@ msgstr "コマンドの実行"
 msgid "Executing"
 msgstr "実行中"
 
+msgid "Existing Scheduler Hints"
+msgstr "既存のスケジューラーヒント"
+
 msgid "Exit Code"
 msgstr "終了コード"
+
+msgid "External Network"
+msgstr "外部ネットワーク"
+
+msgid ""
+"For now, only Label Filter is available. So there are\n"
+"    no scheduler hint definitions in the left column. Please set key that "
+"included in labels."
+msgstr ""
+"現状、ラベルフィルターのみが利用できます。なので、左の列にはスケジューラーヒ"
+"ントが定義されていません。キーはラベルに含まれるものを設定してください。"
 
 msgid "Glance"
 msgstr "Glance"
@@ -168,11 +238,23 @@ msgstr "Glance: Glance からイメージを取得します。"
 msgid "Host"
 msgstr "ホスト"
 
+msgid "Host ID"
+msgstr "ホスト ID"
+
 msgid "Hostname"
 msgstr "ホスト名"
 
 msgid "ID"
 msgstr "ID"
+
+msgid "IP"
+msgstr "IP"
+
+msgid ""
+"If a network is shared, then all users in the project can access the network."
+msgstr ""
+"共有ネットワークの場合には、プロジェクト内の全ユーザーがそのネットワークを利"
+"用できます。"
 
 msgid "If not present"
 msgstr "存在しなければ"
@@ -225,11 +307,20 @@ msgstr "リンク"
 msgid "Logs"
 msgstr "ログ"
 
+msgid "MacVTap"
+msgstr "MacVTap"
+
+msgid "Max Port"
+msgstr "上限ポート番号"
+
 msgid "Max Retry"
 msgstr "最大試行回数"
 
 msgid "Memory"
 msgstr "メモリー"
+
+msgid "Min Port"
+msgstr "下限ポート番号"
 
 msgid "Miscellaneous"
 msgstr "その他"
@@ -249,6 +340,22 @@ msgstr "コンテナーのイメージの名前または ID。"
 msgid "Name or ID of the container image."
 msgstr "コンテナーのイメージの名前または ID。"
 
+msgid "Network"
+msgstr "ネットワーク"
+
+msgid "Network ID"
+msgstr "ネットワーク ID"
+
+msgid "Network characteristics"
+msgstr "ネットワークの詳細"
+
+msgid "Networks"
+msgstr "ネットワーク"
+
+msgid ""
+"Networks provide the communication channels for containers in the cloud."
+msgstr "ネットワークはクラウド内のコンテナー用の通信経路を提供します。"
+
 msgid "Never"
 msgstr "なし"
 
@@ -257,6 +364,18 @@ msgstr "Never: イメージを取得しない。"
 
 msgid "No"
 msgstr "なし"
+
+msgid "No available items"
+msgstr "利用できるアイテムがありません。"
+
+msgid "No available scheduler hints"
+msgstr "有効なスケジューラーヒントはありません"
+
+msgid "No existing scheduler hints"
+msgstr "選択済みのスケジューラーヒントはありません"
+
+msgid "Normal"
+msgstr "標準"
 
 msgid "On failure"
 msgstr "失敗したら"
@@ -270,8 +389,49 @@ msgstr "概要"
 msgid "Pause Container"
 msgstr "コンテナーの一時停止"
 
+msgid "Physical Network"
+msgstr "物理ネットワーク"
+
 msgid "Ports"
 msgstr "ポート"
+
+msgid "Ports can be created under a network by administrators."
+msgstr "管理者はネットワークにポートを作成することができます。"
+
+msgid ""
+"Ports provide extra communication channels to your instances. You can select "
+"ports instead of networks or a mix of both."
+msgstr ""
+"ポートは、インスタンスに追加の通信経路を提供します。ポートをネットワークの代"
+"わりに選択したり、ネットワークと併せて両方を選択したりすることができます。"
+
+msgid "Project"
+msgstr "プロジェクト"
+
+msgid "Project ID"
+msgstr "プロジェクト ID"
+
+msgid ""
+"Project networks are created by users.\n"
+"    These networks are fully isolated and are project-specific."
+msgstr ""
+"プロジェクトネットワークはユーザーが作成したものです。\n"
+"これらのネットワークは、完全に分離されており、そのプロジェクトでのみ使用でき"
+"ます。"
+
+msgid "Protocol"
+msgstr "プロトコル"
+
+msgid "Provider Network"
+msgstr "プロバイダーネットワーク"
+
+msgid ""
+"Provider networks are created by administrators.\n"
+"    These networks map to an existing physical network in the data center."
+msgstr ""
+"プロバイダーネットワークは管理者により作成されています。\n"
+"これらのネットワークは、データセンターの既存の物理ネットワークに関連付けられ"
+"ています。"
 
 msgid "Pull"
 msgstr "取得"
@@ -279,8 +439,14 @@ msgstr "取得"
 msgid "Pull Image"
 msgstr "イメージの取得"
 
+msgid "Re-order items using drag and drop"
+msgstr "順番を並べ替えるには、アイテムをドラッグ＆ドロップしてください。"
+
 msgid "Refresh"
 msgstr "最新表示"
+
+msgid "Remote"
+msgstr "接続相手"
 
 msgid "Restart"
 msgstr "再起動"
@@ -297,14 +463,67 @@ msgstr "コンテナーが終了するときに適用する再起動ポリシー
 msgid "Retry times for 'On failure' policy."
 msgstr "'失敗したら' ポリシーの試行回数"
 
+msgid "Scheduler Hints"
+msgstr "スケジューラーヒント"
+
+msgid ""
+"Scheduler hints allow you to pass additional placement related information "
+"to the Zun's scheduler."
+msgstr ""
+"スケジューラーヒントを使うと、配置に関する追加の情報を Zun のスケジューラーに"
+"渡すことができます。"
+
+msgid "Security Groups"
+msgstr "セキュリティグループ"
+
+msgid ""
+"Security groups define a set of IP filter rules that determine how network "
+"traffic flows to and from a container. Users can add additional rules to an "
+"existing security group to further define the access options for a "
+"container. To create additional rules, go to the <b>Network | Security "
+"Groups</b> view, then find the security group and click <b>Manage Rules</b>."
+msgstr ""
+"セキュリティーグループは、コンテナーに出入りするネットワークトラフィックをど"
+"のように扱うかを決める IP フィルタールールの集合体です。ユーザーは、既存のセ"
+"キュリティーグループにルールを追加して、コンテナーへのアクセス設定を行うこと"
+"ができます。追加のルールを作成するには、<b>ネットワーク | セキュリティーグ"
+"ループ</b>画面で追加先のセキュリティーグループを見つけて、<b>ルールの管理</b>"
+"をクリックします。"
+
+msgid "Segmentation ID"
+msgstr "セグメント ID"
+
+msgid "Select an item from Available items below"
+msgstr "以下の利用可能なアイテムから 1 つ選択してください。"
+
+msgid "Select networks from those listed below."
+msgstr "以下のリストからネットワークを選択してください。"
+
+msgid "Select one or more"
+msgstr "1 つ以上選択してください。"
+
+msgid "Select one or more security groups from the available groups below."
+msgstr ""
+"以下の利用可能なグループから、１つ以上のセキュリティーグループを選択してくだ"
+"さい。"
+
 msgid "Select policy."
 msgstr "ポリシーを選択してください"
+
+msgid "Select ports from those listed below."
+msgstr "以下のリストからポートを選択してください。"
+
+msgid "Select the security groups to create the container in."
+msgstr "作成するコンテナーのセキュリティーグループを選択します。"
 
 msgid "Send"
 msgstr "送信"
 
 msgid "Send Kill Signal"
 msgstr "停止シグナルの送信"
+
+msgid "Shared"
+msgstr "共有"
 
 msgid ""
 "Signal to send to the container: integer or string like SIGINT.\n"
@@ -349,6 +568,9 @@ msgstr "停止"
 msgid "Stop Container"
 msgstr "コンテナーの停止"
 
+msgid "Subnets Associated"
+msgstr "割り当てサブネット"
+
 msgid "Tag"
 msgstr "タグ"
 
@@ -370,6 +592,13 @@ msgstr "コンテナーのイメージの取得に使用するイメージドラ
 msgid "The kill signal to send."
 msgstr "送信する停止シグナル"
 
+msgid ""
+"The logical port also defines the MAC address and the IP address(es) to be "
+"assigned to the interfaces plugged into them."
+msgstr ""
+"論理ポートは、それらに結線されるインターフェースに割り当てられる MAC アドレス"
+"と IP アドレスも定義します。"
+
 msgid "The number of virtual cpu for this container."
 msgstr "このコンテナーの仮想 CPU の数。"
 
@@ -381,11 +610,33 @@ msgid ""
 "the container."
 msgstr "コンテナーを開始する前にイメージを取得すべきかを決定するポリシーです。"
 
+msgid "The status indicates whether the network has an active connection."
+msgstr "ステータスは、ネットワークにアクティブな接続があるかを示します。"
+
+msgid "The status indicates whether the port has an active connection."
+msgstr "ステータスは、ポートにアクティブな接続があるかどうかを示します。"
+
+msgid ""
+"The subnet identifies a sub-section of a network. A subnet is specified in "
+"CIDR format.\n"
+"    A typical CIDR format looks like <samp>192.xxx.x.x/24</samp>."
+msgstr ""
+"サブネットはネットワークの IP アドレスを表します。サブネットは CIDR 形式で指"
+"定します。\n"
+"通常、CIDR 形式は <samp>192.xxx.x.x/24</samp> のような形式です。"
+
 msgid "The working directory for commands to run in."
 msgstr "コマンドを実行するときの作業ディレクトリ。"
 
 msgid "The working directory needs to be an absolute path."
 msgstr "作業ディレクトリは絶対パスである必要があります。"
+
+msgid "This step allows you to add scheduler hints to your container."
+msgstr ""
+"このステップで、コンテナーにスケジューラーヒントを追加することができます。"
+
+msgid "Type"
+msgstr "種別"
 
 msgid "Unable to create Container."
 msgstr "コンテナーを作成できません。"
@@ -456,17 +707,60 @@ msgstr "停止するまで"
 msgid "Unpause Container"
 msgstr "コンテナーの一時停止解除"
 
+msgid "Up"
+msgstr "動作中"
+
 msgid "Update"
 msgstr "更新"
 
 msgid "Update Container"
 msgstr "コンテナーの更新"
 
+msgid "VNIC type"
+msgstr "仮想 NIC の種別"
+
+msgid ""
+"When IP addresses are associated to a port, this also implies the port is "
+"associated with a subnet, as the IP address was taken from the allocation "
+"pool for a specific subnet."
+msgstr ""
+"IP アドレスがポートに割り当てられる場合には、特定のサブネットの割り当てプール"
+"から IP アドレスが割り当てられるので、そのポートにサブネットが割り当てられる"
+"ことにもなります。"
+
+msgid ""
+"When the <b>Admin State</b> for a network is set to <b>Up</b>,\n"
+"    then the network is available for use. You can set the <b>Admin State</"
+"b> to <b>Down</b>\n"
+"    if you are not ready for other users to access the network."
+msgstr ""
+"ネットワークの<b>管理状態</b>を <b>UP</b> に設定すると、そのネットワークは利"
+"用可能となります。\n"
+"他のユーザーがそのネットワークにアクセスするための準備が整っていない場合に"
+"は、\n"
+"<b>管理状態</b>を <b>DOWN</b> に設定することができます。"
+
+msgid ""
+"When the <b>Admin State</b> for a port is set to <b>Up</b> and it has no "
+"<b>Device Owner</b>,\n"
+"    then the port is available for use. You can set the <b>Admin State</b> "
+"to <b>Down</b>\n"
+"    if you are not ready for other users to use the port."
+msgstr ""
+"ポートの<b>管理状態</b>が <b>Up</b> に設定されていて、<b>デバイス所有者</b>が"
+"指定されていない場合には、\n"
+"そのポートは使用可能です。他のユーザーがそのポートを使用するための準備が整っ"
+"ていない場合には、<b>管理状態</b>を <b>Down</b> に\n"
+"設定することができます。"
+
 msgid "Workdir"
 msgstr "作業ディレクトリ"
 
 msgid "Working Directory"
 msgstr "作業ディレクトリ"
+
+msgid "Yes"
+msgstr "はい"
 
 #, python-format
 msgid "You are not allowed to delete container forcely: %s"
@@ -475,6 +769,15 @@ msgstr "コンテナーの強制削除は許可されていません: %s"
 #, python-format
 msgid "You are not allowed to delete containers: %s"
 msgstr "コンテナーの削除は許可されていません: %s"
+
+msgid ""
+"You can specify scheduler hints by moving items from the left column to the "
+"right column. Use the \"Custom\" option to add scheduler hints with the key "
+"of your choice."
+msgstr ""
+"左の列から右の列にアイテムを移動して、スケジューラーヒントを指定できます。"
+"キーを自分で指定してスケジューラーヒントを追加するには、「カスタム」 オプショ"
+"ンを使用してください。"
 
 #, python-format
 msgid ""
