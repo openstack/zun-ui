@@ -83,9 +83,8 @@
   function run(registry, zun, basePath, resourceType, containerService) {
     registry.getResourceType(resourceType)
     .setNames(gettext('Container'), gettext('Containers'))
-    // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'details/drawer.html')
-    // for table row items and detail summary view.
+    .setDefaultIndexUrl('/project/container/containers/')
     .setProperties(containerProperties())
     .setListFunction(containerService.getContainersPromise)
     .tableColumns
