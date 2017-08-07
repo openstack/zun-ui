@@ -19,10 +19,3 @@ PANEL_DASHBOARD = 'project'
 
 # Python panel class of the PANEL to be added.
 ADD_PANEL = 'zun_ui.content.container.containers.panel.Containers'
-
-# The details view to be belonged to the PANEL_DASHBOARD and PANEL.
-# If the details view uses ngdetails, this setting is needed to refresh the
-# details view.
-ADD_DETAIL_PAGES = {
-    'OS::Zun::Container': (PANEL_DASHBOARD, PANEL)
-}
