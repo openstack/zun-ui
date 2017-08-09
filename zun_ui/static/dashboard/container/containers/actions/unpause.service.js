@@ -28,13 +28,14 @@
   unpauseService.$inject = [
     'horizon.app.core.openstack-service-api.zun',
     'horizon.dashboard.container.containers.resourceType',
+    'horizon.dashboard.container.containers.validStates',
     'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.q.extensions',
     'horizon.framework.widgets.toast.service'
   ];
 
   function unpauseService(
-    zun, resourceType, actionResult, $qExtensions, toast
+    zun, resourceType, validStates, actionResult, $qExtensions, toast
   ) {
 
     var message = {
@@ -56,8 +57,10 @@
     function initAction() {
     }
 
-    function allowed() {
-      return $qExtensions.booleanAsPromise(true);
+    function allowed(container) {
+      return $qExtensions.booleanAsPromise(
+        validStates.unpause.indexOf(container.status) >= 0
+      );
     }
 
     function perform(selected) {

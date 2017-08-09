@@ -25,9 +25,11 @@
     .factory('horizon.dashboard.container.containers.update.service', updateService);
 
   updateService.$inject = [
+    '$q',
     'horizon.app.core.openstack-service-api.policy',
     'horizon.app.core.openstack-service-api.zun',
     'horizon.dashboard.container.containers.resourceType',
+    'horizon.dashboard.container.containers.validStates',
     'horizon.dashboard.container.containers.workflow',
     'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.i18n.gettext',
@@ -37,7 +39,7 @@
   ];
 
   function updateService(
-    policy, zun, resourceType, workflow,
+    $q, policy, zun, resourceType, validStates, workflow,
     actionResult, gettext, $qExtensions, modal, toast
   ) {
     var message = {
@@ -98,8 +100,13 @@
       return modal.open(config).then(submit);
     }
 
-    function allowed() {
-      return policy.ifAllowed({ rules: [['container', 'edit_container']] });
+    function allowed(container) {
+      return $q.all([
+        policy.ifAllowed({ rules: [['container', 'edit_container']] }),
+        $qExtensions.booleanAsPromise(
+          validStates.update.indexOf(container.status) >= 0
+        )
+      ]);
     }
 
     function submit(context) {

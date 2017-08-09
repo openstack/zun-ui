@@ -30,6 +30,7 @@
   executeContainerService.$inject = [
     'horizon.app.core.openstack-service-api.zun',
     'horizon.dashboard.container.containers.resourceType',
+    'horizon.dashboard.container.containers.validStates',
     'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
@@ -39,7 +40,7 @@
   ];
 
   function executeContainerService(
-    zun, resourceType, actionResult, gettext, $qExtensions, modal, waitSpinner, toast
+    zun, resourceType, validStates, actionResult, gettext, $qExtensions, modal, waitSpinner, toast
   ) {
     // schema
     var schema = {
@@ -121,8 +122,10 @@
     function initAction() {
     }
 
-    function allowed() {
-      return $qExtensions.booleanAsPromise(true);
+    function allowed(container) {
+      return $qExtensions.booleanAsPromise(
+        validStates.execute.indexOf(container.status) >= 0
+      );
     }
 
     function perform(selected) {

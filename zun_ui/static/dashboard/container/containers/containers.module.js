@@ -30,6 +30,7 @@
       'horizon.dashboard.container.containers.details'
     ])
     .constant('horizon.dashboard.container.containers.events', events())
+    .constant('horizon.dashboard.container.containers.validStates', validStates())
     .constant('horizon.dashboard.container.containers.resourceType', 'OS::Zun::Container')
     .run(run)
     .config(config);
@@ -44,6 +45,29 @@
     return {
       CREATE_SUCCESS: 'horizon.dashboard.container.containers.CREATE_SUCCESS',
       DELETE_SUCCESS: 'horizon.dashboard.container.containers.DELETE_SUCCESS'
+    };
+  }
+
+  function validStates() {
+    var states = {
+      ERROR: 'Error', RUNNING: 'Running', STOPPED: 'Stopped',
+      PAUSED: 'Paused', UNKNOWN: 'Unknown', CREATING: 'Creating',
+      CREATED: 'Created', DELETED: 'Deleted'
+    };
+    return {
+      update: [states.CREATED, states.RUNNING, states.STOPPED, states.PAUSED],
+      start: [states.CREATED, states.STOPPED, states.ERROR],
+      stop: [states.RUNNING],
+      restart: [states.CREATED, states.RUNNING, states.STOPPED, states.ERROR],
+      pause: [states.RUNNING],
+      unpause: [states.PAUSED],
+      execute: [states.RUNNING],
+      kill: [states.RUNNING],
+      delete: [states.CREATED, states.ERROR, states.STOPPED, states.DELETED],
+      delete_force: [
+        states.CREATED, states.CREATING, states.ERROR, states.RUNNING,
+        states.STOPPED, states.UNKNOWN, states.DELETED
+      ]
     };
   }
 

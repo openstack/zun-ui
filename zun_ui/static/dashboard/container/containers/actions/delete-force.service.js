@@ -38,12 +38,13 @@
     'horizon.framework.widgets.modal.deleteModalService',
     'horizon.framework.widgets.toast.service',
     'horizon.dashboard.container.containers.resourceType',
-    'horizon.dashboard.container.containers.events'
+    'horizon.dashboard.container.containers.events',
+    'horizon.dashboard.container.containers.validStates'
   ];
 
   function deleteForceService(
     $location, $q, zun, policy, actionResult, gettext, $qExtensions, deleteModal,
-    toast, resourceType, events
+    toast, resourceType, events, validStates
   ) {
     var scope;
     var context = {
@@ -65,8 +66,10 @@
     function initAction() {
     }
 
-    function allowed() {
-      return $qExtensions.booleanAsPromise(true);
+    function allowed(container) {
+      return $qExtensions.booleanAsPromise(
+        validStates.delete_force.indexOf(container.status) >= 0
+      );
     }
 
     // delete selected resource objects
