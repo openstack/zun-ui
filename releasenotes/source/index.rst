@@ -6,3 +6,4 @@ Zun UI Release Notes
    :maxdepth: 1
 
    unreleased
+   pike
