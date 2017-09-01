@@ -12,7 +12,7 @@
 
 
 from horizon import exceptions
-from horizon.utils.memoized import memoized
+from horizon.utils.memoized import memoized_with_request
 import logging
 from openstack_dashboard.api import base
 from zunclient.common import utils
@@ -25,21 +25,40 @@ CONTAINER_CREATE_ATTRS = zun_client.containers.CREATION_ATTRIBUTES
 IMAGE_PULL_ATTRS = zun_client.images.PULL_ATTRIBUTES
 
 
-@memoized
-def zunclient(request):
-    zun_url = ""
+def get_auth_params_from_request(request):
+    """Extracts properties needed by zunclient call from the request object.
+
+    These will be used to memoize the calls to zunclient.
+    """
+    endpoint_override = ""
     try:
-        zun_url = base.url_for(request, 'container')
+        endpoint_override = base.url_for(request, 'container')
     except exceptions.ServiceCatalogException:
         LOG.debug('No Container Management service is configured.')
         return None
+    return (
+        request.user.username,
+        request.user.token.id,
+        request.user.tenant_id,
+        endpoint_override
+    )
+
+
+@memoized_with_request(get_auth_params_from_request)
+def zunclient(request_auth_params):
+    (
+        username,
+        token_id,
+        project_id,
+        endpoint_override
+    ) = request_auth_params
 
     LOG.debug('zunclient connection created using the token "%s" and url'
-              '"%s"' % (request.user.token.id, zun_url))
-    c = zun_client.Client(username=request.user.username,
-                          project_id=request.user.tenant_id,
-                          input_auth_token=request.user.token.id,
-                          zun_url=zun_url)
+              ' "%s"' % (token_id, endpoint_override))
+    c = zun_client.Client(username=username,
+                          project_id=project_id,
+                          auth_token=token_id,
+                          endpoint_override=endpoint_override)
     return c
 
 
