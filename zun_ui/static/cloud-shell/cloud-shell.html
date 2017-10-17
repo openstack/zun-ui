@@ -1,0 +1,23 @@
+<div ng-controller="horizon.cloud-shell.controller as ctrl">
+  <resizer id="cloud-shell-resizer"
+    direction="horizontal"
+    height="6"
+    bottom="#cloud-shell"
+    callback="ctrl.resizeTerminal()">
+  </resizer>
+  <div id="cloud-shell">
+    <div id="shell-header">
+      {$ ctrl.container.name $}
+      <!--
+      <a class="cloud-shell-external" ng-click="ctrl.openInNewWindow()">
+        <span class="fa fa-external-link"></span>
+      </a>
+      -->
+      <a class="cloud-shell-close" ng-click="ctrl.close()">
+        <span class="fa fa-times"></span>
+      </a>
+    </div>
+    <div id="shell-content">
+    </div>
+  </div>
+</div>

@@ -205,6 +205,10 @@ def container_attach(request, id):
     return zunclient(request).containers.attach(id)
 
 
+def container_resize(request, id, width, height):
+    return zunclient(request).containers.resize(id, width, height)
+
+
 def image_list(request, limit=None, marker=None, sort_key=None,
                sort_dir=None, detail=True):
     return zunclient(request).images.list(limit, marker, sort_key,

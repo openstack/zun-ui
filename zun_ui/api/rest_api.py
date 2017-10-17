@@ -90,6 +90,10 @@ class ContainerActions(generic.View):
             return client.container_kill(request, id, signal)
         elif action == 'attach':
             return client.container_attach(request, id)
+        elif action == 'resize':
+            width = request.DATA.get("width") or 500
+            height = request.DATA.get("height") or 400
+            return client.container_resize(request, id, width, height)
 
 
 @urls.register

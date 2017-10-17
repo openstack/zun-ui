@@ -43,6 +43,7 @@
       unpauseContainer: unpauseContainer,
       executeContainer: executeContainer,
       killContainer: killContainer,
+      resizeContainer: resizeContainer,
       pullImage: pullImage,
       getImages: getImages
     };
@@ -63,9 +64,12 @@
       return apiService.patch(containersPath + id, params).error(error(msg));
     }
 
-    function getContainer(id) {
-      var msg = gettext('Unable to retrieve the Container.');
-      return apiService.get(containersPath + id).error(error(msg));
+    function getContainer(id, suppressError) {
+      var promise = apiService.get(containersPath + id);
+      return suppressError ? promise : promise.error(function() {
+        var msg = gettext('Unable to retrieve the Container.');
+        toastService.add('error', msg);
+      });
     }
 
     function getContainers() {
@@ -133,6 +137,11 @@
     function killContainer(id, params) {
       var msg = gettext('Unable to send kill signal.');
       return apiService.post(containersPath + id + '/kill', params).error(error(msg));
+    }
+
+    function resizeContainer(id, params) {
+      var msg = gettext('Unable to resize console.');
+      return apiService.post(containersPath + id + '/resize', params).error(error(msg));
     }
 
     ////////////
