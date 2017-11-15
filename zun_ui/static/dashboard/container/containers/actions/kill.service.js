@@ -70,7 +70,7 @@
           },
           {
             type: 'template',
-            templateUrl: basePath + 'operations/kill.help.html'
+            templateUrl: basePath + 'actions/kill.help.html'
           }
         ]
       }
