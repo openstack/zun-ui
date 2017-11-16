@@ -1,0 +1,752 @@
+# Andi Chandler <andi@gowling.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zun-ui 0.2.1.dev17\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-11-01 06:07+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-11-14 10:26+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"Language-Team: English (United Kingdom)\n"
+"Language: en-GB\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "A command that will be sent to the container."
+msgstr "A command that will be sent to the container."
+
+msgid "A port represents a virtual switch port on a logical network switch."
+msgstr "A port represents a virtual switch port on a logical network switch."
+
+msgid "Active"
+msgstr "Active"
+
+msgid "Addresses"
+msgstr "Addresses"
+
+msgid "Adds a map of labels to a container in comma separated KEY=VALUE pairs."
+msgstr ""
+"Adds a map of labels to a container in comma separated KEY=VALUE pairs."
+
+msgid "Admin State"
+msgstr "Admin State"
+
+msgid ""
+"Allocate pseudo-TTY and keep STDIN open even if not attatched. This also "
+"enables Web console in console tab on details view."
+msgstr ""
+"Allocate pseudo-TTY and keep STDIN open even if not attached. This also "
+"enables Web console in console tab on details view."
+
+msgid "Always"
+msgstr "Always"
+
+msgid "Always: Always pull the image from repository."
+msgstr "Always: Always pull the image from repository."
+
+msgid ""
+"An <b>External</b> network is set up by an administrator.\n"
+"    If you want a container to communicate outside of the data center,\n"
+"    then attach a router between your <b>Project</b> network and the "
+"<b>External</b> network.\n"
+"    You can use the <b>Network Topology</b> view to connect the router to "
+"the two networks."
+msgstr ""
+"An <b>External</b> network is set up by an administrator.\n"
+"    If you want a container to communicate outside of the data centre,\n"
+"    then attach a router between your <b>Project</b> network and the "
+"<b>External</b> network.\n"
+"    You can use the <b>Network Topology</b> view to connect the router to "
+"the two networks."
+
+msgid "An arbitrary human-readable name."
+msgstr "An arbitrary human-readable name."
+
+msgid "Available Scheduler Hints"
+msgstr "Available Scheduler Hints"
+
+msgid "Bare Metal"
+msgstr "Bare Metal"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "Click to see more details"
+msgstr "Click to see more details"
+
+msgid "Command"
+msgstr "Command"
+
+msgid "Command sent to the container."
+msgstr "Command sent to the container."
+
+#, python-format
+msgid "Command was successfully executed at container %s."
+msgstr "Command was successfully executed at container %s."
+
+msgid "Confirm Delete Container"
+msgid_plural "Confirm Delete Containers"
+msgstr[0] "Confirm Delete Container"
+msgstr[1] "Confirm Delete Containers"
+
+msgid "Console"
+msgstr "Console"
+
+msgid "Container"
+msgstr "Container"
+
+#, python-format
+msgid "Container %s was successfully created."
+msgstr "Container %s was successfully created."
+
+#, python-format
+msgid "Container %s was successfully paused."
+msgstr "Container %s was successfully paused."
+
+#, python-format
+msgid "Container %s was successfully restarted."
+msgstr "Container %s was successfully restarted."
+
+#, python-format
+msgid "Container %s was successfully started."
+msgstr "Container %s was successfully started."
+
+#, python-format
+msgid "Container %s was successfully stoped."
+msgstr "Container %s was successfully stoped."
+
+#, python-format
+msgid "Container %s was successfully unpaused."
+msgstr "Container %s was successfully unpaused."
+
+#, python-format
+msgid "Container %s was successfully updated."
+msgstr "Container %s was successfully updated."
+
+msgid "Container Name"
+msgstr "Container Name"
+
+msgid "Containers"
+msgstr "Containers"
+
+msgid "Containers attach their interfaces to ports."
+msgstr "Containers attach their interfaces to ports."
+
+msgid "Create"
+msgstr "Create"
+
+msgid "Create Container"
+msgstr "Create Container"
+
+msgid "Delete Container"
+msgid_plural "Delete Containers"
+msgstr[0] "Delete Container"
+msgstr[1] "Delete Containers"
+
+msgid "Delete Containers"
+msgstr "Delete Containers"
+
+#, python-format
+msgid "Deleted Container: %s."
+msgid_plural "Deleted Containers: %s."
+msgstr[0] "Deleted Container: %s."
+msgstr[1] "Deleted Containers: %s."
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Direct"
+msgstr "Direct"
+
+msgid "Direct Physical"
+msgstr "Direct Physical"
+
+msgid "Direction"
+msgstr "Direction"
+
+msgid "Docker Hub"
+msgstr "Docker Hub"
+
+msgid "Docker Hub: Pull the image from Docker Hub."
+msgstr "Docker Hub: Pull the image from Docker Hub."
+
+msgid "Down"
+msgstr "Down"
+
+msgid "Enable Interactive Mode"
+msgstr "Enable Interactive Mode"
+
+msgid "Enable interactive mode"
+msgstr "Enable interactive mode"
+
+msgid "Environment"
+msgstr "Environment"
+
+msgid "Environment Variables"
+msgstr "Environment Variables"
+
+msgid "Ether Type"
+msgstr "Ether Type"
+
+msgid "Execute"
+msgstr "Execute"
+
+msgid "Execute Command"
+msgstr "Execute Command"
+
+msgid "Executing"
+msgstr "Executing"
+
+msgid "Existing Scheduler Hints"
+msgstr "Existing Scheduler Hints"
+
+msgid "Exit Code"
+msgstr "Exit Code"
+
+msgid "External Network"
+msgstr "External Network"
+
+msgid ""
+"For now, only Label Filter is available. So there are\n"
+"    no scheduler hint definitions in the left column. Please set key that "
+"included in labels."
+msgstr ""
+"For now, only Label Filter is available. So there are\n"
+"    no scheduler hint definitions in the left column. Please set key that "
+"included in labels."
+
+msgid "Glance"
+msgstr "Glance"
+
+msgid "Glance: Pull the image from Glance."
+msgstr "Glance: Pull the image from Glance."
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Host ID"
+msgstr "Host ID"
+
+msgid "Hostname"
+msgstr "Hostname"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP"
+msgstr "IP"
+
+msgid ""
+"If a network is shared, then all users in the project can access the network."
+msgstr ""
+"If a network is shared, then all users in the project can access the network."
+
+msgid "If not present"
+msgstr "If not present"
+
+msgid ""
+"If not present: only pull the image if it does not already exist on the node."
+msgstr ""
+"If not present: only pull the image if it does not already exist on the node."
+
+msgid "Image"
+msgstr "Image"
+
+#, python-format
+msgid "Image %s was successfully pulled."
+msgstr "Image %s was successfully pulled."
+
+msgid "Image Driver"
+msgstr "Image Driver"
+
+msgid "Image ID"
+msgstr "Image ID"
+
+msgid "Image Pull Policy"
+msgstr "Image Pull Policy"
+
+msgid "Images"
+msgstr "Images"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Interactive"
+msgstr "Interactive"
+
+msgid "KEY1=VALUE1,KEY2=VALUE2..."
+msgstr "KEY1=VALUE1,KEY2=VALUE2..."
+
+msgid "Kill Signal"
+msgstr "Kill Signal"
+
+#, python-format
+msgid "Kill signal was successfully sent to container %s."
+msgstr "Kill signal was successfully sent to container %s."
+
+msgid "Labels"
+msgstr "Labels"
+
+msgid "Links"
+msgstr "Links"
+
+msgid "Logs"
+msgstr "Logs"
+
+msgid "MacVTap"
+msgstr "MacVTap"
+
+msgid "Max Port"
+msgstr "Max Port"
+
+msgid "Max Retry"
+msgstr "Max Retry"
+
+msgid "Memory"
+msgstr "Memory"
+
+msgid "Min Port"
+msgstr "Min Port"
+
+msgid "Miscellaneous"
+msgstr "Miscellaneous"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Name of the container to create."
+msgstr "Name of the container to create."
+
+msgid "Name of the image."
+msgstr "Name of the image."
+
+msgid "Name or ID of container image."
+msgstr "Name or ID of container image."
+
+msgid "Name or ID of the container image."
+msgstr "Name or ID of the container image."
+
+msgid "Network"
+msgstr "Network"
+
+msgid "Network ID"
+msgstr "Network ID"
+
+msgid "Network characteristics"
+msgstr "Network characteristics"
+
+msgid "Networks"
+msgstr "Networks"
+
+msgid ""
+"Networks provide the communication channels for containers in the cloud."
+msgstr ""
+"Networks provide the communication channels for containers in the cloud."
+
+msgid "Never"
+msgstr "Never"
+
+msgid "Never: never pull the image."
+msgstr "Never: never pull the image."
+
+msgid "No"
+msgstr "No"
+
+msgid "No available items"
+msgstr "No available items"
+
+msgid "No available scheduler hints"
+msgstr "No available scheduler hints"
+
+msgid "No existing scheduler hints"
+msgstr "No existing scheduler hints"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "On failure"
+msgstr "On failure"
+
+msgid "Output"
+msgstr "Output"
+
+msgid "Overview"
+msgstr "Overview"
+
+msgid "Pause Container"
+msgstr "Pause Container"
+
+msgid "Physical Network"
+msgstr "Physical Network"
+
+msgid "Ports"
+msgstr "Ports"
+
+msgid "Ports can be created under a network by administrators."
+msgstr "Ports can be created under a network by administrators."
+
+msgid ""
+"Ports provide extra communication channels to your instances. You can select "
+"ports instead of networks or a mix of both."
+msgstr ""
+"Ports provide extra communication channels to your instances. You can select "
+"ports instead of networks or a mix of both."
+
+msgid "Project"
+msgstr "Project"
+
+msgid "Project ID"
+msgstr "Project ID"
+
+msgid ""
+"Project networks are created by users.\n"
+"    These networks are fully isolated and are project-specific."
+msgstr ""
+"Project networks are created by users.\n"
+"    These networks are fully isolated and are project-specific."
+
+msgid "Protocol"
+msgstr "Protocol"
+
+msgid "Provider Network"
+msgstr "Provider Network"
+
+msgid ""
+"Provider networks are created by administrators.\n"
+"    These networks map to an existing physical network in the data center."
+msgstr ""
+"Provider networks are created by administrators.\n"
+"    These networks map to an existing physical network in the data centre."
+
+msgid "Pull"
+msgstr "Pull"
+
+msgid "Pull Image"
+msgstr "Pull Image"
+
+msgid "Re-order items using drag and drop"
+msgstr "Re-order items using drag and drop"
+
+msgid "Refresh"
+msgstr "Refresh"
+
+msgid "Remote"
+msgstr "Remote"
+
+msgid "Restart"
+msgstr "Restart"
+
+msgid "Restart Container"
+msgstr "Restart Container"
+
+msgid "Restart Policy"
+msgstr "Restart Policy"
+
+msgid "Restart policy to apply when a container exits."
+msgstr "Restart policy to apply when a container exits."
+
+msgid "Retry times for 'On failure' policy."
+msgstr "Retry times for 'On failure' policy."
+
+msgid "Scheduler Hints"
+msgstr "Scheduler Hints"
+
+msgid ""
+"Scheduler hints allow you to pass additional placement related information "
+"to the Zun's scheduler."
+msgstr ""
+"Scheduler hints allow you to pass additional placement related information "
+"to the Zun's scheduler."
+
+msgid "Security Groups"
+msgstr "Security Groups"
+
+msgid ""
+"Security groups define a set of IP filter rules that determine how network "
+"traffic flows to and from a container. Users can add additional rules to an "
+"existing security group to further define the access options for a "
+"container. To create additional rules, go to the <b>Network | Security "
+"Groups</b> view, then find the security group and click <b>Manage Rules</b>."
+msgstr ""
+"Security groups define a set of IP filter rules that determine how network "
+"traffic flows to and from a container. Users can add additional rules to an "
+"existing security group to further define the access options for a "
+"container. To create additional rules, go to the <b>Network | Security "
+"Groups</b> view, then find the security group and click <b>Manage Rules</b>."
+
+msgid "Segmentation ID"
+msgstr "Segmentation ID"
+
+msgid "Select an item from Available items below"
+msgstr "Select an item from Available items below"
+
+msgid "Select networks from those listed below."
+msgstr "Select networks from those listed below."
+
+msgid "Select one or more"
+msgstr "Select one or more"
+
+msgid "Select one or more security groups from the available groups below."
+msgstr "Select one or more security groups from the available groups below."
+
+msgid "Select policy."
+msgstr "Select policy."
+
+msgid "Select ports from those listed below."
+msgstr "Select ports from those listed below."
+
+msgid "Select the security groups to create the container in."
+msgstr "Select the security groups to create the container in."
+
+msgid "Send"
+msgstr "Send"
+
+msgid "Send Kill Signal"
+msgstr "Send Kill Signal"
+
+msgid "Shared"
+msgstr "Shared"
+
+msgid ""
+"Signal to send to the container: integer or string like SIGINT.\n"
+"  When not set, SIGKILL is set as default value and the container will "
+"exit.\n"
+"  The supported signals varies between platform.\n"
+"  Besides, you can omit 'SIG' prefix."
+msgstr ""
+"Signal to send to the container: integer or string like SIGINT.\n"
+"  When not set, SIGKILL is set as default value and the container will "
+"exit.\n"
+"  The supported signals varies between platform.\n"
+"  Besides, you can omit 'SIG' prefix."
+
+msgid "Size"
+msgstr "Size"
+
+msgid "Spec"
+msgstr "Spec"
+
+msgid "Specify a shutdown timeout in seconds. (default: 10)"
+msgstr "Specify a shutdown timeout in seconds. (default: 10)"
+
+msgid "Start Container"
+msgstr "Start Container"
+
+msgid "Start container after creation"
+msgstr "Start container after creation"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Status Detail"
+msgstr "Status Detail"
+
+msgid "Status Reason"
+msgstr "Status Reason"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "Stop Container"
+msgstr "Stop Container"
+
+msgid "Subnets Associated"
+msgstr "Subnets Associated"
+
+msgid "Tag"
+msgstr "Tag"
+
+msgid "Task State"
+msgstr "Task State"
+
+msgid "The command to execute."
+msgstr "The command to execute."
+
+msgid "The container memory size in MiB."
+msgstr "The container memory size in MiB."
+
+msgid "The environment variables in comma separated KEY=VALUE pairs"
+msgstr "The environment variables in comma separated KEY=VALUE pairs"
+
+msgid "The image driver to use to pull container image."
+msgstr "The image driver to use to pull container image."
+
+msgid "The kill signal to send."
+msgstr "The kill signal to send."
+
+msgid ""
+"The logical port also defines the MAC address and the IP address(es) to be "
+"assigned to the interfaces plugged into them."
+msgstr ""
+"The logical port also defines the MAC address and the IP address(es) to be "
+"assigned to the interfaces plugged into them."
+
+msgid "The number of virtual cpu for this container."
+msgstr "The number of virtual CPUs for this container."
+
+msgid "The number of virtual cpus."
+msgstr "The number of virtual CPUs."
+
+msgid ""
+"The policy which determines if the image should be pulled prior to starting "
+"the container."
+msgstr ""
+"The policy which determines if the image should be pulled prior to starting "
+"the container."
+
+msgid "The status indicates whether the network has an active connection."
+msgstr "The status indicates whether the network has an active connection."
+
+msgid "The status indicates whether the port has an active connection."
+msgstr "The status indicates whether the port has an active connection."
+
+msgid ""
+"The subnet identifies a sub-section of a network. A subnet is specified in "
+"CIDR format.\n"
+"    A typical CIDR format looks like <samp>192.xxx.x.x/24</samp>."
+msgstr ""
+"The subnet identifies a sub-section of a network. A subnet is specified in "
+"CIDR format.\n"
+"    A typical CIDR format looks like <samp>192.xxx.x.x/24</samp>."
+
+msgid "The working directory for commands to run in."
+msgstr "The working directory for commands to run in."
+
+msgid "The working directory needs to be an absolute path."
+msgstr "The working directory needs to be an absolute path."
+
+msgid "This step allows you to add scheduler hints to your container."
+msgstr "This step allows you to add scheduler hints to your container."
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Unable to create Container."
+msgstr "Unable to create Container."
+
+#, python-format
+msgid "Unable to delete Container: %s."
+msgid_plural "Unable to delete Containers: %s."
+msgstr[0] "Unable to delete Container: %s."
+msgstr[1] "Unable to delete Containers: %s."
+
+#, python-format
+msgid "Unable to delete the Container with id: %(id)s"
+msgstr "Unable to delete the Container with id: %(id)s"
+
+msgid "Unable to delete the Containers."
+msgstr "Unable to delete the Containers."
+
+msgid "Unable to execute the command."
+msgstr "Unable to execute the command."
+
+msgid "Unable to get logs of Container."
+msgstr "Unable to get logs of Container."
+
+msgid "Unable to pause Container"
+msgstr "Unable to pause Container"
+
+msgid "Unable to pull Image."
+msgstr "Unable to pull Image."
+
+msgid "Unable to restart Container."
+msgstr "Unable to restart Container."
+
+msgid "Unable to retrieve the Container."
+msgstr "Unable to retrieve the Container."
+
+msgid "Unable to retrieve the Containers."
+msgstr "Unable to retrieve the Containers."
+
+msgid "Unable to retrieve the Images."
+msgstr "Unable to retrieve the Images."
+
+msgid "Unable to send kill signal."
+msgstr "Unable to send kill signal."
+
+msgid "Unable to start Container."
+msgstr "Unable to start Container."
+
+msgid "Unable to stop Container."
+msgstr "Unable to stop Container."
+
+msgid "Unable to unpause of Container."
+msgstr "Unable to unpause of Container."
+
+msgid "Unable to update Container."
+msgstr "Unable to update Container."
+
+msgid "Unless Stopped"
+msgstr "Unless Stopped"
+
+msgid "Unpause Container"
+msgstr "Unpause Container"
+
+msgid "Up"
+msgstr "Up"
+
+msgid "Update"
+msgstr "Update"
+
+msgid "Update Container"
+msgstr "Update Container"
+
+msgid "VNIC type"
+msgstr "VNIC type"
+
+msgid ""
+"When IP addresses are associated to a port, this also implies the port is "
+"associated with a subnet, as the IP address was taken from the allocation "
+"pool for a specific subnet."
+msgstr ""
+"When IP addresses are associated to a port, this also implies the port is "
+"associated with a subnet, as the IP address was taken from the allocation "
+"pool for a specific subnet."
+
+msgid ""
+"When the <b>Admin State</b> for a network is set to <b>Up</b>,\n"
+"    then the network is available for use. You can set the <b>Admin State</"
+"b> to <b>Down</b>\n"
+"    if you are not ready for other users to access the network."
+msgstr ""
+"When the <b>Admin State</b> for a network is set to <b>Up</b>,\n"
+"    then the network is available for use. You can set the <b>Admin State</"
+"b> to <b>Down</b>\n"
+"    if you are not ready for other users to access the network."
+
+msgid ""
+"When the <b>Admin State</b> for a port is set to <b>Up</b> and it has no "
+"<b>Device Owner</b>,\n"
+"    then the port is available for use. You can set the <b>Admin State</b> "
+"to <b>Down</b>\n"
+"    if you are not ready for other users to use the port."
+msgstr ""
+"When the <b>Admin State</b> for a port is set to <b>Up</b> and it has no "
+"<b>Device Owner</b>,\n"
+"    then the port is available for use. You can set the <b>Admin State</b> "
+"to <b>Down</b>\n"
+"    if you are not ready for other users to use the port."
+
+msgid "Workdir"
+msgstr "Workdir"
+
+msgid "Working Directory"
+msgstr "Working Directory"
+
+msgid "Yes"
+msgstr "Yes"
+
+#, python-format
+msgid "You are not allowed to delete containers: %s"
+msgstr "You are not allowed to delete containers: %s"
+
+msgid ""
+"You can specify scheduler hints by moving items from the left column to the "
+"right column. Use the \"Custom\" option to add scheduler hints with the key "
+"of your choice."
+msgstr ""
+"You can specify scheduler hints by moving items from the left column to the "
+"right column. Use the \"Custom\" option to add scheduler hints with the key "
+"of your choice."
