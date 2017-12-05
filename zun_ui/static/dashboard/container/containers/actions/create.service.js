@@ -104,7 +104,7 @@
       // Not only "null", blank too.
       for (var key in model) {
         if (model.hasOwnProperty(key) && model[key] === null || model[key] === "" ||
-            key === "tabs") {
+            key === "tabs" || (key === "auto_remove" && model[key] === false)) {
           delete model[key];
         }
       }

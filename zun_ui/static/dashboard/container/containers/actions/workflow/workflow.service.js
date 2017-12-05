@@ -51,6 +51,10 @@
         {value: "always", name: gettext("Always")},
         {value: "unless-stopped", name: gettext("Unless Stopped")}
       ];
+      var runtimes = [
+        {value: "", name: gettext("Select runtime.")},
+        {value: "runc", name: gettext("runc")}
+      ];
 
       // schema
       schema = {
@@ -92,6 +96,10 @@
             type: "number",
             minimum: 4
           },
+          hostname: {
+            title: gettext("Hostname"),
+            type: "string"
+          },
           restart_policy: {
             title: gettext("Restart Policy"),
             type: "string"
@@ -100,6 +108,10 @@
             title: gettext("Max Retry"),
             type: "number",
             minimum: 0
+          },
+          runtime: {
+            title: gettext("Runtime"),
+            type: "string"
           },
           // misc
           workdir: {
@@ -112,6 +124,10 @@
           },
           interactive: {
             title: gettext("Enable interactive mode"),
+            type: "boolean"
+          },
+          auto_remove: {
+            title: gettext("Auto remove"),
             type: "boolean"
           },
           // labels
@@ -183,8 +199,7 @@
                     },
                     {
                       key: "run",
-                      readonly: action === "update",
-                      condition: action === "update"
+                      readonly: action === "update"
                     }
                   ]
                 }
@@ -201,10 +216,27 @@
                   htmlClass: "col-xs-12",
                   items: [
                     {
+                      key: "hostname",
+                      placeholder: gettext("The host name of this container."),
+                      readonly: action === "update"
+                    }
+                  ]
+                },
+                {
+                  type: "section",
+                  htmlClass: "col-xs-6",
+                  items: [
+                    {
                       key: "cpu",
                       step: 0.1,
                       placeholder: gettext("The number of virtual cpu for this container.")
-                    },
+                    }
+                  ]
+                },
+                {
+                  type: "section",
+                  htmlClass: "col-xs-6",
+                  items: [
                     {
                       key: "memory",
                       placeholder: gettext("The container memory size in MiB.")
@@ -225,7 +257,7 @@
                         if (readonly) {
                           model.restart_policy_max_retry = "";
                         }
-                        form[0].tabs[1].items[2].items[0].readonly = readonly;
+                        form[0].tabs[1].items[4].items[0].readonly = readonly;
                       }
                     }
                   ]
@@ -238,6 +270,18 @@
                       key: "restart_policy_max_retry",
                       placeholder: gettext("Retry times for 'On failure' policy."),
                       readonly: true
+                    }
+                  ]
+                },
+                {
+                  type: "section",
+                  htmlClass: "col-xs-6",
+                  items: [
+                    {
+                      key: "runtime",
+                      type: "select",
+                      readonly: action === "update",
+                      titleMap: runtimes
                     }
                   ]
                 }
@@ -327,6 +371,10 @@
                     {
                       key: "interactive",
                       readonly: action === "update"
+                    },
+                    {
+                      key: "auto_remove",
+                      readonly: action === "update"
                     }
                   ]
                 }
@@ -387,10 +435,12 @@
         command: "",
         run: true,
         // spec
+        hostname: "",
         cpu: "",
         memory: "",
         restart_policy: "",
         restart_policy_max_retry: "",
+        runtime: "",
         // networks
         networks: [],
         // ports
@@ -401,6 +451,7 @@
         workdir: "",
         environment: "",
         interactive: true,
+        auto_remove: false,
         // labels
         labels: "",
         // hints

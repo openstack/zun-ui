@@ -143,6 +143,7 @@
   function containerProperties() {
     return {
       'addresses': { label: gettext('Addresses'), filters: ['noValue', 'json'] },
+      'auto_remove': { label: gettext('Auto Remove'), filters: ['yesno'] },
       'command': { label: gettext('Command'), filters: ['noValue'] },
       'cpu': { label: gettext('CPU'), filters: ['noValue'] },
       'environment': { label: gettext('Environment'), filters: ['noValue', 'json'] },
@@ -152,17 +153,18 @@
       'image': {label: gettext('Image'), filters: ['noValue'] },
       'image_driver': {label: gettext('Image Driver'), filters: ['noValue'] },
       'image_pull_policy': {label: gettext('Image Pull Policy'), filters: ['noValue'] },
+      'interactive': {label: gettext('Interactive'), filters: ['yesno'] },
       'labels': {label: gettext('Labels'), filters: ['noValue', 'json'] },
       'links': {label: gettext('Links'), filters: ['noValue', 'json'] },
       'memory': {label: gettext('Memory'), filters: ['noValue'] },
       'name': {label: gettext('Name'), filters: ['noName'] },
       'ports': {label: gettext('Ports'), filters: ['noValue', 'json'] },
-      'security_groups': {label: gettext('Security Groups'), filters: ['noValue', 'json'] },
       'restart_policy': {label: gettext('Restart Policy'), filters: ['noValue', 'json'] },
+      'runtime': {label: gettext('Runtime'), filters: ['noName'] },
+      'security_groups': {label: gettext('Security Groups'), filters: ['noValue', 'json'] },
       'status': {label: gettext('Status'), filters: ['noValue'] },
       'status_detail': {label: gettext('Status Detail'), filters: ['noValue'] },
       'status_reason': {label: gettext('Status Reason'), filters: ['noValue'] },
-      'interactive': {label: gettext('Interactive'), filters: ['yesno'] },
       'task_state': {label: gettext('Task State'), filters: ['noValue'] },
       'workdir': {label: gettext('Workdir'), filters: ['noValue'] }
     };

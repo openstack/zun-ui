@@ -79,6 +79,8 @@
           ? response.data.image_pull_policy : "";
         config.model.command = response.data.command
           ? response.data.command : "";
+        config.model.hostname = response.data.hostname
+          ? response.data.hostname : "";
         config.model.cpu = response.data.cpu
           ? response.data.cpu : "";
         config.model.memory = response.data.memory
@@ -87,12 +89,16 @@
           ? response.data.restart_policy.Name : "";
         config.model.restart_policy_max_retry = response.data.restart_policy.MaximumRetryCount
           ? parseInt(response.data.restart_policy.MaximumRetryCount, 10) : null;
+        config.model.runtime = response.data.runtime
+          ? response.data.runtime : "";
         config.model.workdir = response.data.workdir
           ? response.data.workdir : "";
         config.model.environment = response.data.environment
           ? hashToString(response.data.environment) : "";
         config.model.interactive = response.data.interactive
           ? response.data.interactive : false;
+        config.model.auto_remove = response.data.auto_remove
+          ? response.data.auto_remove : false;
         config.model.labels = response.data.labels
           ? hashToString(response.data.labels) : "";
       }

@@ -15,6 +15,7 @@ from horizon import exceptions
 from horizon.utils.memoized import memoized_with_request
 import logging
 from openstack_dashboard.api import base
+from zunclient import api_versions
 from zunclient.common import utils
 from zunclient.v1 import client as zun_client
 
@@ -23,6 +24,7 @@ LOG = logging.getLogger(__name__)
 
 CONTAINER_CREATE_ATTRS = zun_client.containers.CREATION_ATTRIBUTES
 IMAGE_PULL_ATTRS = zun_client.images.PULL_ATTRIBUTES
+API_VERSION = api_versions.APIVersion(api_versions.DEFAULT_API_VERSION)
 
 
 def get_auth_params_from_request(request):
@@ -58,7 +60,8 @@ def zunclient(request_auth_params):
     c = zun_client.Client(username=username,
                           project_id=project_id,
                           auth_token=token_id,
-                          endpoint_override=endpoint_override)
+                          endpoint_override=endpoint_override,
+                          api_version=API_VERSION)
     return c
 
 
@@ -74,7 +77,8 @@ def _cleanup_params(attrs, check, **params):
         elif key == "memory":
             args[key] = int(value)
         elif key == "interactive" or key == "nets" \
-                or key == "security_groups" or key == "hints":
+                or key == "security_groups" or key == "hints"\
+                or key == "auto_remove":
             args[key] = value
         elif key == "restart_policy":
             args[key] = utils.check_restart_policy(value)
