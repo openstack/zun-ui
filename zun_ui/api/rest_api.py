@@ -39,14 +39,6 @@ class Container(generic.View):
         return change_to_id(client.container_show(request, id).to_dict())
 
     @rest_utils.ajax(data_required=True)
-    def delete(self, request, id):
-        """Delete single Container forcely by id.
-
-        Returns HTTP 204 (no content) on successful deletion.
-        """
-        return client.container_delete(request, id, force=True)
-
-    @rest_utils.ajax(data_required=True)
     def patch(self, request, id):
         """Update a Container.
 
@@ -91,6 +83,19 @@ class ContainerActions(generic.View):
         elif action == 'attach':
             return client.container_attach(request, id)
 
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request, id, action):
+        """Delete specified Container with option.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        opts = {'id': id}
+        if action == 'force':
+            opts['force'] = True
+        elif action == 'stop':
+            opts['stop'] = True
+        return client.container_delete(request, **opts)
+
 
 @urls.register
 class Containers(generic.View):
@@ -114,7 +119,8 @@ class Containers(generic.View):
         Returns HTTP 204 (no content) on successful deletion.
         """
         for id in request.DATA:
-            client.container_delete(request, id)
+            opts = {'id': id}
+            client.container_delete(request, **opts)
 
     @rest_utils.ajax(data_required=True)
     def post(self, request):

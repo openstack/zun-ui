@@ -67,7 +67,8 @@
       delete_force: [
         states.CREATED, states.CREATING, states.ERROR, states.RUNNING,
         states.STOPPED, states.UNKNOWN, states.DELETED
-      ]
+      ],
+      delete_stop: [states.RUNNING]
     };
   }
 

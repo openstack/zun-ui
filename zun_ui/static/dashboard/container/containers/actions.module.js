@@ -36,6 +36,7 @@
     'horizon.dashboard.container.containers.update.service',
     'horizon.dashboard.container.containers.delete.service',
     'horizon.dashboard.container.containers.delete-force.service',
+    'horizon.dashboard.container.containers.delete-stop.service',
     'horizon.dashboard.container.containers.start.service',
     'horizon.dashboard.container.containers.stop.service',
     'horizon.dashboard.container.containers.restart.service',
@@ -54,6 +55,7 @@
     updateContainerService,
     deleteContainerService,
     deleteContainerForceService,
+    deleteContainerStopService,
     startContainerService,
     stopContainerService,
     restartContainerService,
@@ -156,6 +158,14 @@
         template: {
           type: 'delete',
           text: gettext('Delete Container')
+        }
+      })
+      .append({
+        id: 'deleteContainerStopAction',
+        service: deleteContainerStopService,
+        template: {
+          type: 'delete',
+          text: gettext('Stop and Delete Container')
         }
       })
       .append({

@@ -152,9 +152,8 @@ def container_update(request, id, **kwargs):
     return args
 
 
-def container_delete(request, id, force=False):
-    # TODO(shu-mutou): force option should be provided by user.
-    return zunclient(request).containers.delete(id, force=force)
+def container_delete(request, **kwargs):
+    return zunclient(request).containers.delete(**kwargs)
 
 
 def container_list(request, limit=None, marker=None, sort_key=None,
