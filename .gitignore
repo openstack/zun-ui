@@ -8,6 +8,7 @@ npm-debug.log
 releasenotes/build
 zun_ui/test/.secret_key_store
 .coverage*
+.idea
 .jshintrc
 .project
 .pydevproject

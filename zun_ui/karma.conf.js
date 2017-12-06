@@ -21,6 +21,9 @@ module.exports = function (config) {
   // This tox venv is setup in the post-install npm step
   var toxPath = '../.tox/py27/lib/python2.7/site-packages/';
 
+  process.env.PHANTOMJS_BIN = 'node_modules/phantomjs-prebuilt/bin/phantomjs';
+
+
   config.set({
     preprocessors: {
       // Used to collect templates for preprocessing.
