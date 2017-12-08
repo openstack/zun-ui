@@ -328,8 +328,7 @@
                     }
                   ]
                 }
-              ],
-              condition: action === "update"
+              ]
             },
             {
               "title": gettext("Ports"),
@@ -495,8 +494,9 @@
         {id: "", name: gettext("Select available Cinder volume")}
       ];
 
-      // available networks
+      // networks
       model.availableNetworks = [];
+      model.allocatedNetworks = [];
 
       // available ports
       model.availablePorts = [];
@@ -530,6 +530,14 @@
           response.data.items.filter(function(network) {
             return network.subnets.length > 0;
           }));
+        // if network in model.allocatedNetworks, push it to mode.network for update
+        model.availableNetworks.forEach(function (available) {
+          model.allocatedNetworks.forEach(function (allocated) {
+            if (available.id === allocated) {
+              model.networks.push(available);
+            }
+          });
+        });
         return response;
       }
 

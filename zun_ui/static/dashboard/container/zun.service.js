@@ -24,7 +24,7 @@
     'horizon.framework.util.i18n.gettext'
   ];
 
-  function ZunAPI(apiService, toast, gettext) {
+  function ZunAPI(apiService, toastService, gettext) {
     var containersPath = '/api/zun/containers/';
     var imagesPath = '/api/zun/images/';
     var service = {
@@ -45,6 +45,8 @@
       executeContainer: executeContainer,
       killContainer: killContainer,
       resizeContainer: resizeContainer,
+      attachNetwork: attachNetwork,
+      detachNetwork: detachNetwork,
       pullImage: pullImage,
       getImages: getImages
     };
@@ -153,6 +155,18 @@
       return apiService.post(containersPath + id + '/resize', params).error(error(msg));
     }
 
+    function attachNetwork(id, net) {
+      var msg = gettext('Unable to attach network.');
+      return apiService.post(containersPath + id + '/network_attach', {network: net})
+        .error(error(msg));
+    }
+
+    function detachNetwork(id, net) {
+      var msg = gettext('Unable to detach network.');
+      return apiService.post(containersPath + id + '/network_detach', {network: net})
+        .error(error(msg));
+    }
+
     ////////////
     // Images //
     ////////////
@@ -169,7 +183,7 @@
 
     function error(message) {
       return function() {
-        toast.add('error', message);
+        toastService.add('error', message);
       };
     }
   }
