@@ -140,12 +140,17 @@ def container_update(request, id, **kwargs):
     # remove same values from new params
     _delete_attributes_with_same_value(container, args)
 
-    # do rename
+    # get rid of name once
     name = args.pop("name", None)
+
+    # do update
     if len(args):
         zunclient(request).containers.update(id, **args)
 
-    # do update
+    # reset name for response
+    args["name"] = container["name"]
+
+    # do rename
     if name:
         zunclient(request).containers.rename(id, name)
         args["name"] = name
@@ -210,6 +215,18 @@ def container_attach(request, id):
 
 def container_resize(request, id, width, height):
     return zunclient(request).containers.resize(id, width, height)
+
+
+def container_network_attach(request, id):
+    network = request.DATA.get("network") or None
+    zunclient(request).containers.network_attach(id, network)
+    return {"container": id, "network": network}
+
+
+def container_network_detach(request, id):
+    network = request.DATA.get("network") or None
+    zunclient(request).containers.network_detach(id, network)
+    return {"container": id, "network": network}
 
 
 def image_list(request, limit=None, marker=None, sort_key=None,

@@ -43,7 +43,9 @@
     actionResult, gettext, $qExtensions, modal, toast
   ) {
     var message = {
-      success: gettext('Container %s was successfully updated.')
+      success: gettext('Container %s was successfully updated.'),
+      successAttach: gettext('Network %s was successfully attached to container %s.'),
+      successDetach: gettext('Network %s was successfully detached from container %s.')
     };
 
     var service = {
@@ -91,6 +93,7 @@
           ? parseInt(response.data.restart_policy.MaximumRetryCount, 10) : null;
         config.model.runtime = response.data.runtime
           ? response.data.runtime : "";
+        config.model.allocatedNetworks = getAllocatedNetworks(response.data.addresses);
         config.model.workdir = response.data.workdir
           ? response.data.workdir : "";
         config.model.environment = response.data.environment
@@ -117,8 +120,18 @@
 
     function submit(context) {
       var id = context.model.id;
+      var newNets = [];
+      context.model.networks.forEach(function (newNet) {
+        newNets.push(newNet.id);
+      });
+      changeNetworks(id, context.model.allocatedNetworks, newNets);
+      delete context.model.networks;
+      delete context.model.availableNetworks;
+      delete context.model.allocatedNetworks;
       context.model = cleanUpdateProperties(context.model);
-      return zun.updateContainer(id, context.model).then(success);
+      return $q.all([
+        zun.updateContainer(id, context.model).then(success)
+      ]);
     }
 
     function success(response) {
@@ -134,11 +147,55 @@
       // only "cpu" and "memory" fields are editable.
       for (var key in model) {
         if (model.hasOwnProperty(key) && model[key] === null || model[key] === "" ||
-            (key !== "name" && key !== "cpu" && key !== "memory")) {
+            (key !== "name" && key !== "cpu" && key !== "memory" && key !== "nets")) {
           delete model[key];
         }
       }
       return model;
+    }
+
+    function changeNetworks(container, oldNets, newNets) {
+      // attach and detach networks
+      var attachedNets = [];
+      var detachedNets = [];
+      newNets.forEach(function(newNet) {
+        if (!oldNets.includes(newNet)) {
+          attachedNets.push(newNet);
+        }
+      });
+      oldNets.forEach(function(oldNet) {
+        if (!newNets.includes(oldNet)) {
+          detachedNets.push(oldNet);
+        }
+      });
+      attachedNets.forEach(function (net) {
+        zun.attachNetwork(container, net).then(successAttach);
+      });
+      detachedNets.forEach(function (net) {
+        zun.detachNetwork(container, net).then(successDetach);
+      });
+    }
+
+    function successAttach(response) {
+      toast.add('success', interpolate(message.successAttach,
+        [response.data.container, response.data.network]));
+      var result = actionResult.getActionResult().updated(resourceType, response.data.container);
+      return result.result;
+    }
+
+    function successDetach(response) {
+      toast.add('success', interpolate(message.successDetach,
+        [response.data.container, response.data.network]));
+      var result = actionResult.getActionResult().updated(resourceType, response.data.container);
+      return result.result;
+    }
+
+    function getAllocatedNetworks(addresses) {
+      var allocated = [];
+      Object.keys(addresses).forEach(function (id) {
+        allocated.push(id);
+      });
+      return allocated;
     }
 
     function hashToString(hash) {
