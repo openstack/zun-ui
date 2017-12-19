@@ -1,13 +1,13 @@
 # Andi Chandler <andi@gowling.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zun-ui 0.2.1.dev17\n"
+"Project-Id-Version: zun-ui 0.2.1.dev25\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-11-01 06:07+0000\n"
+"POT-Creation-Date: 2017-12-11 08:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-11-14 10:26+0000\n"
+"PO-Revision-Date: 2017-12-18 08:52+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en-GB\n"
@@ -34,11 +34,11 @@ msgid "Admin State"
 msgstr "Admin State"
 
 msgid ""
-"Allocate pseudo-TTY and keep STDIN open even if not attatched. This also "
+"Allocate pseudo-TTY and keep STDIN open even if not attached. This also "
 "enables Web console in console tab on details view."
 msgstr ""
 "Allocate pseudo-TTY and keep STDIN open even if not attached. This also "
-"enables Web console in console tab on details view."
+"enables Web console in console tab of the details view."
 
 msgid "Always"
 msgstr "Always"
@@ -64,6 +64,15 @@ msgstr ""
 msgid "An arbitrary human-readable name."
 msgstr "An arbitrary human-readable name."
 
+msgid "Auto Remove"
+msgstr "Auto Remove"
+
+msgid "Auto remove"
+msgstr "Auto remove"
+
+msgid "Automatically remove the container when it exits"
+msgstr "Automatically remove the container when it exits"
+
 msgid "Available Scheduler Hints"
 msgstr "Available Scheduler Hints"
 
@@ -86,10 +95,20 @@ msgstr "Command sent to the container."
 msgid "Command was successfully executed at container %s."
 msgstr "Command was successfully executed at container %s."
 
+msgid "Confirm Delete After Stop Container"
+msgid_plural "Confirm Delete After Stop Containers"
+msgstr[0] "Confirm Delete After Stop Container"
+msgstr[1] "Confirm Delete After Stop Containers"
+
 msgid "Confirm Delete Container"
 msgid_plural "Confirm Delete Containers"
 msgstr[0] "Confirm Delete Container"
 msgstr[1] "Confirm Delete Containers"
+
+msgid "Confirm Delete Container Forcely"
+msgid_plural "Confirm Delete Containers Forcely"
+msgstr[0] "Confirm Delete Container Forcibly "
+msgstr[1] "Confirm Delete Containers Forcibly "
 
 msgid "Console"
 msgstr "Console"
@@ -145,8 +164,30 @@ msgid_plural "Delete Containers"
 msgstr[0] "Delete Container"
 msgstr[1] "Delete Containers"
 
+msgid "Delete Container After Stop"
+msgid_plural "Delete Containers After Stop"
+msgstr[0] "Delete Container After Stop"
+msgstr[1] "Delete Containers After Stop"
+
+msgid "Delete Container Forcely"
+msgid_plural "Delete Containers Forcely"
+msgstr[0] "Delete Container Forcibly "
+msgstr[1] "Delete Containers Forcibly "
+
 msgid "Delete Containers"
 msgstr "Delete Containers"
+
+#, python-format
+msgid "Deleted Container After Stop: %s."
+msgid_plural "Deleted Containers After Stop: %s."
+msgstr[0] "Deleted Container After Stop: %s."
+msgstr[1] "Deleted Containers After Stop: %s."
+
+#, python-format
+msgid "Deleted Container Forcely: %s."
+msgid_plural "Deleted Containers Forcely: %s."
+msgstr[0] "Deleted Container Forcibly : %s."
+msgstr[1] "Deleted Containers Forcibly : %s."
 
 #, python-format
 msgid "Deleted Container: %s."
@@ -450,6 +491,9 @@ msgstr "Restart policy to apply when a container exits."
 msgid "Retry times for 'On failure' policy."
 msgstr "Retry times for 'On failure' policy."
 
+msgid "Runtime"
+msgstr "Runtime"
+
 msgid "Scheduler Hints"
 msgstr "Scheduler Hints"
 
@@ -496,6 +540,9 @@ msgstr "Select policy."
 
 msgid "Select ports from those listed below."
 msgstr "Select ports from those listed below."
+
+msgid "Select runtime."
+msgstr "Select runtime."
 
 msgid "Select the security groups to create the container in."
 msgstr "Select the security groups to create the container in."
@@ -552,6 +599,9 @@ msgstr "Stop"
 msgid "Stop Container"
 msgstr "Stop Container"
 
+msgid "Stop and Delete Container"
+msgstr "Stop and Delete Container"
+
 msgid "Subnets Associated"
 msgstr "Subnets Associated"
 
@@ -569,6 +619,9 @@ msgstr "The container memory size in MiB."
 
 msgid "The environment variables in comma separated KEY=VALUE pairs"
 msgstr "The environment variables in comma separated KEY=VALUE pairs"
+
+msgid "The host name of this container."
+msgstr "The host name of this container."
 
 msgid "The image driver to use to pull container image."
 msgstr "The image driver to use to pull container image."
@@ -595,6 +648,9 @@ msgid ""
 msgstr ""
 "The policy which determines if the image should be pulled prior to starting "
 "the container."
+
+msgid "The runtime to use for this container. Default: \"runc\""
+msgstr "The runtime to use for this container. Default: \"runc\""
 
 msgid "The status indicates whether the network has an active connection."
 msgstr "The status indicates whether the network has an active connection."
@@ -627,10 +683,26 @@ msgid "Unable to create Container."
 msgstr "Unable to create Container."
 
 #, python-format
+msgid "Unable to delete Container after stopping: %s."
+msgid_plural "Unable to delete Containers after stopping: %s."
+msgstr[0] "Unable to delete Container after stopping: %s."
+msgstr[1] "Unable to delete Containers after stopping: %s."
+
+#, python-format
+msgid "Unable to delete Container forcely: %s."
+msgid_plural "Unable to delete Containers forcely: %s."
+msgstr[0] "Unable to delete Container forcibly : %s."
+msgstr[1] "Unable to delete Containers forcibly : %s."
+
+#, python-format
 msgid "Unable to delete Container: %s."
 msgid_plural "Unable to delete Containers: %s."
 msgstr[0] "Unable to delete Container: %s."
 msgstr[1] "Unable to delete Containers: %s."
+
+#, python-format
+msgid "Unable to delete forcely the Container with id: %(id)s"
+msgstr "Unable to delete forcibly the Container with id: %(id)s"
 
 #, python-format
 msgid "Unable to delete the Container with id: %(id)s"
@@ -671,6 +743,10 @@ msgstr "Unable to start Container."
 
 msgid "Unable to stop Container."
 msgstr "Unable to stop Container."
+
+#, python-format
+msgid "Unable to stop and delete the Container with id: %(id)s"
+msgstr "Unable to stop and delete the Container with id: %(id)s"
 
 msgid "Unable to unpause of Container."
 msgstr "Unable to unpause of Container."
@@ -739,8 +815,16 @@ msgid "Yes"
 msgstr "Yes"
 
 #, python-format
+msgid "You are not allowed to delete container forcely: %s"
+msgstr "You are not allowed to delete container forcibly : %s"
+
+#, python-format
 msgid "You are not allowed to delete containers: %s"
 msgstr "You are not allowed to delete containers: %s"
+
+#, python-format
+msgid "You are not allowed to stop and delete container: %s"
+msgstr "You are not allowed to stop and delete container: %s"
 
 msgid ""
 "You can specify scheduler hints by moving items from the left column to the "
@@ -750,3 +834,34 @@ msgstr ""
 "You can specify scheduler hints by moving items from the left column to the "
 "right column. Use the \"Custom\" option to add scheduler hints with the key "
 "of your choice."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted container "
+"is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted containers "
+"are not recoverable."
+msgstr[0] ""
+"You have selected \"%s\". Please confirm your selection. Deleted container "
+"is not recoverable."
+msgstr[1] ""
+"You have selected \"%s\". Please confirm your selection. Deleted containers "
+"are not recoverable."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. The container will "
+"be stopped before deleting. Deleted container is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. The containers will "
+"be stopped before deleting. Deleted containers are not recoverable."
+msgstr[0] ""
+"You have selected \"%s\". Please confirm your selection. The container will "
+"be stopped before deleting. Deleted container is not recoverable."
+msgstr[1] ""
+"You have selected \"%s\". Please confirm your selection. The containers will "
+"be stopped before deleting. Deleted containers are not recoverable."
+
+msgid "runc"
+msgstr "runc"
