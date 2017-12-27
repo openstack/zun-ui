@@ -83,6 +83,10 @@
     .append({
       id: 'image_id',
       priority: 3
+    })
+    .append({
+      id: 'project_id',
+      priority: 2
     });
     // for magic-search
     registry.getResourceType(resourceType).filterFacets
@@ -105,6 +109,11 @@
       'label': gettext('Image ID'),
       'name': 'image_id',
       'singleton': true
+    })
+    .append({
+      'label': gettext('Project ID'),
+      'name': 'project_id',
+      'singleton': true
     });
   }
 
@@ -114,7 +123,8 @@
       'repo': { label: gettext('Image'), filters: ['noValue'] },
       'tag': { label: gettext('Tag'), filters: ['noValue'] },
       'size': { label: gettext('Size'), filters: ['noValue', 'bytes'] },
-      'image_id': { label: gettext('Image ID'), filters: ['noValue'] }
+      'image_id': { label: gettext('Image ID'), filters: ['noValue'] },
+      'project_id': { label: gettext('Project ID'), filters: ['noValue'] }
     };
   }
 
