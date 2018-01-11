@@ -1,0 +1,59 @@
+<div ng-controller="horizon.dashboard.container.containers.workflow.mounts as ctrl">
+  <p class="step-description" translate>
+    The volumes are mounted into the container.
+  </p>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="type" translate>Type</label>
+        <select class="form-control" id="type" name="type"
+                ng-model="ctrl.model.type"
+                ng-options="type.value as type.label for type in ctrl.types">
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-6" ng-if="ctrl.model.type==='cinder-available'">
+      <div class="form-group">
+        <label class="control-label" for="source" translate>Source</label>
+        <select
+          class="form-control" id="source" name="source"
+          ng-model="ctrl.model.source"
+          ng-options="volume.id as volume.name for volume in ctrl.availableCinderVolumes | filter:{selected: false}">
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-6" ng-if="ctrl.model.type==='cinder-new'">
+      <div class="form-group">
+        <label class="control-label" for="size" translate>Size (GB)</label>
+        <input type="number" min="1" class="form-control" id="size" name="size"
+          ng-model="ctrl.model.size"
+          placeholder="{$ 'Specify size for the new volume in GB.'|translate $}">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="destination" translate>Destination</label>
+        <input type="text" class="form-control" id="destination" name="destination"
+          ng-model="ctrl.model.destination"
+          placeholder="{$ 'Specify mount point of the volume on the container.'|translate $}">
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary"
+      ng-disabled="ctrl.validateVolume()"
+      ng-click="ctrl.addVolume($event)">
+      <span class="fa fa-arrow-down"></span>
+      <translate>Add Volume</translate>
+    </button>
+  </div>
+
+  <hz-dynamic-table
+    config="ctrl.config"
+    items="ctrl.items"
+    item-actions="ctrl.itemActions">
+  </hz-dynamic-table>
+</div>

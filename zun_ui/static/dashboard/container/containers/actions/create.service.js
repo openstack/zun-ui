@@ -79,6 +79,8 @@
           context.model.restart_policy_max_retry;
       }
       delete context.model.restart_policy_max_retry;
+      context.model.mounts = setMounts(context.model.mounts);
+      delete context.model.availableCinderVolumes;
       context.model.nets = setNetworksAndPorts(context.model);
       context.model.security_groups = setSecurityGroups(context.model);
       delete context.model.networks;
@@ -109,6 +111,18 @@
         }
       }
       return model;
+    }
+
+    function setMounts(mounts) {
+      var mnts = [];
+      mounts.forEach(function(mount) {
+        if (mount.type === "cinder-available") {
+          mnts.push({source: mount.source, destination: mount.destination});
+        } else if (mount.type === "cinder-new") {
+          mnts.push({source: "", size: mount.size.toString(), destination: mount.destination});
+        }
+      });
+      return mnts;
     }
 
     function setNetworksAndPorts(model) {

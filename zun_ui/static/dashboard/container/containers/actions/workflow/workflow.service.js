@@ -20,13 +20,14 @@
     .factory("horizon.dashboard.container.containers.workflow", workflow);
 
   workflow.$inject = [
+    "horizon.app.core.openstack-service-api.cinder",
     "horizon.app.core.openstack-service-api.neutron",
     "horizon.dashboard.container.basePath",
     "horizon.framework.util.i18n.gettext",
     "horizon.framework.widgets.metadata.tree.service"
   ];
 
-  function workflow(neutron, basePath, gettext, treeService) {
+  function workflow(cinder, neutron, basePath, gettext, treeService) {
     var workflow = {
       init: init
     };
@@ -86,6 +87,10 @@
             type: "boolean"
           },
           // spec
+          hostname: {
+            title: gettext("Hostname"),
+            type: "string"
+          },
           cpu: {
             title: gettext("CPU"),
             type: "number",
@@ -96,8 +101,8 @@
             type: "number",
             minimum: 4
           },
-          hostname: {
-            title: gettext("Hostname"),
+          destination: {
+            title: gettext("Destination"),
             type: "string"
           },
           restart_policy: {
@@ -288,6 +293,25 @@
               ]
             },
             {
+              "title": gettext("Volumes"),
+              help: basePath + "containers/actions/workflow/mounts/mounts.help.html",
+              type: "section",
+              htmlClass: "row",
+              items: [
+                {
+                  type: "section",
+                  htmlClass: "col-xs-12",
+                  items: [
+                    {
+                      type: "template",
+                      templateUrl: basePath + "containers/actions/workflow/mounts/mounts.html"
+                    }
+                  ]
+                }
+              ],
+              condition: action === "update"
+            },
+            {
               "title": gettext("Networks"),
               help: basePath + "containers/actions/workflow/networks/networks.help.html",
               type: "section",
@@ -441,6 +465,8 @@
         restart_policy: "",
         restart_policy_max_retry: "",
         runtime: "",
+        // mounts
+        mounts: [],
         // networks
         networks: [],
         // ports
@@ -463,11 +489,34 @@
       // initialize tree object for scheduler hints.
       model.hintsTree = new treeService.Tree(model.availableHints, {});
 
+      // available cinder volumes
+      model.availableCinderVolumes = [
+        {id: "", name: gettext("Select available Cinder volume")}
+      ];
+
       // available networks
       model.availableNetworks = [];
 
       // available ports
       model.availablePorts = [];
+
+      // get available cinder volumes
+      getVolumes();
+      function getVolumes() {
+        return cinder.getVolumes().then(onGetVolumes);
+      }
+
+      function onGetVolumes(response) {
+        push.apply(model.availableCinderVolumes,
+          response.data.items.filter(function(volume) {
+            return volume.status === "available";
+          }));
+        model.availableCinderVolumes.forEach(function(volume) {
+          volume.selected = false;
+          return volume;
+        });
+        return response;
+      }
 
       // get available neutron networks and ports
       getNetworks();
