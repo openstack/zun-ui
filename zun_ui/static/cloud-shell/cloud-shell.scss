@@ -1,0 +1,51 @@
+#cloud-shell {
+  position: fixed;
+  z-index: 10;
+  bottom: 0px;
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  color: white;
+}
+#shell-header {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: gray;
+  padding-left: 3px;
+}
+#shell-content {
+  height: calc(100% - 20px);
+}
+.cloud-shell-external {
+  position: relative;
+  top: 0px;
+  padding-left: 3px;
+  color: cyan;
+}
+.cloud-shell-external:hover {
+  color: red;
+}
+.cloud-shell-close {
+  position: relative;
+  top: 0px;
+  float: right;
+  padding-right: 3px;
+  color: white;
+}
+.cloud-shell-close:hover {
+  color: red;
+}
+#cloud-shell-resizer {
+  position: absolute;
+  z-index: 10;
+  bottom: 200px;
+  height: 6px;
+  width: 100%;
+  background-color: lightgray;
+  cursor: n-resize;
+}
+#cloud-shell-resize-holder {
+  width: 100%;
+  height: 100%;
+}

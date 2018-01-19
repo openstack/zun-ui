@@ -3,7 +3,7 @@
 }
 .console {
   margin-top: 10px;
-  height: 500px;
+  height: calc(100vh - 300px);
 }
 textarea#output {
   height: 25em;

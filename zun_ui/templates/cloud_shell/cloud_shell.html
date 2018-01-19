@@ -1,0 +1,10 @@
+{% load i18n %}
+
+<!-- Menu Item for Extensible Header -->
+<span
+  id="cloud-shell-menu"
+  class="fa fa-terminal"
+  cloud-shell-image="{{ CLOUD_SHELL_IMAGE }}"
+  onclick="angular.element(document.body).injector().get('horizon.cloud-shell.service').init();">
+  {% trans "Cloud Shell" %}
+</span>
