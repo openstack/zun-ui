@@ -1,13 +1,14 @@
 # Andi Chandler <andi@gowling.com>, 2017. #zanata
+# Andi Chandler <andi@gowling.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zun-ui 0.2.1.dev25\n"
+"Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-12-11 08:30+0000\n"
+"POT-Creation-Date: 2018-01-19 07:25+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-12-18 08:52+0000\n"
+"PO-Revision-Date: 2018-01-19 07:07+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en-GB\n"
@@ -22,6 +23,9 @@ msgstr "A port represents a virtual switch port on a logical network switch."
 
 msgid "Active"
 msgstr "Active"
+
+msgid "Add Volume"
+msgstr "Add Volume"
 
 msgid "Addresses"
 msgstr "Addresses"
@@ -159,6 +163,9 @@ msgstr "Create"
 msgid "Create Container"
 msgstr "Create Container"
 
+msgid "Delete"
+msgstr "Delete"
+
 msgid "Delete Container"
 msgid_plural "Delete Containers"
 msgstr[0] "Delete Container"
@@ -197,6 +204,9 @@ msgstr[1] "Deleted Containers: %s."
 
 msgid "Description"
 msgstr "Description"
+
+msgid "Destination"
+msgstr "Destination"
 
 msgid "Direct"
 msgstr "Direct"
@@ -526,6 +536,9 @@ msgstr "Segmentation ID"
 msgid "Select an item from Available items below"
 msgstr "Select an item from Available items below"
 
+msgid "Select available Cinder volume"
+msgstr "Select available Cinder volume"
+
 msgid "Select networks from those listed below."
 msgstr "Select networks from those listed below."
 
@@ -553,6 +566,9 @@ msgstr "Send"
 msgid "Send Kill Signal"
 msgstr "Send Kill Signal"
 
+msgid "Set the volume specs and add into the table below."
+msgstr "Set the volume specs and add into the table below."
+
 msgid "Shared"
 msgstr "Shared"
 
@@ -572,11 +588,23 @@ msgstr ""
 msgid "Size"
 msgstr "Size"
 
+msgid "Size (GB)"
+msgstr "Size (GB)"
+
+msgid "Source"
+msgstr "Source"
+
 msgid "Spec"
 msgstr "Spec"
 
 msgid "Specify a shutdown timeout in seconds. (default: 10)"
 msgstr "Specify a shutdown timeout in seconds. (default: 10)"
+
+msgid "Specify mount point of the volume on the container."
+msgstr "Specify mount point of the volume on the container."
+
+msgid "Specify size for the new volume in GB."
+msgstr "Specify size for the new volume in GB."
 
 msgid "Start Container"
 msgstr "Start Container"
@@ -667,6 +695,9 @@ msgstr ""
 "CIDR format.\n"
 "    A typical CIDR format looks like <samp>192.xxx.x.x/24</samp>."
 
+msgid "The volumes are mounted into the container."
+msgstr "The volumes are mounted into the container."
+
 msgid "The working directory for commands to run in."
 msgstr "The working directory for commands to run in."
 
@@ -675,6 +706,24 @@ msgstr "The working directory needs to be an absolute path."
 
 msgid "This step allows you to add scheduler hints to your container."
 msgstr "This step allows you to add scheduler hints to your container."
+
+msgid ""
+"To create new Cinder volume and mount it to the container, select type \"New "
+"Cinder Volume\"\n"
+"    and specify size for the new volume."
+msgstr ""
+"To create new Cinder volume and mount it to the container, select type \"New "
+"Cinder Volume\"\n"
+"    and specify size for the new volume."
+
+msgid ""
+"To mount existing available Cinder volume, select type \"Available Cinder "
+"Volume\"\n"
+"    and select source from the pull-down list."
+msgstr ""
+"To mount existing available Cinder volume, select type \"Available Cinder "
+"Volume\"\n"
+"    and select source from the pull-down list."
 
 msgid "Type"
 msgstr "Type"
@@ -722,6 +771,9 @@ msgstr "Unable to pause Container"
 
 msgid "Unable to pull Image."
 msgstr "Unable to pull Image."
+
+msgid "Unable to resize console."
+msgstr "Unable to resize console."
 
 msgid "Unable to restart Container."
 msgstr "Unable to restart Container."
@@ -771,6 +823,9 @@ msgstr "Update Container"
 
 msgid "VNIC type"
 msgstr "VNIC type"
+
+msgid "Volumes"
+msgstr "Volumes"
 
 msgid ""
 "When IP addresses are associated to a port, this also implies the port is "
