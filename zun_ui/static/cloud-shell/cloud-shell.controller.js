@@ -46,7 +46,7 @@
     var cols = 80;
     var rows = 24;
 
-    // get openrc v3 for OpenStack Client
+    // get clouds.yaml for OpenStack Client
     var cloudsYaml;
     http.get('/project/api_access/clouds.yaml/').then(function(response) {
       // cloud.yaml to be set to .config/openstack/clouds.yaml in container

@@ -47,6 +47,10 @@ And enable it in Horizon::
     cp ../zun-ui/zun_ui/enabled/_2330_project_container_panelgroup.py openstack_dashboard/local/enabled
     cp ../zun-ui/zun_ui/enabled/_2331_project_container_images_panel.py openstack_dashboard/local/enabled
 
+If allow users to use cloud shell::
+
+    cp ../zun-ui/zun_ui/enabled/_0330_cloud_shell.py openstack_dashboard/local/enabled
+
 To run horizon with the newly enabled Zun UI plugin run::
 
     python manage.py runserver 0.0.0.0:8080

@@ -1,0 +1,60 @@
+---
+features:
+  - |
+    Added Cloud Shell feature. See also
+    [`Screen Shot <https://drive.google.com/file/d/0B1UFZO9xX8eweERNX2FWVGRrMXM/view>`_]
+    and [`Short Video <https://youtu.be/lYt2U7qZG38>`_].
+
+    To enable cloud shell, copy zun_ui/enabled/_0330_cloud_shell.py into
+    openstack_dashboard/local/enabled directory and restart Horizon.
+    Then ">_ Cloud Shell" button will be shown right on header of Horizon
+    after loging in.
+
+    When user click "Cloud Shell" button, web console for the cloud shell
+    will be shown in bottom of window.
+
+    At first time to show cloud shell, Zun UI starts to create cloud shell
+    container for the user. So it take just a litle time before using
+    cloud shell. The container will be named
+    "cloud-shell-<user>-<project>-<domain>-<region>".
+
+    If cloud shell container exists, attach the web console to the container.
+
+    Each time when attach to the container, Zun UI gets user's clouds.yaml
+    from Horizon and set it into "~/.config/openstack/clouds.yaml".
+    Also, "export OS_CLOUD=openstack" will be set into "~/.bashrc".
+
+    The user password is not set into the container, so user should
+    set manually "OS_PASSWORD" into envirinment variables or "password"
+    into clouds.yaml.
+
+    To configure image for cloud shell, see
+    [`Image for Cloud Shell <https://docs.openstack.org/zun-ui/latest/configuration/index.html#image-for-cloud-shell>`_]
+  - >
+    [`cinder-integration <https://blueprints.launchpad.net/zun-ui/+spec/cinder-integration>`_]
+    Added Volumes tab for container creation dialog. When create
+    container, user can mount existing Cinder volume or create and mount
+    new Cinder volume.
+  - >
+    Added parameters for container creation. New parameters 'auto_remove',
+    'hostname' and 'runtime' are added for container creation.
+    Also, these parameters are shown in details view.
+    These parameters are not for update, so these are readonly in update
+    dialog.
+  - >
+    Show actions according to container status. Previously the UI showed
+    all of the actions regardless of container's status, now UI  filters
+    the actions just like what nova instances do.
+  - >
+    Added new action "Stop and Delete Container". This action stops the
+    container before deletion when the container is running.
+  - >
+    Added project_id into drawer on image table view.
+fixes:
+  - >
+    [`bug/1742599 <https://bugs.launchpad.net/zun-ui/+bug/1742599>`_]
+    Fixed issue the deleted item is selected again with batch delete.
+    Items recently deleted with batch action had been shown in deletion
+    confirmation dialog when execute the batch delete action again.
+    And this had caused the conflict error due to trying to delete
+    unexisting item.
