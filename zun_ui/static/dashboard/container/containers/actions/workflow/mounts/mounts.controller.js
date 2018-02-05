@@ -44,8 +44,8 @@
     // form for adding volume
     ctrl.model = angular.copy(ctrl.initModel);
     ctrl.types = [
-      {value: "cinder-available", label: "Existing Cinder Volume"},
-      {value: "cinder-new", label: "New Cinder Volume"}
+      {value: "cinder-available", label: gettext("Existing Cinder Volume")},
+      {value: "cinder-new", label: gettext("New Cinder Volume")}
     ];
     ctrl.availableCinderVolumes = $scope.model.availableCinderVolumes;
 
@@ -110,11 +110,11 @@
       expand: false,
       trackId: 'id',
       columns: [
-        {id: 'type', title: 'Type'},
-        {id: 'source', title: 'Source', filters: ['noValue']},
-        {id: 'name', title: 'Name', filters: ['noValue']},
-        {id: 'size', title: 'Size (GB)', filters: ['noValue']},
-        {id: 'destination', title: 'Destination'}
+        {id: 'type', title: gettext('Type')},
+        {id: 'source', title: gettext('Source'), filters: ['noValue']},
+        {id: 'name', title: gettext('Name'), filters: ['noValue']},
+        {id: 'size', title: gettext('Size (GB)'), filters: ['noValue']},
+        {id: 'destination', title: gettext('Destination')}
       ]
     };
     ctrl.itemActions = [
