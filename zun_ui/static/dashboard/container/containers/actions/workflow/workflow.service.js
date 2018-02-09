@@ -244,6 +244,7 @@
                   items: [
                     {
                       key: "memory",
+                      step: 128,
                       placeholder: gettext("The container memory size in MiB.")
                     }
                   ]
