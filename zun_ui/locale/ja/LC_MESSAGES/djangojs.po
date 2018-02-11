@@ -1,13 +1,14 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
+# Shu Muto <shu-mutou@rf.jp.nec.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zun-ui 0.2.1.dev25\n"
+"Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-12-11 08:30+0000\n"
+"POT-Creation-Date: 2018-02-09 22:50+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-07-31 04:28+0000\n"
+"PO-Revision-Date: 2018-02-05 04:18+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -25,6 +26,9 @@ msgstr ""
 msgid "Active"
 msgstr "稼働中"
 
+msgid "Add Volume"
+msgstr "ボリュームの追加"
+
 msgid "Addresses"
 msgstr "アドレス"
 
@@ -35,6 +39,13 @@ msgstr ""
 
 msgid "Admin State"
 msgstr "管理状態"
+
+msgid ""
+"Allocate pseudo-TTY and keep STDIN open even if not attached. This also "
+"enables Web console in console tab on details view."
+msgstr ""
+"接続していなくても、擬似 TTY を許可し、標準入力を開いたままにします。これは、"
+"詳細ビューのコンソールタブにあるウェブコンソールも有効にします。"
 
 msgid "Always"
 msgstr "いつも"
@@ -60,6 +71,15 @@ msgstr ""
 msgid "An arbitrary human-readable name."
 msgstr "人間が読むことができる任意の名前。"
 
+msgid "Auto Remove"
+msgstr "自動削除"
+
+msgid "Auto remove"
+msgstr "自動削除"
+
+msgid "Automatically remove the container when it exits"
+msgstr "コンテナーを終了した時に、自動で削除します。"
+
 msgid "Available Scheduler Hints"
 msgstr "有効なスケジューラーヒント"
 
@@ -81,6 +101,10 @@ msgstr "コンテナーに送信されるコマンド。"
 #, python-format
 msgid "Command was successfully executed at container %s."
 msgstr "コンテナー %s で正常にコマンドが実行されました。"
+
+msgid "Confirm Delete After Stop Container"
+msgid_plural "Confirm Delete After Stop Containers"
+msgstr[0] "コンテナーの停止と削除の確認"
 
 msgid "Confirm Delete Container"
 msgid_plural "Confirm Delete Containers"
@@ -139,9 +163,16 @@ msgstr "作成"
 msgid "Create Container"
 msgstr "コンテナーの作成"
 
+msgid "Delete"
+msgstr "削除"
+
 msgid "Delete Container"
 msgid_plural "Delete Containers"
 msgstr[0] "コンテナーの削除"
+
+msgid "Delete Container After Stop"
+msgid_plural "Delete Containers After Stop"
+msgstr[0] "コンテナーの停止と削除"
 
 msgid "Delete Container Forcely"
 msgid_plural "Delete Containers Forcely"
@@ -149,6 +180,11 @@ msgstr[0] "コンテナーの強制削除"
 
 msgid "Delete Containers"
 msgstr "コンテナーの削除"
+
+#, python-format
+msgid "Deleted Container After Stop: %s."
+msgid_plural "Deleted Containers After Stop: %s."
+msgstr[0] "コンテナー %s を停止後に削除しました。"
 
 #, python-format
 msgid "Deleted Container Forcely: %s."
@@ -162,6 +198,9 @@ msgstr[0] "コンテナー %s を削除しました。"
 
 msgid "Description"
 msgstr "説明"
+
+msgid "Destination"
+msgstr "マウント先"
 
 msgid "Direct"
 msgstr "Direct"
@@ -456,6 +495,9 @@ msgstr "コンテナーが終了するときに適用する再起動ポリシー
 msgid "Retry times for 'On failure' policy."
 msgstr "'失敗したら' ポリシーの試行回数"
 
+msgid "Runtime"
+msgstr "ランタイム"
+
 msgid "Scheduler Hints"
 msgstr "スケジューラーヒント"
 
@@ -489,6 +531,9 @@ msgstr "セグメント ID"
 msgid "Select an item from Available items below"
 msgstr "以下の利用可能なアイテムから 1 つ選択してください。"
 
+msgid "Select available Cinder volume"
+msgstr "利用可能な Cinder ボリュームを選択してください。"
+
 msgid "Select networks from those listed below."
 msgstr "以下のリストからネットワークを選択してください。"
 
@@ -506,6 +551,9 @@ msgstr "ポリシーを選択してください"
 msgid "Select ports from those listed below."
 msgstr "以下のリストからポートを選択してください。"
 
+msgid "Select runtime."
+msgstr "ランタイムの選択"
+
 msgid "Select the security groups to create the container in."
 msgstr "作成するコンテナーのセキュリティーグループを選択します。"
 
@@ -514,6 +562,9 @@ msgstr "送信"
 
 msgid "Send Kill Signal"
 msgstr "停止シグナルの送信"
+
+msgid "Set the volume specs and add into the table below."
+msgstr "ボリュームのスペックを設定して、以下のテーブルに追加します。"
 
 msgid "Shared"
 msgstr "共有"
@@ -534,11 +585,23 @@ msgstr ""
 msgid "Size"
 msgstr "サイズ"
 
+msgid "Size (GB)"
+msgstr "サイズ (GB)"
+
+msgid "Source"
+msgstr "ソース"
+
 msgid "Spec"
 msgstr "スペック"
 
 msgid "Specify a shutdown timeout in seconds. (default: 10)"
 msgstr "停止するまでの秒数を指定してください。（デフォルト値: 10）"
+
+msgid "Specify mount point of the volume on the container."
+msgstr "コンテナー上でのボリュームのマウントポイントを指定してください。"
+
+msgid "Specify size for the new volume in GB."
+msgstr "新しいボリュームのサイズを GB 単位で指定してください。。"
 
 msgid "Start Container"
 msgstr "コンテナーの更新"
@@ -561,6 +624,9 @@ msgstr "停止"
 msgid "Stop Container"
 msgstr "コンテナーの停止"
 
+msgid "Stop and Delete Container"
+msgstr "コンテナーの停止と削除"
+
 msgid "Subnets Associated"
 msgstr "割り当てサブネット"
 
@@ -578,6 +644,9 @@ msgstr "MiB 単位のコンテナーのメモリーサイズ。"
 
 msgid "The environment variables in comma separated KEY=VALUE pairs"
 msgstr "環境変数をコンマ区切りの KEY=VALUE ペアで指定してください。"
+
+msgid "The host name of this container."
+msgstr "このコンテナーのホスト名。"
 
 msgid "The image driver to use to pull container image."
 msgstr "コンテナーのイメージの取得に使用するイメージドライバー。"
@@ -603,6 +672,9 @@ msgid ""
 "the container."
 msgstr "コンテナーを開始する前にイメージを取得すべきかを決定するポリシーです。"
 
+msgid "The runtime to use for this container. Default: \"runc\""
+msgstr "このコンテナーに使用するランタイムを指定します。デフォルト: \"runc\""
+
 msgid "The status indicates whether the network has an active connection."
 msgstr "ステータスは、ネットワークにアクティブな接続があるかを示します。"
 
@@ -618,6 +690,9 @@ msgstr ""
 "定します。\n"
 "通常、CIDR 形式は <samp>192.xxx.x.x/24</samp> のような形式です。"
 
+msgid "The volumes are mounted into the container."
+msgstr "ボリュームをコンテナーにマウントします。"
+
 msgid "The working directory for commands to run in."
 msgstr "コマンドを実行するときの作業ディレクトリ。"
 
@@ -628,11 +703,33 @@ msgid "This step allows you to add scheduler hints to your container."
 msgstr ""
 "このステップで、コンテナーにスケジューラーヒントを追加することができます。"
 
+msgid ""
+"To create new Cinder volume and mount it to the container, select type \"New "
+"Cinder Volume\"\n"
+"    and specify size for the new volume."
+msgstr ""
+"新しい Cinder ボリュームを作成してコンテナーにマウントするには、種別に「新し"
+"い Cinder ボリューム」を選択して、新しいボリュームのサイズを指定してくださ"
+"い。"
+
+msgid ""
+"To mount existing available Cinder volume, select type \"Available Cinder "
+"Volume\"\n"
+"    and select source from the pull-down list."
+msgstr ""
+"既存の利用可能な Cinder ボリュームをマウントするには、種別に「利用可能な "
+"Cinder ボリューム」を選択して、プルダウンリストからソースを選択してください。"
+
 msgid "Type"
 msgstr "種別"
 
 msgid "Unable to create Container."
 msgstr "コンテナーを作成できません。"
+
+#, python-format
+msgid "Unable to delete Container after stopping: %s."
+msgid_plural "Unable to delete Containers after stopping: %s."
+msgstr[0] "コンテナーの停止と削除ができません: %s"
 
 #, python-format
 msgid "Unable to delete Container forcely: %s."
@@ -667,6 +764,9 @@ msgstr "コンテナーを一時停止できません。"
 msgid "Unable to pull Image."
 msgstr "イメージを取得できません。"
 
+msgid "Unable to resize console."
+msgstr "コンソールをリサイズできません。"
+
 msgid "Unable to restart Container."
 msgstr "コンテナーを再起動できません。"
 
@@ -687,6 +787,10 @@ msgstr "コンテナーを開始できません。"
 
 msgid "Unable to stop Container."
 msgstr "コンテナーを停止できません。"
+
+#, python-format
+msgid "Unable to stop and delete the Container with id: %(id)s"
+msgstr "ID %(id)s のコンテナーの停止と削除ができません。"
 
 msgid "Unable to unpause of Container."
 msgstr "コンテナーを一時停止解除できません。"
@@ -711,6 +815,9 @@ msgstr "コンテナーの更新"
 
 msgid "VNIC type"
 msgstr "仮想 NIC の種別"
+
+msgid "Volumes"
+msgstr "ボリューム"
 
 msgid ""
 "When IP addresses are associated to a port, this also implies the port is "
@@ -763,6 +870,10 @@ msgstr "コンテナーの強制削除は許可されていません: %s"
 msgid "You are not allowed to delete containers: %s"
 msgstr "コンテナーの削除は許可されていません: %s"
 
+#, python-format
+msgid "You are not allowed to stop and delete container: %s"
+msgstr "コンテナーの停止と削除は許可されていません: %s"
+
 msgid ""
 "You can specify scheduler hints by moving items from the left column to the "
 "right column. Use the \"Custom\" option to add scheduler hints with the key "
@@ -782,3 +893,17 @@ msgid_plural ""
 msgstr[0] ""
 "\"%s\" を選択しました。選択内容を確認してください。削除されたコンテナーは元に"
 "戻せません。"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. The container will "
+"be stopped before deleting. Deleted container is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. The containers will "
+"be stopped before deleting. Deleted containers are not recoverable."
+msgstr[0] ""
+"\"%s\" を選択しました。選択内容を確認してください。コンテナーは削除の前に停止"
+"されます。削除されたコンテナーは元に戻せません。"
+
+msgid "runc"
+msgstr "runc"
