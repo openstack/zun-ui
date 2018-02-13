@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-05 01:36+0000\n"
+"POT-Creation-Date: 2018-02-13 04:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-05 04:18+0000\n"
+"PO-Revision-Date: 2018-02-13 05:05+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -244,6 +244,9 @@ msgstr "コマンドの実行"
 msgid "Executing"
 msgstr "実行中"
 
+msgid "Existing Cinder Volume"
+msgstr "既存の Cinder ボリューム"
+
 msgid "Existing Scheduler Hints"
 msgstr "既存のスケジューラーヒント"
 
@@ -393,6 +396,9 @@ msgstr "なし"
 
 msgid "Never: never pull the image."
 msgstr "Never: イメージを取得しない。"
+
+msgid "New Cinder Volume"
+msgstr "新しい Cinder ボリューム"
 
 msgid "No"
 msgstr "なし"
