@@ -52,10 +52,6 @@
         {value: "always", name: gettext("Always")},
         {value: "unless-stopped", name: gettext("Unless Stopped")}
       ];
-      var runtimes = [
-        {value: "", name: gettext("Select runtime.")},
-        {value: "runc", name: gettext("runc")}
-      ];
 
       // schema
       schema = {
@@ -285,9 +281,8 @@
                   items: [
                     {
                       key: "runtime",
-                      type: "select",
+                      placeholder: gettext("The runtime to create container with."),
                       readonly: action === "update",
-                      titleMap: runtimes
                     }
                   ]
                 }
