@@ -7,6 +7,7 @@ Zun UI
 * Free software: Apache license
 * Source: https://git.openstack.org/cgit/openstack/zun-ui
 * Bugs: https://bugs.launchpad.net/zun-ui
+* Documentation: https://docs.openstack.org/zun-ui/latest/
 
 Enabling in DevStack
 --------------------
