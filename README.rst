@@ -1,13 +1,14 @@
-==========
-zun-ui
-==========
-
+======
 Zun UI
+======
+
+Horizon plugin for Zun
 
 * Free software: Apache license
 * Source: https://git.openstack.org/cgit/openstack/zun-ui
 * Bugs: https://bugs.launchpad.net/zun-ui
 * Documentation: https://docs.openstack.org/zun-ui/latest/
+* Release notes: https://docs.openstack.org/releasenotes/zun-ui/
 
 Enabling in DevStack
 --------------------
