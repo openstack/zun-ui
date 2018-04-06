@@ -90,6 +90,8 @@ class ContainerActions(generic.View):
             return client.container_network_attach(request, id)
         elif action == 'network_detach':
             return client.container_network_detach(request, id)
+        elif action == 'port_update_security_groups':
+            return client.port_update_security_groups(request)
 
     @rest_utils.ajax(data_required=True)
     def delete(self, request, id, action):

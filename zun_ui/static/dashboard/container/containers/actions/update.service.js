@@ -65,52 +65,7 @@
       var title, submitText;
       title = gettext('Update Container');
       submitText = gettext('Update');
-      var config = workflow.init('update', title, submitText);
-      config.model.id = selected.id;
-
-      // load current data
-      zun.getContainer(selected.id).then(onLoad);
-      function onLoad(response) {
-        config.model.name = response.data.name
-          ? response.data.name : "";
-        config.model.image = response.data.image
-          ? response.data.image : "";
-        config.model.image_driver = response.data.image_driver
-          ? response.data.image_driver : "docker";
-        config.model.image_pull_policy = response.data.image_pull_policy
-          ? response.data.image_pull_policy : "";
-        config.model.command = response.data.command
-          ? response.data.command : "";
-        config.model.hostname = response.data.hostname
-          ? response.data.hostname : "";
-        config.model.auto_remove = response.data.auto_remove
-          ? response.data.auto_remove : false;
-        config.model.cpu = response.data.cpu
-          ? response.data.cpu : "";
-        config.model.memory = response.data.memory
-          ? parseInt(response.data.memory, 10) : "";
-        config.model.restart_policy = response.data.restart_policy.Name
-          ? response.data.restart_policy.Name : "";
-        config.model.restart_policy_max_retry = response.data.restart_policy.MaximumRetryCount
-          ? parseInt(response.data.restart_policy.MaximumRetryCount, 10) : null;
-        if (config.model.auto_remove) {
-          config.model.exit_policy = "remove";
-        } else {
-          config.model.exit_policy = config.model.restart_policy;
-        }
-        config.model.runtime = response.data.runtime
-          ? response.data.runtime : "";
-        config.model.allocatedNetworks = getAllocatedNetworks(response.data.addresses);
-        config.model.workdir = response.data.workdir
-          ? response.data.workdir : "";
-        config.model.environment = response.data.environment
-          ? hashToString(response.data.environment) : "";
-        config.model.interactive = response.data.interactive
-          ? response.data.interactive : false;
-        config.model.labels = response.data.labels
-          ? hashToString(response.data.labels) : "";
-      }
-
+      var config = workflow.init('update', title, submitText, selected.id);
       return modal.open(config).then(submit);
     }
 
@@ -183,37 +138,16 @@
 
     function successAttach(response) {
       toast.add('success', interpolate(message.successAttach,
-        [response.data.container, response.data.network]));
+        [response.data.network, response.data.container]));
       var result = actionResult.getActionResult().updated(resourceType, response.data.container);
       return result.result;
     }
 
     function successDetach(response) {
       toast.add('success', interpolate(message.successDetach,
-        [response.data.container, response.data.network]));
+        [response.data.network, response.data.container]));
       var result = actionResult.getActionResult().updated(resourceType, response.data.container);
       return result.result;
-    }
-
-    function getAllocatedNetworks(addresses) {
-      var allocated = [];
-      Object.keys(addresses).forEach(function (id) {
-        allocated.push(id);
-      });
-      return allocated;
-    }
-
-    function hashToString(hash) {
-      var str = "";
-      for (var key in hash) {
-        if (hash.hasOwnProperty(key)) {
-          if (str.length > 0) {
-            str += ",";
-          }
-          str += key + "=" + hash[key];
-        }
-      }
-      return str;
     }
   }
 })();

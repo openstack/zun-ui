@@ -47,6 +47,7 @@
       resizeContainer: resizeContainer,
       attachNetwork: attachNetwork,
       detachNetwork: detachNetwork,
+      updatePortSecurityGroup: updatePortSecurityGroup,
       pullImage: pullImage,
       getImages: getImages
     };
@@ -164,6 +165,15 @@
     function detachNetwork(id, net) {
       var msg = gettext('Unable to detach network.');
       return apiService.post(containersPath + id + '/network_detach', {network: net})
+        .error(error(msg));
+    }
+
+    function updatePortSecurityGroup(id, port, sgs) {
+      var msg = interpolate(
+        gettext('Unable to update security groups %(sgs)s for port %(port)s.'),
+        {port: port, sgs: sgs}, true);
+      return apiService.post(containersPath + id + '/port_update_security_groups',
+        {port: port, security_groups: sgs})
         .error(error(msg));
     }
 

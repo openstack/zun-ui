@@ -22,17 +22,23 @@
   workflow.$inject = [
     "horizon.app.core.openstack-service-api.cinder",
     "horizon.app.core.openstack-service-api.neutron",
+    "horizon.app.core.openstack-service-api.security-group",
+    'horizon.app.core.openstack-service-api.zun',
     "horizon.dashboard.container.basePath",
     "horizon.framework.util.i18n.gettext",
+    'horizon.framework.util.q.extensions',
     "horizon.framework.widgets.metadata.tree.service"
   ];
 
-  function workflow(cinder, neutron, basePath, gettext, treeService) {
+  function workflow(
+    cinder, neutron, securityGroup, zun, basePath, gettext,
+    $qExtensions, treeService
+  ) {
     var workflow = {
       init: init
     };
 
-    function init(action, title, submitText) {
+    function init(action, title, submitText, id) {
       var push = Array.prototype.push;
       var schema, form, model;
       var imageDrivers = [
@@ -495,8 +501,93 @@
       // available ports
       model.availablePorts = [];
 
+      // security groups
+      model.availableSecurityGroups = [];
+      model.allocatedSecurityGroups = [];
+
+      // get resources
+      getContainer(action, id).then(function () {
+        getVolumes();
+        getNetworks();
+        securityGroup.query().then(onGetSecurityGroups);
+      });
+
+      // get container when action equals "update"
+      function getContainer (action, id) {
+        if (action === 'create') {
+          return $qExtensions.booleanAsPromise(true);
+        } else {
+          return zun.getContainer(id).then(onGetContainer);
+        }
+      }
+
+      // get container for update
+      function onGetContainer(response) {
+        model.id = id;
+        model.name = response.data.name
+          ? response.data.name : "";
+        model.image = response.data.image
+          ? response.data.image : "";
+        model.image_driver = response.data.image_driver
+          ? response.data.image_driver : "docker";
+        model.image_pull_policy = response.data.image_pull_policy
+          ? response.data.image_pull_policy : "";
+        model.command = response.data.command
+          ? response.data.command : "";
+        model.hostname = response.data.hostname
+          ? response.data.hostname : "";
+        model.runtime = response.data.runtime
+          ? response.data.runtime : "";
+        model.cpu = response.data.cpu
+          ? response.data.cpu : "";
+        model.memory = response.data.memory
+          ? parseInt(response.data.memory, 10) : "";
+        model.restart_policy = response.data.restart_policy.Name
+          ? response.data.restart_policy.Name : "";
+        model.restart_policy_max_retry = response.data.restart_policy.MaximumRetryCount
+          ? parseInt(response.data.restart_policy.MaximumRetryCount, 10) : null;
+        if (config.model.auto_remove) {
+          config.model.exit_policy = "remove";
+        } else {
+          config.model.exit_policy = config.model.restart_policy;
+        }
+        model.allocatedNetworks = getAllocatedNetworks(response.data.addresses);
+        model.allocatedSecurityGroups = response.data.security_groups;
+        model.workdir = response.data.workdir
+          ? response.data.workdir : "";
+        model.environment = response.data.environment
+          ? hashToString(response.data.environment) : "";
+        model.interactive = response.data.interactive
+          ? response.data.interactive : false;
+        model.auto_remove = response.data.auto_remove
+          ? response.data.auto_remove : false;
+        model.labels = response.data.labels
+          ? hashToString(response.data.labels) : "";
+        return response;
+      }
+
+      function getAllocatedNetworks(addresses) {
+        var allocated = [];
+        Object.keys(addresses).forEach(function (id) {
+          allocated.push(id);
+        });
+        return allocated;
+      }
+
+      function hashToString(hash) {
+        var str = "";
+        for (var key in hash) {
+          if (hash.hasOwnProperty(key)) {
+            if (str.length > 0) {
+              str += ",";
+            }
+            str += key + "=" + hash[key];
+          }
+        }
+        return str;
+      }
+
       // get available cinder volumes
-      getVolumes();
       function getVolumes() {
         return cinder.getVolumes().then(onGetVolumes);
       }
@@ -514,7 +605,6 @@
       }
 
       // get available neutron networks and ports
-      getNetworks();
       function getNetworks() {
         return neutron.getNetworks().then(onGetNetworks).then(getPorts);
       }
@@ -543,6 +633,7 @@
             }
           );
         });
+        return networks;
       }
 
       function onGetPorts(ports, network) {
@@ -567,6 +658,27 @@
           });
         });
         return subnetNames;
+      }
+
+      // get security groups
+      function onGetSecurityGroups(response) {
+        angular.forEach(response.data.items, function (item) {
+          // 'default' is a special security group in neutron. It can not be
+          // deleted and is guaranteed to exist. It by default contains all
+          // of the rules needed for an instance to reach out to the network
+          // so the instance can provision itself.
+          if (item.name === 'default' && action === "create") {
+            model.security_groups.push(item);
+          }
+          // if network in model.allocatedSecurityGroups,
+          // push it to mode.security_groups for update
+          else if (model.allocatedSecurityGroups.includes(item.id)) {
+            model.security_groups.push(item);
+          }
+
+        });
+        push.apply(model.availableSecurityGroups, response.data.items);
+        return response;
       }
 
       var config = {
