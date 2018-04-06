@@ -144,9 +144,11 @@
   function containerProperties() {
     return {
       'addresses': { label: gettext('Addresses'), filters: ['noValue', 'json'] },
+      'auto_heal': { label: gettext('Auto Heal'), filters: ['yesno'] },
       'auto_remove': { label: gettext('Auto Remove'), filters: ['yesno'] },
       'command': { label: gettext('Command'), filters: ['noValue'] },
       'cpu': { label: gettext('CPU'), filters: ['noValue'] },
+      'disk': { label: gettext('Disk'), filters: ['gb', 'noValue'] },
       'environment': { label: gettext('Environment'), filters: ['noValue', 'json'] },
       'host': { label: gettext('Host'), filters: ['noValue'] },
       'hostname': { label: gettext('Hostname'), filters: ['noValue'] },

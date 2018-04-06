@@ -59,6 +59,9 @@
         {value: "unless-stopped", name: gettext("Restart if stopped")},
         {value: "remove", name: gettext("Remove container")}
       ];
+      var availabilityZones = [
+        {value: "", name: gettext("Select availability zone.")}
+      ];
 
       // schema
       schema = {
@@ -108,6 +111,15 @@
             type: "number",
             minimum: 4
           },
+          disk: {
+            title: gettext("Disk"),
+            type: "number",
+            minimum: 0
+          },
+          availability_zone: {
+            title: gettext("Availability Zone"),
+            type: "string"
+          },
           exit_policy: {
             title: gettext("Exit Policy"),
             type: "string"
@@ -116,6 +128,10 @@
             title: gettext("Max Retry"),
             type: "number",
             minimum: 0
+          },
+          auto_heal: {
+            title: gettext("Enable auto heal"),
+            type: "boolean"
           },
           // misc
           workdir: {
@@ -260,6 +276,29 @@
                   htmlClass: "col-xs-6",
                   items: [
                     {
+                      key: "disk",
+                      step: 1,
+                      placeholder: gettext("The disk size in GiB for per container.")
+                    }
+                  ]
+                },
+                {
+                  type: "section",
+                  htmlClass: "col-xs-6",
+                  items: [
+                    {
+                      key: "availability_zone",
+                      readonly: action === "update",
+                      type: "select",
+                      titleMap: availabilityZones
+                    }
+                  ]
+                },
+                {
+                  type: "section",
+                  htmlClass: "col-xs-6",
+                  items: [
+                    {
                       key: "exit_policy",
                       type: "select",
                       readonly: action === "update",
@@ -269,7 +308,7 @@
                         if (notOnFailure) {
                           model.restart_policy_max_retry = "";
                         }
-                        form[0].tabs[1].items[5].items[0].readonly = notOnFailure;
+                        form[0].tabs[1].items[7].items[0].readonly = notOnFailure;
                         // set auto_remove whether exit_policy is "remove".
                         // if exit_policy is set as "remove", clear restart_policy.
                         // otherwise, set restart_policy as same value as exit_policy.
@@ -291,6 +330,16 @@
                       key: "restart_policy_max_retry",
                       placeholder: gettext("Retry times for 'Restart on failure' policy."),
                       readonly: true
+                    }
+                  ]
+                },
+                {
+                  type: "section",
+                  htmlClass: "col-xs-12",
+                  items: [
+                    {
+                      key: "auto_heal",
+                      readonly: action === "update"
                     }
                   ]
                 }
@@ -462,10 +511,13 @@
         runtime: "",
         cpu: "",
         memory: "",
+        disks: "",
+        availability_zone: "",
         exit_policy: "",
         restart_policy: "",
         restart_policy_max_retry: "",
         auto_remove: false,
+        auto_heal: false,
         // mounts
         mounts: [],
         // networks
@@ -510,6 +562,7 @@
         getVolumes();
         getNetworks();
         securityGroup.query().then(onGetSecurityGroups);
+        zun.getZunAvailabilityZones().then(onGetZunServices);
       });
 
       // get container when action equals "update"
@@ -679,6 +732,15 @@
         });
         push.apply(model.availableSecurityGroups, response.data.items);
         return response;
+      }
+
+      // get availability zones from zun services
+      function onGetZunServices(response) {
+        var azs = [];
+        response.data.items.forEach(function (service) {
+          azs.push({value: service.availability_zone, name: service.availability_zone});
+        });
+        push.apply(availabilityZones, azs);
       }
 
       var config = {
