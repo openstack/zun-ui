@@ -100,6 +100,19 @@ class ContainerActions(generic.View):
             opts['stop'] = True
         return client.container_delete(request, **opts)
 
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request, id, action):
+        """Delete specified Container with option.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        opts = {'id': id}
+        if action == 'force':
+            opts['force'] = True
+        elif action == 'stop':
+            opts['stop'] = True
+        return client.container_delete(request, **opts)
+
 
 @urls.register
 class Containers(generic.View):
