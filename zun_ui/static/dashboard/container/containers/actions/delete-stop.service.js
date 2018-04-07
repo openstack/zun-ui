@@ -120,14 +120,14 @@
       // from the deleteModal into a standard form
       var result = actionResult.getActionResult();
       deleteModalResult.pass.forEach(function markDeleted(item) {
-        result.deleted(resourceType, getEntity(item).id);
+        result.updated(resourceType, getEntity(item).id);
       });
       deleteModalResult.fail.forEach(function markFailed(item) {
         result.failed(resourceType, getEntity(item).id);
       });
       var indexPath = '/project/container/containers';
       var currentPath = $location.path();
-      if (result.result.failed.length === 0 && result.result.deleted.length > 0 &&
+      if (result.result.failed.length === 0 && result.result.updated.length > 0 &&
           currentPath !== indexPath) {
         $location.path(indexPath);
       } else {
