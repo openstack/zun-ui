@@ -1,15 +1,15 @@
-# Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
-# Shu Muto <shu-mutou@rf.jp.nec.com>, 2018. #zanata
+# Shu Muto <shu.mutow@gmail.com>, 2017. #zanata
+# Shu Muto <shu.mutow@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-03-07 18:39+0000\n"
+"POT-Creation-Date: 2018-04-06 06:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-13 05:05+0000\n"
-"Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
+"PO-Revision-Date: 2018-04-06 07:37+0000\n"
+"Last-Translator: Shu Muto <shu.mutow@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -378,6 +378,14 @@ msgstr "コンテナーのイメージの名前または ID。"
 msgid "Network"
 msgstr "ネットワーク"
 
+#, python-format
+msgid "Network %s was successfully attached to container %s."
+msgstr "ネットワーク %s はコンテナー %s に正常に接続されました。"
+
+#, python-format
+msgid "Network %s was successfully detached from container %s."
+msgstr "ネットワーク %s はコンテナー %s から正常に切断されました。"
+
 msgid "Network ID"
 msgstr "ネットワーク ID"
 
@@ -675,6 +683,9 @@ msgid ""
 "the container."
 msgstr "コンテナーを開始する前にイメージを取得すべきかを決定するポリシーです。"
 
+msgid "The runtime to create container with."
+msgstr "コンテナーを作成するランタイムです。"
+
 msgid "The runtime to use for this container. Default: \"runc\""
 msgstr "このコンテナーに使用するランタイムを指定します。デフォルト: \"runc\""
 
@@ -726,6 +737,9 @@ msgstr ""
 msgid "Type"
 msgstr "種別"
 
+msgid "Unable to attach network."
+msgstr "ネットワークを接続できません。"
+
 msgid "Unable to create Container."
 msgstr "コンテナーを作成できません。"
 
@@ -754,6 +768,9 @@ msgstr "ID %(id)s のコンテナーを削除できません。"
 
 msgid "Unable to delete the Containers."
 msgstr "コンテナーの一覧を取得できません。"
+
+msgid "Unable to detach network."
+msgstr "ネットワークを切断できません。"
 
 msgid "Unable to execute the command."
 msgstr "コマンドを実行できません。"
