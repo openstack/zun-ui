@@ -86,19 +86,10 @@ class ContainerActions(generic.View):
             width = request.DATA.get("width") or 500
             height = request.DATA.get("height") or 400
             return client.container_resize(request, id, width, height)
-
-    @rest_utils.ajax(data_required=True)
-    def delete(self, request, id, action):
-        """Delete specified Container with option.
-
-        Returns HTTP 204 (no content) on successful deletion.
-        """
-        opts = {'id': id}
-        if action == 'force':
-            opts['force'] = True
-        elif action == 'stop':
-            opts['stop'] = True
-        return client.container_delete(request, **opts)
+        elif action == 'network_attach':
+            return client.container_network_attach(request, id)
+        elif action == 'network_detach':
+            return client.container_network_detach(request, id)
 
 
 @urls.register
