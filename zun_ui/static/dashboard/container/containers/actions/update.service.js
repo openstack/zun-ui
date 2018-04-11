@@ -83,6 +83,8 @@
           ? response.data.command : "";
         config.model.hostname = response.data.hostname
           ? response.data.hostname : "";
+        config.model.auto_remove = response.data.auto_remove
+          ? response.data.auto_remove : false;
         config.model.cpu = response.data.cpu
           ? response.data.cpu : "";
         config.model.memory = response.data.memory
@@ -91,6 +93,11 @@
           ? response.data.restart_policy.Name : "";
         config.model.restart_policy_max_retry = response.data.restart_policy.MaximumRetryCount
           ? parseInt(response.data.restart_policy.MaximumRetryCount, 10) : null;
+        if (config.model.auto_remove) {
+          config.model.exit_policy = "remove";
+        } else {
+          config.model.exit_policy = config.model.restart_policy;
+        }
         config.model.runtime = response.data.runtime
           ? response.data.runtime : "";
         config.model.allocatedNetworks = getAllocatedNetworks(response.data.addresses);
@@ -100,8 +107,6 @@
           ? hashToString(response.data.environment) : "";
         config.model.interactive = response.data.interactive
           ? response.data.interactive : false;
-        config.model.auto_remove = response.data.auto_remove
-          ? response.data.auto_remove : false;
         config.model.labels = response.data.labels
           ? hashToString(response.data.labels) : "";
       }

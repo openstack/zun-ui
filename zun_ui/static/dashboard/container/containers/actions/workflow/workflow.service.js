@@ -45,12 +45,13 @@
         {value: "always", name: gettext("Always")},
         {value: "never", name: gettext("Never")}
       ];
-      var restartPolicies = [
+      var exitPolicies = [
         {value: "", name: gettext("Select policy.")},
         {value: "no", name: gettext("No")},
-        {value: "on-failure", name: gettext("On failure")},
-        {value: "always", name: gettext("Always")},
-        {value: "unless-stopped", name: gettext("Unless Stopped")}
+        {value: "on-failure", name: gettext("Restart on failure")},
+        {value: "always", name: gettext("Always restart")},
+        {value: "unless-stopped", name: gettext("Restart if stopped")},
+        {value: "remove", name: gettext("Remove container")}
       ];
 
       // schema
@@ -87,6 +88,10 @@
             title: gettext("Hostname"),
             type: "string"
           },
+          runtime: {
+            title: gettext("Runtime"),
+            type: "string"
+          },
           cpu: {
             title: gettext("CPU"),
             type: "number",
@@ -97,22 +102,14 @@
             type: "number",
             minimum: 4
           },
-          destination: {
-            title: gettext("Destination"),
-            type: "string"
-          },
-          restart_policy: {
-            title: gettext("Restart Policy"),
+          exit_policy: {
+            title: gettext("Exit Policy"),
             type: "string"
           },
           restart_policy_max_retry: {
             title: gettext("Max Retry"),
             type: "number",
             minimum: 0
-          },
-          runtime: {
-            title: gettext("Runtime"),
-            type: "string"
           },
           // misc
           workdir: {
@@ -125,10 +122,6 @@
           },
           interactive: {
             title: gettext("Enable interactive mode"),
-            type: "boolean"
-          },
-          auto_remove: {
-            title: gettext("Auto remove"),
             type: "boolean"
           },
           // labels
@@ -214,11 +207,22 @@
               items: [
                 {
                   type: "section",
-                  htmlClass: "col-xs-12",
+                  htmlClass: "col-xs-6",
                   items: [
                     {
                       key: "hostname",
                       placeholder: gettext("The host name of this container."),
+                      readonly: action === "update"
+                    }
+                  ]
+                },
+                {
+                  type: "section",
+                  htmlClass: "col-xs-6",
+                  items: [
+                    {
+                      key: "runtime",
+                      placeholder: gettext("The runtime to create container with."),
                       readonly: action === "update"
                     }
                   ]
@@ -250,16 +254,25 @@
                   htmlClass: "col-xs-6",
                   items: [
                     {
-                      key: "restart_policy",
+                      key: "exit_policy",
                       type: "select",
                       readonly: action === "update",
-                      titleMap: restartPolicies,
+                      titleMap: exitPolicies,
                       onChange: function() {
-                        var readonly = model.restart_policy !== "on-failure";
-                        if (readonly) {
+                        var notOnFailure = model.exit_policy !== "on-failure";
+                        if (notOnFailure) {
                           model.restart_policy_max_retry = "";
                         }
-                        form[0].tabs[1].items[4].items[0].readonly = readonly;
+                        form[0].tabs[1].items[5].items[0].readonly = notOnFailure;
+                        // set auto_remove whether exit_policy is "remove".
+                        // if exit_policy is set as "remove", clear restart_policy.
+                        // otherwise, set restart_policy as same value as exit_policy.
+                        model.auto_remove = (model.exit_policy === "remove");
+                        if (model.auto_remove) {
+                          model.restart_policy = "";
+                        } else {
+                          model.restart_policy = model.exit_policy;
+                        }
                       }
                     }
                   ]
@@ -270,19 +283,8 @@
                   items: [
                     {
                       key: "restart_policy_max_retry",
-                      placeholder: gettext("Retry times for 'On failure' policy."),
+                      placeholder: gettext("Retry times for 'Restart on failure' policy."),
                       readonly: true
-                    }
-                  ]
-                },
-                {
-                  type: "section",
-                  htmlClass: "col-xs-6",
-                  items: [
-                    {
-                      key: "runtime",
-                      placeholder: gettext("The runtime to create container with."),
-                      readonly: action === "update",
                     }
                   ]
                 }
@@ -390,10 +392,6 @@
                     {
                       key: "interactive",
                       readonly: action === "update"
-                    },
-                    {
-                      key: "auto_remove",
-                      readonly: action === "update"
                     }
                   ]
                 }
@@ -455,11 +453,13 @@
         run: true,
         // spec
         hostname: "",
+        runtime: "",
         cpu: "",
         memory: "",
+        exit_policy: "",
         restart_policy: "",
         restart_policy_max_retry: "",
-        runtime: "",
+        auto_remove: false,
         // mounts
         mounts: [],
         // networks
@@ -472,7 +472,6 @@
         workdir: "",
         environment: "",
         interactive: true,
-        auto_remove: false,
         // labels
         labels: "",
         // hints
