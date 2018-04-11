@@ -1,0 +1,6 @@
+fixes:
+  - >
+    [`bug/1763250 <https://bugs.launchpad.net/zun-ui/+bug/1763250>`_]
+    Fixed issue the conflict between retry and auto_remove options.
+    To avoid this conflict, auto_remove option will be cleared when
+    retry option is set.

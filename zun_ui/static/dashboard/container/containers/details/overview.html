@@ -18,9 +18,9 @@
         resource-type-name="OS::Zun::Container"
         cls="dl-horizontal"
         item="ctrl.container"
-        property-groups="[['image', 'image_driver', 'image_pull_policy',
-                           'cpu', 'memory', 'restart_policy', 'runtime',
-                           'hostname', 'addresses', 'ports', 'security_groups']]">
+        property-groups="[['image', 'image_driver', 'image_pull_policy', 'hostname', 'runtime',
+                           'cpu', 'memory', 'restart_policy', 'auto_remove',
+                           'addresses', 'ports', 'security_groups']]">
       </hz-resource-property-list>
     </div>
   </div>
@@ -33,7 +33,7 @@
         cls="dl-horizontal"
         item="ctrl.container"
         property-groups="[['host', 'workdir', 'environment', 'interactive',
-                           'auto_remove', 'labels','links']]">
+                           'labels', 'links']]">
       </hz-resource-property-list>
     </div>
   </div>
