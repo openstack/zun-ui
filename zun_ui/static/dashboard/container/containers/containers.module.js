@@ -52,7 +52,8 @@
     var states = {
       ERROR: 'Error', RUNNING: 'Running', STOPPED: 'Stopped',
       PAUSED: 'Paused', UNKNOWN: 'Unknown', CREATING: 'Creating',
-      CREATED: 'Created', DELETED: 'Deleted'
+      CREATED: 'Created', DELETED: 'Deleted', DELETING: 'Deleting',
+      REBUILDING: 'Rebuilding', DEAD: 'Dead', RESTARTING: 'Restarting'
     };
     return {
       update: [states.CREATED, states.RUNNING, states.STOPPED, states.PAUSED],
@@ -63,12 +64,16 @@
       unpause: [states.PAUSED],
       execute: [states.RUNNING],
       kill: [states.RUNNING],
-      delete: [states.CREATED, states.ERROR, states.STOPPED, states.DELETED],
+      delete: [states.CREATED, states.ERROR, states.STOPPED, states.DELETED, states.DEAD],
       delete_force: [
         states.CREATED, states.CREATING, states.ERROR, states.RUNNING,
-        states.STOPPED, states.UNKNOWN, states.DELETED
+        states.STOPPED, states.UNKNOWN, states.DELETED, states.DEAD,
+        states.RESTARTING, states.REBUILDING
       ],
-      delete_stop: [states.RUNNING],
+      delete_stop: [
+        states.RUNNING, states.CREATED, states.ERROR, states.STOPPED,
+        states.DELETED, states.DEAD
+      ],
       manage_security_groups: [states.CREATED, states.RUNNING, states.STOPPED, states.PAUSED]
     };
   }
