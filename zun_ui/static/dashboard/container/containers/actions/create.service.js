@@ -70,13 +70,15 @@
     }
 
     function submit(context) {
+      delete context.model.exit_policy;
       if (context.model.restart_policy === "on-failure") {
         if (!context.model.restart_policy_max_retry) {
-          context.model.restart_policy_max_retry = 0;
+          delete context.model.restart_policy_max_retry;
+        } else {
+          context.model.restart_policy =
+            context.model.restart_policy + ":" +
+            context.model.restart_policy_max_retry;
         }
-        context.model.restart_policy =
-          context.model.restart_policy + ":" +
-          context.model.restart_policy_max_retry;
       }
       delete context.model.restart_policy_max_retry;
       context.model.mounts = setMounts(context.model.mounts);
