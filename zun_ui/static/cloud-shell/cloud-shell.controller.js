@@ -105,7 +105,8 @@
       var shellIframe = angular.element("#shell-content > iframe");
       var newCols = shellIframe.contents().find("#terminalNode").attr("termCols");
       var newRows = shellIframe.contents().find("#terminalNode").attr("termRows");
-      if ((newCols !== cols || newRows !== rows) && newCols > 0 && newRows > 0) {
+      if ((newCols !== cols || newRows !== rows) && newCols > 0 && newRows > 0 &&
+        ctrl.container.id) {
         // resize tty
         zun.resizeContainer(ctrl.container.id, {width: newCols, height: newRows}).then(function() {
           cols = newCols;
