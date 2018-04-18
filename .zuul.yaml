@@ -1,7 +1,31 @@
 - project:
     check:
       jobs:
-        - openstack-tox-lower-constraints
+        - nodejs-npm-run-lint:
+            vars:
+              node_version: 4
+            required-projects:
+              - openstack/horizon
+        - nodejs-npm-run-test:
+            vars:
+              node_version: 4
+            required-projects:
+              - openstack/horizon
+        - openstack-tox-lower-constraints:
+            required-projects:
+              - openstack/horizon
     gate:
       jobs:
-        - openstack-tox-lower-constraints
+        - nodejs-npm-run-lint:
+            vars:
+              node_version: 4
+            required-projects:
+              - openstack/horizon
+        - nodejs-npm-run-test:
+            vars:
+              node_version: 4
+            required-projects:
+              - openstack/horizon
+        - openstack-tox-lower-constraints:
+            required-projects:
+              - openstack/horizon
