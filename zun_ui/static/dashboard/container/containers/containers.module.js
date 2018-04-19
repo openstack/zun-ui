@@ -68,7 +68,8 @@
         states.CREATED, states.CREATING, states.ERROR, states.RUNNING,
         states.STOPPED, states.UNKNOWN, states.DELETED
       ],
-      delete_stop: [states.RUNNING]
+      delete_stop: [states.RUNNING],
+      manage_security_groups: [states.CREATED, states.RUNNING, states.STOPPED, states.PAUSED]
     };
   }
 

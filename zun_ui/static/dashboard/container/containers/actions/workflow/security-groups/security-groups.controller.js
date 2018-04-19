@@ -21,7 +21,6 @@
 
   SecurityGroupsController.$inject = [
     '$scope',
-    'horizon.app.core.openstack-service-api.security-group',
     'horizon.dashboard.container.basePath'
   ];
 
@@ -34,15 +33,11 @@
    * Allows selection of security groups.
    * @returns {undefined} No return value
    */
-  function SecurityGroupsController($scope, securityGroup, basePath) {
-    var push = Array.prototype.push;
-
+  function SecurityGroupsController($scope, basePath) {
     var ctrl = this;
-    var availableSecurityGroups = [];
-    securityGroup.query().then(onGetSecurityGroups);
 
     ctrl.tableData = {
-      available: availableSecurityGroups,
+      available: $scope.model.availableSecurityGroups,
       allocated: $scope.model.security_groups,
       displayedAvailable: [],
       displayedAllocated: []
@@ -75,19 +70,5 @@
         singleton: true
       }
     ];
-
-    // Security Groups
-    function onGetSecurityGroups(data) {
-      angular.forEach(data.data.items, function addDefault(item) {
-        // 'default' is a special security group in neutron. It can not be
-        // deleted and is guaranteed to exist. It by default contains all
-        // of the rules needed for an instance to reach out to the network
-        // so the instance can provision itself.
-        if (item.name === 'default') {
-          $scope.model.security_groups.push(item);
-        }
-      });
-      push.apply(availableSecurityGroups, data.data.items);
-    }
   }
 })();

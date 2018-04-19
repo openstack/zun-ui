@@ -89,6 +89,8 @@
       delete context.model.ports;
       delete context.model.availableNetworks;
       delete context.model.allocatedNetworks;
+      delete context.model.availableSecurityGroups;
+      delete context.model.allocatedSecurityGroups;
       delete context.model.availablePorts;
       context.model.hints = setSchedulerHints(context.model);
       delete context.model.availableHints;

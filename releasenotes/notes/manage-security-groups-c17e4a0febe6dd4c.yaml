@@ -1,0 +1,6 @@
+---
+features:
+  - >
+    [`manage-security-groups <https://blueprints.launchpad.net/zun-ui/+spec/manage-security-groups>`_]
+    Added Manage Security Groups action to manage associations between
+    security groups and ports on container.

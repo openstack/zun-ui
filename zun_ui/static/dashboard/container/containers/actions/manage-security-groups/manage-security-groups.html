@@ -1,0 +1,43 @@
+<div ng-controller="horizon.dashboard.container.containers.manage-security-groups as ctrl">
+  <p class="step-description" translate>
+    Manage security group for ports.
+  </p>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="port" translate>Port</label>
+        <select class="form-control" id="port" name="port"
+                ng-model="ctrl.model.port"
+                ng-options="port.id as port.name for port in ctrl.availablePorts"
+                ng-change="ctrl.refreshAvailableSecurityGroups()">
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="security_group" translate>Security Group</label>
+        <select
+          class="form-control" id="security_group" name="security_group"
+          ng-model="ctrl.model.security_group"
+          ng-options="sg.id as sg.name for sg in ctrl.availableSecurityGroups | filter:{selected: false}"
+          ng-disabled="ctrl.disabledSecurityGroup">
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary"
+      ng-disabled="ctrl.validateSecurityGroup()"
+      ng-click="ctrl.addSecurityGroup($event)">
+      <span class="fa fa-arrow-down"></span>
+      <translate>Add Security Group</translate>
+    </button>
+  </div>
+
+  <hz-dynamic-table
+    config="ctrl.config"
+    items="ctrl.items"
+    item-actions="ctrl.itemActions">
+  </hz-dynamic-table>
+</div>

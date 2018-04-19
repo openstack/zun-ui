@@ -45,6 +45,7 @@
     'horizon.dashboard.container.containers.execute.service',
     'horizon.dashboard.container.containers.kill.service',
     'horizon.dashboard.container.containers.refresh.service',
+    'horizon.dashboard.container.containers.manage-security-groups.service',
     'horizon.dashboard.container.containers.resourceType'
   ];
 
@@ -64,6 +65,7 @@
     executeContainerService,
     killContainerService,
     refreshContainerService,
+    manageSecurityGroupService,
     resourceType
   ) {
     var containersResourceType = registry.getResourceType(resourceType);
@@ -101,6 +103,13 @@
         service: updateContainerService,
         template: {
           text: gettext('Update Container')
+        }
+      })
+      .append({
+        id: 'manageSecurityGroupService',
+        service: manageSecurityGroupService,
+        template: {
+          text: gettext('Manage Security Groups')
         }
       })
       .append({

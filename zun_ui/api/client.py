@@ -10,15 +10,18 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import logging
+
+from django.conf import settings
 
 from horizon import exceptions
 from horizon.utils.memoized import memoized_with_request
-import logging
 from openstack_dashboard.api import base
+
+from neutronclient.v2_0 import client as neutron_client
 from zunclient import api_versions
 from zunclient.common import utils
 from zunclient.v1 import client as zun_client
-
 
 LOG = logging.getLogger(__name__)
 
@@ -62,6 +65,33 @@ def zunclient(request_auth_params):
                           auth_token=token_id,
                           endpoint_override=endpoint_override,
                           api_version=API_VERSION)
+    return c
+
+
+def get_auth_params_from_request_neutron(request):
+    """Extracts properties needed by neutronclient call from the request object.
+
+    These will be used to memoize the calls to neutronclient.
+    """
+    return (
+        request.user.token.id,
+        base.url_for(request, 'network'),
+        base.url_for(request, 'identity')
+    )
+
+
+@memoized_with_request(get_auth_params_from_request_neutron)
+def neutronclient(request_auth_params):
+    token_id, neutron_url, auth_url = request_auth_params
+    insecure = getattr(settings, 'OPENSTACK_SSL_NO_VERIFY', False)
+    cacert = getattr(settings, 'OPENSTACK_SSL_CACERT', None)
+
+    LOG.debug('neutronclient connection created using the token "%s" and url'
+              ' "%s"' % (token_id, neutron_url))
+    c = neutron_client.Client(token=token_id,
+                              auth_url=auth_url,
+                              endpoint_url=neutron_url,
+                              insecure=insecure, ca_cert=cacert)
     return c
 
 
@@ -227,6 +257,14 @@ def container_network_detach(request, id):
     network = request.DATA.get("network") or None
     zunclient(request).containers.network_detach(id, network)
     return {"container": id, "network": network}
+
+
+def port_update_security_groups(request):
+    port = request.DATA.get("port") or None
+    security_groups = request.DATA.get("security_groups") or None
+    kwargs = {"security_groups": security_groups}
+    neutronclient(request).update_port(port, body={"port": kwargs})
+    return {"port": port, "security_group": security_groups}
 
 
 def image_list(request, limit=None, marker=None, sort_key=None,
