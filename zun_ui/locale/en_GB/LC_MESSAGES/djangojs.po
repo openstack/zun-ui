@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-04-13 12:40+0000\n"
+"POT-Creation-Date: 2018-04-19 05:28+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-13 01:50+0000\n"
+"PO-Revision-Date: 2018-04-18 06:40+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -47,6 +47,9 @@ msgstr ""
 msgid "Always"
 msgstr "Always"
 
+msgid "Always restart"
+msgstr "Always restart"
+
 msgid "Always: Always pull the image from repository."
 msgstr "Always: Always pull the image from repository."
 
@@ -70,12 +73,6 @@ msgstr "An arbitrary human-readable name."
 
 msgid "Auto Remove"
 msgstr "Auto Remove"
-
-msgid "Auto remove"
-msgstr "Auto remove"
-
-msgid "Automatically remove the container when it exits"
-msgstr "Automatically remove the container when it exits"
 
 msgid "Available Scheduler Hints"
 msgstr "Available Scheduler Hints"
@@ -258,6 +255,9 @@ msgstr "Existing Scheduler Hints"
 
 msgid "Exit Code"
 msgstr "Exit Code"
+
+msgid "Exit Policy"
+msgstr "Exit Policy"
 
 msgid "External Network"
 msgstr "External Network"
@@ -442,9 +442,6 @@ msgstr "No existing scheduler hints"
 msgid "Normal"
 msgstr "Normal"
 
-msgid "On failure"
-msgstr "On failure"
-
 msgid "Output"
 msgstr "Output"
 
@@ -456,6 +453,9 @@ msgstr "Pause Container"
 
 msgid "Physical Network"
 msgstr "Physical Network"
+
+msgid "Policy to apply when a container exits."
+msgstr "Policy to apply when a container exits."
 
 msgid "Ports"
 msgstr "Ports"
@@ -511,6 +511,9 @@ msgstr "Refresh"
 msgid "Remote"
 msgstr "Remote"
 
+msgid "Remove container"
+msgstr "Remove container"
+
 msgid "Restart"
 msgstr "Restart"
 
@@ -520,11 +523,14 @@ msgstr "Restart Container"
 msgid "Restart Policy"
 msgstr "Restart Policy"
 
-msgid "Restart policy to apply when a container exits."
-msgstr "Restart policy to apply when a container exits."
+msgid "Restart if stopped"
+msgstr "Restart if stopped"
 
-msgid "Retry times for 'On failure' policy."
-msgstr "Retry times for 'On failure' policy."
+msgid "Restart on failure"
+msgstr "Restart on failure"
+
+msgid "Retry times for 'Restart on failure' policy."
+msgstr "Retry times for 'Restart on failure' policy."
 
 msgid "Runtime"
 msgstr "Runtime"
@@ -839,9 +845,6 @@ msgstr "Unable to unpause of Container."
 
 msgid "Unable to update Container."
 msgstr "Unable to update Container."
-
-msgid "Unless Stopped"
-msgstr "Unless Stopped"
 
 msgid "Unpause Container"
 msgstr "Unpause Container"
