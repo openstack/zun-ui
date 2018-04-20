@@ -59,10 +59,10 @@ from zun_ui import version as zunui_ver
 # Add any Sphinx extension module names here, as strings.
 # They can be extensions coming with Sphinx (named 'sphinx.ext.*')
 # or your custom ones.
-extensions = ['sphinx.ext.autodoc',
-              'sphinx.ext.todo',
+extensions = ['sphinx.ext.todo',
               'sphinx.ext.coverage',
               'sphinx.ext.viewcode',
+              'sphinxcontrib.apidoc',
               'openstackdocstheme',
               ]
 
@@ -129,6 +129,12 @@ pygments_style = 'sphinx'
 primary_domain = 'py'
 nitpicky = False
 
+# sphinxcontrib-apidoc
+apidoc_module_dir = '../../zun_ui'
+apidoc_output_dir = 'contributor/api'
+apidoc_excluded_paths = [
+    'test',
+]
 
 # -- Options for HTML output --------------------------------------------------
 
