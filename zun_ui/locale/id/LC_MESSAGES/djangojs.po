@@ -1,0 +1,998 @@
+# suhartono <cloudsuhartono@gmail.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zun-ui VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-05-14 08:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-05-14 02:00+0000\n"
+"Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"X-Generator: Zanata 4.3.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "(empty)"
+msgstr "(kosong)"
+
+msgid "A command that will be sent to the container."
+msgstr "Perintah yang akan dikirim ke kontainer."
+
+msgid "A port represents a virtual switch port on a logical network switch."
+msgstr "Port menunjukkan port switch virtual pada switch jaringan logis."
+
+msgid "Active"
+msgstr "Active"
+
+msgid "Add Security Group"
+msgstr "Tambahkan Grup Keamanan"
+
+msgid "Add Volume"
+msgstr "Tambahkan Volume"
+
+msgid "Addresses"
+msgstr "Addresses"
+
+msgid "Adds a map of labels to a container in comma separated KEY=VALUE pairs."
+msgstr ""
+"Menambahkan peta label ke kontainer di comma yang dipisahkan pasangan "
+"KEY=VALUE."
+
+msgid "Admin State"
+msgstr "Admin State"
+
+msgid ""
+"Allocate pseudo-TTY and keep STDIN open even if not attached. This also "
+"enables Web console in console tab on details view."
+msgstr ""
+"Alokasikan pseudo-TTY dan biarkan STDIN tetap terbuka meskipun tidak "
+"terkait. Ini juga memungkinkan konsol Web di tab konsol pada tampilan detail."
+
+msgid "Always"
+msgstr "Always"
+
+msgid "Always restart"
+msgstr "Selalu restart"
+
+msgid "Always: Always pull the image from repository."
+msgstr "Selalu: Selalu tarik image dari repositori."
+
+msgid ""
+"An <b>External</b> network is set up by an administrator.\n"
+"    If you want a container to communicate outside of the data center,\n"
+"    then attach a router between your <b>Project</b> network and the "
+"<b>External</b> network.\n"
+"    You can use the <b>Network Topology</b> view to connect the router to "
+"the two networks."
+msgstr ""
+"Jaringan <b> Eksternal </b> diatur oleh administrator.\n"
+"     Jika Anda ingin sebuah kontainer untuk berkomunikasi di luar pusat "
+"data,\n"
+"     kemudian pasang router antara jaringan <b>Project</b> Anda dan jaringan "
+"<b> Eksternal </b>.\n"
+"     Anda dapat menggunakan tampilan <b> Network Topology </b> untuk "
+"menghubungkan router ke dua jaringan."
+
+msgid "An arbitrary human-readable name."
+msgstr "Nama human-readable secara acak."
+
+msgid "Auto Remove"
+msgstr "Auto Remove"
+
+msgid "Available Scheduler Hints"
+msgstr "Petunjuk Penjadwal  yang tersedia"
+
+msgid "Bare Metal"
+msgstr "Bare Metal"
+
+msgid "CPU"
+msgstr "CPU"
+
+#, python-format
+msgid ""
+"Changes security groups %(sgs)s for port %(port)s was successfully submitted."
+msgstr "Perubahan grup keamanan %(sgs) s untuk port %(port)s berhasil dikirim."
+
+msgid "Click to see more details"
+msgstr "Klik untuk melihat detail lebih lanjut"
+
+msgid "Command"
+msgstr "Command"
+
+msgid "Command sent to the container."
+msgstr "Perintah dikirim ke kontainer."
+
+#, python-format
+msgid "Command was successfully executed at container %s."
+msgstr "Perintah berhasil dijalankan di kontainer %s."
+
+msgid "Confirm Delete After Stop Container"
+msgid_plural "Confirm Delete After Stop Containers"
+msgstr[0] "Confirm Delete After Stop Container"
+
+msgid "Confirm Delete Container"
+msgid_plural "Confirm Delete Containers"
+msgstr[0] "Confirm Delete Container"
+
+msgid "Confirm Delete Container Forcely"
+msgid_plural "Confirm Delete Containers Forcely"
+msgstr[0] "Confirm Delete Container Forcely"
+
+msgid "Console"
+msgstr "Console"
+
+msgid "Container"
+msgstr "Kontainer"
+
+#, python-format
+msgid "Container %s was successfully created."
+msgstr "Kontainer %s berhasil dibuat."
+
+#, python-format
+msgid "Container %s was successfully paused."
+msgstr "Kontainer %s berhasil dihentikan sementara."
+
+#, python-format
+msgid "Container %s was successfully restarted."
+msgstr "Kontainer %s berhasil dimulai ulang."
+
+#, python-format
+msgid "Container %s was successfully started."
+msgstr "Penampung %s telah berhasil dimulai."
+
+#, python-format
+msgid "Container %s was successfully stoped."
+msgstr "Kontainer %s berhasil dihentikan."
+
+#, python-format
+msgid "Container %s was successfully unpaused."
+msgstr "Kontainer %s berhasil tidak dijeda."
+
+#, python-format
+msgid "Container %s was successfully updated."
+msgstr "Kontainer %s berhasil diperbarui."
+
+msgid "Container Name"
+msgstr "Nama Kontainer"
+
+msgid "Containers"
+msgstr "Kontainer"
+
+msgid "Containers attach their interfaces to ports."
+msgstr "Kontainer menghubungkan antarmuka mereka ke port."
+
+msgid "Create"
+msgstr "Membuat"
+
+msgid "Create Container"
+msgstr "Buat Kontainer"
+
+msgid "Delete"
+msgstr "Menghapus"
+
+msgid "Delete Container"
+msgid_plural "Delete Containers"
+msgstr[0] "Delete Container"
+
+msgid "Delete Container After Stop"
+msgid_plural "Delete Containers After Stop"
+msgstr[0] "Delete Container After Stop"
+
+msgid "Delete Container Forcely"
+msgid_plural "Delete Containers Forcely"
+msgstr[0] "Delete Container Forcely"
+
+msgid "Delete Containers"
+msgstr "Hapus Kontainer"
+
+#, python-format
+msgid "Deleted Container After Stop: %s."
+msgid_plural "Deleted Containers After Stop: %s."
+msgstr[0] "Deleted Container After Stop: %s."
+
+#, python-format
+msgid "Deleted Container Forcely: %s."
+msgid_plural "Deleted Containers Forcely: %s."
+msgstr[0] "Deleted Container Forcely: %s."
+
+#, python-format
+msgid "Deleted Container: %s."
+msgid_plural "Deleted Containers: %s."
+msgstr[0] "Deleted Container: %s."
+
+msgid "Description"
+msgstr "Deskripsi"
+
+msgid "Destination"
+msgstr "Destination"
+
+msgid "Direct"
+msgstr "Direct (langsung)"
+
+msgid "Direct Physical"
+msgstr "Direct Physical (fisik langsung)"
+
+msgid "Direction"
+msgstr "Direction"
+
+msgid "Docker Hub"
+msgstr "Docker Hub"
+
+msgid "Docker Hub: Pull the image from Docker Hub."
+msgstr "Docker Hub: Tarik image dari Docker Hub."
+
+msgid "Down"
+msgstr "Down"
+
+msgid "Enable Interactive Mode"
+msgstr "Aktifkan Mode Interaktif"
+
+msgid "Enable interactive mode"
+msgstr "Aktifkan mode interaktif"
+
+msgid "Environment"
+msgstr "Environment"
+
+msgid "Environment Variables"
+msgstr "Variabel Lingkungan"
+
+msgid "Ether Type"
+msgstr "Ether Type"
+
+msgid "Execute"
+msgstr "Execute (jalankan)"
+
+msgid "Execute Command"
+msgstr "Jalankan Perintah"
+
+msgid "Executing"
+msgstr "Executing (pelaksana)"
+
+msgid "Existing Cinder Volume"
+msgstr "Volume Cinder Yang Ada"
+
+msgid "Existing Scheduler Hints"
+msgstr "Petunjuk Penjadwal yang ada"
+
+msgid "Exit Code"
+msgstr "Exit Code"
+
+msgid "Exit Policy"
+msgstr "Keluar dari Kebijakan"
+
+msgid "External Network"
+msgstr "Jaringan Eksternal"
+
+msgid ""
+"For now, only Label Filter is available. So there are\n"
+"    no scheduler hint definitions in the left column. Please set key that "
+"included in labels."
+msgstr ""
+"Untuk saat ini, hanya Label Filter tersedia. Jadi ada\n"
+"     tidak ada definisi petunjuk penjadwal di kolom kiri. Silakan mengatur "
+"kunci yang termasuk dalam label."
+
+msgid "Glance"
+msgstr "Glance"
+
+msgid "Glance: Pull the image from Glance."
+msgstr "Glance: Tarik image dari Glance."
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Host ID"
+msgstr "Host ID"
+
+msgid "Hostname"
+msgstr "Hostname"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP"
+msgstr "IP"
+
+msgid ""
+"If a network is shared, then all users in the project can access the network."
+msgstr ""
+"Jika jaringan dibagi, maka semua pengguna dalam proyek dapat mengakses "
+"jaringan."
+
+msgid "If not present"
+msgstr "Jika tidak ada"
+
+msgid ""
+"If not present: only pull the image if it does not already exist on the node."
+msgstr "Jika tidak ada: hanya tarik image jika belum ada di node."
+
+msgid "Image"
+msgstr "Image"
+
+#, python-format
+msgid "Image %s was successfully pulled."
+msgstr "Image %s berhasil ditarik."
+
+msgid "Image Driver"
+msgstr "Image Driver"
+
+msgid "Image ID"
+msgstr "Image ID"
+
+msgid "Image Pull Policy"
+msgstr "Image Pull Policy"
+
+msgid "Images"
+msgstr "Images"
+
+msgid ""
+"In this dialog, specify the security groups for the container.\n"
+"      Note that the security groups will only apply for ports that\n"
+"      will be created from the allocated networks, but will not apply\n"
+"      for the allocated ports that are pre-existing."
+msgstr ""
+"Dalam dialog ini, tentukan grup keamanan untuk kontainer.\n"
+"       Perhatikan bahwa grup keamanan hanya akan berlaku untuk port itu\n"
+"       akan dibuat dari jaringan yang dialokasikan, tetapi tidak akan "
+"berlaku\n"
+"       untuk port yang dialokasikan yang sudah ada sebelumnya."
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Interactive"
+msgstr "Interactive"
+
+msgid "KEY1=VALUE1,KEY2=VALUE2..."
+msgstr "KEY1=VALUE1,KEY2=VALUE2..."
+
+msgid "Kill Signal"
+msgstr "Sinyal Mematikan"
+
+#, python-format
+msgid "Kill signal was successfully sent to container %s."
+msgstr "Sinyal mematikan berhasil dikirim ke kontainer %s."
+
+msgid "Labels"
+msgstr "Labels"
+
+msgid "Links"
+msgstr "Links"
+
+msgid "Logs"
+msgstr "Logs"
+
+msgid "MacVTap"
+msgstr "MacVTap"
+
+msgid "Manage Security Groups"
+msgstr "Kelola Grup Keamanan"
+
+#, python-format
+msgid "Manage Security Groups: container %s"
+msgstr "Kelola Grup Keamanan: kontainer %s"
+
+msgid "Manage security group for ports."
+msgstr "Kelola grup keamanan untuk port."
+
+msgid "Max Port"
+msgstr "Max Port"
+
+msgid "Max Retry"
+msgstr "Max Retry"
+
+msgid "Memory"
+msgstr "Memory"
+
+msgid "Min Port"
+msgstr "Min Port"
+
+msgid "Miscellaneous"
+msgstr "Miscellaneous (bermacam-macam)"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Name of the container to create."
+msgstr "Nama kontainer untuk dibuat."
+
+msgid "Name of the image."
+msgstr "Nama image."
+
+msgid "Name or ID of container image."
+msgstr "Nama atau ID image kontainer."
+
+msgid "Name or ID of the container image."
+msgstr "Nama atau ID image kontainer."
+
+msgid "Network"
+msgstr "Jaringan"
+
+#, python-format
+msgid "Network %s was successfully attached to container %s."
+msgstr "Jaringan% s berhasil dilampirkan ke kontainer %s."
+
+#, python-format
+msgid "Network %s was successfully detached from container %s."
+msgstr "Jaringan% s berhasil terlepas dari kontainer %s."
+
+msgid "Network ID"
+msgstr "Network ID"
+
+msgid "Network characteristics"
+msgstr "Karakteristik jaringan"
+
+msgid "Networks"
+msgstr "Networks (jaringan)"
+
+msgid ""
+"Networks provide the communication channels for containers in the cloud."
+msgstr "Jaringan menyediakan saluran komunikasi untuk kontainer di awan."
+
+msgid "Never"
+msgstr "Never"
+
+msgid "Never: never pull the image."
+msgstr "Never: jangan pernah menarik image."
+
+msgid "New Cinder Volume"
+msgstr "Volume Cinder Baru"
+
+msgid "No"
+msgstr "No"
+
+msgid "No available items"
+msgstr "Tidak ada item yang tersedia"
+
+msgid "No available scheduler hints"
+msgstr "Tidak ada petunjuk penjadwal yang tersedia"
+
+msgid "No existing scheduler hints"
+msgstr "Tidak ada petunjuk penjadwal yang ada"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Output"
+msgstr "Output"
+
+msgid "Overview"
+msgstr "Ikhtisar"
+
+msgid "Pause Container"
+msgstr "Jeda Kontainer"
+
+msgid "Physical Network"
+msgstr "Jaringan Fisik"
+
+msgid "Policy to apply when a container exits."
+msgstr "Kebijakan untuk diterapkan saat kontainer keluar."
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Ports"
+msgstr "Ports"
+
+msgid "Ports can be created under a network by administrators."
+msgstr "Port dapat dibuat di bawah jaringan oleh administrator."
+
+msgid ""
+"Ports provide extra communication channels to your instances. You can select "
+"ports instead of networks or a mix of both."
+msgstr ""
+"Port menyediakan saluran komunikasi tambahan untuk instance Anda. Anda dapat "
+"memilih port, bukan jaringan atau campuran keduanya."
+
+msgid "Project"
+msgstr "Proyek"
+
+msgid "Project ID"
+msgstr "Project ID"
+
+msgid ""
+"Project networks are created by users.\n"
+"    These networks are fully isolated and are project-specific."
+msgstr ""
+"Jaringan proyek dibuat oleh pengguna.\n"
+"     Jaringan ini sepenuhnya terisolasi dan project-specific."
+
+msgid "Protocol"
+msgstr "Protocol"
+
+msgid "Provider Network"
+msgstr "Jaringan Provider"
+
+msgid ""
+"Provider networks are created by administrators.\n"
+"    These networks map to an existing physical network in the data center."
+msgstr ""
+"Jaringan penyedia dibuat oleh administrator.\n"
+"     Jaringan ini memetakan ke jaringan fisik yang ada di pusat data."
+
+msgid "Pull"
+msgstr "Pull"
+
+msgid "Pull Image"
+msgstr "Pull Image"
+
+msgid "Re-order items using drag and drop"
+msgstr "Re-order item menggunakan drag and drop (seret dan lepas)"
+
+msgid "Refresh"
+msgstr "Menyegarkan"
+
+msgid "Remote"
+msgstr "Remote"
+
+msgid "Remove container"
+msgstr "Hapus kontainer"
+
+msgid "Restart"
+msgstr "Mengulang kembali"
+
+msgid "Restart Container"
+msgstr "Mulai Ulang Kontainer"
+
+msgid "Restart Policy"
+msgstr "Restart Policy"
+
+msgid "Restart if stopped"
+msgstr "Restart jika berhenti"
+
+msgid "Restart on failure"
+msgstr "Restart pada kegagalan"
+
+msgid "Retry times for 'Restart on failure' policy."
+msgstr "Ulangi waktu untuk kebijakan 'Restart on failure'."
+
+msgid "Runtime"
+msgstr "Runtime"
+
+msgid "Scheduler Hints"
+msgstr "Scheduler Hints"
+
+msgid ""
+"Scheduler hints allow you to pass additional placement related information "
+"to the Zun's scheduler."
+msgstr ""
+"Petunjuk penjadwalan memungkinkan Anda menyampaikan informasi terkait "
+"penempatan tambahan ke penjadwal Zun."
+
+msgid "Security Group"
+msgstr "Grup Keamanan"
+
+msgid "Security Groups"
+msgstr "Grup Keamanan"
+
+msgid ""
+"Security groups define a set of IP filter rules that determine\n"
+"      how network traffic flows to and from a container."
+msgstr ""
+"Grup keamanan menentukan satu set aturan filter IP yang menentukan\n"
+"       bagaimana arus lalu lintas jaringan ke dan dari suatu kontainer."
+
+msgid "Segmentation ID"
+msgstr "Segmentation ID"
+
+msgid "Select an item from Available items below"
+msgstr "Pilih item dari item yang Tersedia di bawah ini"
+
+msgid "Select available Cinder volume"
+msgstr "Pilih volume Cinder yang tersedia"
+
+msgid "Select networks from those listed below."
+msgstr "Pilih jaringan dari yang tercantum di bawah ini."
+
+msgid "Select one or more"
+msgstr "Pilih satu atau lebih"
+
+msgid "Select one or more security groups from the available groups below."
+msgstr ""
+"Pilih satu atau beberapa grup keamanan dari grup yang tersedia di bawah ini."
+
+msgid "Select policy."
+msgstr "Pilih kebijakan."
+
+msgid "Select port first."
+msgstr "Pilih port terlebih dahulu."
+
+msgid "Select port."
+msgstr "Memilih port."
+
+msgid "Select ports from those listed below."
+msgstr "Pilih port dari yang tercantum di bawah ini."
+
+msgid "Select security group."
+msgstr "Pilih grup keamanan."
+
+msgid "Select the security groups to create the container in."
+msgstr "Pilih grup keamanan untuk membuat kontainer."
+
+msgid "Send"
+msgstr "Kirim"
+
+msgid "Send Kill Signal"
+msgstr "Kirim Sinyal Membunuh"
+
+msgid "Set the volume specs and add into the table below."
+msgstr "Atur spec volume dan tambahkan ke tabel di bawah ini."
+
+msgid "Shared"
+msgstr "Shared"
+
+msgid ""
+"Signal to send to the container: integer or string like SIGINT.\n"
+"  When not set, SIGKILL is set as default value and the container will "
+"exit.\n"
+"  The supported signals varies between platform.\n"
+"  Besides, you can omit 'SIG' prefix."
+msgstr ""
+"Sinyal untuk dikirim ke kontainer: integer atau string seperti SIGINT.\n"
+"   Bila tidak disetel, SIGKILL ditetapkan sebagai nilai default dan "
+"kontainer akan keluar.\n"
+"   Sinyal yang didukung bervariasi antar platform.\n"
+"   Selain itu, Anda dapat menghilangkan awalan 'SIG'."
+
+msgid "Size"
+msgstr "Size"
+
+msgid "Size (GB)"
+msgstr "Size (GB)"
+
+msgid "Source"
+msgstr "Source"
+
+msgid "Spec"
+msgstr "Spec"
+
+msgid "Specify a shutdown timeout in seconds. (default: 10)"
+msgstr ""
+"Tentukan shutdown timeout (waktu mati) dalam hitungan detik. (default: 10)"
+
+msgid "Specify mount point of the volume on the container."
+msgstr "Tentukan titik mount volume pada kontainer."
+
+msgid "Specify size for the new volume in GB."
+msgstr "Tentukan ukuran untuk volume baru dalam GB."
+
+msgid "Start Container"
+msgstr "Start Kontainer"
+
+msgid "Start container after creation"
+msgstr "Mulai kontainer setelah pembuatan"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Status Detail"
+msgstr "Status Detail"
+
+msgid "Status Reason"
+msgstr "Status Reason"
+
+msgid "Stop"
+msgstr "Berhenti"
+
+msgid "Stop Container"
+msgstr "Hentikan Kontainer"
+
+msgid "Stop and Delete Container"
+msgstr "Hentikan dan Hapus Kontainer"
+
+msgid "Submit"
+msgstr "Submit (menyerahkan)"
+
+msgid "Subnets Associated"
+msgstr "Subnet Terkait"
+
+msgid "Tag"
+msgstr "Tag"
+
+msgid "Task State"
+msgstr "Task State"
+
+msgid "The command to execute."
+msgstr "Perintah untuk dijalankan."
+
+msgid "The container memory size in MiB."
+msgstr "Ukuran memori kontainer dalam MiB."
+
+msgid "The environment variables in comma separated KEY=VALUE pairs"
+msgstr "Variabel lingkungan dalam koma yang dipisahkan pasangan KEY=VALUE."
+
+msgid "The host name of this container."
+msgstr "Nama host dari kontainer ini."
+
+msgid "The image driver to use to pull container image."
+msgstr "Driver gambar yang digunakan untuk menarik image kontainer."
+
+msgid "The kill signal to send."
+msgstr "Sinyal mematikan untuk dikirim."
+
+msgid ""
+"The logical port also defines the MAC address and the IP address(es) to be "
+"assigned to the interfaces plugged into them."
+msgstr ""
+"Port logis juga mendefinisikan alamat MAC dan alamat IP yang akan ditugaskan "
+"(assigned) ke antarmuka yang dicolokkan (plugged) ke dalamnya."
+
+msgid "The number of virtual cpu for this container."
+msgstr "Jumlah cpu virtual untuk kontainer ini."
+
+msgid "The number of virtual cpus."
+msgstr "Jumlah CPU virtual."
+
+msgid ""
+"The policy which determines if the image should be pulled prior to starting "
+"the container."
+msgstr ""
+"Kebijakan yang menentukan apakah image harus ditarik sebelum memulai "
+"kontainer."
+
+msgid "The runtime to create container with."
+msgstr "Runtime untuk membuat kontainer dengan."
+
+msgid "The runtime to use for this container. Default: \"runc\""
+msgstr "Runtime yang digunakan untuk penampung ini. Default: \"runc\""
+
+msgid "The status indicates whether the network has an active connection."
+msgstr "Status menunjukkan apakah jaringan memiliki koneksi aktif."
+
+msgid "The status indicates whether the port has an active connection."
+msgstr "Status menunjukkan apakah port memiliki koneksi aktif."
+
+msgid ""
+"The subnet identifies a sub-section of a network. A subnet is specified in "
+"CIDR format.\n"
+"    A typical CIDR format looks like <samp>192.xxx.x.x/24</samp>."
+msgstr ""
+"Subnet mengidentifikasi sub-sectionn dari suatu jaringan. Subnet ditentukan "
+"dalam format CIDR.\n"
+"     Format CIDR khas tampak seperti <samp>192.xxx.x.x/24</samp>."
+
+msgid "The volumes are mounted into the container."
+msgstr "Volume dipasang ke dalam kontainer."
+
+msgid "The working directory for commands to run in."
+msgstr "Direktori kerja untuk perintah dijalankan."
+
+msgid "The working directory needs to be an absolute path."
+msgstr "Direktori kerja harus menjadi jalur absolut."
+
+msgid "This step allows you to add scheduler hints to your container."
+msgstr ""
+"Langkah ini memungkinkan Anda untuk menambahkan petunjuk penjadwalan ke "
+"kontainer Anda."
+
+msgid ""
+"To create new Cinder volume and mount it to the container, select type \"New "
+"Cinder Volume\"\n"
+"    and specify size for the new volume."
+msgstr ""
+"Untuk membuat volume Cinder baru dan memasangnya ke kontainer, pilih jenis "
+"\"New Cinder Volume\"\n"
+"     dan tentukan ukuran untuk volume baru."
+
+msgid ""
+"To create new security groups, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then click <b>Create Security Group</b>."
+msgstr ""
+"Untuk membuat grup keamanan baru, buka  <b>Network | Security Groups</b>,\n"
+"       lalu klik <b>Create Security Group</b>."
+
+msgid ""
+"To mount existing available Cinder volume, select type \"Available Cinder "
+"Volume\"\n"
+"    and select source from the pull-down list."
+msgstr ""
+"Untuk memasang volume Cinder yang tersedia saat ini, pilih jenis \"Available "
+"Cinder Volume\"\n"
+"     dan pilih sumber dari daftar pull-down."
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Unable to attach network."
+msgstr "Tidak dapat mencantelkan jaringan."
+
+msgid "Unable to create Container."
+msgstr "Tidak dapat membuat Kontainer."
+
+#, python-format
+msgid "Unable to delete Container after stopping: %s."
+msgid_plural "Unable to delete Containers after stopping: %s."
+msgstr[0] "Unable to delete Container after stopping: %s."
+
+#, python-format
+msgid "Unable to delete Container forcely: %s."
+msgid_plural "Unable to delete Containers forcely: %s."
+msgstr[0] "Unable to delete Container forcely: %s."
+
+#, python-format
+msgid "Unable to delete Container: %s."
+msgid_plural "Unable to delete Containers: %s."
+msgstr[0] "Unable to delete Container: %s."
+
+#, python-format
+msgid "Unable to delete forcely the Container with id: %(id)s"
+msgstr "Tidak dapat menghapus secara paksa Kontainer dengan  id: %(id)s"
+
+#, python-format
+msgid "Unable to delete the Container with id: %(id)s"
+msgstr "Tidak dapat menghapus Kontainer dengan id: %(id)s"
+
+msgid "Unable to delete the Containers."
+msgstr "Tidak dapat menghapus Kontainer."
+
+msgid "Unable to detach network."
+msgstr "Tidak dapat melepas jaringan."
+
+msgid "Unable to execute the command."
+msgstr "Tidak dapat menjalankan perintah."
+
+msgid "Unable to get logs of Container."
+msgstr "Tidak bisa mendapatkan log Kontainer."
+
+msgid "Unable to pause Container"
+msgstr "Tidak dapat menjeda Penampung"
+
+msgid "Unable to pull Image."
+msgstr "Tidak bisa menarik Image."
+
+msgid "Unable to resize console."
+msgstr "Tidak dapat mengubah ukuran konsol."
+
+msgid "Unable to restart Container."
+msgstr "Tidak dapat memulai ulang Kontainer."
+
+msgid "Unable to retrieve the Container."
+msgstr "Tidak dapat mengambil Kontainer."
+
+msgid "Unable to retrieve the Containers."
+msgstr "Tidak dapat mengambil Kontainer."
+
+msgid "Unable to retrieve the Images."
+msgstr "Tidak dapat mengambil Images."
+
+msgid "Unable to send kill signal."
+msgstr "Tidak dapat mengirim sinyal mematikan."
+
+msgid "Unable to start Container."
+msgstr "Tidak dapat memulai Kontainer."
+
+msgid "Unable to stop Container."
+msgstr "Tidak dapat menghentikan Kontainer."
+
+#, python-format
+msgid "Unable to stop and delete the Container with id: %(id)s"
+msgstr "Tidak dapat menghentikan dan menghapus Kontainer dengan  id: %(id)s"
+
+msgid "Unable to unpause of Container."
+msgstr "Tidak dapat membatalkan jeda Kontainer."
+
+msgid "Unable to update Container."
+msgstr "Tidak dapat memperbarui Kontainer."
+
+#, python-format
+msgid "Unable to update security groups %(sgs)s for port %(port)s."
+msgstr "Tidak dapat memperbarui grup keamanan %(sgs)s untuk %(port)s."
+
+msgid "Unpause Container"
+msgstr "Unpause Kontainer"
+
+msgid "Up"
+msgstr "Up"
+
+msgid "Update"
+msgstr "Memperbarui"
+
+msgid "Update Container"
+msgstr "Perbarui Kontainer"
+
+msgid ""
+"Users can add additional rules to an existing security group\n"
+"      to further define the access options for a container.\n"
+"      To create additional rules, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then find the security group and click <b>Manage Rules</b>."
+msgstr ""
+"Pengguna dapat menambahkan aturan tambahan ke grup keamanan yang ada\n"
+"       untuk menentukan opsi akses lebih lanjut untuk suatu kontainer.\n"
+"       Untuk membuat aturan tambahan, buka <b>Network | Security Groups</"
+"b>,\n"
+"       kemudian cari grup keamanan dan klik <b>Manage Rules</b>."
+
+msgid "VNIC type"
+msgstr "VNIC type"
+
+msgid "Volumes"
+msgstr "Volume"
+
+msgid ""
+"When IP addresses are associated to a port, this also implies the port is "
+"associated with a subnet, as the IP address was taken from the allocation "
+"pool for a specific subnet."
+msgstr ""
+"Ketika alamat IP dikaitkan ke port, ini juga menyiratkan port dikaitkan "
+"dengan subnet, karena alamat IP diambil dari allocation pool untuk subnet "
+"tertentu."
+
+msgid ""
+"When the <b>Admin State</b> for a network is set to <b>Up</b>,\n"
+"    then the network is available for use. You can set the <b>Admin State</"
+"b> to <b>Down</b>\n"
+"    if you are not ready for other users to access the network."
+msgstr ""
+"Ketika <b> Admin State </b> untuk jaringan diatur ke <b>Up</b>,\n"
+"     kemudian jaringan tersedia untuk digunakan. Anda dapat mengatur <b> "
+"Admin State </b> ke <b> Down </b>\n"
+"     jika Anda belum siap untuk pengguna lain untuk mengakses jaringan."
+
+msgid ""
+"When the <b>Admin State</b> for a port is set to <b>Up</b> and it has no "
+"<b>Device Owner</b>,\n"
+"    then the port is available for use. You can set the <b>Admin State</b> "
+"to <b>Down</b>\n"
+"    if you are not ready for other users to use the port."
+msgstr ""
+"Ketika <b> Admin State </b> untuk port diatur ke <b>Up</b> dan tidak "
+"memiliki <b>Device Owner</b>,\n"
+"     maka port tersedia untuk digunakan. Anda dapat mengatur <b>Admin State</"
+"b> ke <b>Down </b>\n"
+"     jika Anda belum siap untuk pengguna lain untuk menggunakan port."
+
+msgid "Workdir"
+msgstr "Workdir"
+
+msgid "Working Directory"
+msgstr "Working Directory (direktori kerja)"
+
+msgid "Yes"
+msgstr "Yes"
+
+#, python-format
+msgid "You are not allowed to delete container forcely: %s"
+msgstr "Anda tidak diizinkan untuk menghapus kontainer secara paksa:% s"
+
+#, python-format
+msgid "You are not allowed to delete containers: %s"
+msgstr "Anda tidak diizinkan untuk menghapus kontainer: %s"
+
+#, python-format
+msgid "You are not allowed to stop and delete container: %s"
+msgstr "Anda tidak diizinkan untuk berhenti dan menghapus kontainer: %s"
+
+msgid ""
+"You can specify scheduler hints by moving items from the left column to the "
+"right column. Use the \"Custom\" option to add scheduler hints with the key "
+"of your choice."
+msgstr ""
+"Anda dapat menentukan petunjuk penjadwalan dengan memindahkan item dari "
+"kolom kiri ke kolom kanan. Gunakan opsi \"Custom\" untuk menambahkan "
+"petunjuk penjadwal dengan kunci pilihan Anda."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted container "
+"is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted containers "
+"are not recoverable."
+msgstr[0] ""
+"You have selected \"%s\". Please confirm your selection. Deleted container "
+"is not recoverable."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. The container will "
+"be stopped before deleting. Deleted container is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. The containers will "
+"be stopped before deleting. Deleted containers are not recoverable."
+msgstr[0] ""
+"You have selected \"%s\". Please confirm your selection. The container will "
+"be stopped before deleting. Deleted container is not recoverable."
