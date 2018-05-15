@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-09 22:50+0000\n"
+"POT-Creation-Date: 2018-04-18 08:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Language-Team: German\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 
 msgid "A command that will be sent to the container."
 msgstr "Ein Befehl, der an den Container gesendet wird."
@@ -72,12 +72,6 @@ msgstr "Ein beliebiger, von Menschen lesbarer Name."
 
 msgid "Auto Remove"
 msgstr "Automatisch entfernen"
-
-msgid "Auto remove"
-msgstr "Automatisch entfernen"
-
-msgid "Automatically remove the container when it exits"
-msgstr "Entfernt den Container beim Beenden automatisch"
 
 msgid "Available Scheduler Hints"
 msgstr "Verfügbare Scheduler-Tipps"
@@ -426,9 +420,6 @@ msgstr "Keine vorhandenen Scheduler-Hinweise"
 msgid "Normal"
 msgstr "Normal"
 
-msgid "On failure"
-msgstr "Bei einem Fehler"
-
 msgid "Output"
 msgstr "Ausgabe"
 
@@ -504,13 +495,6 @@ msgstr "Starten Sie den Container neu"
 msgid "Restart Policy"
 msgstr "Richtlinie neu starten"
 
-msgid "Restart policy to apply when a container exits."
-msgstr ""
-"Richtlinie neu starten, die beim Beenden eines Containers angewendet wird"
-
-msgid "Retry times for 'On failure' policy."
-msgstr "Wiederholungszeiten für die Richtlinie 'Bei Fehler'."
-
 msgid "Runtime"
 msgstr "Laufzeit"
 
@@ -526,21 +510,6 @@ msgstr ""
 
 msgid "Security Groups"
 msgstr "Sicherheitsgruppen"
-
-msgid ""
-"Security groups define a set of IP filter rules that determine how network "
-"traffic flows to and from a container. Users can add additional rules to an "
-"existing security group to further define the access options for a "
-"container. To create additional rules, go to the <b>Network | Security "
-"Groups</b> view, then find the security group and click <b>Manage Rules</b>."
-msgstr ""
-"Sicherheitsgruppen definieren eine Gruppe von IP-Filterregeln, die "
-"bestimmen, wie der Netzwerkverkehr zu und von einem Container fließt. "
-"Benutzer können einer vorhandenen Sicherheitsgruppe zusätzliche Regeln "
-"hinzufügen, um die Zugriffsoptionen für einen Container weiter zu "
-"definieren. Um zusätzliche Regeln zu erstellen, gehen Sie zu <b>Netzwerk |</"
-"b> Klicken Sie auf <b>Sicherheitsgruppen</b> , suchen Sie die "
-"Sicherheitsgruppe und klicken Sie auf <b>Regeln verwalten</b> ."
 
 msgid "Segmentation ID"
 msgstr "Segmentierungs-ID"
@@ -567,9 +536,6 @@ msgstr "Wählen Sie die Richtlinie aus."
 
 msgid "Select ports from those listed below."
 msgstr "Wählen Sie die folgenden Ports aus."
-
-msgid "Select runtime."
-msgstr "Wählen Sie Laufzeit aus."
 
 msgid "Select the security groups to create the container in."
 msgstr ""
@@ -829,9 +795,6 @@ msgstr "Der Container konnte nicht wiederhergestellt werden."
 msgid "Unable to update Container."
 msgstr "Der Container konnte nicht aktualisiert werden."
 
-msgid "Unless Stopped"
-msgstr "Sofern nicht gestoppt"
-
 msgid "Unpause Container"
 msgstr "Container aufheben"
 
@@ -943,6 +906,3 @@ msgstr[1] ""
 "Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Die "
 "Container werden gestoppt, bevor sie gelöscht werden. Gelöschte Container "
 "können nicht wiederhergestellt werden."
-
-msgid "runc"
-msgstr "runc"

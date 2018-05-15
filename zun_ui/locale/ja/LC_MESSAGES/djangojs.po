@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-03-07 01:01+0000\n"
+"POT-Creation-Date: 2018-04-18 08:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -73,12 +73,6 @@ msgstr "人間が読むことができる任意の名前。"
 
 msgid "Auto Remove"
 msgstr "自動削除"
-
-msgid "Auto remove"
-msgstr "自動削除"
-
-msgid "Automatically remove the container when it exits"
-msgstr "コンテナーを終了した時に、自動で削除します。"
 
 msgid "Available Scheduler Hints"
 msgstr "有効なスケジューラーヒント"
@@ -415,9 +409,6 @@ msgstr "選択済みのスケジューラーヒントはありません"
 msgid "Normal"
 msgstr "標準"
 
-msgid "On failure"
-msgstr "失敗したら"
-
 msgid "Output"
 msgstr "出力"
 
@@ -495,12 +486,6 @@ msgstr "コンテナーの再起動"
 msgid "Restart Policy"
 msgstr "再起動ポリシー"
 
-msgid "Restart policy to apply when a container exits."
-msgstr "コンテナーが終了するときに適用する再起動ポリシー。"
-
-msgid "Retry times for 'On failure' policy."
-msgstr "'失敗したら' ポリシーの試行回数"
-
 msgid "Runtime"
 msgstr "ランタイム"
 
@@ -516,20 +501,6 @@ msgstr ""
 
 msgid "Security Groups"
 msgstr "セキュリティグループ"
-
-msgid ""
-"Security groups define a set of IP filter rules that determine how network "
-"traffic flows to and from a container. Users can add additional rules to an "
-"existing security group to further define the access options for a "
-"container. To create additional rules, go to the <b>Network | Security "
-"Groups</b> view, then find the security group and click <b>Manage Rules</b>."
-msgstr ""
-"セキュリティーグループは、コンテナーに出入りするネットワークトラフィックをど"
-"のように扱うかを決める IP フィルタールールの集合体です。ユーザーは、既存のセ"
-"キュリティーグループにルールを追加して、コンテナーへのアクセス設定を行うこと"
-"ができます。追加のルールを作成するには、<b>ネットワーク | セキュリティーグ"
-"ループ</b>画面で追加先のセキュリティーグループを見つけて、<b>ルールの管理</b>"
-"をクリックします。"
 
 msgid "Segmentation ID"
 msgstr "セグメント ID"
@@ -556,9 +527,6 @@ msgstr "ポリシーを選択してください"
 
 msgid "Select ports from those listed below."
 msgstr "以下のリストからポートを選択してください。"
-
-msgid "Select runtime."
-msgstr "ランタイムの選択"
 
 msgid "Select the security groups to create the container in."
 msgstr "作成するコンテナーのセキュリティーグループを選択します。"
@@ -804,9 +772,6 @@ msgstr "コンテナーを一時停止解除できません。"
 msgid "Unable to update Container."
 msgstr "コンテナーを更新できません。"
 
-msgid "Unless Stopped"
-msgstr "停止するまで"
-
 msgid "Unpause Container"
 msgstr "コンテナーの一時停止解除"
 
@@ -910,6 +875,3 @@ msgid_plural ""
 msgstr[0] ""
 "\"%s\" を選択しました。選択内容を確認してください。コンテナーは削除の前に停止"
 "されます。削除されたコンテナーは元に戻せません。"
-
-msgid "runc"
-msgstr "runc"

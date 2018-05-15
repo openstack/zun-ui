@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-13 04:57+0000\n"
+"POT-Creation-Date: 2018-04-18 08:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-06 12:18+0000\n"
+"PO-Revision-Date: 2018-05-14 10:04+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -47,6 +47,9 @@ msgstr ""
 msgid "Always"
 msgstr "Always"
 
+msgid "Always restart"
+msgstr "Always restart"
+
 msgid "Always: Always pull the image from repository."
 msgstr "Always: Always pull the image from repository."
 
@@ -70,12 +73,6 @@ msgstr "An arbitrary human-readable name."
 
 msgid "Auto Remove"
 msgstr "Auto Remove"
-
-msgid "Auto remove"
-msgstr "Auto remove"
-
-msgid "Automatically remove the container when it exits"
-msgstr "Automatically remove the container when it exits"
 
 msgid "Available Scheduler Hints"
 msgstr "Available Scheduler Hints"
@@ -259,6 +256,9 @@ msgstr "Existing Scheduler Hints"
 msgid "Exit Code"
 msgstr "Exit Code"
 
+msgid "Exit Policy"
+msgstr "Exit Policy"
+
 msgid "External Network"
 msgstr "External Network"
 
@@ -324,6 +324,17 @@ msgstr "Image Pull Policy"
 msgid "Images"
 msgstr "Images"
 
+msgid ""
+"In this dialog, specify the security groups for the container.\n"
+"      Note that the security groups will only apply for ports that\n"
+"      will be created from the allocated networks, but will not apply\n"
+"      for the allocated ports that are pre-existing."
+msgstr ""
+"In this dialogue, specify the security groups for the container.\n"
+"      Note that the security groups will only apply for ports that\n"
+"      will be created from the allocated networks, but will not apply\n"
+"      for the allocated ports that are pre-existing."
+
 msgid "Info"
 msgstr "Info"
 
@@ -385,6 +396,14 @@ msgstr "Name or ID of the container image."
 msgid "Network"
 msgstr "Network"
 
+#, python-format
+msgid "Network %s was successfully attached to container %s."
+msgstr "Network %s was successfully attached to container %s."
+
+#, python-format
+msgid "Network %s was successfully detached from container %s."
+msgstr "Network %s was successfully detached from container %s."
+
 msgid "Network ID"
 msgstr "Network ID"
 
@@ -423,9 +442,6 @@ msgstr "No existing scheduler hints"
 msgid "Normal"
 msgstr "Normal"
 
-msgid "On failure"
-msgstr "On failure"
-
 msgid "Output"
 msgstr "Output"
 
@@ -437,6 +453,9 @@ msgstr "Pause Container"
 
 msgid "Physical Network"
 msgstr "Physical Network"
+
+msgid "Policy to apply when a container exits."
+msgstr "Policy to apply when a container exits."
 
 msgid "Ports"
 msgstr "Ports"
@@ -492,6 +511,9 @@ msgstr "Refresh"
 msgid "Remote"
 msgstr "Remote"
 
+msgid "Remove container"
+msgstr "Remove container"
+
 msgid "Restart"
 msgstr "Restart"
 
@@ -501,11 +523,14 @@ msgstr "Restart Container"
 msgid "Restart Policy"
 msgstr "Restart Policy"
 
-msgid "Restart policy to apply when a container exits."
-msgstr "Restart policy to apply when a container exits."
+msgid "Restart if stopped"
+msgstr "Restart if stopped"
 
-msgid "Retry times for 'On failure' policy."
-msgstr "Retry times for 'On failure' policy."
+msgid "Restart on failure"
+msgstr "Restart on failure"
+
+msgid "Retry times for 'Restart on failure' policy."
+msgstr "Retry times for 'Restart on failure' policy."
 
 msgid "Runtime"
 msgstr "Runtime"
@@ -524,17 +549,11 @@ msgid "Security Groups"
 msgstr "Security Groups"
 
 msgid ""
-"Security groups define a set of IP filter rules that determine how network "
-"traffic flows to and from a container. Users can add additional rules to an "
-"existing security group to further define the access options for a "
-"container. To create additional rules, go to the <b>Network | Security "
-"Groups</b> view, then find the security group and click <b>Manage Rules</b>."
+"Security groups define a set of IP filter rules that determine\n"
+"      how network traffic flows to and from a container."
 msgstr ""
-"Security groups define a set of IP filter rules that determine how network "
-"traffic flows to and from a container. Users can add additional rules to an "
-"existing security group to further define the access options for a "
-"container. To create additional rules, go to the <b>Network | Security "
-"Groups</b> view, then find the security group and click <b>Manage Rules</b>."
+"Security groups define a set of IP filter rules that determine\n"
+"      how network traffic flows to and from a container."
 
 msgid "Segmentation ID"
 msgstr "Segmentation ID"
@@ -559,9 +578,6 @@ msgstr "Select policy."
 
 msgid "Select ports from those listed below."
 msgstr "Select ports from those listed below."
-
-msgid "Select runtime."
-msgstr "Select runtime."
 
 msgid "Select the security groups to create the container in."
 msgstr "Select the security groups to create the container in."
@@ -683,6 +699,9 @@ msgstr ""
 "The policy which determines if the image should be pulled prior to starting "
 "the container."
 
+msgid "The runtime to create container with."
+msgstr "The runtime to create container with."
+
 msgid "The runtime to use for this container. Default: \"runc\""
 msgstr "The runtime to use for this container. Default: \"runc\""
 
@@ -723,6 +742,15 @@ msgstr ""
 "    and specify size for the new volume."
 
 msgid ""
+"To create new security groups, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then click <b>Create Security Group</b>."
+msgstr ""
+"To create new security groups, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then click <b>Create Security Group</b>."
+
+msgid ""
 "To mount existing available Cinder volume, select type \"Available Cinder "
 "Volume\"\n"
 "    and select source from the pull-down list."
@@ -733,6 +761,9 @@ msgstr ""
 
 msgid "Type"
 msgstr "Type"
+
+msgid "Unable to attach network."
+msgstr "Unable to attach network."
 
 msgid "Unable to create Container."
 msgstr "Unable to create Container."
@@ -765,6 +796,9 @@ msgstr "Unable to delete the Container with id: %(id)s"
 
 msgid "Unable to delete the Containers."
 msgstr "Unable to delete the Containers."
+
+msgid "Unable to detach network."
+msgstr "Unable to detach network."
 
 msgid "Unable to execute the command."
 msgstr "Unable to execute the command."
@@ -812,9 +846,6 @@ msgstr "Unable to unpause of Container."
 msgid "Unable to update Container."
 msgstr "Unable to update Container."
 
-msgid "Unless Stopped"
-msgstr "Unless Stopped"
-
 msgid "Unpause Container"
 msgstr "Unpause Container"
 
@@ -826,6 +857,19 @@ msgstr "Update"
 
 msgid "Update Container"
 msgstr "Update Container"
+
+msgid ""
+"Users can add additional rules to an existing security group\n"
+"      to further define the access options for a container.\n"
+"      To create additional rules, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then find the security group and click <b>Manage Rules</b>."
+msgstr ""
+"Users can add additional rules to an existing security group\n"
+"      to further define the access options for a container.\n"
+"      To create additional rules, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then find the security group and click <b>Manage Rules</b>."
 
 msgid "VNIC type"
 msgstr "VNIC type"
@@ -923,6 +967,3 @@ msgstr[0] ""
 msgstr[1] ""
 "You have selected \"%s\". Please confirm your selection. The containers will "
 "be stopped before deleting. Deleted containers are not recoverable."
-
-msgid "runc"
-msgstr "runc"
