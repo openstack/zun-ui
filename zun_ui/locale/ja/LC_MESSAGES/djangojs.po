@@ -4,16 +4,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-04-19 05:28+0000\n"
+"POT-Creation-Date: 2018-05-24 20:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-06 07:37+0000\n"
+"PO-Revision-Date: 2018-05-28 03:21+0000\n"
 "Last-Translator: Shu Muto <shu.mutow@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
 "X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "(empty)"
+msgstr "(空)"
 
 msgid "A command that will be sent to the container."
 msgstr "コンテナーに送信されるコマンド。"
@@ -25,6 +28,9 @@ msgstr ""
 
 msgid "Active"
 msgstr "稼働中"
+
+msgid "Add Security Group"
+msgstr "セキュリティーグループの追加"
 
 msgid "Add Volume"
 msgstr "ボリュームの追加"
@@ -49,6 +55,9 @@ msgstr ""
 
 msgid "Always"
 msgstr "いつも"
+
+msgid "Always restart"
+msgstr "常時再起動"
 
 msgid "Always: Always pull the image from repository."
 msgstr "いつも: イメージをリポジトリから毎回取得します。"
@@ -82,6 +91,13 @@ msgstr "Bare Metal"
 
 msgid "CPU"
 msgstr "CPU"
+
+#, python-format
+msgid ""
+"Changes security groups %(sgs)s for port %(port)s was successfully submitted."
+msgstr ""
+"ポート %(port)s のセキュリティーグループ %(sgs)s の変更は、正常に送信されまし"
+"た。"
 
 msgid "Click to see more details"
 msgstr "クリックすると詳しい情報が表示されます。"
@@ -247,6 +263,9 @@ msgstr "既存のスケジューラーヒント"
 msgid "Exit Code"
 msgstr "終了コード"
 
+msgid "Exit Policy"
+msgstr "終了ポリシー"
+
 msgid "External Network"
 msgstr "外部ネットワーク"
 
@@ -311,6 +330,16 @@ msgstr "イメージ取得ポリシー"
 msgid "Images"
 msgstr "イメージ"
 
+msgid ""
+"In this dialog, specify the security groups for the container.\n"
+"      Note that the security groups will only apply for ports that\n"
+"      will be created from the allocated networks, but will not apply\n"
+"      for the allocated ports that are pre-existing."
+msgstr ""
+"このダイアログでは、コンテナ―のセキュリティーグループを指定します。セキュリ"
+"ティーグループは、割り当てられたネットワークから作成されるポートにのみ適用さ"
+"れ、既存のポートには割り当てられないことに注意してください。"
+
 msgid "Info"
 msgstr "情報"
 
@@ -338,6 +367,16 @@ msgstr "ログ"
 
 msgid "MacVTap"
 msgstr "MacVTap"
+
+msgid "Manage Security Groups"
+msgstr "セキュリティーグループの管理"
+
+#, python-format
+msgid "Manage Security Groups: container %s"
+msgstr "セキュリティーグループの管理: コンテナ― %s"
+
+msgid "Manage security group for ports."
+msgstr "ポートのセキュリティーグループの管理"
 
 msgid "Max Port"
 msgstr "上限ポート番号"
@@ -429,6 +468,12 @@ msgstr "コンテナーの一時停止"
 msgid "Physical Network"
 msgstr "物理ネットワーク"
 
+msgid "Policy to apply when a container exits."
+msgstr "コンテナーが終了するときに適用するポリシー。"
+
+msgid "Port"
+msgstr "ポート"
+
 msgid "Ports"
 msgstr "ポート"
 
@@ -485,6 +530,9 @@ msgstr "最新表示"
 msgid "Remote"
 msgstr "接続相手"
 
+msgid "Remove container"
+msgstr "コンテナ―を削除"
+
 msgid "Restart"
 msgstr "再起動"
 
@@ -493,6 +541,15 @@ msgstr "コンテナーの再起動"
 
 msgid "Restart Policy"
 msgstr "再起動ポリシー"
+
+msgid "Restart if stopped"
+msgstr "停止時に再起動"
+
+msgid "Restart on failure"
+msgstr "失敗時に再起動"
+
+msgid "Retry times for 'Restart on failure' policy."
+msgstr "「失敗時に再起動」ポリシーの試行回数"
 
 msgid "Runtime"
 msgstr "ランタイム"
@@ -507,8 +564,18 @@ msgstr ""
 "スケジューラーヒントを使うと、配置に関する追加の情報を Zun のスケジューラーに"
 "渡すことができます。"
 
+msgid "Security Group"
+msgstr "セキュリティーグループ"
+
 msgid "Security Groups"
 msgstr "セキュリティグループ"
+
+msgid ""
+"Security groups define a set of IP filter rules that determine\n"
+"      how network traffic flows to and from a container."
+msgstr ""
+"セキュリティーグループは、コンテナ―に出入りするネットワークトラフィックをどの"
+"ように扱うかを決める IP フィルタールールの集合体です。"
 
 msgid "Segmentation ID"
 msgstr "セグメント ID"
@@ -533,8 +600,17 @@ msgstr ""
 msgid "Select policy."
 msgstr "ポリシーを選択してください"
 
+msgid "Select port first."
+msgstr "最初にポートを選択してください。"
+
+msgid "Select port."
+msgstr "ポートを選択してください"
+
 msgid "Select ports from those listed below."
 msgstr "以下のリストからポートを選択してください。"
+
+msgid "Select security group."
+msgstr "セキュリティーグループを選択してください。"
 
 msgid "Select the security groups to create the container in."
 msgstr "作成するコンテナーのセキュリティーグループを選択します。"
@@ -608,6 +684,9 @@ msgstr "コンテナーの停止"
 
 msgid "Stop and Delete Container"
 msgstr "コンテナーの停止と削除"
+
+msgid "Submit"
+msgstr "送信"
 
 msgid "Subnets Associated"
 msgstr "割り当てサブネット"
@@ -696,6 +775,15 @@ msgstr ""
 "新しい Cinder ボリュームを作成してコンテナーにマウントするには、種別に「新し"
 "い Cinder ボリューム」を選択して、新しいボリュームのサイズを指定してくださ"
 "い。"
+
+msgid ""
+"To create new security groups, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then click <b>Create Security Group</b>."
+msgstr ""
+"新しいセキュリティーグループを作成するには、<b>ネットワーク | セキュリティー"
+"グループ</b>画面に移動して、<b>セキュリティーグループの作成</b>をクリックしま"
+"す。"
 
 msgid ""
 "To mount existing available Cinder volume, select type \"Available Cinder "
@@ -789,6 +877,10 @@ msgstr "コンテナーを一時停止解除できません。"
 msgid "Unable to update Container."
 msgstr "コンテナーを更新できません。"
 
+#, python-format
+msgid "Unable to update security groups %(sgs)s for port %(port)s."
+msgstr "ポート %(port)s のセキュリティーグループ %(sgs)s を更新できません。"
+
 msgid "Unpause Container"
 msgstr "コンテナーの一時停止解除"
 
@@ -800,6 +892,18 @@ msgstr "更新"
 
 msgid "Update Container"
 msgstr "コンテナーの更新"
+
+msgid ""
+"Users can add additional rules to an existing security group\n"
+"      to further define the access options for a container.\n"
+"      To create additional rules, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then find the security group and click <b>Manage Rules</b>."
+msgstr ""
+"ユーザーは、既存のセキュリティーグループにルールを追加して、コンテナ―へのアク"
+"セス設定を行うことができます。追加のルールを作成するには、<b>ネットワーク | "
+"セキュリティーグループ</b>画面で追加先のセキュリティーグループを見つけて、<b>"
+"ルールの管理</b>をクリックします。"
 
 msgid "VNIC type"
 msgstr "仮想 NIC の種別"
