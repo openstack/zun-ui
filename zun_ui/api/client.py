@@ -170,20 +170,10 @@ def container_update(request, id, **kwargs):
     # remove same values from new params
     _delete_attributes_with_same_value(container, args)
 
-    # get rid of name once
-    name = args.pop("name", None)
-
     # do update
     if len(args):
         zunclient(request).containers.update(id, **args)
 
-    # reset name for response
-    args["name"] = container["name"]
-
-    # do rename
-    if name:
-        zunclient(request).containers.rename(id, name)
-        args["name"] = name
     return args
 
 
