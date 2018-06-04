@@ -70,6 +70,8 @@ class ContainerActions(generic.View):
         elif action == 'restart':
             timeout = request.DATA.get("timeout") or 10
             return client.container_restart(request, id, timeout)
+        elif action == 'rebuild':
+            return client.container_rebuild(request, id, **request.DATA)
         elif action == 'pause':
             return client.container_pause(request, id)
         elif action == 'unpause':

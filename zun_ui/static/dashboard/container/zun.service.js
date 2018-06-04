@@ -40,6 +40,7 @@
       stopContainer: stopContainer,
       logsContainer: logsContainer,
       restartContainer: restartContainer,
+      rebuildContainer: rebuildContainer,
       pauseContainer: pauseContainer,
       unpauseContainer: unpauseContainer,
       executeContainer: executeContainer,
@@ -129,6 +130,11 @@
     function restartContainer(id, params) {
       var msg = gettext('Unable to restart Container.');
       return apiService.post(containersPath + id + '/restart', params).error(error(msg));
+    }
+
+    function rebuildContainer(id, params) {
+      var msg = gettext('Unable to rebuild Container.');
+      return apiService.post(containersPath + id + '/rebuild', params).error(error(msg));
     }
 
     function pauseContainer(id) {

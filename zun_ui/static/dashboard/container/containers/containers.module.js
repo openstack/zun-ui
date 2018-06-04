@@ -59,6 +59,7 @@
       start: [states.CREATED, states.STOPPED, states.ERROR],
       stop: [states.RUNNING],
       restart: [states.CREATED, states.RUNNING, states.STOPPED, states.ERROR],
+      rebuild: [states.CREATED, states.RUNNING, states.STOPPED, states.ERROR],
       pause: [states.RUNNING],
       unpause: [states.PAUSED],
       execute: [states.RUNNING],

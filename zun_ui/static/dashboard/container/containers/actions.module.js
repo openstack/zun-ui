@@ -40,6 +40,7 @@
     'horizon.dashboard.container.containers.start.service',
     'horizon.dashboard.container.containers.stop.service',
     'horizon.dashboard.container.containers.restart.service',
+    'horizon.dashboard.container.containers.rebuild.service',
     'horizon.dashboard.container.containers.pause.service',
     'horizon.dashboard.container.containers.unpause.service',
     'horizon.dashboard.container.containers.execute.service',
@@ -60,6 +61,7 @@
     startContainerService,
     stopContainerService,
     restartContainerService,
+    rebuildContainerService,
     pauseContainerService,
     unpauseContainerService,
     executeContainerService,
@@ -131,6 +133,13 @@
         service: restartContainerService,
         template: {
           text: gettext('Restart Container')
+        }
+      })
+      .append({
+        id: 'rebuildContainerAction',
+        service: rebuildContainerService,
+        template: {
+          text: gettext('Rebuild Container')
         }
       })
       .append({
