@@ -104,11 +104,11 @@ def _cleanup_params(attrs, check, **params):
             run = value
         elif key == "cpu":
             args[key] = float(value)
-        elif key == "memory":
+        elif key == "memory" or key == "disk":
             args[key] = int(value)
         elif key == "interactive" or key == "mounts" or key == "nets" \
                 or key == "security_groups" or key == "hints"\
-                or key == "auto_remove":
+                or key == "auto_remove" or key == "auto_heal":
             args[key] = value
         elif key == "restart_policy":
             args[key] = utils.check_restart_policy(value)
@@ -265,6 +265,11 @@ def port_update_security_groups(request):
     kwargs = {"security_groups": security_groups}
     neutronclient(request).update_port(port, body={"port": kwargs})
     return {"port": port, "security_group": security_groups}
+
+
+def availability_zone_list(request):
+    list = zunclient(request).availability_zones.list()
+    return list
 
 
 def image_list(request, limit=None, marker=None, sort_key=None,
