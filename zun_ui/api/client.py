@@ -212,6 +212,10 @@ def container_restart(request, id, timeout):
     return zunclient(request).containers.restart(id, timeout)
 
 
+def container_rebuild(request, id, **kwargs):
+    return zunclient(request).containers.rebuild(id, **kwargs)
+
+
 def container_pause(request, id):
     return zunclient(request).containers.pause(id)
 
