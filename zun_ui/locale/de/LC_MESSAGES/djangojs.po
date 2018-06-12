@@ -1,0 +1,753 @@
+# Robert Simai <robert.simai@suse.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zun-ui VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-06-12 03:56+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-06-11 09:37+0000\n"
+"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"X-Generator: Zanata 4.3.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "(empty)"
+msgstr "(leer)"
+
+msgid "A command that will be sent to the container."
+msgstr "Ein Befehl, der an den Container gesendet wird."
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Add Security Group"
+msgstr "Sicherheitsgruppe hinzufügen"
+
+msgid "Add Volume"
+msgstr "Datenträger hinzufügen"
+
+msgid "Addresses"
+msgstr "Adressen"
+
+msgid "Adds a map of labels to a container in comma separated KEY=VALUE pairs."
+msgstr ""
+"Fügt einem Container eine Beschriftungskarte mit durch Komma getrennten "
+"SCHLÜSSEL=WERT Paaren hinzu."
+
+msgid "Admin State"
+msgstr "Adminstatus"
+
+msgid ""
+"Allocate pseudo-TTY and keep STDIN open even if not attached. This also "
+"enables Web console in console tab on details view."
+msgstr ""
+"Pseudo-TTY zuweisen und STDIN offenhalten, auch wenn nicht angehängt. Dies "
+"aktiviert auch die Webkonsole im Konsolen-Tab der Details Ansicht."
+
+msgid "Always"
+msgstr "Immer"
+
+msgid "Always restart"
+msgstr "Immer neustarten"
+
+msgid "Always: Always pull the image from repository."
+msgstr "Immer: Zieht das Abbild immer aus dem Repository."
+
+msgid "An arbitrary human-readable name."
+msgstr "Ein frei wählbarer Klarschrift-Name "
+
+msgid "Auto Heal"
+msgstr "Automatisch heilen"
+
+msgid "Auto Remove"
+msgstr "Automatisch entfernen"
+
+msgid "Availability Zone"
+msgstr "Verfügbarkeitszone"
+
+msgid "Bare Metal"
+msgstr "Bare Metal"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "Command"
+msgstr "Befehl"
+
+msgid "Command sent to the container."
+msgstr "Zum Container geschicktes Kommando."
+
+#, python-format
+msgid "Command was successfully executed at container %s."
+msgstr "Der Befehl wurde erfolgreich am Container %s ausgeführt."
+
+msgid "Confirm Delete After Stop Container"
+msgid_plural "Confirm Delete After Stop Containers"
+msgstr[0] "Container nach Stoppen löschen bestätigen"
+msgstr[1] "Container nach Stoppen löschen bestätigen"
+
+msgid "Confirm Delete Container"
+msgid_plural "Confirm Delete Containers"
+msgstr[0] "Container löschen bestätigen"
+msgstr[1] "Container löschen bestätigen"
+
+msgid "Confirm Delete Container Forcely"
+msgid_plural "Confirm Delete Containers Forcely"
+msgstr[0] "Gewaltsames Löschen des Containers bestätigen"
+msgstr[1] "Gewaltsames Löschen der Container bestätigen"
+
+msgid "Container"
+msgstr "Container"
+
+#, python-format
+msgid "Container %s was successfully created."
+msgstr "Container %s wurde erfolgreich erstellt."
+
+#, python-format
+msgid "Container %s was successfully paused."
+msgstr "Container %s wurde erfolgreich pausiert."
+
+#, python-format
+msgid "Container %s was successfully rebuilt."
+msgstr "Container %s wurde erfolgreich neu erstellt."
+
+#, python-format
+msgid "Container %s was successfully restarted."
+msgstr "Container %s wurde erfolgreich neu gestartet."
+
+#, python-format
+msgid "Container %s was successfully started."
+msgstr "Container %s wurde erfolgreich gestartet."
+
+#, python-format
+msgid "Container %s was successfully stoped."
+msgstr "Container %s wurde erfolgreich gestoppt."
+
+#, python-format
+msgid "Container %s was successfully unpaused."
+msgstr "Pausieren von Container %s wurde erfolgreich aufgehoben."
+
+#, python-format
+msgid "Container %s was successfully updated."
+msgstr "Container %s wurde erfolgreich aktualisiert."
+
+msgid "Container Name"
+msgstr "Containername"
+
+msgid "Containers"
+msgstr "Container"
+
+msgid "Create"
+msgstr "Erstellen"
+
+msgid "Create Container"
+msgstr "Container erstellen"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Delete Container"
+msgid_plural "Delete Containers"
+msgstr[0] "Container löschen"
+msgstr[1] "Container löschen"
+
+msgid "Delete Container After Stop"
+msgid_plural "Delete Containers After Stop"
+msgstr[0] "Lösche Container nach dem Stop"
+msgstr[1] "Lösche Container nach dem Stop"
+
+msgid "Delete Container Forcely"
+msgid_plural "Delete Containers Forcely"
+msgstr[0] "Container gewaltsam löschen"
+msgstr[1] "Container gewaltsam löschen"
+
+msgid "Delete Containers"
+msgstr "Container löschen"
+
+#, python-format
+msgid "Deleted Container After Stop: %s."
+msgid_plural "Deleted Containers After Stop: %s."
+msgstr[0] "Gelöschter Container nach dem Stoppen: %s."
+msgstr[1] "Gelöschte Container nach dem Stoppen: %s."
+
+#, python-format
+msgid "Deleted Container Forcely: %s."
+msgid_plural "Deleted Containers Forcely: %s."
+msgstr[0] "Gewaltsam gelöschter Container: %s."
+msgstr[1] "Gewaltsam gelöschte Container: %s."
+
+#, python-format
+msgid "Deleted Container: %s."
+msgid_plural "Deleted Containers: %s."
+msgstr[0] "Gelöschter Container: %s."
+msgstr[1] "Gelöschte Container: %s."
+
+msgid "Destination"
+msgstr "Ziel"
+
+msgid "Direct Physical"
+msgstr "Direkt Physisch"
+
+msgid "Disk"
+msgstr "Festplatte"
+
+msgid "Docker Hub"
+msgstr "Docker-Hub"
+
+msgid "Docker Hub: Pull the image from Docker Hub."
+msgstr "Docker Hub: Ziehe das Abbild vom Docker Hub."
+
+msgid "Down"
+msgstr "Inaktiv"
+
+msgid "Enable Interactive Mode"
+msgstr "Aktivieren des interaktiven Modus"
+
+msgid "Enable auto heal"
+msgstr "Automatisch heilen aktivieren"
+
+msgid "Enable interactive mode"
+msgstr "Interaktiven Modus aktivieren"
+
+msgid "Environment"
+msgstr "Umgebung"
+
+msgid "Environment Variables"
+msgstr "Umgebungsvariablen"
+
+msgid "Execute"
+msgstr "Ausführen"
+
+msgid "Execute Command"
+msgstr "Befehl ausführen"
+
+msgid "Executing"
+msgstr "Ausführen"
+
+msgid "Existing Cinder Volume"
+msgstr "Vorhandene Cinder-Datenträger"
+
+msgid "Exit Code"
+msgstr "Beendigungscode"
+
+msgid "Exit Policy"
+msgstr "Ausstiegs-Richtlinie"
+
+msgid "Glance"
+msgstr "Glance"
+
+msgid "Glance: Pull the image from Glance."
+msgstr "Glance: Zieht das Abbild von Glance."
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Hostname"
+msgstr "Hostname"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "If not present"
+msgstr "Wenn nicht vorhanden"
+
+msgid ""
+"If not present: only pull the image if it does not already exist on the node."
+msgstr ""
+"Wenn nicht vorhanden: Zieht das Abbild nur, wenn es noch nicht auf dem "
+"Knoten vorhanden ist."
+
+msgid "Image"
+msgstr "Abbild"
+
+#, python-format
+msgid "Image %s was successfully pulled."
+msgstr "Abbild %s wurde erfolgreich gezogen."
+
+msgid "Image Driver"
+msgstr "Abbildtreiber"
+
+msgid "Image Pull Policy"
+msgstr "Abbild Zieh-Richtlinie"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "Interactive"
+msgstr "Interaktiv"
+
+msgid "KEY1=VALUE1,KEY2=VALUE2..."
+msgstr "SCHLÜSSEL1=WERT1,SCHLÜSSEL2=WERT2..."
+
+msgid "Kill Signal"
+msgstr "Kill-Signal"
+
+#, python-format
+msgid "Kill signal was successfully sent to container %s."
+msgstr "Das Kill-Signal wurde erfolgreich an den Container %s gesendet."
+
+msgid "Labels"
+msgstr "Bezeichnungen"
+
+msgid "Links"
+msgstr "Links"
+
+msgid "MacVTap"
+msgstr "MacVTap"
+
+msgid "Manage Security Groups"
+msgstr "Sicherheitsgruppen verwalten"
+
+#, python-format
+msgid "Manage Security Groups: container %s"
+msgstr "Sicheheitsgruppe verwalten: Container %s"
+
+msgid "Manage security group for ports."
+msgstr "Sicherheitsgruppen für Ports verwalten."
+
+msgid "Max Retry"
+msgstr "Max. Wiederholen"
+
+msgid "Memory"
+msgstr "Speicher"
+
+msgid "Miscellaneous"
+msgstr "Verschiedenes"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Name of the container to create."
+msgstr "Name des zu erstellenden Containers"
+
+msgid "Name or ID of container image."
+msgstr "Name oder ID des Container-Abbildes."
+
+msgid "Name or ID of the container image."
+msgstr "Name oder ID des Containerabbilds"
+
+msgid "Network"
+msgstr "Netzwerk"
+
+msgid "Network characteristics"
+msgstr "Netzwerkeigenschaften"
+
+msgid "Networks"
+msgstr "Netzwerke"
+
+msgid "Never"
+msgstr "Niemals"
+
+msgid "Never: never pull the image."
+msgstr "Nie: nie das Abbild ziehen."
+
+msgid "New Cinder Volume"
+msgstr "Neuer Cinder-Datenträger"
+
+msgid "No"
+msgstr "Nein"
+
+msgid "Output"
+msgstr "Ausgabe"
+
+msgid "Pause Container"
+msgstr "Container pausieren"
+
+msgid "Policy to apply when a container exits."
+msgstr "Richtlinie, die beim Beenden eines Containers angewendet wird"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Ports"
+msgstr "Ports"
+
+msgid "Pull"
+msgstr "Ziehen"
+
+msgid "Pull Image"
+msgstr "Abbild ziehen"
+
+msgid "Re-order items using drag and drop"
+msgstr "Umsortieren der Positionen durch Ziehen und Ablegen"
+
+msgid "Rebuild"
+msgstr "Neu erstellen"
+
+msgid "Rebuild Container"
+msgstr "Container neu erstellen"
+
+msgid "Refresh"
+msgstr "Aktualisieren"
+
+msgid "Remove container"
+msgstr "Container entfernen"
+
+msgid "Restart"
+msgstr "Neustart"
+
+msgid "Restart Container"
+msgstr "Container neu starten"
+
+msgid "Restart Policy"
+msgstr "Neustart Richtlinie"
+
+msgid "Restart if stopped"
+msgstr "Neustarten wenn gestoppt"
+
+msgid "Restart on failure"
+msgstr "Im Fehlerfall neustarten"
+
+msgid "Runtime"
+msgstr "Laufzeit"
+
+msgid "Scheduler Hints"
+msgstr "Schedulerhinweise"
+
+msgid "Security Group"
+msgstr "Sicherheitsgruppe"
+
+msgid "Security Groups"
+msgstr "Sicherheitsgruppen"
+
+msgid "Select availability zone."
+msgstr "Verfügbarkeitszone auswählen."
+
+msgid "Select available Cinder volume"
+msgstr "Vorhandenen Cinder-Datenträger auswählen"
+
+msgid "Select image driver for changing image."
+msgstr "Abbildtreiber zum wechseln des Abbildes auswählen"
+
+msgid "Select networks from those listed below."
+msgstr "Wählen Sie aus den unten stehenden Netzwerken aus."
+
+msgid "Select policy."
+msgstr "Richtlinie auswählen."
+
+msgid "Select port first."
+msgstr "Zuerst einen Port auswählen."
+
+msgid "Select port."
+msgstr "Port auswählen."
+
+msgid "Select ports from those listed below."
+msgstr "Wählen Sie Ports aus den nachstehend aufgelisteten Ports aus."
+
+msgid "Select security group."
+msgstr "Sicherheitsgruppe auswählen."
+
+msgid "Send"
+msgstr "Senden"
+
+msgid "Send Kill Signal"
+msgstr "Sende Kill-Signal"
+
+msgid "Set the volume specs and add into the table below."
+msgstr ""
+"Datenträgerspezifikationen festlegen und in die folgende Tabelle einfügen."
+
+msgid "Shared"
+msgstr "Geteilt"
+
+msgid ""
+"Signal to send to the container: integer or string like SIGINT.\n"
+"  When not set, SIGKILL is set as default value and the container will "
+"exit.\n"
+"  The supported signals varies between platform.\n"
+"  Besides, you can omit 'SIG' prefix."
+msgstr ""
+"Signal zum Senden an den Container: Ganzzahl oder Zeichenkette wie SIGINT. "
+"Wenn nicht gesetzt, wird SIGKILL als Standardwert gesetzt und der Container "
+"wird beendet. Die unterstützten Signale variieren zwischen den Plattformen. "
+"Außerdem können Sie das Präfix 'SIG' weglassen."
+
+msgid "Size (GB)"
+msgstr "Größe (GB)"
+
+msgid "Source"
+msgstr "Quelle"
+
+msgid "Specify a shutdown timeout in seconds. (default: 10)"
+msgstr ""
+"Geben Sie ein Zeitlimit für das Herunterfahren in Sekunden an. (Standard: 10)"
+
+msgid "Specify an image to change."
+msgstr "Abbild zum wechseln auswählen"
+
+msgid "Specify mount point of the volume on the container."
+msgstr "Geben Sie den Einhängepunkt des Datenträgers für den Container an."
+
+msgid "Specify size for the new volume in GB."
+msgstr "Geben Sie die Größe für den neuen Datenträger in GB an."
+
+msgid "Start Container"
+msgstr "Container starten"
+
+msgid "Start container after creation"
+msgstr "Container nach der Erstellung starten"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Status Detail"
+msgstr "Statusdetails"
+
+msgid "Status Reason"
+msgstr "Status Grund"
+
+msgid "Stop"
+msgstr "Stopp"
+
+msgid "Stop Container"
+msgstr "Container stoppen"
+
+msgid "Stop and Delete Container"
+msgstr "Container anhalten und löschen"
+
+msgid "Submit"
+msgstr "Absenden"
+
+msgid "Subnets Associated"
+msgstr "Zugewiesene Subnetze"
+
+msgid "Task State"
+msgstr "Auftragsstatus"
+
+msgid "The availability zone of the container."
+msgstr "Verfügbarkeitszone des Containers."
+
+msgid "The command to execute."
+msgstr "Der auszuführende Befehl."
+
+msgid "The container memory size in MiB."
+msgstr "Die Speichergröße des Containers in MiB."
+
+msgid "The disk size in GiB for per container."
+msgstr "The Festplattengröße in GiB pro Container."
+
+msgid "The environment variables in comma separated KEY=VALUE pairs"
+msgstr "Die Umgebungsvariablen in Komma getrennten SCHLÜSSEL = WERT - Paaren"
+
+msgid "The host name of this container."
+msgstr "Der Hostname dieses Containers."
+
+msgid "The image driver to use to pull container image."
+msgstr "Der Abbildtreiber zum ziehen des Container-Abbildes."
+
+msgid "The kill signal to send."
+msgstr "Das zu sendende Kill-Signal"
+
+msgid "The number of virtual CPUs."
+msgstr "Die Anzahl der virtuellen CPUs."
+
+msgid "The number of virtual cpu for this container."
+msgstr "Die Anzahl der virtuellen CPUs für diesen Container."
+
+msgid ""
+"The policy which determines if the image should be pulled prior to starting "
+"the container."
+msgstr ""
+"Die Richtlinie, die festlegt, ob das Image vor dem Starten des Containers "
+"gezogen werden soll."
+
+msgid "The runtime to create container with."
+msgstr ""
+"Die Laufzeit, die für die Erstellung des Containers verwendet werden soll."
+
+msgid "The runtime to use for this container. Default: \"runc\""
+msgstr ""
+"Die Laufzeit, die für diesen Container verwendet werden soll. Standard: "
+"\"runc\""
+
+msgid "The volumes are mounted into the container."
+msgstr "Datenträger werden in den Container gemountet."
+
+msgid "The working directory for commands to run in."
+msgstr "Das Arbeitsverzeichnis, in dem Befehle ausgeführt werden."
+
+msgid "The working directory needs to be an absolute path."
+msgstr "Das Arbeitsverzeichnis muss ein absoluter Pfad sein."
+
+msgid ""
+"To create new Cinder volume and mount it to the container, select type \"New "
+"Cinder Volume\"\n"
+"    and specify size for the new volume."
+msgstr ""
+"Um einen neuen Cinder-Datenträger zu erstellen und ihn im Container zu "
+"mounten, wählen Sie \"Neuer Cinder-Datenträger\" und geben Sie die Größe für "
+"den neuen Datenträger an."
+
+msgid ""
+"To mount existing available Cinder volume, select type \"Available Cinder "
+"Volume\"\n"
+"    and select source from the pull-down list."
+msgstr ""
+"Um den vorhandenen verfügbare Cinder-Datenträger zu mounten, wählen Sie "
+"\"Verfügbare Cinder Datenträger\" und wählen Sie die Quelle aus der Pull-"
+"Down-Liste."
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Unable to attach network."
+msgstr "Netzwerk kann nicht hinzugefügt werden."
+
+msgid "Unable to create Container."
+msgstr "Container kann nicht erstellt werden."
+
+#, python-format
+msgid "Unable to delete Container after stopping: %s."
+msgid_plural "Unable to delete Containers after stopping: %s."
+msgstr[0] "Kann Container nach dem Stoppen nicht löschen: %s."
+msgstr[1] "Kann Container nach dem Stoppen nicht löschen: %s."
+
+#, python-format
+msgid "Unable to delete Container forcely: %s."
+msgid_plural "Unable to delete Containers forcely: %s."
+msgstr[0] "Kann Container nicht gewaltsam löschen: %s."
+msgstr[1] "Kann Container nicht gewaltsam löschen: %s."
+
+#, python-format
+msgid "Unable to delete Container: %s."
+msgid_plural "Unable to delete Containers: %s."
+msgstr[0] "Kann Container nicht löschen: %s."
+msgstr[1] "Kann Container nicht löschen: %s."
+
+#, python-format
+msgid "Unable to delete forcely the Container with id: %(id)s"
+msgstr "Löschen des Containers mit ID  %(id)s konnte nicht erzwungen werden"
+
+#, python-format
+msgid "Unable to delete the Container with id: %(id)s"
+msgstr "Container mit der ID %(id)s kann nicht gelöscht werden"
+
+msgid "Unable to delete the Containers."
+msgstr "Container können nicht gelöscht werden."
+
+msgid "Unable to detach network."
+msgstr "Netzwerk kann nicht abgetrennt werden."
+
+msgid "Unable to execute the command."
+msgstr "Der Befehl kann nicht ausgeführt werden."
+
+msgid "Unable to get logs of Container."
+msgstr "Logs aus dem Container können nicht abgerufen werden."
+
+msgid "Unable to pause Container"
+msgstr "Der Container kann nicht pausiert werden"
+
+msgid "Unable to pull Image."
+msgstr "Abbild kann nicht gezogen werden."
+
+msgid "Unable to rebuild Container."
+msgstr "Container kann nicht neu erstellt werden."
+
+msgid "Unable to resize console."
+msgstr "Die Größe der Konsole kann nicht geändert werden."
+
+msgid "Unable to restart Container."
+msgstr "Der Container kann nicht neu gestartet werden."
+
+msgid "Unable to retrieve the Container."
+msgstr "Container kann nicht abgerufen werden."
+
+msgid "Unable to retrieve the Containers."
+msgstr "Container können nicht abgerufen werden."
+
+msgid "Unable to retrieve the Images."
+msgstr "Abbilder können nicht abgerufen werden."
+
+msgid "Unable to send kill signal."
+msgstr "Das Kill-Signal kann nicht gesendet werden."
+
+msgid "Unable to start Container."
+msgstr "Container kann nicht gestartet werden."
+
+msgid "Unable to stop Container."
+msgstr "Der Container kann nicht gestoppt werden."
+
+#, python-format
+msgid "Unable to stop and delete the Container with id: %(id)s"
+msgstr "Container mit der ID %(id)s kann nicht gestoppt und gelöscht werden"
+
+msgid "Unable to unpause of Container."
+msgstr "Pausieren des Containers kann nicht aufgehoben werden."
+
+msgid "Unable to update Container."
+msgstr "Container kann nicht aktualisiert werden."
+
+#, python-format
+msgid "Unable to update security groups %(sgs)s for port %(port)s."
+msgstr ""
+"Sicherheitsgruppen %(sgs)s für Port %(port)s können nicht aktualisiert "
+"werden."
+
+msgid "Unpause Container"
+msgstr "Container pausieren aufheben"
+
+msgid "Up"
+msgstr "Aktiv"
+
+msgid "Update"
+msgstr "Aktualisieren"
+
+msgid "Update Container"
+msgstr "Container aktualisieren"
+
+msgid "Volumes"
+msgstr "Datenträger"
+
+msgid "Workdir"
+msgstr "Arbeitsverzeichnis"
+
+msgid "Working Directory"
+msgstr "Arbeitsverzeichnis"
+
+msgid "Yes"
+msgstr "Ja"
+
+#, python-format
+msgid "You are not allowed to delete container forcely: %s"
+msgstr "Sie dürfen den Container nicht zwangsweise löschen: %s"
+
+#, python-format
+msgid "You are not allowed to delete containers: %s"
+msgstr "Sie dürfen keine Container löschen: %s"
+
+#, python-format
+msgid "You are not allowed to stop and delete container: %s"
+msgstr "Sie dürfen den Container nicht anhalten und löschen: %s"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted container "
+"is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted containers "
+"are not recoverable."
+msgstr[0] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
+"Container können nicht wiederhergestellt werden."
+msgstr[1] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
+"Container können nicht wiederhergestellt werden."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. The container will "
+"be stopped before deleting. Deleted container is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. The containers will "
+"be stopped before deleting. Deleted containers are not recoverable."
+msgstr[0] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Der "
+"Container wird gestoppt, bevor er gelöscht wird. Der gelöschter Container "
+"kann nicht wiederhergestellt werden."
+msgstr[1] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Die "
+"Container werden gestoppt, bevor sie gelöscht werden. Gelöschte Container "
+"können nicht wiederhergestellt werden."
