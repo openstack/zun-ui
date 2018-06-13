@@ -54,6 +54,7 @@
       getZunAvailabilityZones: getZunAvailabilityZones,
       pullImage: pullImage,
       getImages: getImages,
+      deleteImage: deleteImage,
       getHosts: getHosts
     };
 
@@ -208,6 +209,11 @@
     function getImages() {
       var msg = gettext('Unable to retrieve the Images.');
       return apiService.get(imagesPath).error(error(msg));
+    }
+
+    function deleteImage(id, host) {
+      var msg = gettext('Unable to delete the Image.');
+      return apiService.delete(imagesPath + id, {host: host}).error(error(msg));
     }
 
     ///////////

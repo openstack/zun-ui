@@ -278,6 +278,10 @@ def image_create(request, **kwargs):
     return zunclient(request).images.create(**args)
 
 
+def image_delete(request, id, **kwargs):
+    return zunclient(request).images.delete(id, **kwargs)
+
+
 def host_list(request, limit=None, marker=None, sort_key=None,
               sort_dir=None, detail=False):
     return zunclient(request).hosts.list(limit, marker, sort_key,

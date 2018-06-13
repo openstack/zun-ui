@@ -191,6 +191,17 @@ class Images(generic.View):
 
 
 @urls.register
+class Image(generic.View):
+    """API for operate a single image"""
+    url_regex = r'zun/images/(?P<id>[^/]+)$'
+
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request, id):
+        """Delete a specific image"""
+        client.image_delete(request, id, **request.DATA)
+
+
+@urls.register
 class Hosts(generic.View):
     """API for Zun Hosts"""
     url_regex = r'zun/hosts/$'
