@@ -266,6 +266,12 @@ def availability_zone_list(request):
     return list
 
 
+def capsule_list(request, limit=None, marker=None, sort_key=None,
+                 sort_dir=None):
+    return zunclient(request).capsules.list(limit, marker, sort_key,
+                                            sort_dir)
+
+
 def image_list(request, limit=None, marker=None, sort_key=None,
                sort_dir=None, detail=False):
     # FIXME(shu-mutou): change "detail" param to True, if it enabled.

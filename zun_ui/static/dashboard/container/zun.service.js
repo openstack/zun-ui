@@ -27,6 +27,7 @@
   function ZunAPI(apiService, toastService, gettext) {
     var containersPath = '/api/zun/containers/';
     var zunAvailabilityZonesPath = '/api/zun/availability_zones/';
+    var capsulesPath = '/api/zun/capsules/';
     var imagesPath = '/api/zun/images/';
     var hostsPath = '/api/zun/hosts/';
     var service = {
@@ -52,6 +53,7 @@
       detachNetwork: detachNetwork,
       updatePortSecurityGroup: updatePortSecurityGroup,
       getZunAvailabilityZones: getZunAvailabilityZones,
+      getCapsules: getCapsules,
       pullImage: pullImage,
       getImages: getImages,
       deleteImage: deleteImage,
@@ -195,6 +197,15 @@
     function getZunAvailabilityZones() {
       var msg = gettext('Unable to retrieve the Zun Availability Zones.');
       return apiService.get(zunAvailabilityZonesPath).error(error(msg));
+    }
+
+    //////////////
+    // Capsules //
+    //////////////
+
+    function getCapsules() {
+      var msg = gettext('Unable to retrieve the Capsules.');
+      return apiService.get(capsulesPath).error(error(msg));
     }
 
     ////////////

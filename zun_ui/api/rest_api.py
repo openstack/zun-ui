@@ -164,6 +164,22 @@ class AvailabilityZones(generic.View):
 
 
 @urls.register
+class Capsules(generic.View):
+    """API for Capsules"""
+    url_regex = r'zun/capsules/$'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get a list of the Capsules.
+
+        The returned result is an object with property 'items' and each
+        item under this is a Capsules.
+        """
+        result = client.capsule_list(request)
+        return {'items': [i.to_dict() for i in result]}
+
+
+@urls.register
 class Images(generic.View):
     """API for Zun Images"""
     url_regex = r'zun/images/$'

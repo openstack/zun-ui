@@ -24,6 +24,7 @@
   angular
     .module('horizon.dashboard.container', [
       'horizon.dashboard.container.containers',
+      'horizon.dashboard.container.capsules',
       'horizon.dashboard.container.images',
       'ngRoute'
     ])
