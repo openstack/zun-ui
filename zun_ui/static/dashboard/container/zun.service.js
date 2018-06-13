@@ -28,6 +28,7 @@
     var containersPath = '/api/zun/containers/';
     var zunAvailabilityZonesPath = '/api/zun/availability_zones/';
     var imagesPath = '/api/zun/images/';
+    var hostsPath = '/api/zun/hosts/';
     var service = {
       createContainer: createContainer,
       updateContainer: updateContainer,
@@ -52,7 +53,8 @@
       updatePortSecurityGroup: updatePortSecurityGroup,
       getZunAvailabilityZones: getZunAvailabilityZones,
       pullImage: pullImage,
-      getImages: getImages
+      getImages: getImages,
+      getHosts: getHosts
     };
 
     return service;
@@ -206,6 +208,15 @@
     function getImages() {
       var msg = gettext('Unable to retrieve the Images.');
       return apiService.get(imagesPath).error(error(msg));
+    }
+
+    ///////////
+    // Hosts //
+    ///////////
+
+    function getHosts() {
+      var msg = gettext('Unable to retrieve the Hosts.');
+      return apiService.get(hostsPath).error(error(msg));
     }
 
     function error(message) {
