@@ -180,6 +180,17 @@ class Capsules(generic.View):
 
 
 @urls.register
+class Capsule(generic.View):
+    """API for retrieving a single capsule"""
+    url_regex = r'zun/capsules/(?P<id>[^/]+)$'
+
+    @rest_utils.ajax()
+    def get(self, request, id):
+        """Get a specific capsule"""
+        return change_to_id(client.capsule_show(request, id).to_dict())
+
+
+@urls.register
 class Images(generic.View):
     """API for Zun Images"""
     url_regex = r'zun/images/$'

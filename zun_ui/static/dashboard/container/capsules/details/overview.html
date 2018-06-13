@@ -1,0 +1,50 @@
+<div ng-controller="horizon.dashboard.container.capsules.OverviewController as ctrl">
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Info</h3>
+      <hr>
+      <hz-resource-property-list
+        resource-type-name="OS::Zun::Capsule"
+        cls="dl-horizontal"
+        item="ctrl.capsule"
+        property-groups="[['id', 'name', 'capsule_versionid', 'status', 'status_reason',
+                           'created_at', 'updated_at', 'project_id', 'user_id']]">
+      </hz-resource-property-list>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Spec</h3>
+      <hr>
+      <hz-resource-property-list
+        resource-type-name="OS::Zun::Capsule"
+        cls="dl-horizontal"
+        item="ctrl.capsule"
+        property-groups="[['cpu', 'memory', 'restart_policy',
+                           'meta_labels', 'links', 'addresses']]">
+      </hz-resource-property-list>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Containers</h3>
+      <hr>
+      <div class="row">
+        <dl class="col-md-12 dl-horizontal" ng-repeat="container in ctrl.capsule.containers">
+          <dt>Name</dt>
+          <dd><a href="{$ ctrl.webRoot $}ngdetails/OS::Zun::Container/{$ container.uuid $}">{$ container.name $}</a></dd>
+          <dt>Container ID</dt>
+          <dd>{$ container.uuid $}</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Volumes</h3>
+      <hr>
+      <hz-resource-property-list
+        resource-type-name="OS::Zun::Capsule"
+        cls="dl-horizontal"
+        item="ctrl.capsule"
+        property-groups="[['volumes_info']]">
+      </hz-resource-property-list>
+    </div>
+  </div>
+</div>

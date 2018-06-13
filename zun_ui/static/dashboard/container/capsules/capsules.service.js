@@ -33,8 +33,35 @@
    */
   function capsulesService(detailRoute, zun) {
     return {
+      getDetailsPath: getDetailsPath,
+      getCapsulePromise: getCapsulePromise,
       getCapsulesPromise: getCapsulesPromise
     };
+
+    /*
+     * @ngdoc function
+     * @name getDetailsPath
+     * @param item {Object} - The capsule object
+     * @description
+     * Returns the relative path to the details view.
+     */
+    function getDetailsPath(item) {
+      return detailRoute + 'OS::Zun::Capsule/' + item.id;
+    }
+
+    /*
+     * @ngdoc function
+     * @name getCapsulePromise
+     * @description
+     * Given an id, returns a promise for the capsule data.
+     */
+    function getCapsulePromise(identifier) {
+      return zun.getCapsule(identifier).then(modifyDetails);
+    }
+
+    function modifyDetails(response) {
+      return {data: modifyItem(response.data)};
+    }
 
     /*
      * @ngdoc function
@@ -52,9 +79,10 @@
     }
 
     function modifyItem(item) {
-      item.id = item.uuid;
-      item.trackBy = item.uuid;
-      item.trackBy = item.trackBy.concat(item.updated_at);
+      item.name = item.meta_name;
+      item.capsule_id = item.id;
+      item.id = item.uuid ? item.uuid : item.capsule_id;
+      item.trackBy = item.id.concat(item.updated_at);
       return item;
     }
   }

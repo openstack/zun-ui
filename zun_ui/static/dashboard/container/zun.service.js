@@ -54,6 +54,7 @@
       updatePortSecurityGroup: updatePortSecurityGroup,
       getZunAvailabilityZones: getZunAvailabilityZones,
       getCapsules: getCapsules,
+      getCapsule: getCapsule,
       pullImage: pullImage,
       getImages: getImages,
       deleteImage: deleteImage,
@@ -206,6 +207,11 @@
     function getCapsules() {
       var msg = gettext('Unable to retrieve the Capsules.');
       return apiService.get(capsulesPath).error(error(msg));
+    }
+
+    function getCapsule(id) {
+      var msg = gettext('Unable to retrieve the Capsule.');
+      return apiService.get(capsulesPath + id).error(error(msg));
     }
 
     ////////////

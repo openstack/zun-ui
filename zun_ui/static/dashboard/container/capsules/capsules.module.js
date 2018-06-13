@@ -26,7 +26,8 @@
   angular
     .module('horizon.dashboard.container.capsules', [
       'ngRoute',
-      'horizon.dashboard.container.capsules.actions'
+      'horizon.dashboard.container.capsules.actions',
+      'horizon.dashboard.container.capsules.details'
     ])
     .constant('horizon.dashboard.container.capsules.events', events())
     .constant('horizon.dashboard.container.capsules.resourceType', 'OS::Zun::Capsule')
@@ -47,6 +48,7 @@
   }
 
   run.$inject = [
+    '$filter',
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.app.core.openstack-service-api.zun',
     'horizon.dashboard.container.capsules.basePath',
@@ -54,19 +56,19 @@
     'horizon.dashboard.container.capsules.service'
   ];
 
-  function run(registry, zun, basePath, resourceType, capsuleService) {
+  function run($filter, registry, zun, basePath, resourceType, capsuleService) {
     registry.getResourceType(resourceType)
     .setNames(gettext('Capsule'), gettext('Capsules'))
-    // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'drawer.html')
-    // for table row items and detail summary view.
+    .setDefaultIndexUrl('/project/container/capsules/')
     .setProperties(capsuleProperties())
     .setListFunction(capsuleService.getCapsulesPromise)
     .tableColumns
     .append({
-      id: 'meta_name',
+      id: 'name',
       priority: 1,
-      sortDefault: true
+      sortDefault: true,
+      urlFunction: capsuleService.getDetailsPath
     })
     .append({
       id: 'id',
@@ -87,13 +89,13 @@
     // for magic-search
     registry.getResourceType(resourceType).filterFacets
     .append({
-      'label': gettext('ID'),
-      'name': 'id',
+      'label': gettext('Capsule ID'),
+      'name': 'capsule_id',
       'singleton': true
     })
     .append({
       'label': gettext('Name'),
-      'name': 'meta_name',
+      'name': 'name',
       'singleton': true
     })
     .append({
@@ -115,7 +117,7 @@
       'links': {label: gettext('Links'), filters: ['noValue', 'json'] },
       'memory': { label: gettext('Memory'), filters: ['noValue'] },
       'meta_labels': {label: gettext('Labels'), filters: ['noValue', 'json'] },
-      'meta_name': { label: gettext('Name'), filters: ['noName'] },
+      'name': { label: gettext('Name'), filters: ['noName'] },
       'project_id': { label: gettext('Project ID'), filters: ['noValue'] },
       'restart_policy': { label: gettext('Restart Policy'), filters: ['noValue'] },
       'status': { label: gettext('Status'), filters: ['noValue'] },

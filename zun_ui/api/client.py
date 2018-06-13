@@ -272,6 +272,10 @@ def capsule_list(request, limit=None, marker=None, sort_key=None,
                                             sort_dir)
 
 
+def capsule_show(request, id):
+    return zunclient(request).capsules.get(id)
+
+
 def image_list(request, limit=None, marker=None, sort_key=None,
                sort_dir=None, detail=False):
     # FIXME(shu-mutou): change "detail" param to True, if it enabled.
