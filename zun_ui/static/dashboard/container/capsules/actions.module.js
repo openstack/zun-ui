@@ -33,6 +33,7 @@
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container.capsules.actions.create.service',
+    'horizon.dashboard.container.capsules.actions.delete.service',
     'horizon.dashboard.container.capsules.actions.refresh.service',
     'horizon.dashboard.container.capsules.resourceType'
   ];
@@ -41,6 +42,7 @@
     registry,
     gettext,
     createCapsuleService,
+    deleteCapsuleService,
     refreshCapsuleService,
     resourceType
   ) {
@@ -55,13 +57,30 @@
         }
       });
 
-    // FIXME(shu-mutow): refresh action is dummy. remove it when add other item action.
+    capsulesResourceType.batchActions
+      .append({
+        id: 'deleteCapsuleAction',
+        service: deleteCapsuleService,
+        template: {
+          type: 'delete-selected',
+          text: gettext('Delete')
+        }
+      });
+
     capsulesResourceType.itemActions
       .append({
         id: 'refreshCapsuleAction',
         service: refreshCapsuleService,
         template: {
           text: gettext('Refresh')
+        }
+      })
+      .append({
+        id: 'deleteCapsuleAction',
+        service: deleteCapsuleService,
+        template: {
+          type: 'delete',
+          text: gettext('Delete')
         }
       });
   }

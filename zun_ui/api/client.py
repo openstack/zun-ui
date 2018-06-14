@@ -284,6 +284,10 @@ def capsule_create(request, **kwargs):
     return zunclient(request).capsules.create(**args)
 
 
+def capsule_delete(request, **kwargs):
+    return zunclient(request).capsules.delete(**kwargs)
+
+
 def image_list(request, limit=None, marker=None, sort_key=None,
                sort_dir=None, detail=False):
     # FIXME(shu-mutou): change "detail" param to True, if it enabled.

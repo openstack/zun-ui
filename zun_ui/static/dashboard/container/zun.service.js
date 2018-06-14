@@ -56,6 +56,7 @@
       getCapsules: getCapsules,
       getCapsule: getCapsule,
       createCapsule: createCapsule,
+      deleteCapsule: deleteCapsule,
       pullImage: pullImage,
       getImages: getImages,
       deleteImage: deleteImage,
@@ -218,6 +219,14 @@
     function createCapsule(params) {
       var msg = gettext('Unable to create Capsule.');
       return apiService.post(capsulesPath, params).error(error(msg));
+    }
+
+    function deleteCapsule(id, suppressError) {
+      var promise = apiService.delete(capsulesPath, [id]);
+      return suppressError ? promise : promise.error(function() {
+        var msg = gettext('Unable to delete the Capsule with id: %(id)s');
+        toastService.add('error', interpolate(msg, { id: id }, true));
+      });
     }
 
     ////////////

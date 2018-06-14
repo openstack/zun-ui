@@ -179,6 +179,16 @@ class Capsules(generic.View):
         return {'items': [i.to_dict() for i in result]}
 
     @rest_utils.ajax(data_required=True)
+    def delete(self, request):
+        """Delete one or more Capsules by id.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        for id in request.DATA:
+            opts = {'id': id}
+            client.capsule_delete(request, **opts)
+
+    @rest_utils.ajax(data_required=True)
     def post(self, request):
         """Create a new Capsule.
 
