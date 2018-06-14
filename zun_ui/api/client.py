@@ -20,12 +20,14 @@ from openstack_dashboard.api import base
 
 from neutronclient.v2_0 import client as neutron_client
 from zunclient import api_versions
+from zunclient.common import template_format
 from zunclient.common import utils
 from zunclient.v1 import client as zun_client
 
 LOG = logging.getLogger(__name__)
 
 CONTAINER_CREATE_ATTRS = zun_client.containers.CREATION_ATTRIBUTES
+CAPSULE_CREATE_ATTRS = zun_client.capsules.CREATION_ATTRIBUTES
 IMAGE_PULL_ATTRS = zun_client.images.PULL_ATTRIBUTES
 API_VERSION = api_versions.APIVersion(api_versions.DEFAULT_API_VERSION)
 
@@ -274,6 +276,12 @@ def capsule_list(request, limit=None, marker=None, sort_key=None,
 
 def capsule_show(request, id):
     return zunclient(request).capsules.get(id)
+
+
+def capsule_create(request, **kwargs):
+    args, run = _cleanup_params(CAPSULE_CREATE_ATTRS, True, **kwargs)
+    args["template"] = template_format.parse(args["template"])
+    return zunclient(request).capsules.create(**args)
 
 
 def image_list(request, limit=None, marker=None, sort_key=None,

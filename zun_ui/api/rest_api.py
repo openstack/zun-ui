@@ -178,6 +178,17 @@ class Capsules(generic.View):
         result = client.capsule_list(request)
         return {'items': [i.to_dict() for i in result]}
 
+    @rest_utils.ajax(data_required=True)
+    def post(self, request):
+        """Create a new Capsule.
+
+        Returns the new Capsule object on success.
+        """
+        new_capsule = client.capsule_create(request, **request.DATA)
+        return rest_utils.CreatedResponse(
+            '/api/zun/capsules/%s' % new_capsule.uuid,
+            new_capsule.to_dict())
+
 
 @urls.register
 class Capsule(generic.View):

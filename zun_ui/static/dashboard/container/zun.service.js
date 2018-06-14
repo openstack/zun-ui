@@ -55,6 +55,7 @@
       getZunAvailabilityZones: getZunAvailabilityZones,
       getCapsules: getCapsules,
       getCapsule: getCapsule,
+      createCapsule: createCapsule,
       pullImage: pullImage,
       getImages: getImages,
       deleteImage: deleteImage,
@@ -212,6 +213,11 @@
     function getCapsule(id) {
       var msg = gettext('Unable to retrieve the Capsule.');
       return apiService.get(capsulesPath + id).error(error(msg));
+    }
+
+    function createCapsule(params) {
+      var msg = gettext('Unable to create Capsule.');
+      return apiService.post(capsulesPath, params).error(error(msg));
     }
 
     ////////////
