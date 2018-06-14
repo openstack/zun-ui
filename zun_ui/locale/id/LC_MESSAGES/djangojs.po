@@ -3,11 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-06-07 01:42+0000\n"
+"POT-Creation-Date: 2018-06-13 03:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-05-14 02:00+0000\n"
+"PO-Revision-Date: 2018-06-13 02:30+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -78,8 +78,14 @@ msgstr ""
 msgid "An arbitrary human-readable name."
 msgstr "Nama human-readable secara acak."
 
+msgid "Auto Heal"
+msgstr "Pemulihan Otomatis"
+
 msgid "Auto Remove"
 msgstr "Auto Remove"
+
+msgid "Availability Zone"
+msgstr "Availability Zone (zona Ketersediaan)"
 
 msgid "Available Scheduler Hints"
 msgstr "Petunjuk Penjadwal  yang tersedia"
@@ -133,6 +139,10 @@ msgstr "Kontainer %s berhasil dibuat."
 #, python-format
 msgid "Container %s was successfully paused."
 msgstr "Kontainer %s berhasil dihentikan sementara."
+
+#, python-format
+msgid "Container %s was successfully rebuilt."
+msgstr "Container %s berhasil dibangun kembali."
 
 #, python-format
 msgid "Container %s was successfully restarted."
@@ -217,6 +227,9 @@ msgstr "Direct Physical (fisik langsung)"
 msgid "Direction"
 msgstr "Direction"
 
+msgid "Disk"
+msgstr "Disk"
+
 msgid "Docker Hub"
 msgstr "Docker Hub"
 
@@ -228,6 +241,9 @@ msgstr "Down"
 
 msgid "Enable Interactive Mode"
 msgstr "Aktifkan Mode Interaktif"
+
+msgid "Enable auto heal"
+msgstr "Aktifkan pemulihan otomatis"
 
 msgid "Enable interactive mode"
 msgstr "Aktifkan mode interaktif"
@@ -521,6 +537,12 @@ msgstr "Pull Image"
 msgid "Re-order items using drag and drop"
 msgstr "Re-order item menggunakan drag and drop (seret dan lepas)"
 
+msgid "Rebuild"
+msgstr "Membangun kembali"
+
+msgid "Rebuild Container"
+msgstr "Membangun kembali Container"
+
 msgid "Refresh"
 msgstr "Menyegarkan"
 
@@ -580,8 +602,14 @@ msgstr "Segmentation ID"
 msgid "Select an item from Available items below"
 msgstr "Pilih item dari item yang Tersedia di bawah ini"
 
+msgid "Select availability zone."
+msgstr "Pilih zona ketersediaan."
+
 msgid "Select available Cinder volume"
 msgstr "Pilih volume Cinder yang tersedia"
+
+msgid "Select image driver for changing image."
+msgstr "Pilih driver image untuk mengubah image."
 
 msgid "Select networks from those listed below."
 msgstr "Pilih jaringan dari yang tercantum di bawah ini."
@@ -652,6 +680,9 @@ msgid "Specify a shutdown timeout in seconds. (default: 10)"
 msgstr ""
 "Tentukan shutdown timeout (waktu mati) dalam hitungan detik. (default: 10)"
 
+msgid "Specify an image to change."
+msgstr "Tentukan image untuk diubah."
+
 msgid "Specify mount point of the volume on the container."
 msgstr "Tentukan titik mount volume pada kontainer."
 
@@ -694,14 +725,23 @@ msgstr "Tag"
 msgid "Task State"
 msgstr "Task State"
 
+msgid "The availability zone of the container."
+msgstr "Zona ketersediaan container."
+
 msgid "The command to execute."
 msgstr "Perintah untuk dijalankan."
 
 msgid "The container memory size in MiB."
 msgstr "Ukuran memori kontainer dalam MiB."
 
+msgid "The disk size in GiB for per container."
+msgstr "Ukuran disk dalam GiB untuk per kontainer."
+
 msgid "The environment variables in comma separated KEY=VALUE pairs"
 msgstr "Variabel lingkungan dalam koma yang dipisahkan pasangan KEY=VALUE."
+
+msgid "The flag of healing non-existent container in docker."
+msgstr "Bendera (flag) pemulihan non-existent container di docker"
 
 msgid "The host name of this container."
 msgstr "Nama host dari kontainer ini."
@@ -718,6 +758,9 @@ msgid ""
 msgstr ""
 "Port logis juga mendefinisikan alamat MAC dan alamat IP yang akan ditugaskan "
 "(assigned) ke antarmuka yang dicolokkan (plugged) ke dalamnya."
+
+msgid "The number of virtual CPUs."
+msgstr "Jumlah CPU virtual."
 
 msgid "The number of virtual cpu for this container."
 msgstr "Jumlah cpu virtual untuk kontainer ini."
@@ -840,6 +883,9 @@ msgstr "Tidak dapat menjeda Penampung"
 msgid "Unable to pull Image."
 msgstr "Tidak bisa menarik Image."
 
+msgid "Unable to rebuild Container."
+msgstr "Tidak dapat membangun kembali Container."
+
 msgid "Unable to resize console."
 msgstr "Tidak dapat mengubah ukuran konsol."
 
@@ -854,6 +900,9 @@ msgstr "Tidak dapat mengambil Kontainer."
 
 msgid "Unable to retrieve the Images."
 msgstr "Tidak dapat mengambil Images."
+
+msgid "Unable to retrieve the Zun Availability Zones."
+msgstr "Tidak dapat mengambil Zun Availability Zones."
 
 msgid "Unable to send kill signal."
 msgstr "Tidak dapat mengirim sinyal mematikan."
