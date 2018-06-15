@@ -33,6 +33,7 @@
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container.images.actions.create.service',
+    'horizon.dashboard.container.images.actions.delete.service',
     'horizon.dashboard.container.images.resourceType'
   ];
 
@@ -40,6 +41,7 @@
     registry,
     gettext,
     createImageService,
+    deleteImageService,
     resourceType
   ) {
     var imagesResourceType = registry.getResourceType(resourceType);
@@ -51,6 +53,15 @@
         template: {
           type: 'create',
           text: gettext('Pull Image')
+        }
+      });
+
+    imagesResourceType.itemActions
+      .append({
+        id: 'deleteImageAction',
+        service: deleteImageService,
+        template: {
+          text: gettext('Delete Image')
         }
       });
   }
