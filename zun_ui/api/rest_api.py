@@ -188,3 +188,19 @@ class Images(generic.View):
         return rest_utils.CreatedResponse(
             '/api/zun/image/%s' % new_image.uuid,
             new_image.to_dict())
+
+
+@urls.register
+class Hosts(generic.View):
+    """API for Zun Hosts"""
+    url_regex = r'zun/hosts/$'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get a list of the Hosts for admin users.
+
+        The returned result is an object with property 'items' and each
+        item under this is a HOst.
+        """
+        result = client.host_list(request)
+        return {'items': [change_to_id(i.to_dict()) for i in result]}

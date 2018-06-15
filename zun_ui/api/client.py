@@ -267,11 +267,18 @@ def availability_zone_list(request):
 
 
 def image_list(request, limit=None, marker=None, sort_key=None,
-               sort_dir=None, detail=True):
+               sort_dir=None, detail=False):
+    # FIXME(shu-mutou): change "detail" param to True, if it enabled.
     return zunclient(request).images.list(limit, marker, sort_key,
-                                          sort_dir, False)
+                                          sort_dir, detail)
 
 
 def image_create(request, **kwargs):
     args, run = _cleanup_params(IMAGE_PULL_ATTRS, True, **kwargs)
     return zunclient(request).images.create(**args)
+
+
+def host_list(request, limit=None, marker=None, sort_key=None,
+              sort_dir=None, detail=False):
+    return zunclient(request).hosts.list(limit, marker, sort_key,
+                                         sort_dir, detail)
