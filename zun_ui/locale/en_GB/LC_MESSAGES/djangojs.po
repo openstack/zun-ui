@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-06-07 01:42+0000\n"
+"POT-Creation-Date: 2018-06-19 03:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-07 09:03+0000\n"
+"PO-Revision-Date: 2018-06-18 07:14+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -617,6 +617,9 @@ msgstr "Select availability zone."
 msgid "Select available Cinder volume"
 msgstr "Select available Cinder volume"
 
+msgid "Select host that stores the image."
+msgstr "Select host that stores the image."
+
 msgid "Select image driver for changing image."
 msgstr "Select image driver for changing image."
 
@@ -906,6 +909,9 @@ msgstr "Unable to retrieve the Container."
 
 msgid "Unable to retrieve the Containers."
 msgstr "Unable to retrieve the Containers."
+
+msgid "Unable to retrieve the Hosts."
+msgstr "Unable to retrieve the Hosts."
 
 msgid "Unable to retrieve the Images."
 msgstr "Unable to retrieve the Images."
