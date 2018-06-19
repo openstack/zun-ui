@@ -77,16 +77,6 @@
     // model
     var model;
 
-    // get hosts for zun
-    zun.getHosts().then(onGetZunHosts);
-    function onGetZunHosts(response) {
-      var hs = [];
-      response.data.items.forEach(function (host) {
-        hs.push({value: host.id, name: host.hostname});
-      });
-      push.apply(hosts, hs);
-    }
-
     var message = {
       success: gettext('Container %s was successfully restarted.')
     };
@@ -104,6 +94,15 @@
     // include this function in your service
     // if you plan to emit events to the parent controller
     function initAction() {
+      // get hosts for zun
+      zun.getHosts().then(onGetZunHosts);
+      function onGetZunHosts(response) {
+        var hs = [];
+        response.data.items.forEach(function (host) {
+          hs.push({value: host.id, name: host.hostname});
+        });
+        push.apply(hosts, hs);
+      }
     }
 
     function allowed() {
