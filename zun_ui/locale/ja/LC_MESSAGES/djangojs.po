@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-06-07 01:42+0000\n"
+"POT-Creation-Date: 2018-06-22 03:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-05-28 03:21+0000\n"
+"PO-Revision-Date: 2018-06-22 06:09+0000\n"
 "Last-Translator: Shu Muto <shu.mutow@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -80,8 +80,14 @@ msgstr ""
 msgid "An arbitrary human-readable name."
 msgstr "人間が読むことができる任意の名前。"
 
+msgid "Auto Heal"
+msgstr "自動修復"
+
 msgid "Auto Remove"
 msgstr "自動削除"
+
+msgid "Availability Zone"
+msgstr "アベイラビリティーゾーン"
 
 msgid "Available Scheduler Hints"
 msgstr "有効なスケジューラーヒント"
@@ -91,6 +97,18 @@ msgstr "Bare Metal"
 
 msgid "CPU"
 msgstr "CPU"
+
+msgid "Capsule"
+msgstr "カプセル"
+
+msgid "Capsule ID"
+msgstr "カプセル ID"
+
+msgid "Capsule Version ID"
+msgstr "カプセルバージョン ID"
+
+msgid "Capsules"
+msgstr "カプセル"
 
 #, python-format
 msgid ""
@@ -116,6 +134,10 @@ msgid "Confirm Delete After Stop Container"
 msgid_plural "Confirm Delete After Stop Containers"
 msgstr[0] "コンテナーの停止と削除の確認"
 
+msgid "Confirm Delete Capsule"
+msgid_plural "Confirm Delete Capsules"
+msgstr[0] "カプセルの削除の確認"
+
 msgid "Confirm Delete Container"
 msgid_plural "Confirm Delete Containers"
 msgstr[0] "コンテナーの削除の確認"
@@ -137,6 +159,10 @@ msgstr "コンテナー %s が正常に作成されました。"
 #, python-format
 msgid "Container %s was successfully paused."
 msgstr "コンテナー %s が正常に一時停止されました。"
+
+#, python-format
+msgid "Container %s was successfully rebuilt."
+msgstr "コンテナー %s が正常に再構築されました。"
 
 #, python-format
 msgid "Container %s was successfully restarted."
@@ -161,6 +187,9 @@ msgstr "コンテナー %s が正常に更新されました。"
 msgid "Container Name"
 msgstr "コンテナー名"
 
+msgid "Container UUIDs"
+msgstr "コンテナー UUID 一覧"
+
 msgid "Containers"
 msgstr "コンテナー"
 
@@ -170,11 +199,21 @@ msgstr "コンテナーによりインターフェースがポートに接続さ
 msgid "Create"
 msgstr "作成"
 
+msgid "Create Capsule"
+msgstr "カプセル作成"
+
 msgid "Create Container"
 msgstr "コンテナーの作成"
 
+msgid "Created"
+msgstr "作成時刻"
+
 msgid "Delete"
 msgstr "削除"
+
+msgid "Delete Capsule"
+msgid_plural "Delete Capsules"
+msgstr[0] "カプセルの削除"
 
 msgid "Delete Container"
 msgid_plural "Delete Containers"
@@ -190,6 +229,18 @@ msgstr[0] "コンテナーの強制削除"
 
 msgid "Delete Containers"
 msgstr "コンテナーの削除"
+
+msgid "Delete Image"
+msgstr "イメージの削除"
+
+#, python-format
+msgid "Delete Image %s"
+msgstr "イメージ %s の削除"
+
+#, python-format
+msgid "Deleted Capsule: %s."
+msgid_plural "Deleted Capsules: %s."
+msgstr[0] "カプセル %s を削除しました。"
 
 #, python-format
 msgid "Deleted Container After Stop: %s."
@@ -221,6 +272,9 @@ msgstr "Direct Physical"
 msgid "Direction"
 msgstr "方向"
 
+msgid "Disk"
+msgstr "ディスク"
+
 msgid "Docker Hub"
 msgstr "Docker Hub"
 
@@ -232,6 +286,9 @@ msgstr "停止中"
 
 msgid "Enable Interactive Mode"
 msgstr "インタラクティブモードの有効化"
+
+msgid "Enable auto heal"
+msgstr "自動修復を有効にします。"
 
 msgid "Enable interactive mode"
 msgstr "インタラクティブモードの有効化"
@@ -524,6 +581,12 @@ msgstr "イメージの取得"
 msgid "Re-order items using drag and drop"
 msgstr "順番を並べ替えるには、アイテムをドラッグ＆ドロップしてください。"
 
+msgid "Rebuild"
+msgstr "再構築"
+
+msgid "Rebuild Container"
+msgstr "コンテナーの再構築"
+
 msgid "Refresh"
 msgstr "最新表示"
 
@@ -532,6 +595,10 @@ msgstr "接続相手"
 
 msgid "Remove container"
 msgstr "コンテナ―を削除"
+
+#, python-format
+msgid "Request to create capsule %s has been accepted."
+msgstr "カプセル %s の作成リクエストは、正常に受け付けられました。"
 
 msgid "Restart"
 msgstr "再起動"
@@ -583,8 +650,20 @@ msgstr "セグメント ID"
 msgid "Select an item from Available items below"
 msgstr "以下の利用可能なアイテムから 1 つ選択してください。"
 
+msgid "Select availability zone."
+msgstr "アベイラビリティーゾーンを選択してください。"
+
 msgid "Select available Cinder volume"
 msgstr "利用可能な Cinder ボリュームを選択してください。"
+
+msgid "Select host that stores the image."
+msgstr "イメージを保存するホストを選択してください。"
+
+msgid "Select host to remove the image from."
+msgstr "イメージを削除するホストを選択してください。"
+
+msgid "Select image driver for changing image."
+msgstr "変更するイメージのイメージドライバを選択してください。"
 
 msgid "Select networks from those listed below."
 msgstr "以下のリストからネットワークを選択してください。"
@@ -655,6 +734,9 @@ msgstr "スペック"
 msgid "Specify a shutdown timeout in seconds. (default: 10)"
 msgstr "停止するまでの秒数を指定してください。（デフォルト値: 10）"
 
+msgid "Specify an image to change."
+msgstr "変更するイメージを指定してください。"
+
 msgid "Specify mount point of the volume on the container."
 msgstr "コンテナー上でのボリュームのマウントポイントを指定してください。"
 
@@ -697,14 +779,26 @@ msgstr "タグ"
 msgid "Task State"
 msgstr "タスク状態"
 
+msgid "Template"
+msgstr "テンプレート"
+
+msgid "The availability zone of the container."
+msgstr "コンテナーのアベイラビリティーゾーン。"
+
 msgid "The command to execute."
 msgstr "実行するコマンド"
 
 msgid "The container memory size in MiB."
 msgstr "MiB 単位のコンテナーのメモリーサイズ。"
 
+msgid "The disk size in GiB for per container."
+msgstr "コンテナー毎のギガバイト (GiB) 単位のディスクサイズ。"
+
 msgid "The environment variables in comma separated KEY=VALUE pairs"
 msgstr "環境変数をコンマ区切りの KEY=VALUE ペアで指定してください。"
+
+msgid "The flag of healing non-existent container in docker."
+msgstr "Docker に存在しないコンテナーを修復します。"
 
 msgid "The host name of this container."
 msgstr "このコンテナーのホスト名。"
@@ -721,6 +815,9 @@ msgid ""
 msgstr ""
 "論理ポートは、それらに結線されるインターフェースに割り当てられる MAC アドレス"
 "と IP アドレスも定義します。"
+
+msgid "The number of virtual CPUs."
+msgstr "仮想 CPU の数。"
 
 msgid "The number of virtual cpu for this container."
 msgstr "このコンテナーの仮想 CPU の数。"
@@ -796,8 +893,16 @@ msgstr "種別"
 msgid "Unable to attach network."
 msgstr "ネットワークを接続できません。"
 
+msgid "Unable to create Capsule."
+msgstr "カプセルを作成できません。"
+
 msgid "Unable to create Container."
 msgstr "コンテナーを作成できません。"
+
+#, python-format
+msgid "Unable to delete Capsule: %s."
+msgid_plural "Unable to delete Capsules: %s."
+msgstr[0] "カプセルを削除できません: %s"
 
 #, python-format
 msgid "Unable to delete Container after stopping: %s."
@@ -819,11 +924,18 @@ msgid "Unable to delete forcely the Container with id: %(id)s"
 msgstr "ID %(id)s のコンテナーを強制削除できません。"
 
 #, python-format
+msgid "Unable to delete the Capsule with id: %(id)s"
+msgstr "ID %(id)s のカプセルを削除できません。"
+
+#, python-format
 msgid "Unable to delete the Container with id: %(id)s"
 msgstr "ID %(id)s のコンテナーを削除できません。"
 
 msgid "Unable to delete the Containers."
 msgstr "コンテナーの一覧を取得できません。"
+
+msgid "Unable to delete the Image."
+msgstr "イメージを削除できません。"
 
 msgid "Unable to detach network."
 msgstr "ネットワークを切断できません。"
@@ -840,11 +952,20 @@ msgstr "コンテナーを一時停止できません。"
 msgid "Unable to pull Image."
 msgstr "イメージを取得できません。"
 
+msgid "Unable to rebuild Container."
+msgstr "コンテナーを再構築できません。"
+
 msgid "Unable to resize console."
 msgstr "コンソールをリサイズできません。"
 
 msgid "Unable to restart Container."
 msgstr "コンテナーを再起動できません。"
+
+msgid "Unable to retrieve the Capsule."
+msgstr "カプセルを取得できません。"
+
+msgid "Unable to retrieve the Capsules."
+msgstr "カプセルの一覧を取得できません。"
 
 msgid "Unable to retrieve the Container."
 msgstr "コンテナーの情報を取得できません。"
@@ -852,8 +973,14 @@ msgstr "コンテナーの情報を取得できません。"
 msgid "Unable to retrieve the Containers."
 msgstr "コンテナーの一覧を取得できません。"
 
+msgid "Unable to retrieve the Hosts."
+msgstr "ホストの一覧を取得できません。"
+
 msgid "Unable to retrieve the Images."
 msgstr "イメージ一覧を取得できません。"
+
+msgid "Unable to retrieve the Zun Availability Zones."
+msgstr "Zun のアベイラビリティーゾーンを取得できません。"
 
 msgid "Unable to send kill signal."
 msgstr "停止シグナルを送信できません。"
@@ -890,6 +1017,12 @@ msgstr "更新"
 msgid "Update Container"
 msgstr "コンテナーの更新"
 
+msgid "Updated"
+msgstr "更新時刻"
+
+msgid "User ID"
+msgstr "ユーザー ID"
+
 msgid ""
 "Users can add additional rules to an existing security group\n"
 "      to further define the access options for a container.\n"
@@ -907,6 +1040,9 @@ msgstr "仮想 NIC の種別"
 
 msgid "Volumes"
 msgstr "ボリューム"
+
+msgid "Volumes Info"
+msgstr "ボリューム情報"
 
 msgid ""
 "When IP addresses are associated to a port, this also implies the port is "
@@ -952,6 +1088,10 @@ msgid "Yes"
 msgstr "はい"
 
 #, python-format
+msgid "You are not allowed to delete capsules: %s"
+msgstr "カプセルの削除は許可されていません: %s"
+
+#, python-format
 msgid "You are not allowed to delete container forcely: %s"
 msgstr "コンテナーの強制削除は許可されていません: %s"
 
@@ -971,6 +1111,17 @@ msgstr ""
 "左の列から右の列にアイテムを移動して、スケジューラーヒントを指定できます。"
 "キーを自分で指定してスケジューラーヒントを追加するには、「カスタム」 オプショ"
 "ンを使用してください。"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsule is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsules "
+"are not recoverable."
+msgstr[0] ""
+"\"%s\" を選択しました。選択内容を確認してください。削除されたカプセルは元に戻"
+"せません。"
 
 #, python-format
 msgid ""
