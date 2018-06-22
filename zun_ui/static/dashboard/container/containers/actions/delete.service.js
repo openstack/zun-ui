@@ -30,12 +30,14 @@
   deleteService.$inject = [
     '$location',
     '$q',
+    '$rootScope',
     'horizon.app.core.openstack-service-api.zun',
     'horizon.app.core.openstack-service-api.policy',
     'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
     'horizon.framework.widgets.modal.deleteModalService',
+    'horizon.framework.widgets.table.events',
     'horizon.framework.widgets.toast.service',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.dashboard.container.containers.events',
@@ -43,8 +45,8 @@
   ];
 
   function deleteService(
-    $location, $q, zun, policy, actionResult, gettext, $qExtensions, deleteModal,
-    toast, resourceType, events, validStates
+    $location, $q, $rootScope, zun, policy, actionResult, gettext, $qExtensions, deleteModal,
+    tableEvents, toast, resourceType, events, validStates
   ) {
     var scope;
     var context = {
@@ -137,6 +139,7 @@
           currentPath !== indexPath) {
         $location.path(indexPath);
       } else {
+        $rootScope.$broadcast(tableEvents.CLEAR_SELECTIONS);
         return result.result;
       }
     }
