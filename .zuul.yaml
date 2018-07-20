@@ -1,6 +1,8 @@
 - project:
     check:
       jobs:
+        - openstack-tox-py36:
+            voting: false
         - nodejs-npm-run-lint:
             vars:
               node_version: 4
