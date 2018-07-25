@@ -1,0 +1,51 @@
+---
+prelude: >
+    Various improvements, addition of functions, including addition of
+    container group (capsule) operation panel, were implemented.
+    For more details, please see the features section.
+features:
+  - >
+    [`blueprint capsule <https://blueprints.launchpad.net/zun-ui/+spec/capsule>`_]
+    Added capsule panel for user. This panel has CRUD operations for container
+    groups.
+  - >
+    [`blueprint add-image-delete <https://blueprints.launchpad.net/zun-ui/+spec/add-image-delete>`_]
+    Added delete action for image panel for admin.
+  - >
+    [`blueprint image-host <https://blueprints.launchpad.net/zun-ui/+spec/image-host>`_]
+    To clarify the host that has the image to be operated, `host` parameter was
+    added into image operation. This parameter is implemented in Zun UI too.
+  - >
+    [`blueprint rebuild-action <https://blueprints.launchpad.net/zun-ui/+spec/rebuild-action>`_]
+    Added rebuild action into containers panel as item action. User can rebuild
+    container with same or other image.
+  - >
+    New statuses for container, ``DELETING``, ``REBUILDING``, ``DEAD`` and
+    ``RESTARTING`` are added.
+  - >
+    New parameters for container, ``disk``, ``availablity_zone`` and ``auto_heal``
+    are added.
+  - >
+    The runtime option for container creation accepts as string.
+    Previously the runtime option was a drop down menu with only ``runc`` option.
+    User was not able to enter new runtimes configured by them.
+    To accept any string, the runtime option was changed to the field.
+upgrade:
+  - >
+    [`blueprint capsule <https://blueprints.launchpad.net/zun-ui/+spec/capsule>`_]
+    To enable capsule panel, copy
+    `zun-ui/zun_ui/enabled/_1332_project_container_capsules_panel.py` into
+    horizon's `enabled` directory.
+fixes:
+  - >
+    [`bug/1777545 <https://bugs.launchpad.net/zun-ui/+bug/1777545>`_]
+    Fixed issue the deleted item is selected again with batch delete.
+    Item selections on table view for batch actions are not cleared
+    after execution of actions. To ensure to clear item selections,
+    `hzTable:clearSelection` event is emitted.
+  - >
+    [`bug/1746706 <https://bugs.launchpad.net/zun-ui/+bug/1746706>`_]
+    Reproduced navigations when refreshing details view. Previously the fix
+    for [`bug/1681627 <https://bugs.launchpad.net/horizon/+bug/1681627>`_]
+    allowed us to reload or directly open Angular-based detail page (ngdetail),
+    but the navigation menu was not reproduced correctly.
