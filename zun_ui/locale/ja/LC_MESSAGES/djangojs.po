@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-04-18 08:17+0000\n"
+"POT-Creation-Date: 2018-05-15 23:45+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-06 07:38+0000\n"
+"PO-Revision-Date: 2018-07-30 12:47+0000\n"
 "Last-Translator: Shu Muto <shu.mutow@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -49,6 +49,9 @@ msgstr ""
 
 msgid "Always"
 msgstr "いつも"
+
+msgid "Always restart"
+msgstr "常時再起動"
 
 msgid "Always: Always pull the image from repository."
 msgstr "いつも: イメージをリポジトリから毎回取得します。"
@@ -247,6 +250,9 @@ msgstr "既存のスケジューラーヒント"
 msgid "Exit Code"
 msgstr "終了コード"
 
+msgid "Exit Policy"
+msgstr "終了ポリシー"
+
 msgid "External Network"
 msgstr "外部ネットワーク"
 
@@ -311,6 +317,16 @@ msgstr "イメージ取得ポリシー"
 msgid "Images"
 msgstr "イメージ"
 
+msgid ""
+"In this dialog, specify the security groups for the container.\n"
+"      Note that the security groups will only apply for ports that\n"
+"      will be created from the allocated networks, but will not apply\n"
+"      for the allocated ports that are pre-existing."
+msgstr ""
+"このダイアログでは、コンテナ―のセキュリティーグループを指定します。セキュリ"
+"ティーグループは、割り当てられたネットワークから作成されるポートにのみ適用さ"
+"れ、既存のポートには割り当てられないことに注意してください。"
+
 msgid "Info"
 msgstr "情報"
 
@@ -372,6 +388,14 @@ msgstr "コンテナーのイメージの名前または ID。"
 msgid "Network"
 msgstr "ネットワーク"
 
+#, python-format
+msgid "Network %s was successfully attached to container %s."
+msgstr "ネットワーク %s はコンテナー %s に正常に接続されました。"
+
+#, python-format
+msgid "Network %s was successfully detached from container %s."
+msgstr "ネットワーク %s はコンテナー %s から正常に切断されました。"
+
 msgid "Network ID"
 msgstr "ネットワーク ID"
 
@@ -420,6 +444,9 @@ msgstr "コンテナーの一時停止"
 
 msgid "Physical Network"
 msgstr "物理ネットワーク"
+
+msgid "Policy to apply when a container exits."
+msgstr "コンテナーが終了するときに適用するポリシー。"
 
 msgid "Ports"
 msgstr "ポート"
@@ -477,6 +504,9 @@ msgstr "最新表示"
 msgid "Remote"
 msgstr "接続相手"
 
+msgid "Remove container"
+msgstr "コンテナ―を削除"
+
 msgid "Restart"
 msgstr "再起動"
 
@@ -485,6 +515,15 @@ msgstr "コンテナーの再起動"
 
 msgid "Restart Policy"
 msgstr "再起動ポリシー"
+
+msgid "Restart if stopped"
+msgstr "停止時に再起動"
+
+msgid "Restart on failure"
+msgstr "失敗時に再起動"
+
+msgid "Retry times for 'Restart on failure' policy."
+msgstr "「失敗時に再起動」ポリシーの試行回数"
 
 msgid "Runtime"
 msgstr "ランタイム"
@@ -501,6 +540,13 @@ msgstr ""
 
 msgid "Security Groups"
 msgstr "セキュリティグループ"
+
+msgid ""
+"Security groups define a set of IP filter rules that determine\n"
+"      how network traffic flows to and from a container."
+msgstr ""
+"セキュリティーグループは、コンテナ―に出入りするネットワークトラフィックをどの"
+"ように扱うかを決める IP フィルタールールの集合体です。"
 
 msgid "Segmentation ID"
 msgstr "セグメント ID"
@@ -646,6 +692,9 @@ msgid ""
 "the container."
 msgstr "コンテナーを開始する前にイメージを取得すべきかを決定するポリシーです。"
 
+msgid "The runtime to create container with."
+msgstr "コンテナーを作成するランタイムです。"
+
 msgid "The runtime to use for this container. Default: \"runc\""
 msgstr "このコンテナーに使用するランタイムを指定します。デフォルト: \"runc\""
 
@@ -687,6 +736,15 @@ msgstr ""
 "い。"
 
 msgid ""
+"To create new security groups, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then click <b>Create Security Group</b>."
+msgstr ""
+"新しいセキュリティーグループを作成するには、<b>ネットワーク | セキュリティー"
+"グループ</b>画面に移動して、<b>セキュリティーグループの作成</b>をクリックしま"
+"す。"
+
+msgid ""
 "To mount existing available Cinder volume, select type \"Available Cinder "
 "Volume\"\n"
 "    and select source from the pull-down list."
@@ -696,6 +754,9 @@ msgstr ""
 
 msgid "Type"
 msgstr "種別"
+
+msgid "Unable to attach network."
+msgstr "ネットワークを接続できません。"
 
 msgid "Unable to create Container."
 msgstr "コンテナーを作成できません。"
@@ -725,6 +786,9 @@ msgstr "ID %(id)s のコンテナーを削除できません。"
 
 msgid "Unable to delete the Containers."
 msgstr "コンテナーの一覧を取得できません。"
+
+msgid "Unable to detach network."
+msgstr "ネットワークを切断できません。"
 
 msgid "Unable to execute the command."
 msgstr "コマンドを実行できません。"
@@ -783,6 +847,18 @@ msgstr "更新"
 
 msgid "Update Container"
 msgstr "コンテナーの更新"
+
+msgid ""
+"Users can add additional rules to an existing security group\n"
+"      to further define the access options for a container.\n"
+"      To create additional rules, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then find the security group and click <b>Manage Rules</b>."
+msgstr ""
+"ユーザーは、既存のセキュリティーグループにルールを追加して、コンテナ―へのアク"
+"セス設定を行うことができます。追加のルールを作成するには、<b>ネットワーク | "
+"セキュリティーグループ</b>画面で追加先のセキュリティーグループを見つけて、<b>"
+"ルールの管理</b>をクリックします。"
 
 msgid "VNIC type"
 msgstr "仮想 NIC の種別"
