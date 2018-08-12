@@ -1,14 +1,15 @@
+# Frank Kloeker <eumel@arcor.de>, 2018. #zanata
 # Robert Simai <robert.simai@suse.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-06-12 03:56+0000\n"
+"POT-Creation-Date: 2018-08-09 10:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-11 09:37+0000\n"
-"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
+"PO-Revision-Date: 2018-08-11 06:12+0000\n"
+"Last-Translator: Frank Kloeker <eumel@arcor.de>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -74,6 +75,25 @@ msgstr "Bare Metal"
 msgid "CPU"
 msgstr "CPU"
 
+msgid "Capsule"
+msgstr "Kapsel"
+
+msgid "Capsule ID"
+msgstr "Kapsel ID"
+
+msgid "Capsule Version ID"
+msgstr "Kapsel Versions-ID"
+
+msgid "Capsules"
+msgstr "Kapseln"
+
+#, python-format
+msgid ""
+"Changes security groups %(sgs)s for port %(port)s was successfully submitted."
+msgstr ""
+"Änderung der Securitygruppen %(sgs)s für Port %(port)s wurde erfolgreich "
+"eingereicht."
+
 msgid "Command"
 msgstr "Befehl"
 
@@ -88,6 +108,11 @@ msgid "Confirm Delete After Stop Container"
 msgid_plural "Confirm Delete After Stop Containers"
 msgstr[0] "Container nach Stoppen löschen bestätigen"
 msgstr[1] "Container nach Stoppen löschen bestätigen"
+
+msgid "Confirm Delete Capsule"
+msgid_plural "Confirm Delete Capsules"
+msgstr[0] "Bestätigen Sie das Löschen der Kapsel"
+msgstr[1] "Bestätigen Sie das Löschen der Kapseln"
 
 msgid "Confirm Delete Container"
 msgid_plural "Confirm Delete Containers"
@@ -137,17 +162,31 @@ msgstr "Container %s wurde erfolgreich aktualisiert."
 msgid "Container Name"
 msgstr "Containername"
 
+msgid "Container UUIDs"
+msgstr "Container UUIDs:"
+
 msgid "Containers"
 msgstr "Container"
 
 msgid "Create"
 msgstr "Erstellen"
 
+msgid "Create Capsule"
+msgstr "Kapsel erstellen"
+
 msgid "Create Container"
 msgstr "Container erstellen"
 
+msgid "Created"
+msgstr "Erstellt"
+
 msgid "Delete"
 msgstr "Löschen"
+
+msgid "Delete Capsule"
+msgid_plural "Delete Capsules"
+msgstr[0] "Lösche Kapsel"
+msgstr[1] "Lösche Kapseln"
 
 msgid "Delete Container"
 msgid_plural "Delete Containers"
@@ -166,6 +205,12 @@ msgstr[1] "Container gewaltsam löschen"
 
 msgid "Delete Containers"
 msgstr "Container löschen"
+
+#, python-format
+msgid "Deleted Capsule: %s."
+msgid_plural "Deleted Capsules: %s."
+msgstr[0] "Gelöschte Kapsel: %s."
+msgstr[1] "Gelöschte Kapseln: %s."
 
 #, python-format
 msgid "Deleted Container After Stop: %s."
@@ -332,6 +377,14 @@ msgstr "Name oder ID des Containerabbilds"
 msgid "Network"
 msgstr "Netzwerk"
 
+#, python-format
+msgid "Network %s was successfully attached to container %s."
+msgstr "Netzwerk %s wurde erfolgreich an den Container %s angehangen."
+
+#, python-format
+msgid "Network %s was successfully detached from container %s."
+msgstr "Netzwerk %s wurde erfolgreich vom Container %s abgehangen."
+
 msgid "Network characteristics"
 msgstr "Netzwerkeigenschaften"
 
@@ -353,6 +406,9 @@ msgstr "Nein"
 msgid "Output"
 msgstr "Ausgabe"
 
+msgid "Overview"
+msgstr "Übersicht"
+
 msgid "Pause Container"
 msgstr "Container pausieren"
 
@@ -364,6 +420,9 @@ msgstr "Port"
 
 msgid "Ports"
 msgstr "Ports"
+
+msgid "Project ID"
+msgstr "Projekt-ID"
 
 msgid "Pull"
 msgstr "Ziehen"
@@ -385,6 +444,10 @@ msgstr "Aktualisieren"
 
 msgid "Remove container"
 msgstr "Container entfernen"
+
+#, python-format
+msgid "Request to create capsule %s has been accepted."
+msgstr "Die Anfrage zum Erstellen der Kapsel %s wurde akzeptiert."
 
 msgid "Restart"
 msgstr "Neustart"
@@ -471,6 +534,9 @@ msgstr "Größe (GB)"
 msgid "Source"
 msgstr "Quelle"
 
+msgid "Spec"
+msgstr "Spezifikation"
+
 msgid "Specify a shutdown timeout in seconds. (default: 10)"
 msgstr ""
 "Geben Sie ein Zeitlimit für das Herunterfahren in Sekunden an. (Standard: 10)"
@@ -516,6 +582,9 @@ msgstr "Zugewiesene Subnetze"
 
 msgid "Task State"
 msgstr "Auftragsstatus"
+
+msgid "Template"
+msgstr "Vorlage"
 
 msgid "The availability zone of the container."
 msgstr "Verfügbarkeitszone des Containers."
@@ -596,8 +665,17 @@ msgstr "Typ"
 msgid "Unable to attach network."
 msgstr "Netzwerk kann nicht hinzugefügt werden."
 
+msgid "Unable to create Capsule."
+msgstr "Konnte Kapsel nicht erstellen."
+
 msgid "Unable to create Container."
 msgstr "Container kann nicht erstellt werden."
+
+#, python-format
+msgid "Unable to delete Capsule: %s."
+msgid_plural "Unable to delete Capsules: %s."
+msgstr[0] "Konnte Kapsel nicht löschen: %s."
+msgstr[1] "Konnte Kapseln nicht löschen: %s."
 
 #, python-format
 msgid "Unable to delete Container after stopping: %s."
@@ -622,11 +700,18 @@ msgid "Unable to delete forcely the Container with id: %(id)s"
 msgstr "Löschen des Containers mit ID  %(id)s konnte nicht erzwungen werden"
 
 #, python-format
+msgid "Unable to delete the Capsule with id: %(id)s"
+msgstr "Konnte Kapsel mit ID %(id)s nicht löschen"
+
+#, python-format
 msgid "Unable to delete the Container with id: %(id)s"
 msgstr "Container mit der ID %(id)s kann nicht gelöscht werden"
 
 msgid "Unable to delete the Containers."
 msgstr "Container können nicht gelöscht werden."
+
+msgid "Unable to delete the Image."
+msgstr "Konnte Abbild nicht löschen."
 
 msgid "Unable to detach network."
 msgstr "Netzwerk kann nicht abgetrennt werden."
@@ -652,14 +737,26 @@ msgstr "Die Größe der Konsole kann nicht geändert werden."
 msgid "Unable to restart Container."
 msgstr "Der Container kann nicht neu gestartet werden."
 
+msgid "Unable to retrieve the Capsule."
+msgstr "Konnte Kapsel nicht abrufen."
+
+msgid "Unable to retrieve the Capsules."
+msgstr "Konnte Kapseln nicht abrufen."
+
 msgid "Unable to retrieve the Container."
 msgstr "Container kann nicht abgerufen werden."
 
 msgid "Unable to retrieve the Containers."
 msgstr "Container können nicht abgerufen werden."
 
+msgid "Unable to retrieve the Hosts."
+msgstr "Konnte Hosts nicht abrufen."
+
 msgid "Unable to retrieve the Images."
 msgstr "Abbilder können nicht abgerufen werden."
+
+msgid "Unable to retrieve the Zun Availability Zones."
+msgstr "Konnte die Zun-Verfügbarkeitszonen nicht abrufen."
 
 msgid "Unable to send kill signal."
 msgstr "Das Kill-Signal kann nicht gesendet werden."
@@ -698,8 +795,17 @@ msgstr "Aktualisieren"
 msgid "Update Container"
 msgstr "Container aktualisieren"
 
+msgid "Updated"
+msgstr "Aktualisiert"
+
+msgid "User ID"
+msgstr "Benutzer ID"
+
 msgid "Volumes"
 msgstr "Datenträger"
+
+msgid "Volumes Info"
+msgstr "Datenträgerinformationen"
 
 msgid "Workdir"
 msgstr "Arbeitsverzeichnis"
@@ -709,6 +815,10 @@ msgstr "Arbeitsverzeichnis"
 
 msgid "Yes"
 msgstr "Ja"
+
+#, python-format
+msgid "You are not allowed to delete capsules: %s"
+msgstr "Sie haben keine Berechtigung zum Löschen der Kapseln: %s"
 
 #, python-format
 msgid "You are not allowed to delete container forcely: %s"
@@ -721,6 +831,20 @@ msgstr "Sie dürfen keine Container löschen: %s"
 #, python-format
 msgid "You are not allowed to stop and delete container: %s"
 msgstr "Sie dürfen den Container nicht anhalten und löschen: %s"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsule is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsules "
+"are not recoverable."
+msgstr[0] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Gelöschtes "
+"Kapsel känn nicht wiederhergestellt werden."
+msgstr[1] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
+"Kapseln können nicht wiederhergestellt werden."
 
 #, python-format
 msgid ""

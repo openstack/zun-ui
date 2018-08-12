@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-27 01:11+0000\n"
+"POT-Creation-Date: 2018-08-09 10:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,12 +20,6 @@ msgstr "0.2.0"
 
 msgid "1.0.0"
 msgstr "1.0.0"
-
-msgid "1.0.0-15"
-msgstr "1.0.0-15"
-
-msgid "1.0.0-82"
-msgstr "1.0.0-82"
 
 msgid ""
 "Added Cloud Shell feature. See also [`Screen Shot <https://drive.google.com/"
