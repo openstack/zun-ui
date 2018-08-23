@@ -21,4 +21,4 @@ openstackdocstheme>=1.18.1 # Apache-2.0
 reno>=2.5.0 # Apache-2.0
 
 # Include horizon as test requirement
-http://tarballs.openstack.org/horizon/horizon-master.tar.gz#egg=horizon
+http://tarballs.openstack.org/horizon/horizon-stable-queens.tar.gz#egg=horizon
