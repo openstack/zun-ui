@@ -3,11 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-08-23 05:40+0000\n"
+"POT-Creation-Date: 2018-08-31 01:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-13 02:30+0000\n"
+"PO-Revision-Date: 2018-08-31 02:37+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -96,6 +96,18 @@ msgstr "Bare Metal"
 msgid "CPU"
 msgstr "CPU"
 
+msgid "Capsule"
+msgstr "Capsule"
+
+msgid "Capsule ID"
+msgstr "Capsule ID"
+
+msgid "Capsule Version ID"
+msgstr "Capsule Version ID"
+
+msgid "Capsules"
+msgstr "Capsule"
+
 #, python-format
 msgid ""
 "Changes security groups %(sgs)s for port %(port)s was successfully submitted."
@@ -117,6 +129,10 @@ msgstr "Perintah berhasil dijalankan di kontainer %s."
 msgid "Confirm Delete After Stop Container"
 msgid_plural "Confirm Delete After Stop Containers"
 msgstr[0] "Confirm Delete After Stop Container"
+
+msgid "Confirm Delete Capsule"
+msgid_plural "Confirm Delete Capsules"
+msgstr[0] "Confirm Delete Capsule"
 
 msgid "Confirm Delete Container"
 msgid_plural "Confirm Delete Containers"
@@ -167,6 +183,9 @@ msgstr "Kontainer %s berhasil diperbarui."
 msgid "Container Name"
 msgstr "Nama Kontainer"
 
+msgid "Container UUIDs"
+msgstr "Container UUIDs"
+
 msgid "Containers"
 msgstr "Kontainer"
 
@@ -176,11 +195,21 @@ msgstr "Kontainer menghubungkan antarmuka mereka ke port."
 msgid "Create"
 msgstr "Membuat"
 
+msgid "Create Capsule"
+msgstr "Create Capsule"
+
 msgid "Create Container"
 msgstr "Buat Kontainer"
 
+msgid "Created"
+msgstr "Created"
+
 msgid "Delete"
 msgstr "Menghapus"
+
+msgid "Delete Capsule"
+msgid_plural "Delete Capsules"
+msgstr[0] "Delete Capsule"
 
 msgid "Delete Container"
 msgid_plural "Delete Containers"
@@ -196,6 +225,18 @@ msgstr[0] "Delete Container Forcely"
 
 msgid "Delete Containers"
 msgstr "Hapus Kontainer"
+
+msgid "Delete Image"
+msgstr "Delete Image"
+
+#, python-format
+msgid "Delete Image %s"
+msgstr "Delete Image %s"
+
+#, python-format
+msgid "Deleted Capsule: %s."
+msgid_plural "Deleted Capsules: %s."
+msgstr[0] "Deleted Capsule: %s."
 
 #, python-format
 msgid "Deleted Container After Stop: %s."
@@ -552,6 +593,10 @@ msgstr "Remote"
 msgid "Remove container"
 msgstr "Hapus kontainer"
 
+#, python-format
+msgid "Request to create capsule %s has been accepted."
+msgstr "Permintaan untuk membuat capsule % s telah diterima."
+
 msgid "Restart"
 msgstr "Mengulang kembali"
 
@@ -607,6 +652,12 @@ msgstr "Pilih zona ketersediaan."
 
 msgid "Select available Cinder volume"
 msgstr "Pilih volume Cinder yang tersedia"
+
+msgid "Select host that stores the image."
+msgstr "Select host that stores the image."
+
+msgid "Select host to remove the image from."
+msgstr "Select host to remove the image from."
 
 msgid "Select image driver for changing image."
 msgstr "Pilih driver image untuk mengubah image."
@@ -725,6 +776,9 @@ msgstr "Tag"
 msgid "Task State"
 msgstr "Task State"
 
+msgid "Template"
+msgstr "Template"
+
 msgid "The availability zone of the container."
 msgstr "Zona ketersediaan container."
 
@@ -839,8 +893,16 @@ msgstr "Type"
 msgid "Unable to attach network."
 msgstr "Tidak dapat mencantelkan jaringan."
 
+msgid "Unable to create Capsule."
+msgstr "Tidak dapat membuat Capsule."
+
 msgid "Unable to create Container."
 msgstr "Tidak dapat membuat Kontainer."
+
+#, python-format
+msgid "Unable to delete Capsule: %s."
+msgid_plural "Unable to delete Capsules: %s."
+msgstr[0] "Unable to delete Capsule: %s."
 
 #, python-format
 msgid "Unable to delete Container after stopping: %s."
@@ -862,11 +924,18 @@ msgid "Unable to delete forcely the Container with id: %(id)s"
 msgstr "Tidak dapat menghapus secara paksa Kontainer dengan  id: %(id)s"
 
 #, python-format
+msgid "Unable to delete the Capsule with id: %(id)s"
+msgstr "Tidak dapat menghapus Capsule dengan id: %(id)s"
+
+#, python-format
 msgid "Unable to delete the Container with id: %(id)s"
 msgstr "Tidak dapat menghapus Kontainer dengan id: %(id)s"
 
 msgid "Unable to delete the Containers."
 msgstr "Tidak dapat menghapus Kontainer."
+
+msgid "Unable to delete the Image."
+msgstr "Tidak dapat menghapus Image."
 
 msgid "Unable to detach network."
 msgstr "Tidak dapat melepas jaringan."
@@ -892,11 +961,20 @@ msgstr "Tidak dapat mengubah ukuran konsol."
 msgid "Unable to restart Container."
 msgstr "Tidak dapat memulai ulang Kontainer."
 
+msgid "Unable to retrieve the Capsule."
+msgstr "Tidak dapat mengambil Capsule."
+
+msgid "Unable to retrieve the Capsules."
+msgstr "Tidak dapat mengambil Capsule."
+
 msgid "Unable to retrieve the Container."
 msgstr "Tidak dapat mengambil Kontainer."
 
 msgid "Unable to retrieve the Containers."
 msgstr "Tidak dapat mengambil Kontainer."
+
+msgid "Unable to retrieve the Hosts."
+msgstr "Tidak dapat mengambil Host."
 
 msgid "Unable to retrieve the Images."
 msgstr "Tidak dapat mengambil Images."
@@ -939,6 +1017,12 @@ msgstr "Memperbarui"
 msgid "Update Container"
 msgstr "Perbarui Kontainer"
 
+msgid "Updated"
+msgstr "Updated"
+
+msgid "User ID"
+msgstr "User ID"
+
 msgid ""
 "Users can add additional rules to an existing security group\n"
 "      to further define the access options for a container.\n"
@@ -957,6 +1041,9 @@ msgstr "VNIC type"
 
 msgid "Volumes"
 msgstr "Volume"
+
+msgid "Volumes Info"
+msgstr "Volumes Info"
 
 msgid ""
 "When IP addresses are associated to a port, this also implies the port is "
@@ -1001,6 +1088,10 @@ msgid "Yes"
 msgstr "Yes"
 
 #, python-format
+msgid "You are not allowed to delete capsules: %s"
+msgstr "Anda tidak diizinkan untuk menghapus capsules: %s"
+
+#, python-format
 msgid "You are not allowed to delete container forcely: %s"
 msgstr "Anda tidak diizinkan untuk menghapus kontainer secara paksa:% s"
 
@@ -1020,6 +1111,17 @@ msgstr ""
 "Anda dapat menentukan petunjuk penjadwalan dengan memindahkan item dari "
 "kolom kiri ke kolom kanan. Gunakan opsi \"Custom\" untuk menambahkan "
 "petunjuk penjadwal dengan kunci pilihan Anda."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsule is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsules "
+"are not recoverable."
+msgstr[0] ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsule is "
+"not recoverable."
 
 #, python-format
 msgid ""
