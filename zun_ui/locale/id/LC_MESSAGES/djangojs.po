@@ -3,11 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-08-21 00:14+0000\n"
+"POT-Creation-Date: 2018-09-12 01:53+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-08-21 04:45+0000\n"
+"PO-Revision-Date: 2018-09-13 08:17+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -106,7 +106,7 @@ msgid "Capsule Version ID"
 msgstr "Capsule Version ID"
 
 msgid "Capsules"
-msgstr "Capsules"
+msgstr "Capsule"
 
 #, python-format
 msgid ""
@@ -925,7 +925,7 @@ msgstr "Tidak dapat menghapus secara paksa Kontainer dengan  id: %(id)s"
 
 #, python-format
 msgid "Unable to delete the Capsule with id: %(id)s"
-msgstr "Tidak dapat menghapus Capsule dengan  id: %(id)s"
+msgstr "Tidak dapat menghapus Capsule dengan id: %(id)s"
 
 #, python-format
 msgid "Unable to delete the Container with id: %(id)s"
@@ -965,7 +965,7 @@ msgid "Unable to retrieve the Capsule."
 msgstr "Tidak dapat mengambil Capsule."
 
 msgid "Unable to retrieve the Capsules."
-msgstr "Tidak dapat mengambil Capsules."
+msgstr "Tidak dapat mengambil Capsule."
 
 msgid "Unable to retrieve the Container."
 msgstr "Tidak dapat mengambil Kontainer."
@@ -1089,7 +1089,7 @@ msgstr "Yes"
 
 #, python-format
 msgid "You are not allowed to delete capsules: %s"
-msgstr "Anda tidak diizinkan untuk menghapus kapsul: %s"
+msgstr "Anda tidak diizinkan untuk menghapus capsules: %s"
 
 #, python-format
 msgid "You are not allowed to delete container forcely: %s"
