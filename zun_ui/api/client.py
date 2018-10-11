@@ -11,6 +11,7 @@
 #    under the License.
 
 import logging
+import shlex
 
 from django.conf import settings
 
@@ -125,6 +126,8 @@ def _cleanup_params(attrs, check, **params):
                 kv = v.split("=", 1)
                 values[kv[0]] = kv[1]
             args[str(key)] = values
+        elif key == "command":
+            args[key] = shlex.split(value)
         elif key in attrs:
             if value is None:
                 value = ''
