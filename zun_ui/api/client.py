@@ -187,9 +187,7 @@ def container_delete(request, **kwargs):
 
 
 def container_list(request, limit=None, marker=None, sort_key=None,
-                   sort_dir=None, detail=True):
-    # TODO(shu-mutou): detail option should be added, if it is
-    # implemented in Zun API
+                   sort_dir=None):
     return zunclient(request).containers.list(limit, marker, sort_key,
                                               sort_dir)
 
@@ -292,10 +290,9 @@ def capsule_delete(request, **kwargs):
 
 
 def image_list(request, limit=None, marker=None, sort_key=None,
-               sort_dir=None, detail=False):
-    # FIXME(shu-mutou): change "detail" param to True, if it enabled.
+               sort_dir=None):
     return zunclient(request).images.list(limit, marker, sort_key,
-                                          sort_dir, detail)
+                                          sort_dir)
 
 
 def image_create(request, **kwargs):
@@ -308,6 +305,6 @@ def image_delete(request, id, **kwargs):
 
 
 def host_list(request, limit=None, marker=None, sort_key=None,
-              sort_dir=None, detail=False):
+              sort_dir=None):
     return zunclient(request).hosts.list(limit, marker, sort_key,
-                                         sort_dir, detail)
+                                         sort_dir)
