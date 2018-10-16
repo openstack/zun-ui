@@ -26,6 +26,7 @@
       'horizon.dashboard.container.containers',
       'horizon.dashboard.container.capsules',
       'horizon.dashboard.container.images',
+      'horizon.dashboard.container.hosts',
       'ngRoute'
     ])
     .config(config);
