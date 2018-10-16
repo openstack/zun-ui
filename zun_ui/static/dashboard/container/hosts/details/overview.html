@@ -1,0 +1,60 @@
+<div ng-controller="horizon.dashboard.container.hosts.OverviewController as ctrl">
+  <div class="row">
+    <div class="col-md-12 detail">
+      <h3 translate>Usage</h3>
+      <hr>
+      <div class="row">
+        <div class="col-md-4">
+          <h4 translate>Memory</h4>
+          <hr>
+          <pie-chart chart-data="ctrl.chartDataMem"
+                     chart-settings="ctrl.chartSettings"></pie-chart>
+          <dl class="dl-horizontal">
+            <dd translate>Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}</dd>
+          </dl>
+        </div>
+        <div class="col-md-4">
+          <h4 translate>CPU</h4>
+          <hr>
+          <pie-chart chart-data="ctrl.chartDataCpu"
+                     chart-settings="ctrl.chartSettings"></pie-chart>
+          <dl class="dl-horizontal">
+            <dd translate>Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}</dd>
+          </dl>
+        </div>
+        <div class="col-md-4">
+          <h4 translate>Disk</h4>
+          <hr>
+          <pie-chart chart-data="ctrl.chartDataDisk"
+                     chart-settings="ctrl.chartSettings"></pie-chart>
+          <dl class="dl-horizontal">
+            <dd translate>Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Info</h3>
+      <hr>
+      <hz-resource-property-list
+        resource-type-name="OS::Zun::Host"
+        cls="dl-horizontal"
+        item="ctrl.host"
+        property-groups="[['id', 'hostname', 'architecture', 'os', 'os_type',
+                           'kernel_version', 'runtimes', 'total_containers', 'disk_quota_supported']]">
+      </hz-resource-property-list>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Miscellaneous</h3>
+      <hr>
+      <hz-resource-property-list
+        resource-type-name="OS::Zun::Host"
+        cls="dl-horizontal"
+        item="ctrl.host"
+        property-groups="[['labels', 'links']]">
+      </hz-resource-property-list>
+    </div>
+  </div>
+</div>

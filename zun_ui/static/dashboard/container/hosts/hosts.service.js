@@ -33,8 +33,35 @@
    */
   function hostsService(detailRoute, zun) {
     return {
-      getHostsPromise: getHostsPromise
+      getDetailsPath: getDetailsPath,
+      getHostsPromise: getHostsPromise,
+      getHostPromise: getHostPromise
     };
+
+    /*
+     * @ngdoc function
+     * @name getDetailsPath
+     * @param item {Object} - The host object
+     * @description
+     * Returns the relative path to the details view.
+     */
+    function getDetailsPath(item) {
+      return detailRoute + 'OS::Zun::Host/' + item.id;
+    }
+
+    /*
+     * @ngdoc function
+     * @name getHostPromise
+     * @description
+     * Given an id, returns a promise for the host data.
+     */
+    function getHostPromise(identifier) {
+      return zun.getHost(identifier).then(modifyDetails);
+    }
+
+    function modifyDetails(response) {
+      return {data: modifyItem(response.data)};
+    }
 
     /*
      * @ngdoc function
@@ -49,12 +76,12 @@
 
     function modifyResponse(response) {
       return {data: {items: response.data.items.map(modifyItem)}};
+    }
 
-      function modifyItem(item) {
-        var timestamp = new Date();
-        item.trackBy = item.id.concat(timestamp.getTime());
-        return item;
-      }
+    function modifyItem(item) {
+      var timestamp = new Date();
+      item.trackBy = item.id.concat(timestamp.getTime());
+      return item;
     }
   }
 })();
