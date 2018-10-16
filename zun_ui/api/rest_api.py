@@ -263,3 +263,14 @@ class Hosts(generic.View):
         """
         result = client.host_list(request)
         return {'items': [change_to_id(i.to_dict()) for i in result]}
+
+
+@urls.register
+class Host(generic.View):
+    """API for retrieving a single host"""
+    url_regex = r'zun/hosts/(?P<id>[^/]+)$'
+
+    @rest_utils.ajax()
+    def get(self, request, id):
+        """Get a specific host"""
+        return change_to_id(client.host_show(request, id).to_dict())

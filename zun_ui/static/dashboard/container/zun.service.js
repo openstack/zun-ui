@@ -60,9 +60,9 @@
       pullImage: pullImage,
       getImages: getImages,
       deleteImage: deleteImage,
-      getHosts: getHosts
+      getHosts: getHosts,
+      getHost: getHost
     };
-
     return service;
 
     ///////////////
@@ -255,6 +255,11 @@
     function getHosts() {
       var msg = gettext('Unable to retrieve the Hosts.');
       return apiService.get(hostsPath).error(error(msg));
+    }
+
+    function getHost(id) {
+      var msg = gettext('Unable to retrieve the Host.');
+      return apiService.get(hostsPath + id).error(error(msg));
     }
 
     function error(message) {
