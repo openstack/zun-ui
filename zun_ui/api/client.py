@@ -63,11 +63,21 @@ def zunclient(request_auth_params):
 
     LOG.debug('zunclient connection created using the token "%s" and url'
               ' "%s"' % (token_id, endpoint_override))
+    api_version = API_VERSION
+    if API_VERSION.is_latest():
+        c = zun_client.Client(
+            username=username,
+            project_id=project_id,
+            auth_token=token_id,
+            endpoint_override=endpoint_override,
+            api_version=api_versions.APIVersion("1.1"),
+        )
+        api_version = api_versions.discover_version(c, api_version)
     c = zun_client.Client(username=username,
                           project_id=project_id,
                           auth_token=token_id,
                           endpoint_override=endpoint_override,
-                          api_version=API_VERSION)
+                          api_version=api_version)
     return c
 
 
