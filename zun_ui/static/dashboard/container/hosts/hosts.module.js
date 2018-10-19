@@ -25,7 +25,8 @@
    */
   angular
     .module('horizon.dashboard.container.hosts', [
-      'ngRoute'
+      'ngRoute',
+      'horizon.dashboard.container.hosts.details'
     ])
     .constant('horizon.dashboard.container.hosts.resourceType', 'OS::Zun::Host')
     .run(run)
@@ -45,6 +46,7 @@
     // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'drawer.html')
     // for table row items and detail summary view.
+    .setDefaultIndexUrl('/admin/container/hosts/')
     .setProperties(hostProperties())
     .setListFunction(hostService.getHostsPromise)
     .tableColumns
@@ -55,7 +57,8 @@
     .append({
       id: 'hostname',
       priority: 1,
-      sortDefault: true
+      sortDefault: true,
+      urlFunction: hostService.getDetailsPath
     })
     .append({
       id: 'mem_total',
@@ -95,13 +98,14 @@
       'disk_used': { label: gettext('Disk Used'), filters: ['noValue', 'gb'] },
       'disk_quota_supported': { label: gettext('Disk Quota Supported'),
         filters: ['noValue', 'yesno'] },
-      'total_containers': { label: gettext('Disk Used'), filters: ['noValue'] },
+      'total_containers': { label: gettext('Total Containers'), filters: ['noValue'] },
       'os': { label: gettext('OS'), filters: ['noValue'] },
       'os_type': { label: gettext('OS Type'), filters: ['noValue'] },
       'architecture': { label: gettext('Architecture'), filters: ['noValue'] },
       'kernel_version': { label: gettext('Kernel Version'), filters: ['noValue'] },
-      'runtimes': { label: gettext('Runtimes'), filters: ['noValue'] },
-      'labels': { label: gettext('Labels'), filters: ['noValue'] }
+      'runtimes': { label: gettext('Runtimes'), filters: ['noValue', 'json'] },
+      'labels': { label: gettext('Labels'), filters: ['noValue', 'json'] },
+      'links': { label: gettext('Links'), filters: ['noValue', 'json'] }
     };
   }
 
