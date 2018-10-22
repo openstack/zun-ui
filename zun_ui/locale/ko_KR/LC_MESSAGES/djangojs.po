@@ -1,0 +1,867 @@
+# minwook-shin <minwook0106@gmail.com>, 2017. #zanata
+# ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
+# Jaeho Cho <jaeho8032@gmail.com>, 2018. #zanata
+# Jaewook Oh <kyle.oh95@gmail.com>, 2018. #zanata
+# Sungjin Kang <gang.sungjin@gmail.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zun-ui VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-10-19 03:54+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-10-21 08:13+0000\n"
+"Last-Translator: Sungjin Kang <gang.sungjin@gmail.com>\n"
+"Language-Team: Korean (South Korea)\n"
+"Language: ko_KR\n"
+"X-Generator: Zanata 4.3.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "(empty)"
+msgstr "(비어있음)"
+
+msgid "A port represents a virtual switch port on a logical network switch."
+msgstr "포트는 논리 네트워크 스위치 상의 가상 스위치 포트를 나타냅니다."
+
+msgid "Add Security Group"
+msgstr "보안그룹 추가"
+
+msgid "Addresses"
+msgstr "주소"
+
+msgid "Admin State"
+msgstr "관리자 상태"
+
+msgid "Always: Always pull the image from repository."
+msgstr "Always: 항상 저장소에서 이미지를 가져옵니다."
+
+msgid "An arbitrary human-readable name."
+msgstr "사람이 읽을 수 있는 임의의 이름"
+
+msgid "Architecture"
+msgstr "아키텍처"
+
+msgid "Auto Heal"
+msgstr "자동 치유"
+
+msgid "Auto Remove"
+msgstr "자동 제거"
+
+msgid "Available Scheduler Hints"
+msgstr "사용 가능한 스케줄러 힌트"
+
+msgid "Bare Metal"
+msgstr "베어 메탈"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "CPU Total"
+msgstr "CPU 총량"
+
+msgid "CPU Used"
+msgstr "CPU 사용량"
+
+msgid "Capsule"
+msgstr "캡슐"
+
+msgid "Capsule ID"
+msgstr "캡슐 ID"
+
+msgid "Capsule Version ID"
+msgstr "캡슐 버전 ID"
+
+msgid "Capsules"
+msgstr "캡슐"
+
+#, python-format
+msgid ""
+"Changes security groups %(sgs)s for port %(port)s was successfully submitted."
+msgstr "포트 %(port)s의 보안그룹 %(sgs)s 변경이 성공적으로 제출되었습니다."
+
+msgid "Click to see more details"
+msgstr "클릭하여 세부 사항 보기"
+
+msgid "Command"
+msgstr "명령"
+
+msgid "Command sent to the container."
+msgstr "컨테이너에 명령이 전송되었습니다."
+
+#, python-format
+msgid "Command was successfully executed at container %s."
+msgstr "%s 컨테이너에서 명령은 성공적으로 실행되었습니다."
+
+msgid "Confirm Delete After Stop Container"
+msgid_plural "Confirm Delete After Stop Containers"
+msgstr[0] "컨테이너 정지 후 삭제 확인"
+
+msgid "Confirm Delete Capsule"
+msgid_plural "Confirm Delete Capsules"
+msgstr[0] "Capsule 삭제 확인"
+
+msgid "Confirm Delete Container"
+msgid_plural "Confirm Delete Containers"
+msgstr[0] "컨테이너 삭제 확인"
+
+msgid "Confirm Delete Container Forcely"
+msgid_plural "Confirm Delete Containers Forcely"
+msgstr[0] "강제 컨테이너 삭제 확인"
+
+msgid "Console"
+msgstr "콘솔"
+
+msgid "Container"
+msgstr "컨테이너"
+
+#, python-format
+msgid "Container %s was successfully created."
+msgstr "%s 컨테이너가 성공적으로 생성되었습니다."
+
+#, python-format
+msgid "Container %s was successfully paused."
+msgstr "컨테이너 %s가 성공적으로 일시중지되었습니다."
+
+#, python-format
+msgid "Container %s was successfully rebuilt."
+msgstr "컨테이너 %s가 성공적으로 리빌드되었습니다."
+
+#, python-format
+msgid "Container %s was successfully restarted."
+msgstr "컨테이너 %s가 성공적으로 재시작되었습니다."
+
+#, python-format
+msgid "Container %s was successfully started."
+msgstr "컨테이너 %s가 성공적으로 시작되었습니다."
+
+#, python-format
+msgid "Container %s was successfully stoped."
+msgstr "컨테이너 %s가 성공적으로 정지되었습니다."
+
+#, python-format
+msgid "Container %s was successfully unpaused."
+msgstr "컨테이너 %s가 성공적으로 일시정지가 해제되었습니다."
+
+#, python-format
+msgid "Container %s was successfully updated."
+msgstr "컨테이너 %s가 성공적으로 업데이트 되었습니다."
+
+msgid "Container Name"
+msgstr "컨테이너 이름"
+
+msgid "Container UUIDs"
+msgstr "컨테이너 UUID"
+
+msgid "Containers"
+msgstr "컨테이너"
+
+msgid "Containers attach their interfaces to ports."
+msgstr "컨테이너는 인터페이스를 포트에 연결합니다."
+
+msgid "Create"
+msgstr "생성"
+
+msgid "Create Capsule"
+msgstr "캡슐 생성"
+
+msgid "Create Container"
+msgstr "컨테이너 생성"
+
+msgid "Created"
+msgstr "생성됨"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Delete Capsule"
+msgid_plural "Delete Capsules"
+msgstr[0] "Capsule 삭제"
+
+msgid "Delete Container"
+msgid_plural "Delete Containers"
+msgstr[0] "컨테이너 삭제"
+
+msgid "Delete Container After Stop"
+msgid_plural "Delete Containers After Stop"
+msgstr[0] "정지 후 컨테이너 삭제"
+
+msgid "Delete Container Forcely"
+msgid_plural "Delete Containers Forcely"
+msgstr[0] "강제 컨테이너 삭제"
+
+msgid "Delete Containers"
+msgstr "컨테이너 삭제"
+
+msgid "Delete Image"
+msgstr "이미지 삭제"
+
+#, python-format
+msgid "Delete Image %s"
+msgstr "이미지 %s를 삭제"
+
+#, python-format
+msgid "Deleted Capsule: %s."
+msgid_plural "Deleted Capsules: %s."
+msgstr[0] "Capsule 삭제됨:%s."
+
+#, python-format
+msgid "Deleted Container After Stop: %s."
+msgid_plural "Deleted Containers After Stop: %s."
+msgstr[0] "정지 후 삭제된 컨테이너: %s"
+
+#, python-format
+msgid "Deleted Container Forcely: %s."
+msgid_plural "Deleted Containers Forcely: %s."
+msgstr[0] "강제로 삭제된 컨테이너: %s"
+
+#, python-format
+msgid "Deleted Container: %s."
+msgid_plural "Deleted Containers: %s."
+msgstr[0] "삭제된 컨테이너: %s."
+
+msgid "Description"
+msgstr "설명"
+
+msgid "Direct"
+msgstr "Direct"
+
+msgid "Direct Physical"
+msgstr "Direct Physical"
+
+msgid "Direction"
+msgstr "Direction"
+
+msgid "Disk"
+msgstr "디스크"
+
+msgid "Disk Total"
+msgstr "디스크 총량"
+
+msgid "Disk Used"
+msgstr "디스크 사용량"
+
+msgid "Docker Hub"
+msgstr "도커 허브"
+
+msgid "Docker Hub: Pull the image from Docker Hub."
+msgstr "Docker Hub: Docker Hub에서 이미지를 가져옵니다."
+
+msgid "Down"
+msgstr "Down"
+
+msgid "Environment"
+msgstr "환경"
+
+msgid "Ether Type"
+msgstr "Ether 타입"
+
+msgid "Execute"
+msgstr "실행"
+
+msgid "Execute Command"
+msgstr "명령 실행"
+
+msgid "Executing"
+msgstr "실행"
+
+msgid "Existing Scheduler Hints"
+msgstr "기존 스케줄러 힌트"
+
+msgid "Exit Code"
+msgstr "종료 코드"
+
+msgid "External Network"
+msgstr "외부 네트워크"
+
+msgid "Glance"
+msgstr "Glance"
+
+msgid "Glance: Pull the image from Glance."
+msgstr "Glance: Glance에서 이미지를 가져옵니다."
+
+msgid "Host"
+msgstr "호스트"
+
+msgid "Host ID"
+msgstr "호스트 ID"
+
+msgid "Hostname"
+msgstr "호스트 이름"
+
+msgid "Hosts"
+msgstr "호스트"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP"
+msgstr "IP"
+
+msgid ""
+"If not present: only pull the image if it does not already exist on the node."
+msgstr "If not present: 이미지가 노드에 없는 경우에만 이미지를 가져옵니다."
+
+msgid "Image"
+msgstr "이미지"
+
+msgid "Image Driver"
+msgstr "이미지 드라이버"
+
+msgid "Image ID"
+msgstr "이미지 ID"
+
+msgid "Image Pull Policy"
+msgstr "이미지 가져오기 정책"
+
+msgid "Images"
+msgstr "이미지"
+
+msgid "Info"
+msgstr "정보"
+
+msgid "Interactive"
+msgstr "상호작용"
+
+msgid "Kernel Version"
+msgstr "커널 버전"
+
+msgid "Kill Signal"
+msgstr "Kill 신호"
+
+#, python-format
+msgid "Kill signal was successfully sent to container %s."
+msgstr "컨테이너 %s에게 Kill 신호는 성공적으로 전달되었습니다."
+
+msgid "Labels"
+msgstr "레이블"
+
+msgid "Links"
+msgstr "링크"
+
+msgid "Logs"
+msgstr "로그"
+
+msgid "MacVTap"
+msgstr "MacVTap"
+
+msgid "Manage Security Groups"
+msgstr "보안 그룹 관리"
+
+#, python-format
+msgid "Manage Security Groups: container %s"
+msgstr "보안그룹 관리: 컨테이너 %s"
+
+msgid "Manage security group for ports."
+msgstr "포트 보안그룹 규칙 관리"
+
+msgid "Margin"
+msgstr "Margin"
+
+msgid "Max Port"
+msgstr "최대 포트"
+
+msgid "Memory"
+msgstr "메모리"
+
+msgid "Memory Total"
+msgstr "메모리 총량"
+
+msgid "Memory Used"
+msgstr "메모리 사용량"
+
+msgid "Min Port"
+msgstr "최소 포트"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Name of the image."
+msgstr "이미지 이름"
+
+msgid "Name or ID of container image."
+msgstr "컨테이너 이미지의 이름 혹은 ID 입니다."
+
+msgid "Network"
+msgstr "네트워크"
+
+#, python-format
+msgid "Network %s was successfully attached to container %s."
+msgstr "네트워크 %s는 성공적으로 컨테이너 %s에 연결되었습니다."
+
+#, python-format
+msgid "Network %s was successfully detached from container %s."
+msgstr "네트워크 %s는 성공적으로 컨테이너 %s에서 연결 해제되었습니다."
+
+msgid "Network ID"
+msgstr "네트워크 ID"
+
+msgid "Networks"
+msgstr "네트워크"
+
+msgid "Never: never pull the image."
+msgstr "Never: 이미지를 가져오지 않습니다."
+
+msgid "No available items"
+msgstr "사용 가능한 항목 없음"
+
+msgid "No available scheduler hints"
+msgstr "사용 가능한 스케줄러 힌트가 없습니다."
+
+msgid "No existing scheduler hints"
+msgstr "기존 스케줄러 힌트가 없습니다."
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "OS"
+msgstr "OS"
+
+msgid "OS Type"
+msgstr "OS Type"
+
+msgid "Output"
+msgstr "출력"
+
+msgid "Overview"
+msgstr "개요"
+
+msgid "Pause Container"
+msgstr "컨테이너 정지"
+
+msgid "Physical Network"
+msgstr "물리 네트워크"
+
+msgid "Port"
+msgstr "포트"
+
+msgid "Ports"
+msgstr "포트"
+
+msgid "Ports can be created under a network by administrators."
+msgstr "포트는 관리자가 네트워크에서 만들 수 있습니다."
+
+msgid ""
+"Ports provide extra communication channels to your instances. You can select "
+"ports instead of networks or a mix of both."
+msgstr ""
+"포트는 인스턴스에 부가적인 통신 채널을 제공합니다. 네트워크 대신 포트를 선택"
+"하거나 둘 다 선택할 수 있습니다."
+
+msgid "Project"
+msgstr "프로젝트"
+
+msgid "Project ID"
+msgstr "프로젝트 ID"
+
+msgid "Protocol"
+msgstr "프로토콜"
+
+msgid "Provider Network"
+msgstr "프로바이더 네트워크"
+
+msgid "Pull"
+msgstr "Pull"
+
+msgid "Re-order items using drag and drop"
+msgstr "다시 주문할 아이템은 드래그 앤 드롭으로 가져옵니다."
+
+msgid "Rebuild"
+msgstr "리빌드"
+
+msgid "Rebuild Container"
+msgstr "컨테이너 Rebuild"
+
+msgid "Refresh"
+msgstr "갱신"
+
+msgid "Remote"
+msgstr "원격"
+
+#, python-format
+msgid "Request to create capsule %s has been accepted."
+msgstr "캡슐 %s 생성 요청이 받아졌습니다."
+
+msgid "Restart"
+msgstr "재시작"
+
+msgid "Restart Container"
+msgstr "컨테이너 재시작"
+
+msgid "Restart Policy"
+msgstr "재시작 정책"
+
+msgid "Runtime"
+msgstr "런타임"
+
+msgid "Security Group"
+msgstr "보안그룹"
+
+msgid "Security Groups"
+msgstr "보안 그룹"
+
+msgid "Segmentation ID"
+msgstr "구분 ID"
+
+msgid "Select an item from Available items below"
+msgstr "아래에서 사용 가능한 항목에서 선택"
+
+msgid "Select host that stores the image."
+msgstr "이미지를 저장할 호스트를 선택하세요."
+
+msgid "Select host to remove the image from."
+msgstr "이미지를 제거할 호스트를 선택하세요."
+
+msgid "Select image driver for changing image."
+msgstr "이미지 변경을 위한 이미지 드라이버를 선택하세요."
+
+msgid "Select one or more"
+msgstr "하나 이상 선택"
+
+msgid "Select one or more security groups from the available groups below."
+msgstr "아래 사용가능한 그룹에서 하나 이상의 보안 그룹을 선택합니다."
+
+msgid "Select port first."
+msgstr "먼저 포트를 선택하세요."
+
+msgid "Select port."
+msgstr "포트 선택"
+
+msgid "Select ports from those listed below."
+msgstr "아래 목록에서 포트를 선택합니다."
+
+msgid "Select security group."
+msgstr "보안그룹을 선택하세요."
+
+msgid "Send"
+msgstr "전달"
+
+msgid "Send Kill Signal"
+msgstr "Kill 신호 전송"
+
+msgid "Shared"
+msgstr "공유"
+
+msgid ""
+"Signal to send to the container: integer or string like SIGINT.\n"
+"  When not set, SIGKILL is set as default value and the container will "
+"exit.\n"
+"  The supported signals varies between platform.\n"
+"  Besides, you can omit 'SIG' prefix."
+msgstr ""
+"컨테이너로 보내는 신호: SIGINT같은 정수나 문자열.\n"
+"  설정되지 않으면, SIGKILL이 기본값으로 설정되고 컨테이너는 종료됩니다.\n"
+"  지원되는 신호는 플랫폼에 따라 다릅니다.\n"
+"  이 외에, 'SIG' 접두어를 생략할 수 있습니다."
+
+msgid "Size"
+msgstr "크기"
+
+msgid "Spec"
+msgstr "사양"
+
+msgid "Specify a shutdown timeout in seconds. (default: 10)"
+msgstr "종료 제한시간을 초 단위로 지정하세요. (기본: 10초)"
+
+msgid "Specify an image to change."
+msgstr "변경할 이미지를 지정하세요."
+
+msgid "Start Container"
+msgstr "컨테이너 시작"
+
+msgid "Status"
+msgstr "상태"
+
+msgid "Status Detail"
+msgstr "상태 세부사항"
+
+msgid "Status Reason"
+msgstr "상태 원인"
+
+msgid "Stop"
+msgstr "정지"
+
+msgid "Stop Container"
+msgstr "컨테이너 정지"
+
+msgid "Stop and Delete Container"
+msgstr "컨테이너를 중지하고 삭제"
+
+msgid "Submit"
+msgstr "제출"
+
+msgid "Tag"
+msgstr "태그"
+
+msgid "Task State"
+msgstr "작업 상태"
+
+msgid "Template"
+msgstr "템플릿"
+
+msgid "The command to execute."
+msgstr "실행할 명령"
+
+msgid "The image driver to use to pull container image."
+msgstr "컨테이너 이미지를 가져오는데 사용할 이미지 드라이버입니다."
+
+msgid "The kill signal to send."
+msgstr "전송할 kill 신호"
+
+msgid ""
+"The logical port also defines the MAC address and the IP address(es) to be "
+"assigned to the interfaces plugged into them."
+msgstr ""
+"논리 포트는 연결되는 인터페이스에 할당이 이루어질 MAC 주소와 IP 주소 또한 정"
+"의합니다."
+
+msgid ""
+"The policy which determines if the image should be pulled prior to starting "
+"the container."
+msgstr "컨테이너 기동전 이미지를 가져올지를 선택하는 정책"
+
+msgid "The status indicates whether the port has an active connection."
+msgstr "이 상태는 해당 포트가 활성 연결이 있는지 여부를 가리킵니다."
+
+msgid "This step allows you to add scheduler hints to your container."
+msgstr "이 단계에서 컨테이너에 스케줄러 힌트를 추가할 수 있습니다."
+
+msgid "Total Containers"
+msgstr "전체 컨테이너"
+
+msgid "Type"
+msgstr "타입"
+
+msgid "Unable to attach network."
+msgstr "네트워크를 붙일 수 없습니다."
+
+msgid "Unable to create Capsule."
+msgstr "캡슐을 생성할 수 없습니다."
+
+msgid "Unable to create Container."
+msgstr "컨테이너를 생성할 수 없습니다."
+
+#, python-format
+msgid "Unable to delete Capsule: %s."
+msgid_plural "Unable to delete Capsules: %s."
+msgstr[0] "Capsule을 삭제할 수 없습니다:%s."
+
+#, python-format
+msgid "Unable to delete Container after stopping: %s."
+msgid_plural "Unable to delete Containers after stopping: %s."
+msgstr[0] "정지 후 컨테이너를 삭제할 수 없습니다: %s"
+
+#, python-format
+msgid "Unable to delete Container forcely: %s."
+msgid_plural "Unable to delete Containers forcely: %s."
+msgstr[0] "강제로 컨테이너를 삭제할 수 없습니다: %s"
+
+#, python-format
+msgid "Unable to delete Container: %s."
+msgid_plural "Unable to delete Containers: %s."
+msgstr[0] "컨테이너를 삭제할 수 없습니다: %s."
+
+#, python-format
+msgid "Unable to delete forcely the Container with id: %(id)s"
+msgstr "ID가 %(id)s인 컨테이너를 강제로 삭제할 수 없음"
+
+#, python-format
+msgid "Unable to delete the Capsule with id: %(id)s"
+msgstr "id: %(id)s로 캡슐을 삭제할 수 없습니다."
+
+#, python-format
+msgid "Unable to delete the Container with id: %(id)s"
+msgstr "ID가 %(id)s인 컨테이너를 삭제할 수 없습니다."
+
+msgid "Unable to delete the Containers."
+msgstr "컨테이너를 삭제할 수 없습니다."
+
+msgid "Unable to delete the Image."
+msgstr "이미지를 삭제할 수 없습니다."
+
+msgid "Unable to detach network."
+msgstr "네트워크를 떼낼 수 없습니다."
+
+msgid "Unable to execute the command."
+msgstr "명령을 실행할 수 없습니다."
+
+msgid "Unable to get logs of Container."
+msgstr "컨테이너의 로그를 가져올 수 없습니다."
+
+msgid "Unable to pause Container"
+msgstr "컨테이너를 정지할 수 없습니다."
+
+msgid "Unable to pull Image."
+msgstr "이미지를 pull할 수 없습니다."
+
+msgid "Unable to rebuild Container."
+msgstr "컨테이너를 다시 빌드할 수 없습니다."
+
+msgid "Unable to resize console."
+msgstr "콘솔의 크기를 변경할 수 없습니다."
+
+msgid "Unable to restart Container."
+msgstr "컨테이너를 재시작할 수 없습니다."
+
+msgid "Unable to retrieve the Capsule."
+msgstr "캡슐을 가져올 수 없습니다."
+
+msgid "Unable to retrieve the Capsules."
+msgstr "캡슐을 가져올 수 없습니다."
+
+msgid "Unable to retrieve the Container."
+msgstr "컨테이너를 검색할 수 없습니다."
+
+msgid "Unable to retrieve the Containers."
+msgstr "컨테이너를 검색할 수 없습니다."
+
+msgid "Unable to retrieve the Host."
+msgstr "호스트를 찾지 못했습니다."
+
+msgid "Unable to retrieve the Hosts."
+msgstr "호스트를 가져올 수 없습니다."
+
+msgid "Unable to retrieve the Images."
+msgstr "이미지를 찾지 못했습니다."
+
+msgid "Unable to retrieve the Zun Availability Zones."
+msgstr "Zun 가용 구역을 가져올 수 없습니다."
+
+msgid "Unable to send kill signal."
+msgstr "kill 신호를 보낼 수 없습니다."
+
+msgid "Unable to start Container."
+msgstr "컨테이너를 시작할 수 없습니다."
+
+msgid "Unable to stop Container."
+msgstr "컨테이너를 중지할 수 없습니다."
+
+#, python-format
+msgid "Unable to stop and delete the Container with id: %(id)s"
+msgstr "ID가 %(id)s인 컨테이너를 중지 및 삭제할 수 없습니다."
+
+msgid "Unable to unpause of Container."
+msgstr "컨테이너를 재가동할 수 없습니다."
+
+msgid "Unable to update Container."
+msgstr "컨테이너를 업데이트할 수 없습니다."
+
+#, python-format
+msgid "Unable to update security groups %(sgs)s for port %(port)s."
+msgstr "포트 %(port)s의 보안그룹 %(sgs)s을 업데이트할 수 없습니다."
+
+msgid "Unpause Container"
+msgstr "일시중지가 안 된 컨테이너"
+
+msgid "Up"
+msgstr "Up"
+
+msgid "Update"
+msgstr "업데이트"
+
+msgid "Update Container"
+msgstr "컨테이너 업데이트"
+
+msgid "Updated"
+msgstr "업데이트됨"
+
+msgid "Usage"
+msgstr "사용"
+
+msgid "Used"
+msgstr "사용됨"
+
+msgid "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
+msgstr ""
+"{$ ctrl.host.disk_total | gb $} 중 {$ ctrl.host.disk_used | gb $} 사용됨"
+
+msgid "Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}"
+msgstr "{$ ctrl.host.mem_total | mb $} 중 {$ ctrl.host.mem_used | mb $} 사용됨"
+
+msgid "User ID"
+msgstr "사용자 ID"
+
+msgid "VNIC type"
+msgstr "VNIC 타입"
+
+msgid "Volumes"
+msgstr "볼륨"
+
+msgid "Volumes Info"
+msgstr "볼륨 정보"
+
+msgid ""
+"When IP addresses are associated to a port, this also implies the port is "
+"associated with a subnet, as the IP address was taken from the allocation "
+"pool for a specific subnet."
+msgstr ""
+"IP 주소가 포트와 연결을 맺고 있을 때, 이는 IP 주소가 임의의 서브넷에 대한 할"
+"당 풀에서 선택됨에 따라 해당 포트가 서브넷 또한 연결되어 있음을 암시합니다."
+
+msgid ""
+"When the <b>Admin State</b> for a port is set to <b>Up</b> and it has no "
+"<b>Device Owner</b>,\n"
+"    then the port is available for use. You can set the <b>Admin State</b> "
+"to <b>Down</b>\n"
+"    if you are not ready for other users to use the port."
+msgstr ""
+"포트에 대한 <b>관리 상태</b>가 <b>Up</b>으로 설정되어 있고 <b>장치 소유자</"
+"b> 가 없는 경우,\n"
+"    해당 포트는 사용할 수 있는 상태입니다. <b>관리 상태</b>를 <b>Down</b>"
+"로 \n"
+"    설정한다면 다른 사용자들이 해당 포트에 접근할 수 없습니다."
+
+msgid "Workdir"
+msgstr "작업 디렉토리"
+
+msgid "Yes"
+msgstr "예"
+
+#, python-format
+msgid "You are not allowed to delete capsules: %s"
+msgstr "캡슐을 삭제할 수 없습니다:%s"
+
+#, python-format
+msgid "You are not allowed to delete container forcely: %s"
+msgstr "컨테이너를 강제로 삭제하도록 허용되지 않았습니다: %s"
+
+#, python-format
+msgid "You are not allowed to delete containers: %s"
+msgstr "컨테이너를 삭제하도록 허용되지 않았습니다: %s"
+
+#, python-format
+msgid "You are not allowed to stop and delete container: %s"
+msgstr "컨테이너를 정지하고 삭제하도록 허용되지 않았습니다: %s"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsule is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsules "
+"are not recoverable."
+msgstr[0] ""
+"\"%s\"를 선택했습니다. 선택을 확인하십시오. 삭제된 Capsule은 복구할 수 없습니"
+"다."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted container "
+"is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted containers "
+"are not recoverable."
+msgstr[0] ""
+"\"%s\"을(를) 선택했습니다. 선택을 확인하십시오. 삭제한 컨테이너는 복구할 수 "
+"없습니다."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. The container will "
+"be stopped before deleting. Deleted container is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. The containers will "
+"be stopped before deleting. Deleted containers are not recoverable."
+msgstr[0] ""
+"\"%s\"를 선택했습니다. 선택을 확인하십시오. 컨테이너는 삭제 전 정지됩니다. 삭"
+"제된 컨테이너는 복구할 수 없습니다."
