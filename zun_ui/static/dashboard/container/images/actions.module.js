@@ -56,6 +56,16 @@
         }
       });
 
+    imagesResourceType.batchActions
+      .append({
+        id: 'deleteImageAction',
+        service: deleteImageService,
+        template: {
+          type: 'delete-selected',
+          text: gettext('Delete Images')
+        }
+      });
+
     imagesResourceType.itemActions
       .append({
         id: 'deleteImageAction',

@@ -227,6 +227,15 @@ class Images(generic.View):
         return {'items': [change_to_id(i.to_dict()) for i in result]}
 
     @rest_utils.ajax(data_required=True)
+    def delete(self, request):
+        """Delete one or more Images by id.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        for id in request.DATA:
+            client.image_delete(request, id)
+
+    @rest_utils.ajax(data_required=True)
     def post(self, request):
         """Create a new Image.
 
@@ -236,17 +245,6 @@ class Images(generic.View):
         return rest_utils.CreatedResponse(
             '/api/zun/image/%s' % new_image.uuid,
             new_image.to_dict())
-
-
-@urls.register
-class Image(generic.View):
-    """API for operate a single image"""
-    url_regex = r'zun/images/(?P<id>[^/]+)$'
-
-    @rest_utils.ajax(data_required=True)
-    def delete(self, request, id):
-        """Delete a specific image"""
-        client.image_delete(request, id, **request.DATA)
 
 
 @urls.register

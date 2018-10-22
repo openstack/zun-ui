@@ -243,9 +243,12 @@
       return apiService.get(imagesPath).error(error(msg));
     }
 
-    function deleteImage(id, host) {
-      var msg = gettext('Unable to delete the Image.');
-      return apiService.delete(imagesPath + id, {host: host}).error(error(msg));
+    function deleteImage(id, suppressError) {
+      var promise = apiService.delete(imagesPath, [id]);
+      return suppressError ? promise : promise.error(function() {
+        var msg = gettext('Unable to delete the Image with id: %(id)s');
+        toastService.add('error', interpolate(msg, { id: id }, true));
+      });
     }
 
     ///////////

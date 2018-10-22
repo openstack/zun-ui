@@ -19,123 +19,138 @@
    * @ngDoc factory
    * @name horizon.dashboard.container.images.actions.delete.service
    * @Description
-   * restart container.
+   * Brings up the delete images confirmation modal dialog.
+   * On submit, delete selected resources.
+   * On cancel, do nothing.
    */
   angular
-    .module('horizon.dashboard.container.images.actions')
+    .module('horizon.dashboard.container.images')
     .factory('horizon.dashboard.container.images.actions.delete.service', deleteService);
 
   deleteService.$inject = [
+    '$location',
+    '$q',
+    '$rootScope',
     'horizon.app.core.openstack-service-api.zun',
-    'horizon.dashboard.container.images.basePath',
-    'horizon.dashboard.container.images.resourceType',
+    'horizon.app.core.openstack-service-api.policy',
     'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
-    'horizon.framework.widgets.form.ModalFormService',
-    'horizon.framework.widgets.toast.service'
+    'horizon.framework.widgets.modal.deleteModalService',
+    'horizon.framework.widgets.table.events',
+    'horizon.framework.widgets.toast.service',
+    'horizon.dashboard.container.images.resourceType',
+    'horizon.dashboard.container.images.events'
   ];
 
   function deleteService(
-    zun, basePath, resourceType, actionResult, gettext, $qExtensions, modal, toast
+    $location, $q, $rootScope, zun, policy, actionResult, gettext, $qExtensions, deleteModal,
+    tableEvents, toast, resourceType, events
   ) {
-    var push = Array.prototype.push;
-    var hosts = [{value: "", name: gettext("Select host to remove the image from.")}];
-    // schema
-    var schema = {
-      type: "object",
-      properties: {
-        host: {
-          title: gettext("Host"),
-          type: "string"
-        }
-      }
+    var scope;
+    var context = {
+      labels: null,
+      deleteEntity: deleteEntity,
+      successEvent: events.DELETE_SUCCESS
     };
-
-    // form
-    var form = [
-      {
-        type: 'section',
-        htmlClass: 'row',
-        items: [
-          {
-            type: 'section',
-            htmlClass: 'col-sm-12',
-            items: [
-              {
-                key: 'host',
-                type: "select",
-                titleMap: hosts,
-                required: true
-              }
-            ]
-          }
-        ]
-      }
-    ];
-
-    // model
-    var model;
-
-    var message = {
-      success: gettext('Container %s was successfully restarted.')
-    };
-
     var service = {
       initAction: initAction,
       allowed: allowed,
       perform: perform
     };
+    var notAllowedMessage = gettext("You are not allowed to delete images: %s");
 
     return service;
 
     //////////////
 
-    // include this function in your service
-    // if you plan to emit events to the parent controller
     function initAction() {
-      // get hosts for zun
-      zun.getHosts().then(onGetZunHosts);
-      function onGetZunHosts(response) {
-        var hs = [];
-        response.data.items.forEach(function (host) {
-          hs.push({value: host.id, name: host.hostname});
-        });
-        push.apply(hosts, hs);
-      }
     }
 
     function allowed() {
       return $qExtensions.booleanAsPromise(true);
     }
 
-    function perform(selected) {
-      model = {
-        id: selected.id,
-        repo: selected.repo,
-        host: ""
-      };
+    // delete selected resource objects
+    function perform(selected, newScope) {
+      scope = newScope;
+      selected = angular.isArray(selected) ? selected : [selected];
+      context.labels = labelize(selected.length);
+      return $qExtensions.allSettled(selected.map(checkPermission)).then(afterCheck);
+    }
 
-      // modal config
-      var config = {
-        "title": interpolate(gettext('Delete Image %s'), [model.repo]),
-        "submitText": gettext('Delete'),
-        "schema": schema,
-        "form": form,
-        "model": model
+    function labelize(count) {
+      return {
+        title: ngettext('Confirm Delete Image',
+                        'Confirm Delete Images', count),
+        /* eslint-disable max-len */
+        message: ngettext('You have selected "%s". Please confirm your selection. Deleted image is not recoverable.',
+                          'You have selected "%s". Please confirm your selection. Deleted images are not recoverable.', count),
+        /* eslint-enable max-len */
+        submit: ngettext('Delete Image',
+                         'Delete Images', count),
+        success: ngettext('Deleted Image: %s.',
+                          'Deleted Images: %s.', count),
+        error: ngettext('Unable to delete Image: %s.',
+                        'Unable to delete Images: %s.', count)
       };
-      return modal.open(config).then(submit);
+    }
 
-      function submit(context) {
-        var id = context.model.id;
-        var repo = context.model.repo;
-        var host = context.model.host;
-        return zun.deleteImage(id, host).then(function() {
-          toast.add('success', interpolate(message.success, [repo]));
-          var result = actionResult.getActionResult().updated(resourceType, id);
-          return result.result;
-        });
+    // for batch delete
+    function checkPermission(selected) {
+      return {promise: allowed(selected), context: selected};
+    }
+
+    // for batch delete
+    function afterCheck(result) {
+      var outcome = $q.reject();  // Reject the promise by default
+      if (result.fail.length > 0) {
+        toast.add('error', getMessage(notAllowedMessage, result.fail));
+        outcome = $q.reject(result.fail);
       }
+      if (result.pass.length > 0) {
+        outcome = deleteModal.open(scope, result.pass.map(getEntity), context).then(createResult);
+      }
+      return outcome;
+    }
+
+    function createResult(deleteModalResult) {
+      // To make the result of this action generically useful, reformat the return
+      // from the deleteModal into a standard form
+      var result = actionResult.getActionResult();
+      deleteModalResult.pass.forEach(function markDeleted(item) {
+        result.updated(resourceType, getEntity(item).id);
+      });
+      deleteModalResult.fail.forEach(function markFailed(item) {
+        result.failed(resourceType, getEntity(item).id);
+      });
+      var indexPath = '/admin/container/images';
+      var currentPath = $location.path();
+      if (result.result.failed.length === 0 && result.result.updated.length > 0 &&
+          currentPath !== indexPath) {
+        $location.path(indexPath);
+      } else {
+        $rootScope.$broadcast(tableEvents.CLEAR_SELECTIONS);
+        return result.result;
+      }
+    }
+
+    function getMessage(message, entities) {
+      return interpolate(message, [entities.map(getName).join(", ")]);
+    }
+
+    function getName(result) {
+      return getEntity(result).name;
+    }
+
+    // for batch delete
+    function getEntity(result) {
+      return result.context;
+    }
+
+    // call delete REST API
+    function deleteEntity(id) {
+      return zun.deleteImage(id);
     }
   }
 })();
