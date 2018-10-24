@@ -16,7 +16,7 @@ import shlex
 from django.conf import settings
 
 from horizon import exceptions
-from horizon.utils.memoized import memoized_with_request
+from horizon.utils.memoized import memoized
 from openstack_dashboard.api import base
 
 from neutronclient.v2_0 import client as neutron_client
@@ -52,14 +52,14 @@ def get_auth_params_from_request(request):
     )
 
 
-@memoized_with_request(get_auth_params_from_request)
-def zunclient(request_auth_params):
+@memoized
+def zunclient(request):
     (
         username,
         token_id,
         project_id,
         endpoint_override
-    ) = request_auth_params
+    ) = get_auth_params_from_request(request)
 
     LOG.debug('zunclient connection created using the token "%s" and url'
               ' "%s"' % (token_id, endpoint_override))
@@ -93,9 +93,13 @@ def get_auth_params_from_request_neutron(request):
     )
 
 
-@memoized_with_request(get_auth_params_from_request_neutron)
-def neutronclient(request_auth_params):
-    token_id, neutron_url, auth_url = request_auth_params
+@memoized
+def neutronclient(request):
+    (
+        token_id,
+        neutron_url,
+        auth_url
+    ) = get_auth_params_from_request_neutron(request)
     insecure = getattr(settings, 'OPENSTACK_SSL_NO_VERIFY', False)
     cacert = getattr(settings, 'OPENSTACK_SSL_CACERT', None)
 
