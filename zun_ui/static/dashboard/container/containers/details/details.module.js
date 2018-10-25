@@ -27,6 +27,7 @@
   .run(registerDetails);
 
   registerDetails.$inject = [
+    'horizon.app.core.openstack-service-api.zun',
     'horizon.dashboard.container.containers.basePath',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.dashboard.container.containers.service',
@@ -34,6 +35,7 @@
   ];
 
   function registerDetails(
+    zun,
     basePath,
     resourceType,
     containerService,
@@ -46,17 +48,21 @@
         id: 'containerDetailsOverview',
         name: gettext('Overview'),
         template: basePath + 'details/overview.html'
-      })
-      .append({
-        id: 'containerDetailsLogs',
-        name: gettext('Logs'),
-        template: basePath + 'details/logs.html'
-      })
-      .append({
-        id: 'containerDetailsConsole',
-        name: gettext('Console'),
-        template: basePath + 'details/console.html'
       });
+    if (!zun.isAdmin()) {
+      registry.getResourceType(resourceType)
+        .detailsViews
+        .append({
+          id: 'containerDetailsLogs',
+          name: gettext('Logs'),
+          template: basePath + 'details/logs.html'
+        })
+        .append({
+          id: 'containerDetailsConsole',
+          name: gettext('Console'),
+          template: basePath + 'details/console.html'
+        });
+    }
   }
 
 })();

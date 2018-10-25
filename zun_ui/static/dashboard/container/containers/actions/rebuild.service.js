@@ -26,7 +26,9 @@
     .factory('horizon.dashboard.container.containers.rebuild.service', rebuildService);
 
   rebuildService.$inject = [
+    '$q',
     'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.adminActions',
     'horizon.dashboard.container.containers.basePath',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.dashboard.container.containers.validStates',
@@ -38,7 +40,8 @@
   ];
 
   function rebuildService(
-    zun, basePath, resourceType, validStates, actionResult, gettext, $qExtensions, modal, toast
+    $q, zun, adminActions, basePath, resourceType, validStates,
+    actionResult, gettext, $qExtensions, modal, toast
   ) {
     var imageDrivers = [
       {value: "", name: gettext("Select image driver for changing image.")},
@@ -115,9 +118,16 @@
     }
 
     function allowed(container) {
-      return $qExtensions.booleanAsPromise(
-        validStates.rebuild.indexOf(container.status) >= 0
-      );
+      var adminAction = true;
+      if (zun.isAdmin()) {
+        adminAction = adminActions.indexOf("rebuild") >= 0;
+      }
+      return $q.all([
+        $qExtensions.booleanAsPromise(adminAction),
+        $qExtensions.booleanAsPromise(
+          validStates.rebuild.indexOf(container.status) >= 0
+        )
+      ]);
     }
 
     function perform(selected) {

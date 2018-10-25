@@ -28,6 +28,7 @@
     '$q',
     'horizon.app.core.openstack-service-api.policy',
     'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.adminActions',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.dashboard.container.containers.validStates',
     'horizon.dashboard.container.containers.workflow',
@@ -39,7 +40,7 @@
   ];
 
   function updateService(
-    $q, policy, zun, resourceType, validStates, workflow,
+    $q, policy, zun, adminActions, resourceType, validStates, workflow,
     actionResult, gettext, $qExtensions, modal, toast
   ) {
     var message = {
@@ -70,8 +71,13 @@
     }
 
     function allowed(container) {
+      var adminAction = true;
+      if (zun.isAdmin()) {
+        adminAction = adminActions.indexOf("update") >= 0;
+      }
       return $q.all([
         policy.ifAllowed({ rules: [['container', 'edit_container']] }),
+        $qExtensions.booleanAsPromise(adminAction),
         $qExtensions.booleanAsPromise(
           validStates.update.indexOf(container.status) >= 0
         )
