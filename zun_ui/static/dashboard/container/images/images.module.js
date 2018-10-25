@@ -59,6 +59,7 @@
     .setNames(gettext('Image'), gettext('Images'))
     // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'drawer.html')
+    .setDefaultIndexUrl('/admin/container/images/')
     // for table row items and detail summary view.
     .setProperties(imageProperties())
     .setListFunction(imageService.getImagesPromise)
@@ -81,6 +82,10 @@
       priority: 1
     })
     .append({
+      id: 'host',
+      priority: 1
+    })
+    .append({
       id: 'image_id',
       priority: 3
     })
@@ -98,6 +103,11 @@
     .append({
       'label': gettext('Tag'),
       'name': 'tag',
+      'singleton': true
+    })
+    .append({
+      'label': gettext('Host'),
+      'name': 'host',
       'singleton': true
     })
     .append({
@@ -122,6 +132,7 @@
       'id': {label: gettext('ID'), filters: ['noValue'] },
       'repo': { label: gettext('Image'), filters: ['noValue'] },
       'tag': { label: gettext('Tag'), filters: ['noValue'] },
+      'host': { label: gettext('Host'), filters: ['noValue'] },
       'size': { label: gettext('Size'), filters: ['noValue', 'bytes'] },
       'image_id': { label: gettext('Image ID'), filters: ['noValue'] },
       'project_id': { label: gettext('Project ID'), filters: ['noValue'] }
