@@ -4,12 +4,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-10-25 02:05+0000\n"
+"POT-Creation-Date: 2018-10-26 00:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-10-25 02:05+0000\n"
-"Last-Translator: Frank Kloeker <eumel@arcor.de>\n"
+"PO-Revision-Date: 2018-10-25 09:34+0000\n"
+"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -79,6 +79,9 @@ msgstr ""
 msgid "An arbitrary human-readable name."
 msgstr "Ein frei wählbarer Klarschrift-Name "
 
+msgid "Architecture"
+msgstr "Architektur"
+
 msgid "Auto Heal"
 msgstr "Automatisch heilen"
 
@@ -96,6 +99,12 @@ msgstr "Bare Metal"
 
 msgid "CPU"
 msgstr "CPU"
+
+msgid "CPU Total"
+msgstr "CPU gesamt"
+
+msgid "CPU Used"
+msgstr "CPU verwendet"
 
 msgid "Capsule"
 msgstr "Kapsel"
@@ -148,6 +157,11 @@ msgid "Confirm Delete Container Forcely"
 msgid_plural "Confirm Delete Containers Forcely"
 msgstr[0] "Gewaltsames Löschen des Containers bestätigen"
 msgstr[1] "Gewaltsames Löschen der Container bestätigen"
+
+msgid "Confirm Delete Image"
+msgid_plural "Confirm Delete Images"
+msgstr[0] "Löschen von Abbild bestätigen"
+msgstr[1] "Löschen von Abbildern bestätigen"
 
 msgid "Console"
 msgstr "Konsole"
@@ -237,11 +251,13 @@ msgstr[1] "Container gewaltsam löschen"
 msgid "Delete Containers"
 msgstr "Container löschen"
 
-#, fuzzy
 msgid "Delete Image"
 msgid_plural "Delete Images"
 msgstr[0] "Abbild löschen"
-msgstr[1] ""
+msgstr[1] "Abbilder löschen"
+
+msgid "Delete Images"
+msgstr "Abbilder löschen"
 
 #, python-format
 msgid "Deleted Capsule: %s."
@@ -267,6 +283,12 @@ msgid_plural "Deleted Containers: %s."
 msgstr[0] "Gelöschter Container: %s."
 msgstr[1] "Gelöschte Container: %s."
 
+#, python-format
+msgid "Deleted Image: %s."
+msgid_plural "Deleted Images: %s."
+msgstr[0] "Gelöschtes Abbild: %s."
+msgstr[1] "Gelöschte Abbilder: %s."
+
 msgid "Description"
 msgstr "Beschreibung"
 
@@ -284,6 +306,15 @@ msgstr "Richtung"
 
 msgid "Disk"
 msgstr "Festplatte"
+
+msgid "Disk Quota Supported"
+msgstr "Unterstütztes Festplattenkontingent"
+
+msgid "Disk Total"
+msgstr "Festplatten gesamt"
+
+msgid "Disk Used"
+msgstr "Festplatten verwendet"
 
 msgid "Docker Hub"
 msgstr "Docker-Hub"
@@ -360,6 +391,9 @@ msgstr "Host-ID"
 msgid "Hostname"
 msgstr "Hostname"
 
+msgid "Hosts"
+msgstr "Hosts"
+
 msgid "ID"
 msgstr "ID"
 
@@ -421,6 +455,9 @@ msgstr "Interaktiv"
 msgid "KEY1=VALUE1,KEY2=VALUE2..."
 msgstr "SCHLÜSSEL1=WERT1,SCHLÜSSEL2=WERT2..."
 
+msgid "Kernel Version"
+msgstr "Kernelversion"
+
 msgid "Kill Signal"
 msgstr "Kill-Signal"
 
@@ -450,6 +487,9 @@ msgstr "Sicheheitsgruppe verwalten: Container %s"
 msgid "Manage security group for ports."
 msgstr "Sicherheitsgruppen für Ports verwalten."
 
+msgid "Margin"
+msgstr "Spanne"
+
 msgid "Max Port"
 msgstr "Max Port"
 
@@ -458,6 +498,12 @@ msgstr "Max. Wiederholen"
 
 msgid "Memory"
 msgstr "Speicher"
+
+msgid "Memory Total"
+msgstr "Gesamter Speicher"
+
+msgid "Memory Used"
+msgstr "Verwendeter Speicher"
 
 msgid "Min Port"
 msgstr "Min Port"
@@ -527,6 +573,12 @@ msgstr "Keine vorhandenen Schedulerhinweise"
 
 msgid "Normal"
 msgstr "Normal"
+
+msgid "OS"
+msgstr "OS"
+
+msgid "OS Type"
+msgstr "OS Typ"
 
 msgid "Output"
 msgstr "Ausgabe"
@@ -635,6 +687,9 @@ msgstr "Wiederholungszeit für 'Neustart bei Fehler' Regel."
 
 msgid "Runtime"
 msgstr "Laufzeit"
+
+msgid "Runtimes"
+msgstr "Ausführungen"
 
 msgid "Scheduler Hints"
 msgstr "Schedulerhinweise"
@@ -908,6 +963,9 @@ msgstr ""
 "\"Verfügbare Cinder Datenträger\" und wählen Sie die Quelle aus der Pull-"
 "Down-Liste."
 
+msgid "Total Containers"
+msgstr "Container gesamt"
+
 msgid "Type"
 msgstr "Typ"
 
@@ -945,6 +1003,12 @@ msgstr[0] "Kann Container nicht löschen: %s."
 msgstr[1] "Kann Container nicht löschen: %s."
 
 #, python-format
+msgid "Unable to delete Image: %s."
+msgid_plural "Unable to delete Images: %s."
+msgstr[0] "Das folgende Abbild kann nicht gelöscht werden: %s."
+msgstr[1] "Die folgenden Abbilder konnten nicht gelöscht werden: %s."
+
+#, python-format
 msgid "Unable to delete forcely the Container with id: %(id)s"
 msgstr "Löschen des Containers mit ID  %(id)s konnte nicht erzwungen werden"
 
@@ -958,6 +1022,10 @@ msgstr "Container mit der ID %(id)s kann nicht gelöscht werden"
 
 msgid "Unable to delete the Containers."
 msgstr "Container können nicht gelöscht werden."
+
+#, python-format
+msgid "Unable to delete the Image with id: %(id)s"
+msgstr "Das Abbild mit der folgenden ID kann nicht gelöscht werden:  %(id)s"
 
 msgid "Unable to detach network."
 msgstr "Netzwerk kann nicht abgetrennt werden."
@@ -994,6 +1062,9 @@ msgstr "Container kann nicht abgerufen werden."
 
 msgid "Unable to retrieve the Containers."
 msgstr "Container können nicht abgerufen werden."
+
+msgid "Unable to retrieve the Host."
+msgstr "Host kann nicht abgerufen werden."
 
 msgid "Unable to retrieve the Hosts."
 msgstr "Konnte Hosts nicht abrufen."
@@ -1043,6 +1114,23 @@ msgstr "Container aktualisieren"
 
 msgid "Updated"
 msgstr "Aktualisiert"
+
+msgid "Usage"
+msgstr "Verwendung"
+
+msgid "Used"
+msgstr "Benutzt"
+
+msgid "Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}"
+msgstr " Verwendet {$ ctrl.host.cpu_used $} von {$ ctrl.host.cpus $}"
+
+msgid "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
+msgstr ""
+"Verwendet {$ ctrl.host.disk_used | gb $} von {$ ctrl.host.disk_total | gb $}"
+
+msgid "Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}"
+msgstr ""
+"Verwendet {$ ctrl.host.mem_used | mb $} von {$ ctrl.host.mem_total | mb $}"
 
 msgid "User ID"
 msgstr "Benutzer ID"
@@ -1126,6 +1214,10 @@ msgid "You are not allowed to delete containers: %s"
 msgstr "Sie dürfen keine Container löschen: %s"
 
 #, python-format
+msgid "You are not allowed to delete images: %s"
+msgstr "Sie sind nicht berechtigt, Abbilder zu löschen: %s"
+
+#, python-format
 msgid "You are not allowed to stop and delete container: %s"
 msgstr "Sie dürfen den Container nicht anhalten und löschen: %s"
 
@@ -1166,6 +1258,20 @@ msgstr[0] ""
 msgstr[1] ""
 "Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
 "Container können nicht wiederhergestellt werden."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted image is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted images are "
+"not recoverable."
+msgstr[0] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Gelöschtes "
+"Abbild kann nicht wiederhergestellt werden."
+msgstr[1] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
+"Abbilder können nicht wiederhergestellt werden."
 
 #, python-format
 msgid ""

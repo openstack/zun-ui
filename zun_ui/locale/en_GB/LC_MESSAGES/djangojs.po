@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-10-25 02:05+0000\n"
+"POT-Creation-Date: 2018-10-26 00:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-10-25 02:05+0000\n"
+"PO-Revision-Date: 2018-10-25 04:36+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -77,6 +77,9 @@ msgstr ""
 msgid "An arbitrary human-readable name."
 msgstr "An arbitrary human-readable name."
 
+msgid "Architecture"
+msgstr "Architecture"
+
 msgid "Auto Heal"
 msgstr "Auto Heal"
 
@@ -94,6 +97,12 @@ msgstr "Bare Metal"
 
 msgid "CPU"
 msgstr "CPU"
+
+msgid "CPU Total"
+msgstr "CPU Total"
+
+msgid "CPU Used"
+msgstr "CPU Used"
 
 msgid "Capsule"
 msgstr "Capsule"
@@ -145,6 +154,11 @@ msgid "Confirm Delete Container Forcely"
 msgid_plural "Confirm Delete Containers Forcely"
 msgstr[0] "Confirm Delete Container Forcibly "
 msgstr[1] "Confirm Delete Containers Forcibly "
+
+msgid "Confirm Delete Image"
+msgid_plural "Confirm Delete Images"
+msgstr[0] "Confirm Delete Image"
+msgstr[1] "Confirm Delete Images"
 
 msgid "Console"
 msgstr "Console"
@@ -234,11 +248,13 @@ msgstr[1] "Delete Containers Forcibly "
 msgid "Delete Containers"
 msgstr "Delete Containers"
 
-#, fuzzy
 msgid "Delete Image"
 msgid_plural "Delete Images"
 msgstr[0] "Delete Image"
-msgstr[1] ""
+msgstr[1] "Delete Images"
+
+msgid "Delete Images"
+msgstr "Delete Images"
 
 #, python-format
 msgid "Deleted Capsule: %s."
@@ -264,6 +280,12 @@ msgid_plural "Deleted Containers: %s."
 msgstr[0] "Deleted Container: %s."
 msgstr[1] "Deleted Containers: %s."
 
+#, python-format
+msgid "Deleted Image: %s."
+msgid_plural "Deleted Images: %s."
+msgstr[0] "Deleted Image: %s."
+msgstr[1] "Deleted Images: %s."
+
 msgid "Description"
 msgstr "Description"
 
@@ -281,6 +303,15 @@ msgstr "Direction"
 
 msgid "Disk"
 msgstr "Disk"
+
+msgid "Disk Quota Supported"
+msgstr "Disk Quota Supported"
+
+msgid "Disk Total"
+msgstr "Disk Total"
+
+msgid "Disk Used"
+msgstr "Disk Used"
 
 msgid "Docker Hub"
 msgstr "Docker Hub"
@@ -357,6 +388,9 @@ msgstr "Host ID"
 msgid "Hostname"
 msgstr "Hostname"
 
+msgid "Hosts"
+msgstr "Hosts"
+
 msgid "ID"
 msgstr "ID"
 
@@ -415,6 +449,9 @@ msgstr "Interactive"
 msgid "KEY1=VALUE1,KEY2=VALUE2..."
 msgstr "KEY1=VALUE1,KEY2=VALUE2..."
 
+msgid "Kernel Version"
+msgstr "Kernel Version"
+
 msgid "Kill Signal"
 msgstr "Kill Signal"
 
@@ -444,6 +481,9 @@ msgstr "Manage Security Groups: container %s"
 msgid "Manage security group for ports."
 msgstr "Manage security group for ports."
 
+msgid "Margin"
+msgstr "Margin"
+
 msgid "Max Port"
 msgstr "Max Port"
 
@@ -452,6 +492,12 @@ msgstr "Max Retry"
 
 msgid "Memory"
 msgstr "Memory"
+
+msgid "Memory Total"
+msgstr "Memory Total"
+
+msgid "Memory Used"
+msgstr "Memory Used"
 
 msgid "Min Port"
 msgstr "Min Port"
@@ -522,6 +568,12 @@ msgstr "No existing scheduler hints"
 
 msgid "Normal"
 msgstr "Normal"
+
+msgid "OS"
+msgstr "OS"
+
+msgid "OS Type"
+msgstr "OS Type"
 
 msgid "Output"
 msgstr "Output"
@@ -628,6 +680,9 @@ msgstr "Retry times for 'Restart on failure' policy."
 
 msgid "Runtime"
 msgstr "Runtime"
+
+msgid "Runtimes"
+msgstr "Runtimes"
 
 msgid "Scheduler Hints"
 msgstr "Scheduler Hints"
@@ -892,6 +947,9 @@ msgstr ""
 "Volume\"\n"
 "    and select source from the pull-down list."
 
+msgid "Total Containers"
+msgstr "Total Containers"
+
 msgid "Type"
 msgstr "Type"
 
@@ -929,6 +987,12 @@ msgstr[0] "Unable to delete Container: %s."
 msgstr[1] "Unable to delete Containers: %s."
 
 #, python-format
+msgid "Unable to delete Image: %s."
+msgid_plural "Unable to delete Images: %s."
+msgstr[0] "Unable to delete Image: %s."
+msgstr[1] "Unable to delete Images: %s."
+
+#, python-format
 msgid "Unable to delete forcely the Container with id: %(id)s"
 msgstr "Unable to delete forcibly the Container with id: %(id)s"
 
@@ -942,6 +1006,10 @@ msgstr "Unable to delete the Container with id: %(id)s"
 
 msgid "Unable to delete the Containers."
 msgstr "Unable to delete the Containers."
+
+#, python-format
+msgid "Unable to delete the Image with id: %(id)s"
+msgstr "Unable to delete the Image with id: %(id)s"
 
 msgid "Unable to detach network."
 msgstr "Unable to detach network."
@@ -978,6 +1046,9 @@ msgstr "Unable to retrieve the Container."
 
 msgid "Unable to retrieve the Containers."
 msgstr "Unable to retrieve the Containers."
+
+msgid "Unable to retrieve the Host."
+msgstr "Unable to retrieve the Host."
 
 msgid "Unable to retrieve the Hosts."
 msgstr "Unable to retrieve the Hosts."
@@ -1025,6 +1096,21 @@ msgstr "Update Container"
 
 msgid "Updated"
 msgstr "Updated"
+
+msgid "Usage"
+msgstr "Usage"
+
+msgid "Used"
+msgstr "Used"
+
+msgid "Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}"
+msgstr "Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}"
+
+msgid "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
+msgstr "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
+
+msgid "Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}"
+msgstr "Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}"
 
 msgid "User ID"
 msgstr "User ID"
@@ -1106,6 +1192,10 @@ msgid "You are not allowed to delete containers: %s"
 msgstr "You are not allowed to delete containers: %s"
 
 #, python-format
+msgid "You are not allowed to delete images: %s"
+msgstr "You are not allowed to delete images: %s"
+
+#, python-format
 msgid "You are not allowed to stop and delete container: %s"
 msgstr "You are not allowed to stop and delete container: %s"
 
@@ -1145,6 +1235,20 @@ msgstr[0] ""
 msgstr[1] ""
 "You have selected \"%s\". Please confirm your selection. Deleted containers "
 "are not recoverable."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted image is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted images are "
+"not recoverable."
+msgstr[0] ""
+"You have selected \"%s\". Please confirm your selection. Deleted image is "
+"not recoverable."
+msgstr[1] ""
+"You have selected \"%s\". Please confirm your selection. Deleted images are "
+"not recoverable."
 
 #, python-format
 msgid ""

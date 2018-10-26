@@ -3,11 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-21 00:14+0000\n"
+"POT-Creation-Date: 2018-10-26 00:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-06-11 09:33+0000\n"
+"PO-Revision-Date: 2018-10-25 09:34+0000\n"
 "Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -19,6 +19,12 @@ msgstr "0.2.0"
 
 msgid "1.0.0"
 msgstr "1.0.0"
+
+msgid "1.0.0-18"
+msgstr "1.0.0-18"
+
+msgid "2.0.0"
+msgstr "2.0.0"
 
 msgid ""
 "Added Cloud Shell feature. See also [`Screen Shot <https://drive.google.com/"
@@ -41,6 +47,9 @@ msgstr "Fehlerkorrekturen"
 
 msgid "Current Series Release Notes"
 msgstr "Aktuelle Serie Releasenotes"
+
+msgid "New Features"
+msgstr "Neue Funktionen"
 
 msgid "Other Notes"
 msgstr "Andere Notizen"
@@ -91,6 +100,9 @@ msgstr ""
 "_0330_cloud_shell.py into openstack_dashboard/local/enabled Verzeichnis und "
 "starten Sie Horizon neu. Der \">_ Cloud Shell\" Knopf erscheint am rechten "
 "Rand in Horizon nach dem Login."
+
+msgid "Upgrade Notes"
+msgstr "Aktualisierungsnotizen"
 
 msgid "Use only tox for test and remove run_tests.sh that is no longer used."
 msgstr ""
