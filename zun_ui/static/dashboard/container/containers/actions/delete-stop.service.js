@@ -37,6 +37,7 @@
     'horizon.framework.util.q.extensions',
     'horizon.framework.widgets.modal.deleteModalService',
     'horizon.framework.widgets.toast.service',
+    'horizon.dashboard.container.containers.adminActions',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.dashboard.container.containers.events',
     'horizon.dashboard.container.containers.validStates'
@@ -44,7 +45,7 @@
 
   function deleteStopService(
     $location, $q, zun, policy, actionResult, gettext, $qExtensions, deleteModal,
-    toast, resourceType, events, validStates
+    toast, adminActions, resourceType, events, validStates
   ) {
     var scope;
     var context = {
@@ -67,9 +68,16 @@
     }
 
     function allowed(container) {
-      return $qExtensions.booleanAsPromise(
-        validStates.delete_stop.indexOf(container.status) >= 0
-      );
+      var adminAction = true;
+      if (zun.isAdmin()) {
+        adminAction = adminActions.indexOf("delete_stop") >= 0;
+      }
+      return $q.all([
+        $qExtensions.booleanAsPromise(adminAction),
+        $qExtensions.booleanAsPromise(
+          validStates.delete_stop.indexOf(container.status) >= 0
+        )
+      ]);
     }
 
     // delete selected resource objects

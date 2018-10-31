@@ -28,7 +28,9 @@
       executeContainerService);
 
   executeContainerService.$inject = [
+    '$q',
     'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.adminActions',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.dashboard.container.containers.validStates',
     'horizon.framework.util.actions.action-result.service',
@@ -40,7 +42,8 @@
   ];
 
   function executeContainerService(
-    zun, resourceType, validStates, actionResult, gettext, $qExtensions, modal, waitSpinner, toast
+    $q, zun, adminActions, resourceType, validStates, actionResult,
+    gettext, $qExtensions, modal, waitSpinner, toast
   ) {
     // schema
     var schema = {
@@ -123,9 +126,16 @@
     }
 
     function allowed(container) {
-      return $qExtensions.booleanAsPromise(
-        validStates.execute.indexOf(container.status) >= 0
-      );
+      var adminAction = true;
+      if (zun.isAdmin()) {
+        adminAction = adminActions.indexOf("execute") >= 0;
+      }
+      return $q.all([
+        $qExtensions.booleanAsPromise(adminAction),
+        $qExtensions.booleanAsPromise(
+          validStates.execute.indexOf(container.status) >= 0
+        )
+      ]);
     }
 
     function perform(selected) {

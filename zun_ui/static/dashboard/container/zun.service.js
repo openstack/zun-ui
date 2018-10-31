@@ -19,12 +19,13 @@
     .factory('horizon.app.core.openstack-service-api.zun', ZunAPI);
 
   ZunAPI.$inject = [
+    '$location',
     'horizon.framework.util.http.service',
     'horizon.framework.widgets.toast.service',
     'horizon.framework.util.i18n.gettext'
   ];
 
-  function ZunAPI(apiService, toastService, gettext) {
+  function ZunAPI($location, apiService, toastService, gettext) {
     var containersPath = '/api/zun/containers/';
     var zunAvailabilityZonesPath = '/api/zun/availability_zones/';
     var capsulesPath = '/api/zun/capsules/';
@@ -61,7 +62,8 @@
       getImages: getImages,
       deleteImage: deleteImage,
       getHosts: getHosts,
-      getHost: getHost
+      getHost: getHost,
+      isAdmin: isAdmin
     };
     return service;
 
@@ -269,6 +271,16 @@
       return function() {
         toastService.add('error', message);
       };
+    }
+
+    function isAdmin() {
+      var isAdmin = false;
+      if ($location.url().startsWith("/admin") ||
+        $location.url().endsWith("?nav=%2Fadmin%2Fcontainer%2Fcontainers%2F")
+      ) {
+        isAdmin = true;
+      }
+      return isAdmin;
     }
   }
 }());

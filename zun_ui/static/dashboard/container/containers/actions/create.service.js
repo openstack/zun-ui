@@ -25,8 +25,10 @@
     .factory('horizon.dashboard.container.containers.create.service', createService);
 
   createService.$inject = [
+    '$q',
     'horizon.app.core.openstack-service-api.policy',
     'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.adminActions',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.dashboard.container.containers.workflow',
     'horizon.framework.util.actions.action-result.service',
@@ -37,7 +39,7 @@
   ];
 
   function createService(
-    policy, zun, resourceType, workflow,
+    $q, policy, zun, adminActions, resourceType, workflow,
     actionResult, gettext, $qExtensions, modal, toast
   ) {
     var message = {
@@ -66,7 +68,14 @@
     }
 
     function allowed() {
-      return policy.ifAllowed({ rules: [['container', 'add_container']] });
+      var adminAction = true;
+      if (zun.isAdmin()) {
+        adminAction = adminActions.indexOf("create") >= 0;
+      }
+      return $q.all([
+        policy.ifAllowed({ rules: [['container', 'add_container']] }),
+        $qExtensions.booleanAsPromise(adminAction)
+      ]);
     }
 
     function submit(context) {

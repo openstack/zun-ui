@@ -21,10 +21,12 @@
       manageSecurityGroup);
 
   manageSecurityGroup.$inject = [
+    "$q",
     "horizon.app.core.openstack-service-api.neutron",
     "horizon.app.core.openstack-service-api.security-group",
     "horizon.app.core.openstack-service-api.zun",
     "horizon.dashboard.container.basePath",
+    'horizon.dashboard.container.containers.adminActions',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.dashboard.container.containers.validStates',
     'horizon.framework.util.actions.action-result.service',
@@ -35,8 +37,8 @@
   ];
 
   function manageSecurityGroup(
-    neutron, securityGroup, zun, basePath, resourceType, validStates, actionResult,
-    gettext, $qExtensions, modal, toast
+    $q, neutron, securityGroup, zun, basePath, adminActions, resourceType, validStates,
+    actionResult, gettext, $qExtensions, modal, toast
   ) {
     // title for dialog
     var title = gettext("Manage Security Groups: container %s");
@@ -93,9 +95,16 @@
     }
 
     function allowed(container) {
-      return $qExtensions.booleanAsPromise(
-        validStates.manage_security_groups.indexOf(container.status) >= 0
-      );
+      var adminAction = true;
+      if (zun.isAdmin()) {
+        adminAction = adminActions.indexOf("manage_security_groups") >= 0;
+      }
+      return $q.all([
+        $qExtensions.booleanAsPromise(adminAction),
+        $qExtensions.booleanAsPromise(
+          validStates.manage_security_groups.indexOf(container.status) >= 0
+        )
+      ]);
     }
 
     function perform(selected) {

@@ -10,19 +10,12 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from django.utils.translation import ugettext_lazy as _
-import horizon
+# The slug of the panel to be added to HORIZON_CONFIG. Required.
+PANEL = 'container.containers'
+# The slug of the panel group the PANEL is associated with.
+PANEL_GROUP = 'container'
+# The slug of the dashboard the PANEL associated with. Required.
+PANEL_DASHBOARD = 'admin'
 
-# This panel will be loaded from horizon, because specified in enabled file.
-# To register REST api, import below here.
-from zun_ui.api import rest_api  # noqa: F401
-
-
-class Containers(horizon.Panel):
-    name = _("Containers")
-    slug = "container.containers"
-
-
-class ContainersForAdmin(horizon.Panel):
-    name = _("Containers")
-    slug = "container.containers"
+# Python panel class of the PANEL to be added.
+ADD_PANEL = 'zun_ui.content.container.containers.panel.ContainersForAdmin'

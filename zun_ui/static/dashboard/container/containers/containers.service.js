@@ -19,8 +19,10 @@
     .factory('horizon.dashboard.container.containers.service', containersService);
 
   containersService.$inject = [
+    '$location',
     'horizon.app.core.detailRoute',
-    'horizon.app.core.openstack-service-api.zun'
+    'horizon.app.core.openstack-service-api.zun',
+    'horizon.framework.util.navigations.service'
   ];
 
   /*
@@ -31,13 +33,30 @@
    * This service provides functions that are used through
    * the containers features.
    */
-  function containersService(detailRoute, zun) {
+  function containersService($location, detailRoute, zun, navigation) {
     return {
+      getDefaultIndexUrl: getDefaultIndexUrl,
       getDetailsPath: getDetailsPath,
       getContainerPromise: getContainerPromise,
       getContainersPromise: getContainersPromise
     };
 
+    function getDefaultIndexUrl() {
+      var dashboard, breadcrumbDashboard;
+      var path = "/container/containers";
+      if (zun.isAdmin()) {
+        dashboard = "/admin";
+        breadcrumbDashboard = gettext("Admin");
+      } else {
+        dashboard = "/project";
+        breadcrumbDashboard = gettext("Project");
+      }
+      var url = dashboard + path + "/";
+      navigation.setBreadcrumb([
+        breadcrumbDashboard, gettext("Container"), gettext("Containers")]);
+      navigation.expandNavigationByUrl(url);
+      return url;
+    }
     /*
      * @ngdoc function
      * @name getDetailsPath
@@ -46,7 +65,11 @@
      * Returns the relative path to the details view.
      */
     function getDetailsPath(item) {
-      return detailRoute + 'OS::Zun::Container/' + item.id;
+      var detailsPath = detailRoute + 'OS::Zun::Container/' + item.id;
+      if ($location.url() === '/admin/container/containers') {
+        detailsPath = detailsPath + "?nav=/admin/container/containers/";
+      }
+      return detailsPath;
     }
 
     /*

@@ -31,6 +31,7 @@
     ])
     .constant('horizon.dashboard.container.containers.events', events())
     .constant('horizon.dashboard.container.containers.validStates', validStates())
+    .constant('horizon.dashboard.container.containers.adminActions', adminActions())
     .constant('horizon.dashboard.container.containers.resourceType', 'OS::Zun::Container')
     .run(run)
     .config(config);
@@ -66,6 +67,10 @@
       execute: [states.RUNNING],
       kill: [states.RUNNING],
       delete: [states.CREATED, states.ERROR, states.STOPPED, states.DELETED, states.DEAD],
+      /* NOTE(shu-mutow): Docker does not allow us to delete PAUSED container.
+       *                  There are ways to delete paused container in server,
+       *                  but we are according to Docker's policy as now.
+       */
       delete_force: [
         states.CREATED, states.CREATING, states.ERROR, states.RUNNING,
         states.STOPPED, states.UNKNOWN, states.DELETED, states.DEAD,
@@ -77,6 +82,10 @@
       ],
       manage_security_groups: [states.CREATED, states.RUNNING, states.STOPPED, states.PAUSED]
     };
+  }
+
+  function adminActions() {
+    return ["update", "start", "stop", "restart", "rebuild", "kill", "delete_force"];
   }
 
   run.$inject = [
@@ -91,7 +100,7 @@
     registry.getResourceType(resourceType)
     .setNames(gettext('Container'), gettext('Containers'))
     .setSummaryTemplateUrl(basePath + 'details/drawer.html')
-    .setDefaultIndexUrl('/project/container/containers/')
+    .setDefaultIndexUrl(containerService.getDefaultIndexUrl())
     .setProperties(containerProperties())
     .setListFunction(containerService.getContainersPromise)
     .tableColumns
@@ -196,8 +205,12 @@
   function config($provide, $windowProvider, $routeProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/container/containers/';
     $provide.constant('horizon.dashboard.container.containers.basePath', path);
-    $routeProvider.when('/project/container/containers', {
-      templateUrl: path + 'panel.html'
-    });
+    $routeProvider
+      .when('/project/container/containers', {
+        templateUrl: path + 'panel.html'
+      })
+      .when('/admin/container/containers', {
+        templateUrl: path + 'panel.html'
+      });
   }
 })();

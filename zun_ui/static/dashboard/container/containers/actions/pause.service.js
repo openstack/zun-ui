@@ -26,7 +26,9 @@
     .factory('horizon.dashboard.container.containers.pause.service', pauseService);
 
   pauseService.$inject = [
+    '$q',
     'horizon.app.core.openstack-service-api.zun',
+    'horizon.dashboard.container.containers.adminActions',
     'horizon.dashboard.container.containers.resourceType',
     'horizon.dashboard.container.containers.validStates',
     'horizon.framework.util.actions.action-result.service',
@@ -35,7 +37,7 @@
   ];
 
   function pauseService(
-    zun, resourceType, validStates, actionResult, $qExtensions, toast
+    $q, zun, adminActions, resourceType, validStates, actionResult, $qExtensions, toast
   ) {
 
     var message = {
@@ -58,9 +60,16 @@
     }
 
     function allowed(container) {
-      return $qExtensions.booleanAsPromise(
-        validStates.pause.indexOf(container.status) >= 0
-      );
+      var adminAction = true;
+      if (zun.isAdmin()) {
+        adminAction = adminActions.indexOf("pause") >= 0;
+      }
+      return $q.all([
+        $qExtensions.booleanAsPromise(adminAction),
+        $qExtensions.booleanAsPromise(
+          validStates.pause.indexOf(container.status) >= 0
+        )
+      ]);
     }
 
     function perform(selected) {
