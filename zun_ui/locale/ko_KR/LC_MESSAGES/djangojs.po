@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-10-18 08:43+0000\n"
+"POT-Creation-Date: 2018-11-09 08:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-11-05 11:31+0000\n"
+"PO-Revision-Date: 2018-11-14 12:00+0000\n"
 "Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
@@ -26,8 +26,14 @@ msgstr "컨테이너에 전송될 명령입니다."
 msgid "A port represents a virtual switch port on a logical network switch."
 msgstr "포트는 논리 네트워크 스위치 상의 가상 스위치 포트를 나타냅니다."
 
+msgid "Active"
+msgstr "활성"
+
 msgid "Add Security Group"
 msgstr "보안그룹  추가"
+
+msgid "Add Volume"
+msgstr "볼륨 추가"
 
 msgid "Addresses"
 msgstr "주소"
@@ -53,6 +59,21 @@ msgstr "항상 재시작"
 
 msgid "Always: Always pull the image from repository."
 msgstr "Always: 항상 저장소에서 이미지를 가져옵니다."
+
+msgid ""
+"An <b>External</b> network is set up by an administrator.\n"
+"    If you want a container to communicate outside of the data center,\n"
+"    then attach a router between your <b>Project</b> network and the "
+"<b>External</b> network.\n"
+"    You can use the <b>Network Topology</b> view to connect the router to "
+"the two networks."
+msgstr ""
+"<b>외부</b> 네트워크는 관리자에 의해 셋업됩니다.\n"
+"    컨테이너를 데이터 센터 외부와 통신시키고자 할 때에,\n"
+"    <b>프로젝트</b> 네트워크와 <b>외부</b> 네트워크 사이에 있는 라우터에 연결"
+"합니다.\n"
+"    <b>네트워크 토폴로지</b>를 사용하여 라우터가 두 네트워크에 연결되어 있는"
+"지 볼 수 있습니다."
 
 msgid "An arbitrary human-readable name."
 msgstr "사람이 읽을 수 있는 임의의 이름"
@@ -168,6 +189,9 @@ msgstr "컨테이너 UUID"
 msgid "Containers"
 msgstr "컨테이너"
 
+msgid "Containers attach their interfaces to ports."
+msgstr "컨테이너는 인터페이스를 포트에 연결합니다."
+
 msgid "Create"
 msgstr "생성"
 
@@ -202,6 +226,13 @@ msgstr[0] "강제 컨테이너 삭제"
 msgid "Delete Containers"
 msgstr "컨테이너 삭제"
 
+msgid "Delete Image"
+msgstr "이미지 삭제"
+
+#, python-format
+msgid "Delete Image %s"
+msgstr "이미지 %s를 삭제"
+
 #, python-format
 msgid "Deleted Capsule: %s."
 msgid_plural "Deleted Capsules: %s."
@@ -230,6 +261,9 @@ msgstr "대상"
 
 msgid "Direct"
 msgstr "Direct"
+
+msgid "Direct Physical"
+msgstr "Direct Physical"
 
 msgid "Direction"
 msgstr "Direction"
@@ -309,6 +343,12 @@ msgstr "ID"
 msgid "IP"
 msgstr "IP"
 
+msgid ""
+"If a network is shared, then all users in the project can access the network."
+msgstr ""
+"네트워크가 공유 상태이면, 프로젝트 내 모든 사용자들은 네트워크에 접근 가능합"
+"니다."
+
 msgid "If not present"
 msgstr "존재하지 않는다면"
 
@@ -318,6 +358,10 @@ msgstr "If not present: 이미지가 노드에 없는 경우에만 이미지를 
 
 msgid "Image"
 msgstr "이미지"
+
+#, python-format
+msgid "Image %s was successfully pulled."
+msgstr "이미지 %s를 성공적으로 가져왔습니다."
 
 msgid "Image Driver"
 msgstr "이미지 드라이버"
@@ -413,8 +457,15 @@ msgstr "네트워크 %s는 성공적으로 컨테이너 %s에서 연결 해제�
 msgid "Network ID"
 msgstr "네트워크 ID"
 
+msgid "Network characteristics"
+msgstr "네트워크 특징"
+
 msgid "Networks"
 msgstr "네트워크"
+
+msgid ""
+"Networks provide the communication channels for containers in the cloud."
+msgstr "네트워크는 클라우드 내 컨테이너에 대한 통신 채널을 제공합니다."
 
 msgid "Never"
 msgstr "전혀"
@@ -477,11 +528,31 @@ msgstr "프로젝트"
 msgid "Project ID"
 msgstr "프로젝트 ID"
 
+msgid ""
+"Project networks are created by users.\n"
+"    These networks are fully isolated and are project-specific."
+msgstr ""
+"프로젝트 네트워크는 사용자에 의해 생성됩니다.\n"
+"  해당 네트워크는 완전히 격리되어 있으며 프로젝트 별로 관리됩니다."
+
 msgid "Protocol"
 msgstr "프로토콜"
 
 msgid "Provider Network"
 msgstr "프로바이더 네트워크"
+
+msgid ""
+"Provider networks are created by administrators.\n"
+"    These networks map to an existing physical network in the data center."
+msgstr ""
+"프로바이더 네트워크는 관리자에 의해 생성됩니다.\n"
+"  해당 네트워크는 데이터 센터 내 존재하는 물리 네트워크에 매핑됩니다."
+
+msgid "Pull"
+msgstr "Pull"
+
+msgid "Pull Image"
+msgstr "이미지 가져오기"
 
 msgid "Re-order items using drag and drop"
 msgstr "다시 주문할 아이템은 드래그 앤 드롭으로 가져옵니다."
@@ -547,8 +618,17 @@ msgstr "가용 구역 선택"
 msgid "Select available Cinder volume"
 msgstr "가용 Cinder 볼륨을 선택하세요."
 
+msgid "Select host that stores the image."
+msgstr "이미지를 저장할 호스트를 선택하세요."
+
+msgid "Select host to remove the image from."
+msgstr "이미지를 제거할 호스트를 선택하세요."
+
 msgid "Select image driver for changing image."
 msgstr "이미지 변경을 위한 이미지 드라이버를 선택하세요."
+
+msgid "Select networks from those listed below."
+msgstr "아래의 목록에서 네트워크를 선택합니다."
 
 msgid "Select one or more"
 msgstr "하나 이상 선택"
@@ -613,6 +693,12 @@ msgstr "종료 제한시간을 초 단위로 지정하세요. (기본: 10초)"
 msgid "Specify an image to change."
 msgstr "변경할 이미지를 지정하세요."
 
+msgid "Specify mount point of the volume on the container."
+msgstr "컨테이너에서 볼륨의 마운트 지점을 지정하세요."
+
+msgid "Specify size for the new volume in GB."
+msgstr "새 볼륨의 크기(GB)를 지정하세요."
+
 msgid "Start Container"
 msgstr "컨테이너 시작"
 
@@ -639,6 +725,9 @@ msgstr "컨테이너를 중지하고 삭제"
 
 msgid "Submit"
 msgstr "제출"
+
+msgid "Subnets Associated"
+msgstr "연관된 서브넷"
 
 msgid "Tag"
 msgstr "태그"
@@ -700,14 +789,38 @@ msgstr "컨테이너와 함께 생성하기 위한 런타임."
 msgid "The runtime to use for this container. Default: \"runc\""
 msgstr "이 컨테이너를 사용하기 위한 런타임. 기본: \"runc\""
 
+msgid "The status indicates whether the network has an active connection."
+msgstr "해당 상태는 네트워크가 활성화된 연결을 이루고 있는지를 가리킵니다."
+
 msgid "The status indicates whether the port has an active connection."
 msgstr "이 상태는 해당 포트가 활성 연결이 있는지 여부를 가리킵니다."
+
+msgid ""
+"The subnet identifies a sub-section of a network. A subnet is specified in "
+"CIDR format.\n"
+"    A typical CIDR format looks like <samp>192.xxx.x.x/24</samp>."
+msgstr ""
+"서브넷은 네트워크의 하부 부분을 식별합니다. 서브넷은 CIDR 포맷으로 지정됩니"
+"다.\n"
+"    일반적인 CIDR 포맷은 <samp>192.xxx.x.x/24</samp>와 같습니다."
+
+msgid "The volumes are mounted into the container."
+msgstr "볼륨은 컨테이너에 마운트됩니다."
 
 msgid "The working directory for commands to run in."
 msgstr "명령이 실행되는 작업 디렉토리"
 
 msgid "The working directory needs to be an absolute path."
 msgstr "작업 디렉토리는 절대 경로여야 할 필요가 있습니다."
+
+msgid ""
+"To create new Cinder volume and mount it to the container, select type \"New "
+"Cinder Volume\"\n"
+"    and specify size for the new volume."
+msgstr ""
+"새 Cinder 볼륨을 생성하고 컨테이너에 마운트하려면, \"새 Cinder 볼륨\" 타입"
+"을\n"
+"    선택하고 새 볼륨의 크기를 지정합니다."
 
 msgid ""
 "To mount existing available Cinder volume, select type \"Available Cinder "
@@ -870,6 +983,16 @@ msgid ""
 msgstr ""
 "IP 주소가 포트와 연결을 맺고 있을 때, 이는 IP 주소가 임의의 서브넷에 대한 할"
 "당 풀에서 선택됨에 따라 해당 포트가 서브넷 또한 연결되어 있음을 암시합니다."
+
+msgid ""
+"When the <b>Admin State</b> for a network is set to <b>Up</b>,\n"
+"    then the network is available for use. You can set the <b>Admin State</"
+"b> to <b>Down</b>\n"
+"    if you are not ready for other users to access the network."
+msgstr ""
+"네트워크의 <b>관리 상태</b>가 <b>Up</b>으로 설정되어 있을 경우, \n"
+"    네트워크를 사용할 수 있습니다. <b>관리 상태</b>를 <b>Down</b>로 \n"
+"    설정한다면 다른 사용자들이 네트워크에 접근할 수 없습니다."
 
 msgid ""
 "When the <b>Admin State</b> for a port is set to <b>Up</b> and it has no "
