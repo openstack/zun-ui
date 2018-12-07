@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-11-02 01:21+0000\n"
+"POT-Creation-Date: 2018-12-06 01:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-11-05 11:14+0000\n"
+"PO-Revision-Date: 2018-12-06 10:52+0000\n"
 "Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
@@ -21,14 +21,26 @@ msgstr ""
 msgid "(empty)"
 msgstr "(비어있음)"
 
+msgid "A command that will be sent to the container."
+msgstr "컨테이너에 전송될 명령."
+
 msgid "A port represents a virtual switch port on a logical network switch."
 msgstr "포트는 논리 네트워크 스위치 상의 가상 스위치 포트를 나타냅니다."
+
+msgid "Active"
+msgstr "활성"
 
 msgid "Add Security Group"
 msgstr "보안그룹 추가"
 
+msgid "Add Volume"
+msgstr "볼륨 추가"
+
 msgid "Addresses"
 msgstr "주소"
+
+msgid "Adds a map of labels to a container in comma separated KEY=VALUE pairs."
+msgstr "쉼표로 구별된 KEY=VALUE 쌍으로 라벨 맵을 컨테이너에 추가합니다."
 
 msgid "Admin"
 msgstr "관리자"
@@ -36,8 +48,36 @@ msgstr "관리자"
 msgid "Admin State"
 msgstr "관리자 상태"
 
+msgid ""
+"Allocate pseudo-TTY and keep STDIN open even if not attached. This also "
+"enables Web console in console tab on details view."
+msgstr ""
+"첨부되지 않은 경우에도 가상TTY를 할당하고 표준입력을 열어두는 것을 유지하세"
+"요. 이는 또한 세부정보 보기의 콘솔 탭에서 웹 콘솔을 활성화합니다."
+
+msgid "Always"
+msgstr "항상"
+
+msgid "Always restart"
+msgstr "항상 재시작"
+
 msgid "Always: Always pull the image from repository."
 msgstr "Always: 항상 저장소에서 이미지를 가져옵니다."
+
+msgid ""
+"An <b>External</b> network is set up by an administrator.\n"
+"    If you want a container to communicate outside of the data center,\n"
+"    then attach a router between your <b>Project</b> network and the "
+"<b>External</b> network.\n"
+"    You can use the <b>Network Topology</b> view to connect the router to "
+"the two networks."
+msgstr ""
+"<b>외부</b> 네트워크는 관리자에 의해 셋업됩니다.\n"
+"    컨테이너를 데이터 센터 외부와 통신시키고자 할 때에,\n"
+"    <b>프로젝트</b> 네트워크와 <b>외부</b> 네트워크 사이에 있는 라우터에 연결"
+"합니다.\n"
+"    <b>네트워크 토폴로지</b>를 사용하여 라우터가 두 네트워크에 연결되어 있는"
+"지 볼 수 있습니다."
 
 msgid "An arbitrary human-readable name."
 msgstr "사람이 읽을 수 있는 임의의 이름"
@@ -50,6 +90,9 @@ msgstr "자동 복구"
 
 msgid "Auto Remove"
 msgstr "자동 제거"
+
+msgid "Availability Zone"
+msgstr "가용 구역"
 
 msgid "Available Scheduler Hints"
 msgstr "사용 가능한 스케줄러 힌트"
@@ -111,6 +154,10 @@ msgstr[0] "컨테이너 삭제 확인"
 msgid "Confirm Delete Container Forcely"
 msgid_plural "Confirm Delete Containers Forcely"
 msgstr[0] "컨테이너 강제 삭제 확인"
+
+msgid "Confirm Delete Image"
+msgid_plural "Confirm Delete Images"
+msgstr[0] "이미지 삭제 확인"
 
 msgid "Console"
 msgstr "콘솔"
@@ -196,10 +243,12 @@ msgstr[0] "강제 컨테이너 삭제"
 msgid "Delete Containers"
 msgstr "컨테이너 삭제"
 
-#, fuzzy
 msgid "Delete Image"
 msgid_plural "Delete Images"
 msgstr[0] "이미지 삭제"
+
+msgid "Delete Images"
+msgstr "이미지 삭제"
 
 #, python-format
 msgid "Deleted Capsule: %s."
@@ -221,8 +270,16 @@ msgid "Deleted Container: %s."
 msgid_plural "Deleted Containers: %s."
 msgstr[0] "삭제된 컨테이너: %s."
 
+#, python-format
+msgid "Deleted Image: %s."
+msgid_plural "Deleted Images: %s."
+msgstr[0] "삭제된 이미지: %s"
+
 msgid "Description"
 msgstr "설명"
+
+msgid "Destination"
+msgstr "목적지"
 
 msgid "Direct"
 msgstr "Direct"
@@ -235,6 +292,9 @@ msgstr "Direction"
 
 msgid "Disk"
 msgstr "디스크"
+
+msgid "Disk Quota Supported"
+msgstr "디스크 할당량이 지원됨"
 
 msgid "Disk Total"
 msgstr "디스크 총량"
@@ -251,8 +311,20 @@ msgstr "Docker Hub: 도커 허브에서 이미지를 가져옵니다."
 msgid "Down"
 msgstr "Down"
 
+msgid "Enable Interactive Mode"
+msgstr "상호작용 모드 활성"
+
+msgid "Enable auto heal"
+msgstr "자동 복구 활성"
+
+msgid "Enable interactive mode"
+msgstr "상호작용 모드 활성"
+
 msgid "Environment"
 msgstr "환경"
+
+msgid "Environment Variables"
+msgstr "환경 변수"
 
 msgid "Ether Type"
 msgstr "Ether 타입"
@@ -266,14 +338,28 @@ msgstr "명령 실행"
 msgid "Executing"
 msgstr "실행"
 
+msgid "Existing Cinder Volume"
+msgstr "Cinder 볼륨 종료"
+
 msgid "Existing Scheduler Hints"
 msgstr "기존 스케줄러 힌트"
 
 msgid "Exit Code"
 msgstr "종료 코드"
 
+msgid "Exit Policy"
+msgstr "종료 정책"
+
 msgid "External Network"
 msgstr "외부 네트워크"
+
+msgid ""
+"For now, only Label Filter is available. So there are\n"
+"    no scheduler hint definitions in the left column. Please set key that "
+"included in labels."
+msgstr ""
+"이제 라벨 필터만 사용됩니다. 따라서 왼쪽\n"
+"    열에 스케줄러 힌트가 없습니다. 라벨에 포함된 키를 설정하세요."
 
 msgid "Glance"
 msgstr "Glance"
@@ -300,11 +386,24 @@ msgid "IP"
 msgstr "IP"
 
 msgid ""
+"If a network is shared, then all users in the project can access the network."
+msgstr ""
+"네트워크가 공유 상태이면, 프로젝트 내 모든 사용자들은 네트워크에 접근 가능합"
+"니다."
+
+msgid "If not present"
+msgstr "존재하지 않는다면"
+
+msgid ""
 "If not present: only pull the image if it does not already exist on the node."
 msgstr "If not present: 이미지가 노드에 없는 경우에만 이미지를 가져옵니다."
 
 msgid "Image"
 msgstr "이미지"
+
+#, python-format
+msgid "Image %s was successfully pulled."
+msgstr "이미지 %s를 성공적으로 가져왔습니다."
 
 msgid "Image Driver"
 msgstr "이미지 드라이버"
@@ -318,11 +417,25 @@ msgstr "이미지 가져오기 정책"
 msgid "Images"
 msgstr "이미지"
 
+msgid ""
+"In this dialog, specify the security groups for the container.\n"
+"      Note that the security groups will only apply for ports that\n"
+"      will be created from the allocated networks, but will not apply\n"
+"      for the allocated ports that are pre-existing."
+msgstr ""
+"이 대화상자에서는 컨테이너의 보안 그룹을 지정합니다.\n"
+"      보안그룹은 할당된 네트워크에서 만들어진 포트에만\n"
+"      적용될 것이고, 기존에 존재하는 할당된 포트에는\n"
+"      적용되지 않을 것입니다."
+
 msgid "Info"
 msgstr "정보"
 
 msgid "Interactive"
 msgstr "상호작용"
+
+msgid "KEY1=VALUE1,KEY2=VALUE2..."
+msgstr "KEY1=VALUE1,KEY2=VALUE2..."
 
 msgid "Kernel Version"
 msgstr "커널 버전"
@@ -362,6 +475,9 @@ msgstr "Margin"
 msgid "Max Port"
 msgstr "최대 포트"
 
+msgid "Max Retry"
+msgstr "최대 재시도"
+
 msgid "Memory"
 msgstr "메모리"
 
@@ -374,14 +490,23 @@ msgstr "메모리 사용량"
 msgid "Min Port"
 msgstr "최소 포트"
 
+msgid "Miscellaneous"
+msgstr "기타"
+
 msgid "Name"
 msgstr "이름"
+
+msgid "Name of the container to create."
+msgstr "생성할 컨테이너의 이름."
 
 msgid "Name of the image."
 msgstr "이미지 이름"
 
 msgid "Name or ID of container image."
 msgstr "컨테이너 이미지의 이름 혹은 ID 입니다."
+
+msgid "Name or ID of the container image."
+msgstr "컨테이너 이미지의 이름이나 ID."
 
 msgid "Network"
 msgstr "네트워크"
@@ -397,11 +522,27 @@ msgstr "네트워크 %s는 성공적으로 컨테이너 %s에서 연결 해제�
 msgid "Network ID"
 msgstr "네트워크 ID"
 
+msgid "Network characteristics"
+msgstr "네트워크 특징"
+
 msgid "Networks"
 msgstr "네트워크"
 
+msgid ""
+"Networks provide the communication channels for containers in the cloud."
+msgstr "네트워크는 클라우드 내 컨테이너에 대한 통신 채널을 제공합니다."
+
+msgid "Never"
+msgstr "전혀"
+
 msgid "Never: never pull the image."
 msgstr "Never: 이미지를 가져오지 않습니다."
+
+msgid "New Cinder Volume"
+msgstr "새 Cinder 볼륨"
+
+msgid "No"
+msgstr "No"
 
 msgid "No available items"
 msgstr "사용 가능한 항목 없음"
@@ -433,6 +574,9 @@ msgstr "컨테이너 정지"
 msgid "Physical Network"
 msgstr "물리 네트워크"
 
+msgid "Policy to apply when a container exits."
+msgstr "컨테이너가 종료될 때 적용할 정책"
+
 msgid "Port"
 msgstr "포트"
 
@@ -455,14 +599,31 @@ msgstr "프로젝트"
 msgid "Project ID"
 msgstr "프로젝트 ID"
 
+msgid ""
+"Project networks are created by users.\n"
+"    These networks are fully isolated and are project-specific."
+msgstr ""
+"프로젝트 네트워크는 사용자에 의해 생성됩니다.\n"
+"    해당 네트워크는 완전히 격리되어 있으며 프로젝트 별로 관리됩니다."
+
 msgid "Protocol"
 msgstr "프로토콜"
 
 msgid "Provider Network"
 msgstr "프로바이더 네트워크"
 
+msgid ""
+"Provider networks are created by administrators.\n"
+"    These networks map to an existing physical network in the data center."
+msgstr ""
+"프로바이더 네트워크는 관리자에 의해 생성됩니다.\n"
+"    해당 네트워크는 데이터 센터 내 존재하는 물리 네트워크에 매핑됩니다."
+
 msgid "Pull"
 msgstr "Pull"
+
+msgid "Pull Image"
+msgstr "이미지 가져오기"
 
 msgid "Re-order items using drag and drop"
 msgstr "다시 주문할 아이템은 드래그 앤 드롭으로 가져옵니다."
@@ -479,6 +640,9 @@ msgstr "갱신"
 msgid "Remote"
 msgstr "원격"
 
+msgid "Remove container"
+msgstr "컨테이너 제거"
+
 #, python-format
 msgid "Request to create capsule %s has been accepted."
 msgstr "캡슐 %s 생성 요청이 받아졌습니다."
@@ -492,8 +656,29 @@ msgstr "컨테이너 재시작"
 msgid "Restart Policy"
 msgstr "재시작 정책"
 
+msgid "Restart if stopped"
+msgstr "정재 시 재시작"
+
+msgid "Restart on failure"
+msgstr "실패 시 재시작"
+
+msgid "Retry times for 'Restart on failure' policy."
+msgstr "'실패 시 재시작' 정책의 재시도 횟수"
+
 msgid "Runtime"
 msgstr "런타임"
+
+msgid "Runtimes"
+msgstr "런타임"
+
+msgid "Scheduler Hints"
+msgstr "스케줄러 힌트"
+
+msgid ""
+"Scheduler hints allow you to pass additional placement related information "
+"to the Zun's scheduler."
+msgstr ""
+"스케줄러 힌트를 사용하여 배치 관련 추가 정보를 Zun 스케줄러에 추가합니다."
 
 msgid "Security Group"
 msgstr "보안그룹"
@@ -501,11 +686,24 @@ msgstr "보안그룹"
 msgid "Security Groups"
 msgstr "보안 그룹"
 
+msgid ""
+"Security groups define a set of IP filter rules that determine\n"
+"      how network traffic flows to and from a container."
+msgstr ""
+"보안 그룹은 네트워크 트래픽이 컨테이너와 트래픽을 주고받는 방법을\n"
+"      결정하는 일련의 IP 필터 규칙을 정의합니다."
+
 msgid "Segmentation ID"
 msgstr "구분 ID"
 
 msgid "Select an item from Available items below"
 msgstr "아래에서 사용 가능한 항목에서 선택"
+
+msgid "Select availability zone."
+msgstr "가용 구역 선택"
+
+msgid "Select available Cinder volume"
+msgstr "가용 Cinder 볼륨을 선택하세요."
 
 msgid "Select host that stores the image."
 msgstr "이미지를 저장할 호스트를 선택하세요."
@@ -513,11 +711,17 @@ msgstr "이미지를 저장할 호스트를 선택하세요."
 msgid "Select image driver for changing image."
 msgstr "이미지 변경을 위한 이미지 드라이버를 선택하세요."
 
+msgid "Select networks from those listed below."
+msgstr "아래의 목록에서 네트워크를 선택합니다."
+
 msgid "Select one or more"
 msgstr "하나 이상 선택"
 
 msgid "Select one or more security groups from the available groups below."
 msgstr "아래 사용가능한 그룹에서 하나 이상의 보안 그룹을 선택합니다."
+
+msgid "Select policy."
+msgstr "정책 선택"
 
 msgid "Select port first."
 msgstr "먼저 포트를 선택하세요."
@@ -531,11 +735,17 @@ msgstr "아래 목록에서 포트를 선택합니다."
 msgid "Select security group."
 msgstr "보안그룹을 선택하세요."
 
+msgid "Select the security groups to create the container in."
+msgstr "컨테이너를 만들기 위해 보안그룹을 선택합니다."
+
 msgid "Send"
 msgstr "전달"
 
 msgid "Send Kill Signal"
 msgstr "Kill 신호 전송"
+
+msgid "Set the volume specs and add into the table below."
+msgstr "볼륨 사양을 설정하고 아래 표에 추가하세요."
 
 msgid "Shared"
 msgstr "공유"
@@ -555,6 +765,12 @@ msgstr ""
 msgid "Size"
 msgstr "크기"
 
+msgid "Size (GB)"
+msgstr "크기 (GB)"
+
+msgid "Source"
+msgstr "소스"
+
 msgid "Spec"
 msgstr "사양"
 
@@ -564,8 +780,17 @@ msgstr "종료 제한시간을 초 단위로 지정하세요. (기본: 10초)"
 msgid "Specify an image to change."
 msgstr "변경할 이미지를 지정하세요."
 
+msgid "Specify mount point of the volume on the container."
+msgstr "컨테이너에서 볼륨의 마운트 지점을 지정하세요."
+
+msgid "Specify size for the new volume in GB."
+msgstr "새 볼륨의 크기(GB)를 지정하세요."
+
 msgid "Start Container"
 msgstr "컨테이너 시작"
+
+msgid "Start container after creation"
+msgstr "생성 후 컨테이너 시작"
 
 msgid "Status"
 msgstr "상태"
@@ -588,6 +813,9 @@ msgstr "컨테이너를 중지하고 삭제"
 msgid "Submit"
 msgstr "제출"
 
+msgid "Subnets Associated"
+msgstr "연관된 서브넷"
+
 msgid "Tag"
 msgstr "태그"
 
@@ -597,8 +825,26 @@ msgstr "작업 상태"
 msgid "Template"
 msgstr "템플릿"
 
+msgid "The availability zone of the container."
+msgstr "컨테이너의 가용 구역"
+
 msgid "The command to execute."
 msgstr "실행할 명령"
+
+msgid "The container memory size in MiB."
+msgstr "컨테이너 메모리의 크기.(MiB)"
+
+msgid "The disk size in GiB for per container."
+msgstr "컨테이너 당 GiB 단위의 디스크 크기."
+
+msgid "The environment variables in comma separated KEY=VALUE pairs"
+msgstr "쉼표로 구별된 KEY=VALUE 쌍으로 구성된 환경 변수"
+
+msgid "The flag of healing non-existent container in docker."
+msgstr "도커에 존재하지 않는 컨테이너의 복구 플래그"
+
+msgid "The host name of this container."
+msgstr "컨테이너의 호스트 이름."
 
 msgid "The image driver to use to pull container image."
 msgstr "컨테이너 이미지를 가져오는데 사용할 이미지 드라이버입니다."
@@ -613,16 +859,75 @@ msgstr ""
 "논리 포트는 연결되는 인터페이스에 할당이 이루어질 MAC 주소와 IP 주소 또한 정"
 "의합니다."
 
+msgid "The number of virtual CPUs."
+msgstr "가상 CPU의 수."
+
+msgid "The number of virtual cpu for this container."
+msgstr "컨테이너의 가상 CPU 개수."
+
 msgid ""
 "The policy which determines if the image should be pulled prior to starting "
 "the container."
 msgstr "컨테이너 기동 전에 이미지를 가져와야 하는지에 대해 결정하는 정책"
 
+msgid "The runtime to create container with."
+msgstr "컨테이너와 함께 생성하기 위한 런타임."
+
+msgid "The runtime to use for this container. Default: \"runc\""
+msgstr "이 컨테이너를 사용하기 위한 런타임. 기본: \"runc\""
+
+msgid "The status indicates whether the network has an active connection."
+msgstr "해당 상태는 네트워크가 활성화된 연결을 이루고 있는지를 가리킵니다."
+
 msgid "The status indicates whether the port has an active connection."
 msgstr "이 상태는 해당 포트가 활성 연결이 있는지 여부를 가리킵니다."
 
+msgid ""
+"The subnet identifies a sub-section of a network. A subnet is specified in "
+"CIDR format.\n"
+"    A typical CIDR format looks like <samp>192.xxx.x.x/24</samp>."
+msgstr ""
+"서브넷은 네트워크의 서브섹션을 식별합니다. 서브넷은 CIDR 포맷으로 구체화합니"
+"다.\n"
+"    일반적인 CIDR 포맷은 <samp>192.xxx.x.x/24</samp>와 같습니다."
+
+msgid "The volumes are mounted into the container."
+msgstr "볼륨은 컨테이너에 마운트됩니다."
+
+msgid "The working directory for commands to run in."
+msgstr "명령이 실행되는 작업 디렉토리"
+
+msgid "The working directory needs to be an absolute path."
+msgstr "작업 디렉토리는 절대 경로여야 합니다."
+
 msgid "This step allows you to add scheduler hints to your container."
 msgstr "이 단계에서 컨테이너에 스케줄러 힌트를 추가할 수 있습니다."
+
+msgid ""
+"To create new Cinder volume and mount it to the container, select type \"New "
+"Cinder Volume\"\n"
+"    and specify size for the new volume."
+msgstr ""
+"새 Cinder 볼륨을 생성하고 컨테이너에 마운트하려면, \"새 Cinder 볼륨\" 타입"
+"을\n"
+"    선택하고 새 볼륨의 크기를 지정합니다."
+
+msgid ""
+"To create new security groups, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then click <b>Create Security Group</b>."
+msgstr ""
+"새 보안 그룹을 만드려면 <b>Network | Security Groups</b> 보기로 가서,\n"
+"      <b>Create Security Group</b>를 클릭합니다."
+
+msgid ""
+"To mount existing available Cinder volume, select type \"Available Cinder "
+"Volume\"\n"
+"    and select source from the pull-down list."
+msgstr ""
+"존재하는 가용 Cinder 볼륨을 마운트하려면, \"가용 Cinder 볼륨\" 타입을 선택하"
+"고\n"
+"    풀다운 리스트에서 소스를 선택합니다."
 
 msgid "Total Containers"
 msgstr "전체 컨테이너"
@@ -660,6 +965,11 @@ msgid_plural "Unable to delete Containers: %s."
 msgstr[0] "컨테이너를 삭제할 수 없습니다: %s."
 
 #, python-format
+msgid "Unable to delete Image: %s."
+msgid_plural "Unable to delete Images: %s."
+msgstr[0] "이미지를 삭제할 수 없습니다: %s."
+
+#, python-format
 msgid "Unable to delete forcely the Container with id: %(id)s"
 msgstr "ID가 %(id)s인 컨테이너를 강제로 삭제할 수 없음"
 
@@ -673,6 +983,10 @@ msgstr "ID가 %(id)s인 컨테이너를 삭제할 수 없습니다."
 
 msgid "Unable to delete the Containers."
 msgstr "컨테이너를 삭제할 수 없습니다."
+
+#, python-format
+msgid "Unable to delete the Image with id: %(id)s"
+msgstr "ID가 %(id)s인 이미지를 삭제할 수 없습니다"
 
 msgid "Unable to detach network."
 msgstr "네트워크를 떼낼 수 없습니다."
@@ -766,6 +1080,9 @@ msgstr "사용"
 msgid "Used"
 msgstr "사용됨"
 
+msgid "Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}"
+msgstr "{$ ctrl.host.cpus $} 에서 {$ ctrl.host.cpu_used $} 사용함"
+
 msgid "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
 msgstr ""
 "{$ ctrl.host.disk_total | gb $} 중 {$ ctrl.host.disk_used | gb $} 사용됨"
@@ -775,6 +1092,19 @@ msgstr "{$ ctrl.host.mem_total | mb $} 중 {$ ctrl.host.mem_used | mb $} 사용�
 
 msgid "User ID"
 msgstr "사용자 ID"
+
+msgid ""
+"Users can add additional rules to an existing security group\n"
+"      to further define the access options for a container.\n"
+"      To create additional rules, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then find the security group and click <b>Manage Rules</b>."
+msgstr ""
+"사용자는 부가적인 규칙을 기존 보안그룹에 추가하여\n"
+"      컨테이너에 대한 접근 옵션을 상세히 정의할 수 있습니다.\n"
+"      부가적인 규칙을 만드려면 <b>Network | Security Groups</b> 보기로 가"
+"서,\n"
+"      보안그룹을 찾아서 <b>Manage Rules</b>를 클릭합니다."
 
 msgid "VNIC type"
 msgstr "VNIC 타입"
@@ -794,6 +1124,16 @@ msgstr ""
 "당 풀에서 선택됨에 따라 해당 포트가 서브넷 또한 연결되어 있음을 암시합니다."
 
 msgid ""
+"When the <b>Admin State</b> for a network is set to <b>Up</b>,\n"
+"    then the network is available for use. You can set the <b>Admin State</"
+"b> to <b>Down</b>\n"
+"    if you are not ready for other users to access the network."
+msgstr ""
+"네트워크의 <b>관리 상태</b>가 <b>UP</b>으로 설정되어 있을 경우, \n"
+"    네트워크를 사용할 수 있습니다. <b>관리 상태</b>를 <b>Down</b>로 \n"
+"    설정한다면 다른 사용자들이 네트워크에 접근할 수 없습니다."
+
+msgid ""
 "When the <b>Admin State</b> for a port is set to <b>Up</b> and it has no "
 "<b>Device Owner</b>,\n"
 "    then the port is available for use. You can set the <b>Admin State</b> "
@@ -807,6 +1147,9 @@ msgstr ""
 "    설정한다면 다른 사용자들이 해당 포트에 접근할 수 없습니다."
 
 msgid "Workdir"
+msgstr "작업 디렉토리"
+
+msgid "Working Directory"
 msgstr "작업 디렉토리"
 
 msgid "Yes"
@@ -825,8 +1168,20 @@ msgid "You are not allowed to delete containers: %s"
 msgstr "컨테이너를 삭제하도록 허용되지 않았습니다: %s"
 
 #, python-format
+msgid "You are not allowed to delete images: %s"
+msgstr "이미지를 삭제하도록 허용되지 않았습니다: %s"
+
+#, python-format
 msgid "You are not allowed to stop and delete container: %s"
 msgstr "컨테이너를 정지하고 삭제하도록 허용되지 않았습니다: %s"
+
+msgid ""
+"You can specify scheduler hints by moving items from the left column to the "
+"right column. Use the \"Custom\" option to add scheduler hints with the key "
+"of your choice."
+msgstr ""
+"왼쪽 열에서 오른쪽 열로 이동하여 스케줄러 힌트를 지정할 수 있습니다. 선택한 "
+"키로 스케줄러 힌트를 추가하기 위해  \"사용자 정의\" 옵션을 사용합니다."
 
 #, python-format
 msgid ""
@@ -849,6 +1204,17 @@ msgid_plural ""
 msgstr[0] ""
 "\"%s\"을(를) 선택했습니다. 선택을 확인하십시오. 삭제한 컨테이너는 복구할 수 "
 "없습니다."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted image is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted images are "
+"not recoverable."
+msgstr[0] ""
+"\"%s\"를 선택했습니다. 선택을 확인하십시오. 삭제된 이미지는 복구할 수 없습니"
+"다."
 
 #, python-format
 msgid ""
