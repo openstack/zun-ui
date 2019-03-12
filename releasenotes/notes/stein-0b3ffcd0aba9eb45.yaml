@@ -1,0 +1,43 @@
+---
+features:
+  - |
+    [`blueprint add-host-panel <https://blueprints.launchpad.net/zun-ui/+spec/add-host-panel>`_]
+    Added hosts panel for admin. This panel includes list and details for host.
+  - |
+    [`blueprint add-admin-containers-panel <https://blueprints.launchpad.net/zun-ui/+spec/add-admin-containers-panel>`_]
+    Added containers panel fro admin. Differences from project side is as follows:
+
+    Allowed actions for admin:
+
+    - update
+    - rebuild
+    - start / stop / restart
+    - kill
+    - delete with force
+
+    Not allowed actions for admin:
+
+    - create
+    - manage security group
+    - pause / unpause
+    - execute
+    - delete
+    - delete with stop
+
+    Not allowed view for admin:
+
+    - logs tab on details view
+    - console tab on details view
+fixes:
+  - |
+    [`bug/1797285 <https://bugs.launchpad.net/zun-ui/+bug/1797285>`_]
+    The `command` parameter has changed from string to list.
+  - |
+    [`bug/1799125 <https://bugs.launchpad.net/zun-ui/+bug/1799125>`_]
+    Changed the dialog for deleting image to common deletion confirm dialog.
+    Deleting image API requres only `id` and does not need `host` parameter
+    no longer. And it means the dialog to specify the host that delete the
+    image from is unnecessary.
+  - |
+    [`bug/1798702 <https://bugs.launchpad.net/zun-ui/+bug/1798702>`_]
+    Added "host" column into images table view for admin.
