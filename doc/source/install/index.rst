@@ -18,6 +18,14 @@ Enable Zun UI in your Horizon::
 
     cp zun_ui/enabled/* <path to your horizon>/openstack_dashboard/local/enabled/
 
+Run collectstatic command::
+
+    python <path to your horizon>/manage.py collectstatic
+
+Compress static files (if enabled)::
+
+    python <path to your horizon>/manage.py compress
+
 Then restart your Horizon.
 
 After restart your Horizon, reload dashboard forcely using [Ctrl + F5] or etc. in your browser.
