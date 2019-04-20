@@ -12,11 +12,13 @@
         - nodejs-npm-run-lint:
             vars:
               node_version: 4
+            nodeset: ubuntu-xenial
             required-projects:
               - openstack/horizon
         - nodejs-npm-run-test:
             vars:
               node_version: 4
+            nodeset: ubuntu-xenial
             required-projects:
               - openstack/horizon
         - horizon-openstack-tox-python3-django111
@@ -28,11 +30,13 @@
         - nodejs-npm-run-lint:
             vars:
               node_version: 4
+            nodeset: ubuntu-xenial
             required-projects:
               - openstack/horizon
         - nodejs-npm-run-test:
             vars:
               node_version: 4
+            nodeset: ubuntu-xenial
             required-projects:
               - openstack/horizon
         - horizon-openstack-tox-python3-django111
