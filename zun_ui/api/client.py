@@ -24,7 +24,7 @@ LOG = logging.getLogger(__name__)
 
 CONTAINER_CREATE_ATTRS = zun_client.containers.CREATION_ATTRIBUTES
 IMAGE_PULL_ATTRS = zun_client.images.PULL_ATTRIBUTES
-API_VERSION = api_versions.APIVersion(api_versions.DEFAULT_API_VERSION)
+API_VERSION = api_versions.APIVersion('1.12')
 
 
 def get_auth_params_from_request(request):
