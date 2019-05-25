@@ -22,7 +22,6 @@
     '$location',
     'horizon.app.core.detailRoute',
     'horizon.app.core.openstack-service-api.zun',
-    'horizon.framework.util.navigations.service'
   ];
 
   /*
@@ -33,7 +32,7 @@
    * This service provides functions that are used through
    * the containers features.
    */
-  function containersService($location, detailRoute, zun, navigation) {
+  function containersService($location, detailRoute, zun) {
     return {
       getDefaultIndexUrl: getDefaultIndexUrl,
       getDetailsPath: getDetailsPath,
@@ -42,19 +41,14 @@
     };
 
     function getDefaultIndexUrl() {
-      var dashboard, breadcrumbDashboard;
+      var dashboard;
       var path = "/container/containers";
       if (zun.isAdmin()) {
         dashboard = "/admin";
-        breadcrumbDashboard = gettext("Admin");
       } else {
         dashboard = "/project";
-        breadcrumbDashboard = gettext("Project");
       }
       var url = dashboard + path + "/";
-      navigation.setBreadcrumb([
-        breadcrumbDashboard, gettext("Container"), gettext("Containers")]);
-      navigation.expandNavigationByUrl(url);
       return url;
     }
     /*
