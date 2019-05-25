@@ -10,20 +10,14 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+from django.conf.urls import url
 from django.utils.translation import ugettext_lazy as _
-import horizon
+from horizon.browsers import views
+from zun_ui.content.container.containers import views as zun_views
 
-# This panel will be loaded from horizon, because specified in enabled file.
-# To register REST api, import below here.
-from zun_ui.api import rest_api  # noqa: F401
-
-
-class Containers(horizon.Panel):
-    name = _("Containers")
-    slug = "container.containers"
-
-
-class ContainersForAdmin(horizon.Panel):
-    name = _("Containers")
-    slug = "container.containers"
-    urls = "admin_urls"
+title = _("Containers")
+urlpatterns = [
+    url(r'^(?P<container_id>[^/]+)/console',
+        zun_views.SerialConsoleView.as_view(), name='console'),
+    url('', views.AngularIndexView.as_view(title=title), name='index'),
+]
