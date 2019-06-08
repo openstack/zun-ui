@@ -74,7 +74,7 @@
       delete_force: [
         states.CREATED, states.CREATING, states.ERROR, states.RUNNING,
         states.STOPPED, states.UNKNOWN, states.DELETED, states.DEAD,
-        states.RESTARTING, states.REBUILDING
+        states.RESTARTING, states.REBUILDING, states.DELETING
       ],
       delete_stop: [
         states.RUNNING, states.CREATED, states.ERROR, states.STOPPED,
