@@ -1,13 +1,14 @@
 # suhartono <cloudsuhartono@gmail.com>, 2018. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 09:18+0000\n"
+"POT-Creation-Date: 2019-07-07 15:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-08-21 04:42+0000\n"
+"PO-Revision-Date: 2019-07-17 03:32+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -20,8 +21,14 @@ msgstr "0.2.0"
 msgid "1.0.0"
 msgstr "1.0.0"
 
+msgid "1.0.0-23"
+msgstr "1.0.0-23"
+
 msgid "2.0.0"
 msgstr "2.0.0"
+
+msgid "3.0.0"
+msgstr "3.0.0"
 
 msgid ""
 "Added Cloud Shell feature. See also [`Screen Shot <https://drive.google.com/"
@@ -52,6 +59,9 @@ msgstr ""
 
 msgid "Added project_id into drawer on image table view."
 msgstr "Menambahkan project_id ke dalam drawer pada tampilan tabel image."
+
+msgid "Allowed actions for admin:"
+msgstr "Tindakan yang diizinkan untuk admin:"
 
 msgid ""
 "At first time to show cloud shell, Zun UI starts to create cloud shell "
@@ -116,6 +126,12 @@ msgstr ""
 "Status baru untuk penampung, ``DELETING``, ``REBUILDING``, ``DEAD`` dan "
 "``RESTARTING`` ditambahkan."
 
+msgid "Not allowed actions for admin:"
+msgstr "Tindakan yang tidak diizinkan untuk admin:"
+
+msgid "Not allowed view for admin:"
+msgstr "Tampilan tidak diizinkan untuk admin:"
+
 msgid "Other Notes"
 msgstr "Catatan Lain"
 
@@ -139,6 +155,9 @@ msgstr ""
 "Tampilkan tindakan sesuai dengan status kontainer. Sebelumnya UI menunjukkan "
 "semua aksi tanpa menghiraukan status kontainer, sekarang UI memfilter "
 "tindakan seperti yang dilakukan oleh instance nova."
+
+msgid "Stein Series Release Notes"
+msgstr "Catatan Rilis Seri Stein"
 
 msgid "Support python 3.5."
 msgstr "Mendukung python 3.5."
@@ -219,6 +238,15 @@ msgid "Zun UI Release Notes"
 msgstr "Catatan Rilis Zun UI"
 
 msgid ""
+"[`blueprint add-admin-containers-panel <https://blueprints.launchpad.net/zun-"
+"ui/+spec/add-admin-containers-panel>`_] Added containers panel fro admin. "
+"Differences from project side is as follows:"
+msgstr ""
+"[`blueprint add-admin-containers-panel <https://blueprints.launchpad.net/zun-"
+"ui/+spec/add-admin-containers-panel>`_] Panel containers ditambahkan untuk "
+"admin. Perbedaan dari sisi proyek adalah sebagai berikut:"
+
+msgid ""
 "[`blueprint add-container-operations <https://blueprints.launchpad.net/zun-"
 "ui/+spec/add-container-operations>`_] Operations for container, such as "
 "'Start', 'Stop', 'Restart', 'Pause', 'Unpause', 'Execute Command' and 'Send "
@@ -230,6 +258,15 @@ msgstr ""
 "'Start', 'Stop', 'Restart', 'Pause', 'Unpause', 'Execute Command' dan 'Send "
 "Kill Signal', ditambahkan. Juga, saat memuat tampilan detail, maka log "
 "kontainer ditampilkan di tab 'Log'."
+
+msgid ""
+"[`blueprint add-host-panel <https://blueprints.launchpad.net/zun-ui/+spec/"
+"add-host-panel>`_] Added hosts panel for admin. This panel includes list and "
+"details for host."
+msgstr ""
+"[`blueprint add-host-panel <https://blueprints.launchpad.net/zun-ui/+spec/"
+"add-host-panel>`_] Panel host ditambahkan untuk admin. Panel ini mencakup "
+"daftar dan detail untuk host."
 
 msgid ""
 "[`blueprint add-image-delete <https://blueprints.launchpad.net/zun-ui/+spec/"
@@ -361,6 +398,33 @@ msgstr ""
 "`hzTable: clearSelection` dipancarkan."
 
 msgid ""
+"[`bug/1797285 <https://bugs.launchpad.net/zun-ui/+bug/1797285>`_] The "
+"`command` parameter has changed from string to list."
+msgstr ""
+"[`bug/1797285 <https://bugs.launchpad.net/zun-ui/+bug/1797285>`_] Parameter "
+"`command` telah berubah dari string ke list."
+
+msgid ""
+"[`bug/1798702 <https://bugs.launchpad.net/zun-ui/+bug/1798702>`_] Added "
+"\"host\" column into images table view for admin."
+msgstr ""
+"[`bug/1798702 <https://bugs.launchpad.net/zun-ui/+bug/1798702>`_] "
+"Menambahkan kolom \"host\" ke dalam tampilan tabel images untuk admin."
+
+msgid ""
+"[`bug/1799125 <https://bugs.launchpad.net/zun-ui/+bug/1799125>`_] Changed "
+"the dialog for deleting image to common deletion confirm dialog. Deleting "
+"image API requres only `id` and does not need `host` parameter no longer. "
+"And it means the dialog to specify the host that delete the image from is "
+"unnecessary."
+msgstr ""
+"[`bug/1799125 <https://bugs.launchpad.net/zun-ui/+bug/1799125>`_] Mengubah "
+"dialog untuk menghapus image menjadi dialog konfirmasi penghapusan umum. "
+"Menghapus API image hanya memerlukan `id` dan tidak perlu parameter`host` "
+"lagi. Dan itu berarti dialog untuk menentukan host yang menghapus image dari "
+"tidak perlu."
+
+msgid ""
 "[`cinder-integration <https://blueprints.launchpad.net/zun-ui/+spec/cinder-"
 "integration>`_] Added Volumes tab for container creation dialog. When create "
 "container, user can mount existing Cinder volume or create and mount new "
@@ -379,3 +443,42 @@ msgstr ""
 "[`manage-security-groups <https://blueprints.launchpad.net/zun-ui/+spec/"
 "manage-security-groups>`_] Menambahkan aksi Manage Security Groups untuk "
 "mengelola asosiasi antara grup keamanan dan port pada kontainer."
+
+msgid "console tab on details view"
+msgstr "tab konsol pada tampilan detail"
+
+msgid "create"
+msgstr "membuat"
+
+msgid "delete"
+msgstr "menghapus"
+
+msgid "delete with force"
+msgstr "hapus dengan paksa"
+
+msgid "delete with stop"
+msgstr "hapus dengan berhenti"
+
+msgid "execute"
+msgstr "menjalankan"
+
+msgid "kill"
+msgstr "mematikan"
+
+msgid "logs tab on details view"
+msgstr "tab log pada tampilan detail"
+
+msgid "manage security group"
+msgstr "kelola grup keamanan"
+
+msgid "pause / unpause"
+msgstr "jeda / tidak jeda"
+
+msgid "rebuild"
+msgstr "membangun kembali"
+
+msgid "start / stop / restart"
+msgstr "start / stop / restart"
+
+msgid "update"
+msgstr "update"
