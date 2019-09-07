@@ -81,7 +81,7 @@ python-neutronclient==6.7.0
 python-novaclient==10.1.0
 python-openstackclient==3.14.0
 python-swiftclient==3.5.0
-python-zunclient==1.4.0
+python-zunclient==3.5.0
 pytz==2018.3
 PyYAML==3.12
 rcssmin==1.0.6
