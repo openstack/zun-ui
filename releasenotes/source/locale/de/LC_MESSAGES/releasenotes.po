@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-25 02:24+0000\n"
+"POT-Creation-Date: 2019-09-25 07:45+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-09-24 07:00+0000\n"
+"PO-Revision-Date: 2019-09-28 07:51+0000\n"
 "Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -64,6 +64,12 @@ msgstr "Einleitung"
 msgid "Queens Series Release Notes"
 msgstr "Queens Serie Releasenotes"
 
+msgid "Rocky Series Release Notes"
+msgstr "Rocky Serie Releasenotes"
+
+msgid "Stein Series Release Notes"
+msgstr "Stein Serie Releasenotes"
+
 msgid "Support python 3.5."
 msgstr "Unterstützung für Python 3.5."
 
@@ -102,6 +108,9 @@ msgstr ""
 "starten Sie Horizon neu. Der \">_ Cloud Shell\" Knopf erscheint am rechten "
 "Rand in Horizon nach dem Login."
 
+msgid "Train Series Release Notes"
+msgstr "Train Serie Releasenotes"
+
 msgid "Upgrade Notes"
 msgstr "Aktualisierungsnotizen"
 
@@ -123,3 +132,30 @@ msgstr ""
 
 msgid "Zun UI Release Notes"
 msgstr "Zaqar UI Releasenotes"
+
+msgid "create"
+msgstr "erstellen"
+
+msgid "delete"
+msgstr "löschen"
+
+msgid "delete with force"
+msgstr "löschen erzwingen"
+
+msgid "delete with stop"
+msgstr "löschen mit anhalten"
+
+msgid "execute"
+msgstr "ausführen"
+
+msgid "kill"
+msgstr "töten"
+
+msgid "pause / unpause"
+msgstr "pausieren / fortfahren"
+
+msgid "rebuild"
+msgstr "wieder aufbauen"
+
+msgid "update"
+msgstr "aktualisieren"
