@@ -61,7 +61,6 @@ django.setup()
 extensions = ['sphinx.ext.todo',
               'sphinx.ext.coverage',
               'sphinx.ext.viewcode',
-              'sphinxcontrib.apidoc',
               'openstackdocstheme',
               ]
 
@@ -127,13 +126,6 @@ pygments_style = 'sphinx'
 
 primary_domain = 'py'
 nitpicky = False
-
-# sphinxcontrib-apidoc
-apidoc_module_dir = '../../zun_ui'
-apidoc_output_dir = 'contributor/api'
-apidoc_excluded_paths = [
-    'test',
-]
 
 # -- Options for HTML output --------------------------------------------------
 
