@@ -60,12 +60,24 @@
       ctrl.region = cloudsYaml.match(/region_name: "(.+)"/)[1];
 
       // container name
-      ctrl.container.name = "cloud-shell-" + ctrl.user + "-" + ctrl.project +
+      ctrl.containerLabel = "cloud-shell-" + ctrl.user + "-" + ctrl.project +
         "-" + ctrl.domain + "-" + ctrl.region;
 
       // get container
-      zun.getContainer(ctrl.container.name, true).then(onGetContainer, onFailGetContainer);
+      zun.getContainers().then(findContainer);
     });
+
+    function findContainer(response) {
+      var container = response.data.items.find(function(item) {
+        return item.labels['cloud-shell'] === ctrl.containerLabel;
+      });
+
+      if (typeof (container) === 'undefined') {
+        onFailGetContainer();
+      } else {
+        onGetContainer({data: container});
+      }
+    }
 
     function onGetContainer(response) {
       ctrl.container = response.data;
@@ -119,13 +131,12 @@
       // create new container and attach console to it.
       var image = angular.element("#cloud-shell-menu").attr("cloud-shell-image");
       var model = {
-        name: ctrl.container.name,
         image: image,
         command: "/bin/bash",
         interactive: true,
         run: true,
         environment: "OS_CLOUD=openstack",
-        labels: "cloud-shell=" + ctrl.container.name
+        labels: "cloud-shell=" + ctrl.containerLabel
       };
       zun.createContainer(model).then(function (response) {
         // attach
