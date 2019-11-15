@@ -1,14 +1,15 @@
 # Andi Chandler <andi@gowling.com>, 2017. #zanata
 # Andi Chandler <andi@gowling.com>, 2018. #zanata
+# Andi Chandler <andi@gowling.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-19 09:18+0000\n"
+"POT-Creation-Date: 2019-11-01 20:09+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-08-21 11:10+0000\n"
+"PO-Revision-Date: 2019-11-14 11:34+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -21,8 +22,17 @@ msgstr "0.2.0"
 msgid "1.0.0"
 msgstr "1.0.0"
 
+msgid "1.0.0-23"
+msgstr "1.0.0-23"
+
 msgid "2.0.0"
 msgstr "2.0.0"
+
+msgid "3.0.0"
+msgstr "3.0.0"
+
+msgid "4.0.0-9"
+msgstr "4.0.0-9"
 
 msgid ""
 "Added Cloud Shell feature. See also [`Screen Shot <https://drive.google.com/"
@@ -53,6 +63,9 @@ msgstr ""
 
 msgid "Added project_id into drawer on image table view."
 msgstr "Added project_id into drawer on image table view."
+
+msgid "Allowed actions for admin:"
+msgstr "Allowed actions for admin:"
 
 msgid ""
 "At first time to show cloud shell, Zun UI starts to create cloud shell "
@@ -117,6 +130,12 @@ msgstr ""
 "New statuses for container, ``DELETING``, ``REBUILDING``, ``DEAD`` and "
 "``RESTARTING`` are added."
 
+msgid "Not allowed actions for admin:"
+msgstr "Not allowed actions for admin:"
+
+msgid "Not allowed view for admin:"
+msgstr "Not allowed view for admin:"
+
 msgid "Other Notes"
 msgstr "Other Notes"
 
@@ -125,6 +144,15 @@ msgstr "Pike Series Release Notes"
 
 msgid "Prelude"
 msgstr "Prelude"
+
+msgid ""
+"Python 2.7 support has been dropped. Last release of zun-ui to support py2.7 "
+"is OpenStack Train. The minimum version of Python now supported by zun-ui is "
+"Python 3.6."
+msgstr ""
+"Python 2.7 support has been dropped. Last release of zun-ui to support py2.7 "
+"is OpenStack Train. The minimum version of Python now supported by zun-ui is "
+"Python 3.6."
 
 msgid "Queens Series Release Notes"
 msgstr "Queens Series Release Notes"
@@ -140,6 +168,9 @@ msgstr ""
 "Show actions according to container status. Previously the UI showed all of "
 "the actions regardless of container's status, now UI  filters the actions "
 "just like what Nova instances do."
+
+msgid "Stein Series Release Notes"
+msgstr "Stein Series Release Notes"
 
 msgid "Support python 3.5."
 msgstr "Support python 3.5."
@@ -188,6 +219,9 @@ msgstr ""
 "Cloud Shell\" button will be shown right on header of Horizon after logging "
 "in."
 
+msgid "Train Series Release Notes"
+msgstr "Train Series Release Notes"
+
 msgid "Upgrade Notes"
 msgstr "Upgrade Notes"
 
@@ -217,6 +251,15 @@ msgid "Zun UI Release Notes"
 msgstr "Zun UI Release Notes"
 
 msgid ""
+"[`blueprint add-admin-containers-panel <https://blueprints.launchpad.net/zun-"
+"ui/+spec/add-admin-containers-panel>`_] Added containers panel fro admin. "
+"Differences from project side is as follows:"
+msgstr ""
+"[`blueprint add-admin-containers-panel <https://blueprints.launchpad.net/zun-"
+"ui/+spec/add-admin-containers-panel>`_] Added containers panel fro admin. "
+"Differences from project side is as follows:"
+
+msgid ""
 "[`blueprint add-container-operations <https://blueprints.launchpad.net/zun-"
 "ui/+spec/add-container-operations>`_] Operations for container, such as "
 "'Start', 'Stop', 'Restart', 'Pause', 'Unpause', 'Execute Command' and 'Send "
@@ -228,6 +271,15 @@ msgstr ""
 "'Start', 'Stop', 'Restart', 'Pause', 'Unpause', 'Execute Command' and 'Send "
 "Kill Signal', are added. Also, while loading details view, then logs of "
 "container are shown in 'Logs' tab."
+
+msgid ""
+"[`blueprint add-host-panel <https://blueprints.launchpad.net/zun-ui/+spec/"
+"add-host-panel>`_] Added hosts panel for admin. This panel includes list and "
+"details for host."
+msgstr ""
+"[`blueprint add-host-panel <https://blueprints.launchpad.net/zun-ui/+spec/"
+"add-host-panel>`_] Added hosts panel for admin. This panel includes list and "
+"details for host."
 
 msgid ""
 "[`blueprint add-image-delete <https://blueprints.launchpad.net/zun-ui/+spec/"
@@ -353,6 +405,33 @@ msgstr ""
 "emitted."
 
 msgid ""
+"[`bug/1797285 <https://bugs.launchpad.net/zun-ui/+bug/1797285>`_] The "
+"`command` parameter has changed from string to list."
+msgstr ""
+"[`bug/1797285 <https://bugs.launchpad.net/zun-ui/+bug/1797285>`_] The "
+"`command` parameter has changed from string to list."
+
+msgid ""
+"[`bug/1798702 <https://bugs.launchpad.net/zun-ui/+bug/1798702>`_] Added "
+"\"host\" column into images table view for admin."
+msgstr ""
+"[`bug/1798702 <https://bugs.launchpad.net/zun-ui/+bug/1798702>`_] Added "
+"\"host\" column into images table view for admin."
+
+msgid ""
+"[`bug/1799125 <https://bugs.launchpad.net/zun-ui/+bug/1799125>`_] Changed "
+"the dialog for deleting image to common deletion confirm dialog. Deleting "
+"image API requres only `id` and does not need `host` parameter no longer. "
+"And it means the dialog to specify the host that delete the image from is "
+"unnecessary."
+msgstr ""
+"[`bug/1799125 <https://bugs.launchpad.net/zun-ui/+bug/1799125>`_] Changed "
+"the dialogue for deleting image to common deletion confirm dialog. Deleting "
+"image API requres only `id` and does not need `host` parameter no longer. "
+"And it means the dialogue to specify the host that delete the image from is "
+"unnecessary."
+
+msgid ""
 "[`cinder-integration <https://blueprints.launchpad.net/zun-ui/+spec/cinder-"
 "integration>`_] Added Volumes tab for container creation dialog. When create "
 "container, user can mount existing Cinder volume or create and mount new "
@@ -371,3 +450,42 @@ msgstr ""
 "[`manage-security-groups <https://blueprints.launchpad.net/zun-ui/+spec/"
 "manage-security-groups>`_] Added Manage Security Groups action to manage "
 "associations between security groups and ports on container."
+
+msgid "console tab on details view"
+msgstr "console tab on details view"
+
+msgid "create"
+msgstr "create"
+
+msgid "delete"
+msgstr "delete"
+
+msgid "delete with force"
+msgstr "delete with force"
+
+msgid "delete with stop"
+msgstr "delete with stop"
+
+msgid "execute"
+msgstr "execute"
+
+msgid "kill"
+msgstr "kill"
+
+msgid "logs tab on details view"
+msgstr "logs tab on details view"
+
+msgid "manage security group"
+msgstr "manage security group"
+
+msgid "pause / unpause"
+msgstr "pause / unpause"
+
+msgid "rebuild"
+msgstr "rebuild"
+
+msgid "start / stop / restart"
+msgstr "start / stop / restart"
+
+msgid "update"
+msgstr "update"
