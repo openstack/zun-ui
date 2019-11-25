@@ -7,11 +7,17 @@ Manual Installation
 
 Install Horizon according to `Horizon documentation <https://docs.openstack.org/horizon/>`_.
 
+.. note::
+
+  If your Horizon was installed by python3, Zun UI needs to be installed by
+  python3 as well. For example, replace ``pip`` with ``pip3`` and replace
+  ``python`` with ``python3`` for commands below.
+
 Clone Zun UI from git repository, checkout branch same as Horizon and Zun, and install it::
 
     git clone https://github.com/openstack/zun-ui
-    git checkout <branch which you want>
     cd zun-ui
+    git checkout <branch which you want>
     pip install .
 
 Enable Zun UI in your Horizon::

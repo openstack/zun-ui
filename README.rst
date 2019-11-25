@@ -11,22 +11,7 @@ Zun UI
 Manual Installation
 -------------------
 
-Install Horizon according to `Horizon documentation <https://docs.openstack.org/horizon/>`_.
-
-Clone Zun UI from git repository, checkout branch same as Horizon and Zun, and install it::
-
-    git clone https://github.com/openstack/zun-ui
-    git checkout <branch which you want>
-    cd zun-ui
-    pip install .
-
-Enable Zun UI in your Horizon::
-
-    cp zun_ui/enabled/* <path to your horizon>/openstack_dashboard/local/enabled/
-
-Then restart your Horizon.
-
-After restart your Horizon, reload dashboard forcely using [Ctrl + F5] or etc. in your browser.
+Install according to `Zun UI documentation <https://docs.openstack.org/zun-ui/latest/install/index.html>`_.
 
 Enabling in DevStack
 --------------------
