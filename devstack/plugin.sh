@@ -1,6 +1,7 @@
 # plugin.sh - DevStack plugin.sh dispatch script zun-ui
 
 ZUN_UI_DIR=$(cd $(dirname $BASH_SOURCE)/.. && pwd)
+PYTHON=${PYTHON:-python}
 
 function install_zun_ui {
     # NOTE(shu-mutou): workaround for devstack bug: 1540328
@@ -19,7 +20,7 @@ function configure_zun_ui {
     # NOTE: If locale directory does not exist, compilemessages will fail,
     # so check for an existence of locale directory is required.
     if [ -d ${ZUN_UI_DIR}/zun_ui/locale ]; then
-        (cd ${ZUN_UI_DIR}/zun_ui; DJANGO_SETTINGS_MODULE=openstack_dashboard.settings ../manage.py compilemessages)
+        (cd ${ZUN_UI_DIR}/zun_ui; DJANGO_SETTINGS_MODULE=openstack_dashboard.settings $PYTHON ../manage.py compilemessages)
     fi
 }
 
