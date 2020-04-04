@@ -1,0 +1,1308 @@
+# Roman Gorshunov <roman.gorshunov@att.com>, 2020. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zun-ui VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2020-04-02 13:51+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-04-03 11:15+0000\n"
+"Last-Translator: Roman Gorshunov <roman.gorshunov@att.com>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"X-Generator: Zanata 4.3.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+msgid "(empty)"
+msgstr "(пусто)"
+
+msgid "A command that will be sent to the container."
+msgstr "Команда, которая будет отправлена в контейнер."
+
+msgid "A port represents a virtual switch port on a logical network switch."
+msgstr ""
+"Порт представляет собой порт виртуального коммутатора на коммутаторе "
+"логической сети."
+
+msgid "Active"
+msgstr "Активен"
+
+msgid "Add Security Group"
+msgstr "Добавить группу безопасности"
+
+msgid "Add Volume"
+msgstr "Добавить том"
+
+msgid "Addresses"
+msgstr "Адреса"
+
+msgid "Adds a map of labels to a container in comma separated KEY=VALUE pairs."
+msgstr ""
+"Устанавливает набор меток на контейнер, определяемых в виде пар "
+"ключ=значение, разделённых запятыми."
+
+msgid "Admin State"
+msgstr "Административное состояние"
+
+msgid ""
+"Allocate pseudo-TTY and keep STDIN open even if not attached. This also "
+"enables Web console in console tab on details view."
+msgstr ""
+"Предоставить псевдо терминал и держать открытым стандартный поток ввода, "
+"даже если он пока не подсоединён. Этот параметр так же включает Web-консоль "
+"в закладке Консоль в режиме детализированного просмотра."
+
+msgid "Always"
+msgstr "Всегда"
+
+msgid "Always restart"
+msgstr "Всегда перезапускать"
+
+msgid "Always: Always pull the image from repository."
+msgstr "Всегда: всегда вновь загружать образ из репозитория."
+
+msgid ""
+"An <b>External</b> network is set up by an administrator.\n"
+"    If you want a container to communicate outside of the data center,\n"
+"    then attach a router between your <b>Project</b> network and the "
+"<b>External</b> network.\n"
+"    You can use the <b>Network Topology</b> view to connect the router to "
+"the two networks."
+msgstr ""
+"<b>Внешняя</b> сеть создаётся и настраивается администратором.\n"
+"    Если вы хотите, чтобы контейнер мог общаться с внешним миром,\n"
+"    подключите маршрутизатор между вашей <b>Проектной</b> и <b>Внешней</b> "
+"сетями.\n"
+"    Вы можете использовать раздел <b>Сетевая топология</b> чтобы подключить "
+"маршрутизатор к двум сетям."
+
+msgid "An arbitrary human-readable name."
+msgstr "Произвольное человеко-читаемое имя."
+
+msgid "Architecture"
+msgstr "Архитектура"
+
+msgid "Auto Heal"
+msgstr "Восстанавливать автоматически"
+
+msgid "Auto Remove"
+msgstr "Автоматически удалить"
+
+msgid "Availability Zone"
+msgstr "Зона доступности"
+
+msgid "Available Scheduler Hints"
+msgstr "Доступные подсказки планировщика"
+
+msgid "Bare Metal"
+msgstr "Bare Metal"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "CPU Total"
+msgstr "Всего CPU"
+
+msgid "CPU Used"
+msgstr "Использовано CPU"
+
+msgid "Capsule"
+msgstr "Капсула"
+
+msgid "Capsule ID"
+msgstr "ID капсулы"
+
+msgid "Capsule Version ID"
+msgstr "ID версии капсулы"
+
+msgid "Capsules"
+msgstr "Капсулы"
+
+#, python-format
+msgid ""
+"Changes security groups %(sgs)s for port %(port)s was successfully submitted."
+msgstr ""
+"Изменения групп безопасности %(sgs)s для порта %(port)s были успешно "
+"отправлены."
+
+msgid "Click to see more details"
+msgstr "Нажмите для подробностей"
+
+msgid "Command"
+msgstr "Команда"
+
+msgid "Command sent to the container."
+msgstr "Команда, отправленная в контейнер."
+
+#, python-format
+msgid "Command was successfully executed at container %s."
+msgstr "Команда была успешно выполнена в контейнере %s."
+
+msgid "Confirm Delete After Stop Container"
+msgid_plural "Confirm Delete After Stop Containers"
+msgstr[0] "Подтвердить удаление контейнера после его остановки"
+msgstr[1] "Подтвердить удаление контейнеров после их остановки"
+msgstr[2] "Подтвердить удаление контейнеров после их остановки"
+
+msgid "Confirm Delete Capsule"
+msgid_plural "Confirm Delete Capsules"
+msgstr[0] "Подтвердите удаление капсулы"
+msgstr[1] "Подтвердите удаление капсул"
+msgstr[2] "Подтвердите удаление капсул"
+
+msgid "Confirm Delete Container"
+msgid_plural "Confirm Delete Containers"
+msgstr[0] "Подтвердите удаление контейнера"
+msgstr[1] "Подтвердите удаление контейнеров"
+msgstr[2] "Подтвердите удаление контейнеров"
+
+msgid "Confirm Delete Container Forcely"
+msgid_plural "Confirm Delete Containers Forcely"
+msgstr[0] "Подтвердить принудительное удаление контейнера"
+msgstr[1] "Подтвердить принудительное удаление контейнеров"
+msgstr[2] "Подтвердить принудительное удаление контейнеров"
+
+msgid "Confirm Delete Image"
+msgid_plural "Confirm Delete Images"
+msgstr[0] "Подтвердите удаление образа"
+msgstr[1] "Подтвердите удаление образов"
+msgstr[2] "Подтвердите удаление образов"
+
+msgid "Console"
+msgstr "Консоль"
+
+msgid "Container"
+msgstr "Контейнер"
+
+#, python-format
+msgid "Container %s was successfully created."
+msgstr "Контейнер %s успешно создан."
+
+#, python-format
+msgid "Container %s was successfully paused."
+msgstr "Контейнер %s успешно поставлен на паузу."
+
+#, python-format
+msgid "Container %s was successfully rebuilt."
+msgstr "Контейнер %s успешно пересобран."
+
+#, python-format
+msgid "Container %s was successfully restarted."
+msgstr "Контейнер %s успешно перезапущен."
+
+#, python-format
+msgid "Container %s was successfully started."
+msgstr "Контейнер %s успешно запущен."
+
+#, python-format
+msgid "Container %s was successfully stoped."
+msgstr "Контейнер %s успешно остановлен."
+
+#, python-format
+msgid "Container %s was successfully unpaused."
+msgstr "Контейнер %s успешно снят с паузы."
+
+#, python-format
+msgid "Container %s was successfully updated."
+msgstr "Контейнер %s успешно обновлён."
+
+msgid "Container Name"
+msgstr "Имя контейнера"
+
+msgid "Container UUIDs"
+msgstr "UUID'ы контейнеров"
+
+msgid "Containers"
+msgstr "Контейнеры"
+
+msgid "Containers attach their interfaces to ports."
+msgstr "Контейнеры привязывают свои интерфейсы к портам."
+
+msgid "Create"
+msgstr "Создать"
+
+msgid "Create Capsule"
+msgstr "Создать капсулу"
+
+msgid "Create Container"
+msgstr "Создать контейнер"
+
+msgid "Created"
+msgstr "Создано"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete Capsule"
+msgid_plural "Delete Capsules"
+msgstr[0] "Удалить капсулу"
+msgstr[1] "Удалить капсулы"
+msgstr[2] "Удалить капсулы"
+
+msgid "Delete Container"
+msgid_plural "Delete Containers"
+msgstr[0] "Удалить контейнер"
+msgstr[1] "Удалить контейнеры"
+msgstr[2] "Удалить контейнеры"
+
+msgid "Delete Container After Stop"
+msgid_plural "Delete Containers After Stop"
+msgstr[0] "Удалить контейнер после остановки"
+msgstr[1] "Удалить контейнеры после остановки"
+msgstr[2] "Удалить контейнеры после остановки"
+
+msgid "Delete Container Forcely"
+msgid_plural "Delete Containers Forcely"
+msgstr[0] "Принудительно удалить контейнер"
+msgstr[1] "Принудительно удалить контейнеры"
+msgstr[2] "Принудительно удалить контейнеры"
+
+msgid "Delete Containers"
+msgstr "Удалить контейнеры"
+
+msgid "Delete Image"
+msgid_plural "Delete Images"
+msgstr[0] "Удалить образ"
+msgstr[1] "Удалить образы"
+msgstr[2] "Удалить образы"
+
+msgid "Delete Images"
+msgstr "Удалить образы"
+
+#, python-format
+msgid "Deleted Capsule: %s."
+msgid_plural "Deleted Capsules: %s."
+msgstr[0] "Удалена капусла: %s."
+msgstr[1] "Удалены капуслы: %s."
+msgstr[2] "Удалены капуслы: %s."
+
+#, python-format
+msgid "Deleted Container After Stop: %s."
+msgid_plural "Deleted Containers After Stop: %s."
+msgstr[0] "Контейнер удалён после остановки: %s."
+msgstr[1] "Контейнеры удалены после остановки: %s."
+msgstr[2] "Контейнеры удалены после остановки: %s."
+
+#, python-format
+msgid "Deleted Container Forcely: %s."
+msgid_plural "Deleted Containers Forcely: %s."
+msgstr[0] "Принудительно удалён контейнер: %s."
+msgstr[1] "Принудительно удалены контейнеры: %s."
+msgstr[2] "Принудительно удалены контейнеры: %s."
+
+#, python-format
+msgid "Deleted Container: %s."
+msgid_plural "Deleted Containers: %s."
+msgstr[0] "Удален контейнер: %s."
+msgstr[1] "Удалены контейнеры: %s."
+msgstr[2] "Удалены контейнеры: %s."
+
+#, python-format
+msgid "Deleted Image: %s."
+msgid_plural "Deleted Images: %s."
+msgstr[0] "Удален образ: %s."
+msgstr[1] "Удалены образы: %s."
+msgstr[2] "Удалены образы: %s."
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Destination"
+msgstr "Назначение"
+
+msgid "Direct"
+msgstr "Прямой"
+
+msgid "Direct Physical"
+msgstr "Прямой физический"
+
+msgid "Direction"
+msgstr "Направление"
+
+msgid "Disk"
+msgstr "Диск"
+
+msgid "Disk Quota Supported"
+msgstr "Поддержка квот дискового пространства"
+
+msgid "Disk Total"
+msgstr "Всего дискового пространства"
+
+msgid "Disk Used"
+msgstr "Использовано дискового пространства"
+
+msgid "Docker Hub"
+msgstr "Docker Hub"
+
+msgid "Docker Hub: Pull the image from Docker Hub."
+msgstr "Docker Hub: загружать образы с Docker Hub."
+
+msgid "Down"
+msgstr "Выключен"
+
+msgid "Enable Interactive Mode"
+msgstr "Включить интерактивный режим"
+
+msgid "Enable auto heal"
+msgstr "Включить автоматическое востановление"
+
+msgid "Enable interactive mode"
+msgstr "Включить интерактивный режим"
+
+msgid "Environment"
+msgstr "Окружение"
+
+msgid "Environment Variables"
+msgstr "Переменные среды"
+
+msgid "Ether Type"
+msgstr "Тип сети"
+
+msgid "Execute"
+msgstr "Выполнить"
+
+msgid "Execute Command"
+msgstr "Выполнить команду"
+
+msgid "Executing"
+msgstr "Выполняется"
+
+msgid "Existing Cinder Volume"
+msgstr "Существующие тома Cinder"
+
+msgid "Existing Scheduler Hints"
+msgstr "Существующие подсказки планировщика"
+
+msgid "Exit Code"
+msgstr "Код возврата"
+
+msgid "Exit Policy"
+msgstr "Политика завершения работы"
+
+msgid "External Network"
+msgstr "Внешняя сеть"
+
+msgid ""
+"For now, only Label Filter is available. So there are\n"
+"    no scheduler hint definitions in the left column. Please set key that "
+"included in labels."
+msgstr ""
+"На настоящий момент доступен только фильтр меток. По-этому\n"
+"    в левой колонке нет определений подсказок планировщика. Пожалуйста, "
+"определите ключ, который включён в метки."
+
+msgid "Glance"
+msgstr "Glance"
+
+msgid "Glance: Pull the image from Glance."
+msgstr "Glance: агружать образы с Glance."
+
+msgid "Host"
+msgstr "Хост"
+
+msgid "Host ID"
+msgstr "ID хоста"
+
+msgid "Hostname"
+msgstr "Имя хоста"
+
+msgid "Hosts"
+msgstr "Узлы"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "IP"
+msgstr "IP"
+
+msgid ""
+"If a network is shared, then all users in the project can access the network."
+msgstr ""
+"Если предоставлен совместный доступ к сети, все пользователи проекта имеют к "
+"ней доступ."
+
+msgid "If not present"
+msgstr "При отсутствии"
+
+msgid ""
+"If not present: only pull the image if it does not already exist on the node."
+msgstr "При отсутствии: образ будет загружен только если его ещё нет на узле."
+
+msgid "Image"
+msgstr "Образ"
+
+#, python-format
+msgid "Image %s was successfully pulled."
+msgstr "Образ %s успешно загружен"
+
+msgid "Image Driver"
+msgstr "Драйвер образов"
+
+msgid "Image ID"
+msgstr "ID образа"
+
+msgid "Image Pull Policy"
+msgstr "Политика загрузки образов"
+
+msgid "Images"
+msgstr "Образы"
+
+msgid ""
+"In this dialog, specify the security groups for the container.\n"
+"      Note that the security groups will only apply for ports that\n"
+"      will be created from the allocated networks, but will not apply\n"
+"      for the allocated ports that are pre-existing."
+msgstr ""
+"Задайте группы безопасности для контейнера в этом диалоге.\n"
+"      Обратите внимание, что группы безопасности будут применены только для "
+"тех портов, которые \n"
+"      будут созданы из доступных сетей, но не будут применены\n"
+"      к доступным портам, которые были созданы ранее."
+
+msgid "Info"
+msgstr "Информация"
+
+msgid "Interactive"
+msgstr "Интерактивный"
+
+msgid "KEY1=VALUE1,KEY2=VALUE2..."
+msgstr "KEY1=VALUE1,KEY2=VALUE2..."
+
+msgid "Kernel Version"
+msgstr "Версия ядра"
+
+msgid "Kill Signal"
+msgstr "Сигнал Kill"
+
+#, python-format
+msgid "Kill signal was successfully sent to container %s."
+msgstr "Сигнал Kill был успешно отправлен в контейнер %s."
+
+msgid "Labels"
+msgstr "Метки"
+
+msgid "Links"
+msgstr "Ссылки"
+
+msgid "Logs"
+msgstr "Логи"
+
+msgid "MacVTap"
+msgstr "MacVTap"
+
+msgid "Manage Security Groups"
+msgstr "Управление группами безопасности"
+
+#, python-format
+msgid "Manage Security Groups: container %s"
+msgstr "Управление группами безопасности контейнера %s"
+
+msgid "Manage security group for ports."
+msgstr "Управление группами безопасности для портов."
+
+msgid "Margin"
+msgstr "Осталось"
+
+msgid "Max Port"
+msgstr "По порт"
+
+msgid "Max Retry"
+msgstr "Макс. число попыток"
+
+msgid "Memory"
+msgstr "Память"
+
+msgid "Memory Total"
+msgstr "Всего памяти"
+
+msgid "Memory Used"
+msgstr "Использовано памяти"
+
+msgid "Min Port"
+msgstr "От порта"
+
+msgid "Miscellaneous"
+msgstr "Другое"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Name of the container to create."
+msgstr "Имя создаваемого контейнера."
+
+msgid "Name of the image."
+msgstr "Имя образа."
+
+msgid "Name or ID of container image."
+msgstr "Имя или ID образа контейнера."
+
+msgid "Name or ID of the container image."
+msgstr "Имя или ID образа контейнера."
+
+msgid "Network"
+msgstr "Сеть"
+
+#, python-format
+msgid "Network %s was successfully attached to container %s."
+msgstr "Сеть %s была успешно подключена к контейнеру %s."
+
+#, python-format
+msgid "Network %s was successfully detached from container %s."
+msgstr "Сеть %s была успешно отключена от контейнера %s."
+
+msgid "Network ID"
+msgstr "ID сети"
+
+msgid "Network characteristics"
+msgstr "Характеристики сети"
+
+msgid "Networks"
+msgstr "Сети"
+
+msgid ""
+"Networks provide the communication channels for containers in the cloud."
+msgstr "Сеть предоставляет канал связи между контейнерами в облаке."
+
+msgid "Never"
+msgstr "Никогда"
+
+msgid "Never: never pull the image."
+msgstr "Никогда: нкогда не загружать образ."
+
+msgid "New Cinder Volume"
+msgstr "Новый том Cinder"
+
+msgid "No"
+msgstr "Нет"
+
+msgid "No available items"
+msgstr "Нет доступных элементов"
+
+msgid "No available scheduler hints"
+msgstr "Нет доступных подсказок планировщика"
+
+msgid "No existing scheduler hints"
+msgstr "Подсказок планировщика не существует"
+
+msgid "Normal"
+msgstr "Нормальный"
+
+msgid "OS"
+msgstr "ОС"
+
+msgid "OS Type"
+msgstr "Тип ОС"
+
+msgid "Output"
+msgstr "Вывод"
+
+msgid "Overview"
+msgstr "Обзор"
+
+msgid "Pause Container"
+msgstr "Поставить контейнер на паузу"
+
+msgid "Physical Network"
+msgstr "Физическая сеть"
+
+msgid "Policy to apply when a container exits."
+msgstr "Политика, применяемая при завершении работы контейнера."
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Ports"
+msgstr "Порты"
+
+msgid "Ports can be created under a network by administrators."
+msgstr "Порты создаются в сети администраторами."
+
+msgid ""
+"Ports provide extra communication channels to your instances. You can select "
+"ports instead of networks or a mix of both."
+msgstr ""
+"Порты обеспечивают дополнительные каналы связи для экземпляров. Можно "
+"выбирать порты и (или) сети в любом сочетании."
+
+msgid "Project"
+msgstr "Проект"
+
+msgid "Project ID"
+msgstr "ID проекта"
+
+msgid ""
+"Project networks are created by users.\n"
+"    These networks are fully isolated and are project-specific."
+msgstr ""
+"Проектные сети создаются пользователями.\n"
+"    Эти сети полностью изолированы и принадлежат проекту."
+
+msgid "Protocol"
+msgstr "Протокол"
+
+msgid "Provider Network"
+msgstr "Сеть провайдера"
+
+msgid ""
+"Provider networks are created by administrators.\n"
+"    These networks map to an existing physical network in the data center."
+msgstr ""
+"Провайдерские сети создаются администраторами.\n"
+"    Данные сети представляют существующую физическую сеть в дата-центре."
+
+msgid "Pull"
+msgstr "Загрузить"
+
+msgid "Pull Image"
+msgstr "Загрузить образ"
+
+msgid "Re-order items using drag and drop"
+msgstr "Переопределите порядок элементов перетаскиванием"
+
+msgid "Rebuild"
+msgstr "Пересобрать"
+
+msgid "Rebuild Container"
+msgstr "Пересобрать контейнер"
+
+msgid "Refresh"
+msgstr "Обновить"
+
+msgid "Remote"
+msgstr "Удаленный адрес"
+
+msgid "Remove container"
+msgstr "Удалить контейнер"
+
+#, python-format
+msgid "Request to create capsule %s has been accepted."
+msgstr "Запрос на создание капсулы %s принят."
+
+msgid "Restart"
+msgstr "Перезапустить"
+
+msgid "Restart Container"
+msgstr "Перезапустить контейнер"
+
+msgid "Restart Policy"
+msgstr "Политика перезапуска"
+
+msgid "Restart if stopped"
+msgstr "Перезапускать при остановке"
+
+msgid "Restart on failure"
+msgstr "Перезапустить при сбое"
+
+msgid "Retry times for 'Restart on failure' policy."
+msgstr "Число перезапусков для политики 'перезапуска при сбое'."
+
+msgid "Runtime"
+msgstr "Среда выполнения"
+
+msgid "Runtimes"
+msgstr "Среда выполнения"
+
+msgid "Scheduler Hints"
+msgstr "Подсказки планировщика"
+
+msgid ""
+"Scheduler hints allow you to pass additional placement related information "
+"to the Zun's scheduler."
+msgstr ""
+"Подсказки планировщика позволяют передавать дополнительную информацию "
+"относительно размещения планировщику Zun."
+
+msgid "Security Group"
+msgstr "Группа безопасности"
+
+msgid "Security Groups"
+msgstr "Группы безопасности"
+
+msgid ""
+"Security groups define a set of IP filter rules that determine\n"
+"      how network traffic flows to and from a container."
+msgstr ""
+"Группы безопасности определяют набор правил фильтрации IP, которые "
+"определяют\n"
+"      как сетевой трафик проходит в контейнер и из него."
+
+msgid "Segmentation ID"
+msgstr "ID сегмента"
+
+msgid "Select an item from Available items below"
+msgstr "Выберите элемент из доступных элементов ниже"
+
+msgid "Select availability zone."
+msgstr "Выберите зону доступности."
+
+msgid "Select available Cinder volume"
+msgstr "Выберите доступный том Cinder"
+
+msgid "Select host that stores the image."
+msgstr "Выберите хост, который хранит образ."
+
+msgid "Select image driver for changing image."
+msgstr "Выберите драйвер образов для изменения образа."
+
+msgid "Select networks from those listed below."
+msgstr "Выберите сети из списка ниже."
+
+msgid "Select one or more"
+msgstr "Выберите одну или несколько"
+
+msgid "Select one or more security groups from the available groups below."
+msgstr "Выберите одну или более групп безопасности из доступных."
+
+msgid "Select policy."
+msgstr "Выберите политику."
+
+msgid "Select port first."
+msgstr "Сначала выберите порт."
+
+msgid "Select port."
+msgstr "Выберите порт."
+
+msgid "Select ports from those listed below."
+msgstr "Выберите порты из списка ниже."
+
+msgid "Select security group."
+msgstr "Выберите группу безопасности."
+
+msgid "Select the security groups to create the container in."
+msgstr "Выберите группы защиты, в которых будет запущен контейнер."
+
+msgid "Send"
+msgstr "Отправить"
+
+msgid "Send Kill Signal"
+msgstr "Отправить сигнал Kill"
+
+msgid "Set the volume specs and add into the table below."
+msgstr "Определите свойства тома и добавьте их в таблицу ниже."
+
+msgid "Shared"
+msgstr "Общая"
+
+msgid ""
+"Signal to send to the container: integer or string like SIGINT.\n"
+"  When not set, SIGKILL is set as default value and the container will "
+"exit.\n"
+"  The supported signals varies between platform.\n"
+"  Besides, you can omit 'SIG' prefix."
+msgstr ""
+"Сигнал, который нужно отправить контейнеру: целое число, или строка (напр. "
+"SIGINT).\n"
+"  Если не задано, то по умолчанию будет отправлен сигнал SIGINT и контейнер "
+"завершит работу.\n"
+"  Список доступных сигналов зависит от платформы.\n"
+"  Префикс 'SIG' можно опустить."
+
+msgid "Size"
+msgstr "Размер"
+
+msgid "Size (GB)"
+msgstr "Размер (ГБ)"
+
+msgid "Source"
+msgstr "Источник"
+
+msgid "Spec"
+msgstr "Спецификация"
+
+msgid "Specify a shutdown timeout in seconds. (default: 10)"
+msgstr "Задайте тайм-аут для выключения в секундах (по-умолчанию - 10 сек.)."
+
+msgid "Specify an image to change."
+msgstr "Выберите образ для изменения."
+
+msgid "Specify mount point of the volume on the container."
+msgstr "Укажите каталог подключения тома внутри контейнера."
+
+msgid "Specify size for the new volume in GB."
+msgstr "Укажите размер нового тома в ГБ."
+
+msgid "Start Container"
+msgstr "Запустить контейнер"
+
+msgid "Start container after creation"
+msgstr "Запустить контейнер после его создания"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Status Detail"
+msgstr "Детальный статус"
+
+msgid "Status Reason"
+msgstr "Причина статуса"
+
+msgid "Stop"
+msgstr "Остановить"
+
+msgid "Stop Container"
+msgstr "Остановить контейнер"
+
+msgid "Stop and Delete Container"
+msgstr "Остановить и удалить контейнер"
+
+msgid "Submit"
+msgstr "Отправить"
+
+msgid "Subnets Associated"
+msgstr "Ассоциированные подсети"
+
+msgid "Tag"
+msgstr "Тег"
+
+msgid "Task State"
+msgstr "Состояние задачи"
+
+msgid "Template"
+msgstr "Шаблон"
+
+msgid "The availability zone of the container."
+msgstr "Зона доступности контейнера."
+
+msgid "The command to execute."
+msgstr "Выполняемая команда."
+
+msgid "The container memory size in MiB."
+msgstr "Размер памяти контейнера в MiB."
+
+msgid "The disk size in GiB for per container."
+msgstr "Размер диска каждого контейнера в GiB."
+
+msgid "The environment variables in comma separated KEY=VALUE pairs"
+msgstr ""
+"Переменные среды: определяются в виде пар ключ=значение, разделённых "
+"запятыми."
+
+msgid "The flag of healing non-existent container in docker."
+msgstr "Флаг восстановления не существующего контейнера в docker."
+
+msgid "The host name of this container."
+msgstr "Имя хоста этого контейнера."
+
+msgid "The image driver to use to pull container image."
+msgstr "Драйвер образов, используемый для их загрузки."
+
+msgid "The kill signal to send."
+msgstr "Сигнал Kill для отправки."
+
+msgid ""
+"The logical port also defines the MAC address and the IP address(es) to be "
+"assigned to the interfaces plugged into them."
+msgstr ""
+"Для логического порта также определены MAC-адрес и IP-адреса, присваиваемые "
+"подключенным к ним интерфейсам."
+
+msgid "The number of virtual CPUs."
+msgstr "Число виртуальных CPU."
+
+msgid "The number of virtual cpu for this container."
+msgstr "Число виртуальных CPU для этого контейнера."
+
+msgid ""
+"The policy which determines if the image should be pulled prior to starting "
+"the container."
+msgstr ""
+"Политика, которая определяет, будет ли вновь загружаться образ перед "
+"запуском контейнера."
+
+msgid "The runtime to create container with."
+msgstr "Среда выполнения для запуска этого контейнера."
+
+msgid "The runtime to use for this container. Default: \"runc\""
+msgstr "Среда выполнения для этого контейнера. По-умолчанию: \"runc\""
+
+msgid "The status indicates whether the network has an active connection."
+msgstr "Статус показывает, есть ли активные подключения в данной сети."
+
+msgid "The status indicates whether the port has an active connection."
+msgstr "Состояние указывает, есть ли активные подключения у данного порта."
+
+msgid ""
+"The subnet identifies a sub-section of a network. A subnet is specified in "
+"CIDR format.\n"
+"    A typical CIDR format looks like <samp>192.xxx.x.x/24</samp>."
+msgstr ""
+"Подсеть определяет часть сети. Подсеть задаётся в формате CIDR.\n"
+"    Обычный формат CIDR выглядит как <samp>192.xxx.x.x/24</samp>."
+
+msgid "The volumes are mounted into the container."
+msgstr "Тома подключены к контейнеру."
+
+msgid "The working directory for commands to run in."
+msgstr "Рабочий калалог для выполнения команд."
+
+msgid "The working directory needs to be an absolute path."
+msgstr "Рабочий калалог должен быть в виде абсолютного пути."
+
+msgid "This step allows you to add scheduler hints to your container."
+msgstr ""
+"Этот шаг позволяет добавить подсказки планировщика к вашему контейнеру."
+
+msgid ""
+"To create new Cinder volume and mount it to the container, select type \"New "
+"Cinder Volume\"\n"
+"    and specify size for the new volume."
+msgstr ""
+"Для подключения нового доступного тома Cinder, выберите тип \"Новый том "
+"Cinder\"\n"
+"  и укажите его размер."
+
+msgid ""
+"To create new security groups, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then click <b>Create Security Group</b>."
+msgstr ""
+"Для создания новой группы безопасности, зайдите в раздел <b>Сеть | Группы "
+"безопасности</b>,\n"
+"      и там нажмите <b>Создать группу безопасности</b>."
+
+msgid ""
+"To mount existing available Cinder volume, select type \"Available Cinder "
+"Volume\"\n"
+"    and select source from the pull-down list."
+msgstr ""
+"Для подключения существующего доступного тома Cinder, выберите тип "
+"\"Существующие тома Cinder\"\n"
+"  и выберите источник из выпадающего списка."
+
+msgid "Total Containers"
+msgstr "Всего контейнеров"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Unable to attach network."
+msgstr "Не удалось подключить сеть."
+
+msgid "Unable to create Capsule."
+msgstr "Не удалось создать капсулу."
+
+msgid "Unable to create Container."
+msgstr "Не удалось создать контейнер."
+
+#, python-format
+msgid "Unable to delete Capsule: %s."
+msgid_plural "Unable to delete Capsules: %s."
+msgstr[0] "Не удалось удалить капсулу: %s."
+msgstr[1] "Не удалось удалить капсулы: %s."
+msgstr[2] "Не удалось удалить капсулы: %s."
+
+#, python-format
+msgid "Unable to delete Container after stopping: %s."
+msgid_plural "Unable to delete Containers after stopping: %s."
+msgstr[0] "Не удалось удалить контейнер после остановки: %s."
+msgstr[1] "Не удалось удалить контейнеры после остановки: %s."
+msgstr[2] "Не удалось удалить контейнеры после остановки: %s."
+
+#, python-format
+msgid "Unable to delete Container forcely: %s."
+msgid_plural "Unable to delete Containers forcely: %s."
+msgstr[0] "Не удалось принудительно удалить контейнер: %s."
+msgstr[1] "Не удалось принудительно удалить контейнеры: %s."
+msgstr[2] "Не удалось принудительно удалить контейнеры: %s."
+
+#, python-format
+msgid "Unable to delete Container: %s."
+msgid_plural "Unable to delete Containers: %s."
+msgstr[0] "Не удалось удалить контейнер: %s."
+msgstr[1] "Не удалось удалить контейнеры: %s."
+msgstr[2] "Не удалось удалить контейнеры: %s."
+
+#, python-format
+msgid "Unable to delete Image: %s."
+msgid_plural "Unable to delete Images: %s."
+msgstr[0] "Не удалось удалить образ: %s."
+msgstr[1] "Не удалось удалить образы: %s."
+msgstr[2] "Не удалось удалить образы: %s."
+
+#, python-format
+msgid "Unable to delete forcely the Container with id: %(id)s"
+msgstr "Не удалось принудительно удалить контейнер с id: %(id)s"
+
+#, python-format
+msgid "Unable to delete the Capsule with id: %(id)s"
+msgstr "Не удалось удалить капсулу с id: %(id)s"
+
+#, python-format
+msgid "Unable to delete the Container with id: %(id)s"
+msgstr "Не удалось удалить контейнер с id: %(id)s"
+
+msgid "Unable to delete the Containers."
+msgstr "Не удалось удалить контейнеры."
+
+#, python-format
+msgid "Unable to delete the Image with id: %(id)s"
+msgstr "Не удаётся удалить образ с ID: %(id)s"
+
+msgid "Unable to detach network."
+msgstr "Не удалось отключить сеть."
+
+msgid "Unable to execute the command."
+msgstr "Не удалось выполнить команду."
+
+msgid "Unable to get logs of Container."
+msgstr "Не удалось получить логи контейнера."
+
+msgid "Unable to pause Container"
+msgstr "Не удалось поставить на паузу контейнер."
+
+msgid "Unable to pull Image."
+msgstr "Не удалось загрузить образ."
+
+msgid "Unable to rebuild Container."
+msgstr "Не удалось пересобрать контейнер."
+
+msgid "Unable to resize console."
+msgstr "Не удалось изменить размер консоли."
+
+msgid "Unable to restart Container."
+msgstr "Не удалось перезапустить контейнер."
+
+msgid "Unable to retrieve the Capsule."
+msgstr "Не удалось получить капсулу."
+
+msgid "Unable to retrieve the Capsules."
+msgstr "Не удалось получить капсулы."
+
+msgid "Unable to retrieve the Container."
+msgstr "Не удалось получить контейнер."
+
+msgid "Unable to retrieve the Containers."
+msgstr "Не удалось получить контейнеры."
+
+msgid "Unable to retrieve the Host."
+msgstr "Не удалось получить узел."
+
+msgid "Unable to retrieve the Hosts."
+msgstr "Не удалось получить узлы."
+
+msgid "Unable to retrieve the Images."
+msgstr "Не удалось получить образы."
+
+msgid "Unable to retrieve the Zun Availability Zones."
+msgstr "Не удалось получить зоны доступности Zun."
+
+msgid "Unable to send kill signal."
+msgstr "Не удалось отправить сигнал Kill."
+
+msgid "Unable to start Container."
+msgstr "Не удалось запустить контейнер."
+
+msgid "Unable to stop Container."
+msgstr "Не удалось остановить контейнер."
+
+#, python-format
+msgid "Unable to stop and delete the Container with id: %(id)s"
+msgstr "Не удалось остановить и удалить контейнер с id: %(id)s"
+
+msgid "Unable to unpause of Container."
+msgstr "Не удалось снять с паузы контейнер."
+
+msgid "Unable to update Container."
+msgstr "Не удалось обновить контейнер."
+
+#, python-format
+msgid "Unable to update security groups %(sgs)s for port %(port)s."
+msgstr "Не удалось обновить группы безопасности %(sgs)s для порта %(port)s."
+
+msgid "Unpause Container"
+msgstr "Снять с паузы контейнер"
+
+msgid "Up"
+msgstr "Включен"
+
+msgid "Update"
+msgstr "Обновить"
+
+msgid "Update Container"
+msgstr "Обновить контейнер"
+
+msgid "Updated"
+msgstr "Обновлено"
+
+msgid "Usage"
+msgstr "Использование"
+
+msgid "Used"
+msgstr "Использовано"
+
+msgid "Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}"
+msgstr "Использовано {$ ctrl.host.cpu_used $} из {$ ctrl.host.cpus $}"
+
+msgid "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
+msgstr ""
+"Использовано {$ ctrl.host.disk_used | gb $} из {$ ctrl.host.disk_total | gb "
+"$}"
+
+msgid "Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}"
+msgstr ""
+"Использовано {$ ctrl.host.mem_used | mb $} из {$ ctrl.host.mem_total | mb $}"
+
+msgid "User ID"
+msgstr "ID пользователя"
+
+msgid ""
+"Users can add additional rules to an existing security group\n"
+"      to further define the access options for a container.\n"
+"      To create additional rules, go to the <b>Network | Security Groups</b> "
+"view,\n"
+"      then find the security group and click <b>Manage Rules</b>."
+msgstr ""
+"Пользователи могут добавлять дополнительные правила в существующие группы,\n"
+"      чтобы в дальнейшем определить политики доступа к контейнеру.\n"
+"      Для создания  дополнительных правил, зайдите в раздел <b>Сеть | Группы "
+"безопасности</b>,\n"
+"      найдите нужную группу и нажмите <b>Управление правилами</b>."
+
+msgid "VNIC type"
+msgstr "Тип VNIC"
+
+msgid "Volumes"
+msgstr "Тома"
+
+msgid "Volumes Info"
+msgstr "Информация о томах"
+
+msgid ""
+"When IP addresses are associated to a port, this also implies the port is "
+"associated with a subnet, as the IP address was taken from the allocation "
+"pool for a specific subnet."
+msgstr ""
+"Если порту присвоен IP-адрес, то это подразумевает, что порт также связан и "
+"с подсетью, так как IP-адреса выделяются из пула адресов для подсети."
+
+msgid ""
+"When the <b>Admin State</b> for a network is set to <b>Up</b>,\n"
+"    then the network is available for use. You can set the <b>Admin State</"
+"b> to <b>Down</b>\n"
+"    if you are not ready for other users to access the network."
+msgstr ""
+"Когда <b>Состояние</b> сети выставлено в <b>Включено</b>,\n"
+"    то сеть доступна для использования. Вы можете выставить <b>Состояние</b> "
+"в <b>Выключено</b>\n"
+"    если вы не хотите, чтобы другие пользователи имели к ней доступ."
+
+msgid ""
+"When the <b>Admin State</b> for a port is set to <b>Up</b> and it has no "
+"<b>Device Owner</b>,\n"
+"    then the port is available for use. You can set the <b>Admin State</b> "
+"to <b>Down</b>\n"
+"    if you are not ready for other users to use the port."
+msgstr ""
+"Если <b>Адм. состояние</b> порта - <b>Включен</b> и для него не задан "
+"<b>Владелец устройства</b>,\n"
+"    то порт доступен для использования. Если <b>Адм. состояние</b> задано "
+"как <b>Выключен</b>,\n"
+"    то другим пользователям не разрешено использовать порт."
+
+msgid "Workdir"
+msgstr "Рабочий каталог"
+
+msgid "Working Directory"
+msgstr "Рабочий калалог"
+
+msgid "Yes"
+msgstr "Да"
+
+#, python-format
+msgid "You are not allowed to delete capsules: %s"
+msgstr "Вам не разрешено удалять капулы: %s"
+
+#, python-format
+msgid "You are not allowed to delete container forcely: %s"
+msgstr "Вам не разрешено принудительно удалять контейнеры: %s"
+
+#, python-format
+msgid "You are not allowed to delete containers: %s"
+msgstr "Вам не разрешено удалять контейнеры: %s"
+
+#, python-format
+msgid "You are not allowed to delete images: %s"
+msgstr "Вам не разрешено удалять образы: %s"
+
+#, python-format
+msgid "You are not allowed to stop and delete container: %s"
+msgstr "Вам не разрешено останавливать и удалять контейнеры: %s"
+
+msgid ""
+"You can specify scheduler hints by moving items from the left column to the "
+"right column. Use the \"Custom\" option to add scheduler hints with the key "
+"of your choice."
+msgstr ""
+"Вы можете определить подсказки планировщика перемещая элементы из левой в "
+"правую колонку. Используя опцию \"Custom\" вы можете добавлять подсказки "
+"планировщика с выбранным вами ключом."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsule is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted capsules "
+"are not recoverable."
+msgstr[0] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление капуслы "
+"необратимо."
+msgstr[1] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление капусл "
+"необратимо."
+msgstr[2] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление капусл "
+"необратимо."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted container "
+"is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted containers "
+"are not recoverable."
+msgstr[0] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление контейнера "
+"необратимо."
+msgstr[1] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление контейнеров "
+"необратимо."
+msgstr[2] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление контейнеров "
+"необратимо."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted image is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted images are "
+"not recoverable."
+msgstr[0] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление образа "
+"необратимо."
+msgstr[1] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление образов "
+"необратимо."
+msgstr[2] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление образов "
+"необратимо."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. The container will "
+"be stopped before deleting. Deleted container is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. The containers will "
+"be stopped before deleting. Deleted containers are not recoverable."
+msgstr[0] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Контейнер будет "
+"остановлен перед удалением. Удаление контейнера необратимо."
+msgstr[1] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Контейнеры будут "
+"остановлены перед удалением. Удаление контейнеров необратимо."
+msgstr[2] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Контейнеры будут "
+"остановлены перед удалением. Удаление контейнеров необратимо."
