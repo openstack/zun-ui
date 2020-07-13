@@ -21,7 +21,7 @@
     "phantomjs-prebuilt": "2.1.x"
   },
   "scripts": {
-    "postinstall": "if [ ! -d .tox ] || [ ! -d .tox/karma ]; then tox -ekarma --notest; python3 -m pip install -U -t ./.tox/karma/lib/`python3 -V|tr -d ' '|tr 'P' 'p'|cut -c -9`/site-packages/ -chttps://opendev.org/openstack/requirements/raw/branch/master/upper-constraints.txt ../horizon; fi",
+    "postinstall": "if [ ! -d .tox ] || [ ! -d .tox/karma ]; then tox -ekarma --notest; fi",
     "test": "karma start zun_ui/karma.conf.js --single-run",
     "lint": "eslint --no-color zun_ui/static",
     "lintq": "eslint --quiet zun_ui/static"
