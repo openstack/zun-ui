@@ -6,6 +6,7 @@ Zun UI Release Notes
    :maxdepth: 1
 
    unreleased
+   xena
    wallaby
    victoria
    ussuri
