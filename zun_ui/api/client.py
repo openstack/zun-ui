@@ -61,6 +61,8 @@ def zunclient(request):
         endpoint_override
     ) = get_auth_params_from_request(request)
 
+    insecure = getattr(settings, 'OPENSTACK_SSL_NO_VERIFY', False)
+    cacert = getattr(settings, 'OPENSTACK_SSL_CACERT', None)
     LOG.debug('zunclient connection created using the token "%s" and url'
               ' "%s"' % (token_id, endpoint_override))
     api_version = API_VERSION
@@ -70,6 +72,8 @@ def zunclient(request):
             project_id=project_id,
             auth_token=token_id,
             endpoint_override=endpoint_override,
+            insecure=insecure,
+            cacert=cacert,
             api_version=api_versions.APIVersion("1.1"),
         )
         api_version = api_versions.discover_version(c, api_version)
@@ -77,6 +81,8 @@ def zunclient(request):
                           project_id=project_id,
                           auth_token=token_id,
                           endpoint_override=endpoint_override,
+                          insecure=insecure,
+                          cacert=cacert,
                           api_version=api_version)
     return c
 
