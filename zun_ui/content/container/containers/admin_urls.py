@@ -10,14 +10,14 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from django.conf.urls import url
+from django.urls import re_path
 from django.utils.translation import ugettext_lazy as _
 from horizon.browsers import views
 from zun_ui.content.container.containers import views as zun_views
 
 title = _("Containers")
 urlpatterns = [
-    url(r'^(?P<container_id>[^/]+)/console',
-        zun_views.SerialConsoleView.as_view(), name='console'),
-    url('', views.AngularIndexView.as_view(title=title), name='index'),
+    re_path(r'^(?P<container_id>[^/]+)/console',
+            zun_views.SerialConsoleView.as_view(), name='console'),
+    re_path('', views.AngularIndexView.as_view(title=title), name='index'),
 ]

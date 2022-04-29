@@ -10,11 +10,11 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from django.conf.urls import url
+from django.urls import re_path
 from django.utils.translation import ugettext_lazy as _
 from horizon.browsers import views
 
 title = _("Capsules")
 urlpatterns = [
-    url('', views.AngularIndexView.as_view(title=title), name='index'),
+    re_path('', views.AngularIndexView.as_view(title=title), name='index'),
 ]
