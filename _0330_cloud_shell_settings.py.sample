@@ -1,1 +1,2 @@
 CLOUD_SHELL_IMAGE = "gbraad/openstack-client:alpine"
+CLOUD_SHELL_NETWORK = ""

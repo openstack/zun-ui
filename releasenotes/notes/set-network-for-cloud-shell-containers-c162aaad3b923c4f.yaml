@@ -1,0 +1,2 @@
+features:
+  - it is now possible to specify a network for cloud-shell containers.

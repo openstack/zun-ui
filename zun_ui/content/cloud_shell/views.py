@@ -24,4 +24,9 @@ class CloudShellView(views.HorizonTemplateView):
             context['CLOUD_SHELL_IMAGE'] = settings.CLOUD_SHELL_IMAGE
         else:
             context['CLOUD_SHELL_IMAGE'] = "gbraad/openstack-client:alpine"
+
+        if hasattr(settings, "CLOUD_SHELL_NETWORK"):
+            context['CLOUD_SHELL_NETWORK'] = settings.CLOUD_SHELL_NETWORK
+        else:
+            context['CLOUD_SHELL_NETWORK'] = ""
         return context
