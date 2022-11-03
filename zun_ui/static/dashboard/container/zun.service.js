@@ -91,7 +91,9 @@
 
     function getContainers() {
       var msg = gettext('Unable to retrieve the Containers.');
-      return apiService.get(containersPath).error(error(msg));
+      return apiService.get(containersPath).catch(function onError() {
+        error(msg);
+      });
     }
 
     function deleteContainer(id, suppressError) {
@@ -105,7 +107,9 @@
     // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
     function deleteContainers(ids) {
       var msg = gettext('Unable to delete the Containers.');
-      return apiService.delete(containersPath, ids).error(error(msg));
+      return apiService.delete(containersPath, ids).catch(function onError() {
+        error(msg);
+      });
     }
 
     function deleteContainerForce(id, suppressError) {
@@ -126,64 +130,88 @@
 
     function startContainer(id) {
       var msg = gettext('Unable to start Container.');
-      return apiService.post(containersPath + id + '/start').error(error(msg));
+      return apiService.post(containersPath + id + '/start').catch(function onError() {
+        error(msg);
+      });
     }
 
     function stopContainer(id, params) {
       var msg = gettext('Unable to stop Container.');
-      return apiService.post(containersPath + id + '/stop', params).error(error(msg));
+      return apiService.post(containersPath + id + '/stop', params).catch(function onError() {
+        error(msg);
+      });
     }
 
     function logsContainer(id) {
       var msg = gettext('Unable to get logs of Container.');
-      return apiService.get(containersPath + id + '/logs').error(error(msg));
+      return apiService.get(containersPath + id + '/logs').catch(function onError() {
+        error(msg);
+      });
     }
 
     function restartContainer(id, params) {
       var msg = gettext('Unable to restart Container.');
-      return apiService.post(containersPath + id + '/restart', params).error(error(msg));
+      return apiService.post(containersPath + id + '/restart', params).catch(function onError() {
+        error(msg);
+      });
     }
 
     function rebuildContainer(id, params) {
       var msg = gettext('Unable to rebuild Container.');
-      return apiService.post(containersPath + id + '/rebuild', params).error(error(msg));
+      return apiService.post(containersPath + id + '/rebuild', params).catch(function onError() {
+        error(msg);
+      });
     }
 
     function pauseContainer(id) {
       var msg = gettext('Unable to pause Container');
-      return apiService.post(containersPath + id + '/pause').error(error(msg));
+      return apiService.post(containersPath + id + '/pause').catch(function onError() {
+        error(msg);
+      });
     }
 
     function unpauseContainer(id) {
       var msg = gettext('Unable to unpause of Container.');
-      return apiService.post(containersPath + id + '/unpause').error(error(msg));
+      return apiService.post(containersPath + id + '/unpause').catch(function onError() {
+        error(msg);
+      });
     }
 
     function executeContainer(id, params) {
       var msg = gettext('Unable to execute the command.');
-      return apiService.post(containersPath + id + '/execute', params).error(error(msg));
+      return apiService.post(containersPath + id + '/execute', params).catch(function onError() {
+        error(msg);
+      });
     }
 
     function killContainer(id, params) {
       var msg = gettext('Unable to send kill signal.');
-      return apiService.post(containersPath + id + '/kill', params).error(error(msg));
+      return apiService.post(containersPath + id + '/kill', params).catch(function onError() {
+        error(msg);
+      });
     }
 
     function resizeContainer(id, params) {
       var msg = gettext('Unable to resize console.');
-      return apiService.post(containersPath + id + '/resize', params).error(error(msg));
+      return apiService.post(containersPath + id + '/resize', params).catch(function onError() {
+        error(msg);
+      });
     }
 
     function attachNetwork(id, net) {
       var msg = gettext('Unable to attach network.');
       return apiService.post(containersPath + id + '/network_attach', {network: net})
-        .error(error(msg));
+        .catch(function onError() {
+          error(msg);
+        });
     }
 
     function detachNetwork(id, net) {
       var msg = gettext('Unable to detach network.');
       return apiService.post(containersPath + id + '/network_detach', {network: net})
-        .error(error(msg));
+        .catch(function onError() {
+          error(msg);
+        });
     }
 
     function updatePortSecurityGroup(id, port, sgs) {
@@ -192,7 +220,9 @@
         {port: port, sgs: sgs}, true);
       return apiService.post(containersPath + id + '/port_update_security_groups',
         {port: port, security_groups: sgs})
-        .error(error(msg));
+        .catch(function onError() {
+          error(msg);
+        });
     }
 
     //////////////////////////////
@@ -201,7 +231,9 @@
 
     function getZunAvailabilityZones() {
       var msg = gettext('Unable to retrieve the Zun Availability Zones.');
-      return apiService.get(zunAvailabilityZonesPath).error(error(msg));
+      return apiService.get(zunAvailabilityZonesPath).catch(function onError() {
+        error(msg);
+      });
     }
 
     //////////////
@@ -210,17 +242,23 @@
 
     function getCapsules() {
       var msg = gettext('Unable to retrieve the Capsules.');
-      return apiService.get(capsulesPath).error(error(msg));
+      return apiService.get(capsulesPath).catch(function onError() {
+        error(msg);
+      });
     }
 
     function getCapsule(id) {
       var msg = gettext('Unable to retrieve the Capsule.');
-      return apiService.get(capsulesPath + id).error(error(msg));
+      return apiService.get(capsulesPath + id).catch(function onError() {
+        error(msg);
+      });
     }
 
     function createCapsule(params) {
       var msg = gettext('Unable to create Capsule.');
-      return apiService.post(capsulesPath, params).error(error(msg));
+      return apiService.post(capsulesPath, params).catch(function onError() {
+        error(msg);
+      });
     }
 
     function deleteCapsule(id, suppressError) {
@@ -237,12 +275,16 @@
 
     function pullImage(params) {
       var msg = gettext('Unable to pull Image.');
-      return apiService.post(imagesPath, params).error(error(msg));
+      return apiService.post(imagesPath, params).catch(function onError() {
+        error(msg);
+      });
     }
 
     function getImages() {
       var msg = gettext('Unable to retrieve the Images.');
-      return apiService.get(imagesPath).error(error(msg));
+      return apiService.get(imagesPath).catch(function onError() {
+        error(msg);
+      });
     }
 
     function deleteImage(id, suppressError) {
@@ -259,12 +301,16 @@
 
     function getHosts() {
       var msg = gettext('Unable to retrieve the Hosts.');
-      return apiService.get(hostsPath).error(error(msg));
+      return apiService.get(hostsPath).catch(function onError() {
+        error(msg);
+      });
     }
 
     function getHost(id) {
       var msg = gettext('Unable to retrieve the Host.');
-      return apiService.get(hostsPath + id).error(error(msg));
+      return apiService.get(hostsPath + id).catch(function onError() {
+        error(msg);
+      });
     }
 
     function error(message) {
