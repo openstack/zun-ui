@@ -99,7 +99,7 @@
     function deleteContainer(id, suppressError) {
       var promise = apiService.delete(containersPath, [id]);
       return suppressError ? promise : promise.catch(function onError() {
-        var msg = gettext('Unable to delete the Container with id: %(id)s');
+        var msg = gettext('Unable to delete the Container with ID: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
     }
@@ -115,7 +115,7 @@
     function deleteContainerForce(id, suppressError) {
       var promise = apiService.delete(containersPath + id + '/force', [id]);
       return suppressError ? promise : promise.catch(function onError() {
-        var msg = gettext('Unable to delete forcely the Container with id: %(id)s');
+        var msg = gettext('Unable to delete forcely the Container with ID: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
     }
@@ -123,7 +123,7 @@
     function deleteContainerStop(id, suppressError) {
       var promise = apiService.delete(containersPath + id + '/stop', [id]);
       return suppressError ? promise : promise.catch(function onError() {
-        var msg = gettext('Unable to stop and delete the Container with id: %(id)s');
+        var msg = gettext('Unable to stop and delete the Container with ID: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
     }
@@ -164,7 +164,7 @@
     }
 
     function pauseContainer(id) {
-      var msg = gettext('Unable to pause Container');
+      var msg = gettext('Unable to pause Container.');
       return apiService.post(containersPath + id + '/pause').catch(function onError() {
         error(msg);
       });
@@ -264,7 +264,7 @@
     function deleteCapsule(id, suppressError) {
       var promise = apiService.delete(capsulesPath, [id]);
       return suppressError ? promise : promise.catch(function onError() {
-        var msg = gettext('Unable to delete the Capsule with id: %(id)s');
+        var msg = gettext('Unable to delete the Capsule with ID: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
     }
@@ -290,7 +290,7 @@
     function deleteImage(id, suppressError) {
       var promise = apiService.delete(imagesPath, [id]);
       return suppressError ? promise : promise.catch(function onError() {
-        var msg = gettext('Unable to delete the Image with id: %(id)s');
+        var msg = gettext('Unable to delete the Image with ID: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
     }
