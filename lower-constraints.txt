@@ -28,7 +28,7 @@ fasteners==0.14.1
 fixtures==3.0.0
 futurist==1.6.0
 horizon==17.1.0
-idna==2.6
+idna==3.15
 imagesize==1.0.0
 iso8601==0.1.12
 Jinja2==2.10
