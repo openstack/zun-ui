@@ -28,5 +28,7 @@ classifiers = [
 Homepage = "https://docs.openstack.org/zun-ui/latest/"
 Repository = "https://opendev.org/openstack/zun_ui"
 
-[tool.setuptools.packages.find]
-include = ["zun_ui"]
+[tool.setuptools]
+packages = [
+    "zun_ui"
+]
