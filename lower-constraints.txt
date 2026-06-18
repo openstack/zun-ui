@@ -9,7 +9,7 @@ cliff==2.11.0
 cmd2==0.8.1
 contextlib2==0.5.5
 coverage==4.0
-cryptography==2.1.4
+cryptography==48.0.1
 debtcollector==1.19.0
 decorator==4.2.1
 deprecation==2.0
