@@ -2,9 +2,9 @@
 Zun-UI
 ======
 
-.. image:: https://governance.openstack.org/tc/badges/watcher-tempest-plugin.svg
+.. image:: https://governance.openstack.org/tc/badges/zun-ui.svg
 
-.. Change things from this point on
+.. image:: https://www.openstack.org/themes/openstack/images/project-mascots/Zun/OpenStack_Project_Zun_mascot.jpg
 
 See the following docs to learn more:
 
