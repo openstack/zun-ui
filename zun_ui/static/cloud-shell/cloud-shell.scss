@@ -1,3 +1,25 @@
+@import "{{ THEME_DIR }}/{{ THEME }}/variables";
+
+#cloud-shell-menu {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+
+  &::before {
+    margin-right: 6px;
+  }
+
+  .cloud-shell-label {
+    font-family: $font-family-sans-serif;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $navbar-default-link-hover-bg;
+    text-decoration: none;
+  }
+}
 #cloud-shell {
   position: fixed;
   z-index: 10;
