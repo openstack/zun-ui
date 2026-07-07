@@ -88,10 +88,7 @@ def zunclient(request):
 
 
 def get_auth_params_from_request_neutron(request):
-    """Extracts properties needed by neutronclient call from the request object.
-
-    These will be used to memoize the calls to neutronclient.
-    """
+    """Return authentication parameters for neutronclient."""
     return (
         request.user.token.id,
         base.url_for(request, 'network'),
