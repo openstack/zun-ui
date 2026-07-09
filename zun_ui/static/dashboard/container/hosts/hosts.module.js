@@ -42,7 +42,7 @@
 
   function run(registry, zun, basePath, resourceType, hostService) {
     registry.getResourceType(resourceType)
-    .setNames(gettext('Host'), gettext('Hosts'))
+    .setNames('Host', 'Hosts', ngettext('Host', 'Hosts', 1))
     // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'drawer.html')
     // for table row items and detail summary view.

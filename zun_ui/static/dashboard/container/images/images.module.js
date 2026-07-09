@@ -56,7 +56,7 @@
 
   function run(registry, zun, basePath, resourceType, imageService) {
     registry.getResourceType(resourceType)
-    .setNames(gettext('Image'), gettext('Images'))
+    .setNames('Image', 'Images', ngettext('Image', 'Images', 1))
     // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'drawer.html')
     .setDefaultIndexUrl('/admin/container/images/')
