@@ -58,7 +58,7 @@
 
   function run($filter, registry, zun, basePath, resourceType, capsuleService) {
     registry.getResourceType(resourceType)
-    .setNames(gettext('Capsule'), gettext('Capsules'))
+    .setNames('Capsule', 'Capsules', ngettext('Capsule', 'Capsules', 1))
     .setSummaryTemplateUrl(basePath + 'drawer.html')
     .setDefaultIndexUrl('/project/container/capsules/')
     .setProperties(capsuleProperties())
