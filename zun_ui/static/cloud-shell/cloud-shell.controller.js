@@ -130,13 +130,20 @@
     function onFailGetContainer() {
       // create new container and attach console to it.
       var image = angular.element("#cloud-shell-menu").attr("cloud-shell-image");
+      var cloudShellNetwork = angular.element("#cloud-shell-menu").attr("cloud-shell-network");
+      if (cloudShellNetwork === "") {
+        var cloudShellNetwork = [];
+      } else {
+        var cloudShellNetwork = [{"network": cloudShellNetwork}];
+      }
       var model = {
         image: image,
         command: "/bin/bash",
         interactive: true,
         run: true,
         environment: "OS_CLOUD=openstack",
-        labels: "cloud-shell=" + ctrl.containerLabel
+        labels: "cloud-shell=" + ctrl.containerLabel,
+        nets: cloudShellNetwork
       };
       zun.createContainer(model).then(function (response) {
         // attach
