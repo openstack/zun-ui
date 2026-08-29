@@ -98,7 +98,7 @@
 
   function run(registry, zun, basePath, resourceType, containerService) {
     registry.getResourceType(resourceType)
-    .setNames(gettext('Container'), gettext('Containers'))
+    .setNames('Container', 'Containers', ngettext('Container', 'Containers', 1))
     .setSummaryTemplateUrl(basePath + 'details/drawer.html')
     .setDefaultIndexUrl(containerService.getDefaultIndexUrl())
     .setProperties(containerProperties())
