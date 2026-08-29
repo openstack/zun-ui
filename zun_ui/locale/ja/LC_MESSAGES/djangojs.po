@@ -1,14 +1,15 @@
 # Shu Muto <shu.mutow@gmail.com>, 2017. #zanata
 # Shu Muto <shu.mutow@gmail.com>, 2018. #zanata
+# Shu Muto <shu.mutow@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-06-24 10:49+0000\n"
+"POT-Creation-Date: 2026-08-22 13:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-11-14 08:08+0000\n"
+"PO-Revision-Date: 2026-08-22 01:19+0000\n"
 "Last-Translator: Shu Muto <shu.mutow@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -107,17 +108,16 @@ msgstr "CPU 数合計"
 msgid "CPU Used"
 msgstr "CPU 使用量"
 
+#, fuzzy
 msgid "Capsule"
-msgstr "カプセル"
+msgid_plural "Capsules"
+msgstr[0] "カプセル"
 
 msgid "Capsule ID"
 msgstr "カプセル ID"
 
 msgid "Capsule Version ID"
 msgstr "カプセルバージョン ID"
-
-msgid "Capsules"
-msgstr "カプセル"
 
 #, python-format
 msgid ""
@@ -162,8 +162,10 @@ msgstr[0] "イメージの削除の確認"
 msgid "Console"
 msgstr "コンソール"
 
+#, fuzzy
 msgid "Container"
-msgstr "コンテナー"
+msgid_plural "Containers"
+msgstr[0] "コンテナー"
 
 #, python-format
 msgid "Container %s was successfully created."
@@ -367,17 +369,16 @@ msgstr "Glance"
 msgid "Glance: Pull the image from Glance."
 msgstr "Glance: Glance からイメージを取得します。"
 
+#, fuzzy
 msgid "Host"
-msgstr "ホスト"
+msgid_plural "Hosts"
+msgstr[0] "ホスト"
 
 msgid "Host ID"
 msgstr "ホスト ID"
 
 msgid "Hostname"
 msgstr "ホスト名"
-
-msgid "Hosts"
-msgstr "ホスト"
 
 msgid "ID"
 msgstr "ID"
@@ -398,8 +399,10 @@ msgid ""
 "If not present: only pull the image if it does not already exist on the node."
 msgstr "存在しなければ: ノードにイメージが存在しない場合のみ取得します。"
 
+#, fuzzy
 msgid "Image"
-msgstr "イメージ"
+msgid_plural "Images"
+msgstr[0] "イメージ"
 
 #, python-format
 msgid "Image %s was successfully pulled."
@@ -413,9 +416,6 @@ msgstr "イメージ ID"
 
 msgid "Image Pull Policy"
 msgstr "イメージ取得ポリシー"
-
-msgid "Images"
-msgstr "イメージ"
 
 msgid ""
 "In this dialog, specify the security groups for the container.\n"
