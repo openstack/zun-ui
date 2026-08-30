@@ -1,14 +1,15 @@
 # suhartono <cloudsuhartono@gmail.com>, 2018. #zanata
 # suhartono <cloudsuhartono@gmail.com>, 2019. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2019-07-07 15:19+0000\n"
+"POT-Creation-Date: 2026-08-29 20:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-01-21 04:49+0000\n"
+"PO-Revision-Date: 2026-08-29 08:06+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -106,17 +107,16 @@ msgstr "CPU Total"
 msgid "CPU Used"
 msgstr "CPU Used"
 
+#, fuzzy
 msgid "Capsule"
-msgstr "Capsule"
+msgid_plural "Capsules"
+msgstr[0] "Capsule"
 
 msgid "Capsule ID"
 msgstr "Capsule ID"
 
 msgid "Capsule Version ID"
 msgstr "Capsule Version ID"
-
-msgid "Capsules"
-msgstr "Capsule"
 
 #, python-format
 msgid ""
@@ -159,8 +159,10 @@ msgstr[0] "Confirm Delete Image"
 msgid "Console"
 msgstr "Console"
 
+#, fuzzy
 msgid "Container"
-msgstr "Kontainer"
+msgid_plural "Containers"
+msgstr[0] "Kontainer"
 
 #, python-format
 msgid "Container %s was successfully created."
@@ -365,17 +367,16 @@ msgstr "Glance"
 msgid "Glance: Pull the image from Glance."
 msgstr "Glance: Tarik image dari Glance."
 
+#, fuzzy
 msgid "Host"
-msgstr "Host"
+msgid_plural "Hosts"
+msgstr[0] "Host"
 
 msgid "Host ID"
 msgstr "Host ID"
 
 msgid "Hostname"
 msgstr "Hostname"
-
-msgid "Hosts"
-msgstr "Hosts"
 
 msgid "ID"
 msgstr "ID"
@@ -396,8 +397,10 @@ msgid ""
 "If not present: only pull the image if it does not already exist on the node."
 msgstr "Jika tidak ada: hanya tarik image jika belum ada di node."
 
+#, fuzzy
 msgid "Image"
-msgstr "Image"
+msgid_plural "Images"
+msgstr[0] "Image"
 
 #, python-format
 msgid "Image %s was successfully pulled."
@@ -411,9 +414,6 @@ msgstr "Image ID"
 
 msgid "Image Pull Policy"
 msgstr "Image Pull Policy"
-
-msgid "Images"
-msgstr "Images"
 
 msgid ""
 "In this dialog, specify the security groups for the container.\n"
@@ -1087,12 +1087,15 @@ msgstr "Usage"
 msgid "Used"
 msgstr "Used"
 
+#, python-brace-format
 msgid "Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}"
 msgstr "Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}"
 
+#, python-brace-format
 msgid "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
 msgstr "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
 
+#, python-brace-format
 msgid "Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}"
 msgstr "Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}"
 

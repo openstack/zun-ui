@@ -1,15 +1,16 @@
 # Roman Gorshunov <roman.gorshunov@att.com>, 2020. #zanata
 # Ivan Anfimov <lazekteam@gmail.com>, 2025. #zanata
+# Roman Gorshunov <roman.gorshunov@att.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-09-15 15:16+0000\n"
+"POT-Creation-Date: 2026-08-29 20:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-07-26 10:58+0000\n"
-"Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
+"PO-Revision-Date: 2026-08-29 08:06+0000\n"
+"Last-Translator: Roman Gorshunov <roman.gorshunov@att.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -109,17 +110,18 @@ msgstr "Всего CPU"
 msgid "CPU Used"
 msgstr "Использовано CPU"
 
+#, fuzzy
 msgid "Capsule"
-msgstr "Капсула"
+msgid_plural "Capsules"
+msgstr[0] "Капсула"
+msgstr[1] ""
+msgstr[2] ""
 
 msgid "Capsule ID"
 msgstr "ID капсулы"
 
 msgid "Capsule Version ID"
 msgstr "ID версии капсулы"
-
-msgid "Capsules"
-msgstr "Капсулы"
 
 #, python-format
 msgid ""
@@ -174,8 +176,12 @@ msgstr[2] "Подтвердите удаление образов"
 msgid "Console"
 msgstr "Консоль"
 
+#, fuzzy
 msgid "Container"
-msgstr "Контейнер"
+msgid_plural "Containers"
+msgstr[0] "Контейнер"
+msgstr[1] ""
+msgstr[2] ""
 
 #, python-format
 msgid "Container %s was successfully created."
@@ -400,17 +406,18 @@ msgstr "Glance"
 msgid "Glance: Pull the image from Glance."
 msgstr "Glance: агружать образы с Glance."
 
+#, fuzzy
 msgid "Host"
-msgstr "Хост"
+msgid_plural "Hosts"
+msgstr[0] "Хост"
+msgstr[1] ""
+msgstr[2] ""
 
 msgid "Host ID"
 msgstr "ID хоста"
 
 msgid "Hostname"
 msgstr "Имя хоста"
-
-msgid "Hosts"
-msgstr "Узлы"
 
 msgid "ID"
 msgstr "ID"
@@ -431,8 +438,12 @@ msgid ""
 "If not present: only pull the image if it does not already exist on the node."
 msgstr "При отсутствии: образ будет загружен только если его ещё нет на узле."
 
+#, fuzzy
 msgid "Image"
-msgstr "Образ"
+msgid_plural "Images"
+msgstr[0] "Образ"
+msgstr[1] ""
+msgstr[2] ""
 
 #, python-format
 msgid "Image %s was successfully pulled."
@@ -446,9 +457,6 @@ msgstr "ID образа"
 
 msgid "Image Pull Policy"
 msgstr "Политика загрузки образов"
-
-msgid "Images"
-msgstr "Образы"
 
 msgid ""
 "In this dialog, specify the security groups for the container.\n"

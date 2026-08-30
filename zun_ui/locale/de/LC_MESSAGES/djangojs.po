@@ -1,15 +1,17 @@
 # Frank Kloeker <eumel@arcor.de>, 2018. #zanata
 # Robert Simai <robert.simai@suse.com>, 2018. #zanata
+# Frank Kloeker <eumel@arcor.de>, 2026. #zanata
+# Robert Simai <robert.simai@suse.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2019-07-07 15:19+0000\n"
+"POT-Creation-Date: 2026-08-29 20:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-10-25 09:34+0000\n"
-"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
+"PO-Revision-Date: 2026-08-29 08:06+0000\n"
+"Last-Translator: Frank Kloeker <eumel@arcor.de>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -106,17 +108,17 @@ msgstr "CPU gesamt"
 msgid "CPU Used"
 msgstr "CPU verwendet"
 
+#, fuzzy
 msgid "Capsule"
-msgstr "Kapsel"
+msgid_plural "Capsules"
+msgstr[0] "Kapsel"
+msgstr[1] ""
 
 msgid "Capsule ID"
 msgstr "Kapsel ID"
 
 msgid "Capsule Version ID"
 msgstr "Kapsel Versions-ID"
-
-msgid "Capsules"
-msgstr "Kapseln"
 
 #, python-format
 msgid ""
@@ -166,8 +168,11 @@ msgstr[1] "Löschen von Abbildern bestätigen"
 msgid "Console"
 msgstr "Konsole"
 
+#, fuzzy
 msgid "Container"
-msgstr "Container"
+msgid_plural "Containers"
+msgstr[0] "Container"
+msgstr[1] ""
 
 #, python-format
 msgid "Container %s was successfully created."
@@ -382,17 +387,17 @@ msgstr "Glance"
 msgid "Glance: Pull the image from Glance."
 msgstr "Glance: Zieht das Abbild von Glance."
 
+#, fuzzy
 msgid "Host"
-msgstr "Host"
+msgid_plural "Hosts"
+msgstr[0] "Host"
+msgstr[1] ""
 
 msgid "Host ID"
 msgstr "Host-ID"
 
 msgid "Hostname"
 msgstr "Hostname"
-
-msgid "Hosts"
-msgstr "Hosts"
 
 msgid "ID"
 msgstr "ID"
@@ -415,8 +420,11 @@ msgstr ""
 "Wenn nicht vorhanden: Zieht das Abbild nur, wenn es noch nicht auf dem "
 "Knoten vorhanden ist."
 
+#, fuzzy
 msgid "Image"
-msgstr "Abbild"
+msgid_plural "Images"
+msgstr[0] "Abbild"
+msgstr[1] ""
 
 #, python-format
 msgid "Image %s was successfully pulled."
@@ -430,9 +438,6 @@ msgstr "Abbild ID"
 
 msgid "Image Pull Policy"
 msgstr "Abbild Zieh-Richtlinie"
-
-msgid "Images"
-msgstr "Abbilder"
 
 msgid ""
 "In this dialog, specify the security groups for the container.\n"
@@ -1121,13 +1126,16 @@ msgstr "Verwendung"
 msgid "Used"
 msgstr "Benutzt"
 
+#, python-brace-format
 msgid "Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}"
 msgstr " Verwendet {$ ctrl.host.cpu_used $} von {$ ctrl.host.cpus $}"
 
+#, python-brace-format
 msgid "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
 msgstr ""
 "Verwendet {$ ctrl.host.disk_used | gb $} von {$ ctrl.host.disk_total | gb $}"
 
+#, python-brace-format
 msgid "Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}"
 msgstr ""
 "Verwendet {$ ctrl.host.mem_used | mb $} von {$ ctrl.host.mem_total | mb $}"

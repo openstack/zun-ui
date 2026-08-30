@@ -2,16 +2,18 @@
 # ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
 # Jaeho Cho <jaeho8032@gmail.com>, 2018. #zanata
 # Jaewook Oh <kyle.oh95@gmail.com>, 2018. #zanata
-# Sungjin Kang <gang.sungjin@gmail.com>, 2018. #zanata
+# Sungjin Kang <ujuc@ujuc.me>, 2018. #zanata
+# ByungYeol Woo <wby1089@gmail.com>, 2026. #zanata
+# minwook-shin <minwook0106@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2019-07-07 15:19+0000\n"
+"POT-Creation-Date: 2026-08-29 20:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-12-06 10:52+0000\n"
+"PO-Revision-Date: 2026-08-29 08:06+0000\n"
 "Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
@@ -106,17 +108,16 @@ msgstr "CPU 총량"
 msgid "CPU Used"
 msgstr "CPU 사용량"
 
+#, fuzzy
 msgid "Capsule"
-msgstr "캡슐"
+msgid_plural "Capsules"
+msgstr[0] "캡슐"
 
 msgid "Capsule ID"
 msgstr "캡슐 ID"
 
 msgid "Capsule Version ID"
 msgstr "캡슐 버전 ID"
-
-msgid "Capsules"
-msgstr "캡슐"
 
 #, python-format
 msgid ""
@@ -159,8 +160,10 @@ msgstr[0] "이미지 삭제 확인"
 msgid "Console"
 msgstr "콘솔"
 
+#, fuzzy
 msgid "Container"
-msgstr "컨테이너"
+msgid_plural "Containers"
+msgstr[0] "컨테이너"
 
 #, python-format
 msgid "Container %s was successfully created."
@@ -364,17 +367,16 @@ msgstr "Glance"
 msgid "Glance: Pull the image from Glance."
 msgstr "Glance: Glance에서 이미지를 가져옵니다."
 
+#, fuzzy
 msgid "Host"
-msgstr "호스트"
+msgid_plural "Hosts"
+msgstr[0] "호스트"
 
 msgid "Host ID"
 msgstr "호스트 ID"
 
 msgid "Hostname"
 msgstr "호스트 이름"
-
-msgid "Hosts"
-msgstr "호스트"
 
 msgid "ID"
 msgstr "ID"
@@ -395,8 +397,10 @@ msgid ""
 "If not present: only pull the image if it does not already exist on the node."
 msgstr "If not present: 이미지가 노드에 없는 경우에만 이미지를 가져옵니다."
 
+#, fuzzy
 msgid "Image"
-msgstr "이미지"
+msgid_plural "Images"
+msgstr[0] "이미지"
 
 #, python-format
 msgid "Image %s was successfully pulled."
@@ -410,9 +414,6 @@ msgstr "이미지 ID"
 
 msgid "Image Pull Policy"
 msgstr "이미지 가져오기 정책"
-
-msgid "Images"
-msgstr "이미지"
 
 msgid ""
 "In this dialog, specify the security groups for the container.\n"
@@ -1077,13 +1078,16 @@ msgstr "사용"
 msgid "Used"
 msgstr "사용됨"
 
+#, python-brace-format
 msgid "Used {$ ctrl.host.cpu_used $} of {$ ctrl.host.cpus $}"
 msgstr "{$ ctrl.host.cpus $} 에서 {$ ctrl.host.cpu_used $} 사용함"
 
+#, python-brace-format
 msgid "Used {$ ctrl.host.disk_used | gb $} of {$ ctrl.host.disk_total | gb $}"
 msgstr ""
 "{$ ctrl.host.disk_total | gb $} 중 {$ ctrl.host.disk_used | gb $} 사용됨"
 
+#, python-brace-format
 msgid "Used {$ ctrl.host.mem_used | mb $} of {$ ctrl.host.mem_total | mb $}"
 msgstr "{$ ctrl.host.mem_total | mb $} 중 {$ ctrl.host.mem_used | mb $} 사용됨"
 
