@@ -1,17 +1,16 @@
 # Roman Gorshunov <roman.gorshunov@att.com>, 2020. #zanata
 # Ivan Anfimov <lazekteam@gmail.com>, 2025. #zanata
 # Ivan Anfimov <lazekteam@gmail.com>, 2026. #zanata
-# Roman Gorshunov <roman.gorshunov@att.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-08-22 13:19+0000\n"
+"POT-Creation-Date: 2026-08-29 19:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-08-22 01:19+0000\n"
-"Last-Translator: Roman Gorshunov <roman.gorshunov@att.com>\n"
+"PO-Revision-Date: 2026-08-29 06:33+0000\n"
+"Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -112,12 +111,11 @@ msgstr "Всего CPU"
 msgid "CPU Used"
 msgstr "Использовано CPU"
 
-#, fuzzy
 msgid "Capsule"
 msgid_plural "Capsules"
 msgstr[0] "Капсула"
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Капсулы"
+msgstr[2] "Капсулы"
 
 msgid "Capsule ID"
 msgstr "ID капсулы"
@@ -178,12 +176,11 @@ msgstr[2] "Подтвердите удаление образов"
 msgid "Console"
 msgstr "Консоль"
 
-#, fuzzy
 msgid "Container"
 msgid_plural "Containers"
 msgstr[0] "Контейнер"
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Контейнеры"
+msgstr[2] "Контейнеры"
 
 #, python-format
 msgid "Container %s was successfully created."
@@ -441,12 +438,11 @@ msgid ""
 "If not present: only pull the image if it does not already exist on the node."
 msgstr "При отсутствии: образ будет загружен только если его ещё нет на узле."
 
-#, fuzzy
 msgid "Image"
 msgid_plural "Images"
 msgstr[0] "Образ"
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Образы"
+msgstr[2] "Образы"
 
 #, python-format
 msgid "Image %s was successfully pulled."
