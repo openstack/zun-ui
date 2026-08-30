@@ -79,7 +79,7 @@
     var model;
 
     var message = {
-      success: gettext('Container %s was successfully stoped.')
+      success: gettext('Container %s was successfully stopped.')
     };
 
     var service = {
