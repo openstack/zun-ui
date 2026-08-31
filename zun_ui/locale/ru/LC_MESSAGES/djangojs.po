@@ -5,11 +5,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zun-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-08-29 19:27+0000\n"
+"POT-Creation-Date: 2026-08-30 11:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-08-29 06:33+0000\n"
+"PO-Revision-Date: 2026-08-30 12:13+0000\n"
 "Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -200,11 +200,11 @@ msgstr "Контейнер %s успешно перезапущен."
 
 #, python-format
 msgid "Container %s was successfully started."
-msgstr "Контейнер %s успешно запущен."
+msgstr "Контейнер %s был успешно запущен."
 
 #, python-format
-msgid "Container %s was successfully stoped."
-msgstr "Контейнер %s успешно остановлен."
+msgid "Container %s was successfully stopped."
+msgstr "Контейнер %s был успешно остановлен."
 
 #, python-format
 msgid "Container %s was successfully unpaused."
@@ -212,7 +212,7 @@ msgstr "Контейнер %s успешно снят с паузы."
 
 #, python-format
 msgid "Container %s was successfully updated."
-msgstr "Контейнер %s успешно обновлён."
+msgstr "Контейнер %s был успешно обновлен."
 
 msgid "Container Name"
 msgstr "Имя контейнера"
@@ -406,12 +406,11 @@ msgstr "Glance"
 msgid "Glance: Pull the image from Glance."
 msgstr "Glance: агружать образы с Glance."
 
-#, fuzzy
 msgid "Host"
 msgid_plural "Hosts"
 msgstr[0] "Хост"
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Хосты"
+msgstr[2] "Хосты"
 
 msgid "Host ID"
 msgstr "ID хоста"
@@ -1038,8 +1037,20 @@ msgstr[0] "Не удалось удалить образ: %s."
 msgstr[1] "Не удалось удалить образы: %s."
 msgstr[2] "Не удалось удалить образы: %s."
 
+#, python-format
+msgid "Unable to delete the Capsule with ID: %(id)s"
+msgstr "Не удалось удалить капсулу с ID: %(id)s"
+
+#, python-format
+msgid "Unable to delete the Container with ID: %(id)s"
+msgstr "Не удалось удалить контейнер с ID: %(id)s"
+
 msgid "Unable to delete the Containers."
 msgstr "Не удалось удалить контейнеры."
+
+#, python-format
+msgid "Unable to delete the Image with ID: %(id)s"
+msgstr "Не удалось удалить образ с ID: %(id)s"
 
 #, fuzzy
 msgid "Unable to detach network."
@@ -1099,6 +1110,10 @@ msgstr "Не удалось запустить контейнер."
 
 msgid "Unable to stop Container."
 msgstr "Не удалось остановить контейнер."
+
+#, python-format
+msgid "Unable to stop and delete the Container with ID: %(id)s"
+msgstr "Не удалось остановить и удалить контейнер с ID: %(id)s"
 
 #, fuzzy
 msgid "Unable to unpause of Container."
