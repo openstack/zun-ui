@@ -187,7 +187,7 @@
         var result = actionResult.getActionResult().updated(resourceType, id);
         return result.results;
       }, function(response) {
-        // close spinner and dispaly toast
+        // close spinner and display toast
         waitSpinner.hideModalSpinner();
         toast.add('error', response.data.split("(")[0].trim() + ".");
         var result = actionResult.getActionResult().failed(resourceType, id);
