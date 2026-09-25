@@ -1,18 +1,9 @@
 # plugin.sh - DevStack plugin.sh dispatch script zun-ui
 
 ZUN_UI_DIR=$(cd $(dirname $BASH_SOURCE)/.. && pwd)
-PYTHON=${PYTHON:-python}
 
 function install_zun_ui {
-    # NOTE(shu-mutou): workaround for devstack bug: 1540328
-    # where devstack install 'test-requirements' but should not do it
-    # for zun-ui project as it installs Horizon from url.
-    # Remove following two 'mv' commands when mentioned bug is fixed.
-    mv $ZUN_UI_DIR/test-requirements.txt $ZUN_UI_DIR/_test-requirements.txt
-
     setup_develop ${ZUN_UI_DIR}
-
-    mv $ZUN_UI_DIR/_test-requirements.txt $ZUN_UI_DIR/test-requirements.txt
 }
 
 function configure_zun_ui {
@@ -20,7 +11,7 @@ function configure_zun_ui {
     # NOTE: If locale directory does not exist, compilemessages will fail,
     # so check for an existence of locale directory is required.
     if [ -d ${ZUN_UI_DIR}/zun_ui/locale ]; then
-        (cd ${ZUN_UI_DIR}/zun_ui; DJANGO_SETTINGS_MODULE=openstack_dashboard.settings $PYTHON ../manage.py compilemessages)
+        (cd ${ZUN_UI_DIR}/zun_ui; DJANGO_SETTINGS_MODULE=openstack_dashboard.settings ../manage.py compilemessages)
     fi
 }
 
